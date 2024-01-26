@@ -1,6 +1,6 @@
 OSNAME:=$(shell uname -s | sed 's/_.*//')
 
-COMPILER =
+COMPILER = --compiler=unix
 # to get a list of available compilers run
 # python swig-python-setup.py build_ext --help-compiler
 # no changes necessary on Linux and MacOS
@@ -15,7 +15,7 @@ adaptagrams_wrap.cxx: clean adaptagrams.i
 	swig -DNDEBUG -c++ -python adaptagrams.i
 
 adaptagrams: adaptagrams_wrap.cxx
-	python swig-python-setup.py build_ext --inplace $(COMPILER)
+	python3 swig-python-setup.py build_ext --inplace $(COMPILER)
 
 realclean: clean
 

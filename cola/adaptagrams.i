@@ -121,10 +121,17 @@ using namespace dialect;
 
 %include "std_string.i"
 %include "std_vector.i"
+%include "std_list.i"
 %include "std_deque.i"
 %include "std_pair.i"
 %include "std_map.i"
 %include "std_shared_ptr.i"
+
+namespace dialect {
+
+%apply int { CardinalDir };
+
+}
 
 #ifdef SWIGJAVA
 /* Wrap every C++ action in try/catch statement so we convert all 
@@ -213,6 +220,10 @@ class ColaException {
 %template(Unsigneds) std::vector<unsigned>;
 %template(Doubles) std::vector<double>;
 
+%template(Dimensions) std::pair<double,double>;
+
+
+
 %template(UnsatisfiableConstraintInfoPtrs) std::vector<cola::UnsatisfiableConstraintInfo *>;
 %template(ColaEdge) std::pair<unsigned,unsigned>;
 %template(ColaEdges) std::vector< std::pair<unsigned,unsigned> >;
@@ -228,11 +239,15 @@ class ColaException {
 %template(ColaClusters) std::vector<cola::Cluster*>;
 %template(AvoidPoints) std::vector<Avoid::Point>;
 %template(AvoidCheckpoints) std::vector<Avoid::Checkpoint>;
+%template(AvoidConnRefList) std::list<Avoid::ConnRef *>;
+%template(AvoidConnEndList) std::list<Avoid::ConnEnd>;
+%template(AvoidConnEndPair) std::pair<Avoid::ConnEnd,Avoid::ConnEnd>;
 %template(OrderedAlignmentPtrs) std::vector<dialect::OrderedAlignment*>;
 %template(TreePtrs) std::vector<std::shared_ptr<dialect::Tree>>;
 %template(ChainPtrs) std::vector<std::shared_ptr<dialect::Chain>>;
 %template(DialectNodes) std::vector<std::shared_ptr<dialect::Node>>;
 %template(DialectNodeLookup) std::map<dialect::id_type, std::shared_ptr<dialect::Node>>;
+%template(DialectEdgesLookup) std::map<dialect::id_type, std::shared_ptr<dialect::Edge>>;
 %template(DialectNodeDeques) std::vector<std::deque<std::shared_ptr<dialect::Node>>>;
 
 %inline %{
@@ -263,6 +278,7 @@ void deleteDoubleArray(double* a) {
 %rename(DialectEdge) dialect::Edge;
 
 %shared_ptr(dialect::Node)
+%shared_ptr(dialect::Edge)
 %shared_ptr(dialect::GhostNode)
 %shared_ptr(dialect::PeeledNode)
 %shared_ptr(dialect::Graph)
@@ -291,6 +307,7 @@ void deleteDoubleArray(double* a) {
 %include "libcola/exceptions.h"
 
 %include "libavoid/dllexport.h"
+%include "libavoid/hyperedge.h"
 %include "libavoid/geometry.h"
 %include "libavoid/geomtypes.h"
 %include "libavoid/connend.h"
