@@ -241,6 +241,7 @@ class ColaException {
 %template(AvoidCheckpoints) std::vector<Avoid::Checkpoint>;
 %template(AvoidConnRefList) std::list<Avoid::ConnRef *>;
 %template(AvoidConnEndList) std::list<Avoid::ConnEnd>;
+%template(AvoidJunctionRefList) std::list<Avoid::JunctionRef *>;
 %template(AvoidConnEndPair) std::pair<Avoid::ConnEnd,Avoid::ConnEnd>;
 %template(OrderedAlignmentPtrs) std::vector<dialect::OrderedAlignment*>;
 %template(TreePtrs) std::vector<std::shared_ptr<dialect::Tree>>;
