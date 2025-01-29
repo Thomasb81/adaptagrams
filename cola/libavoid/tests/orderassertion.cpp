@@ -6,11 +6,11 @@ using namespace Avoid;
 int main(void) {
     Router *router = new Router(
             PolyLineRouting | OrthogonalRouting);
-    router->setRoutingPenalty((PenaltyType)0, 50);
-    router->setRoutingPenalty((PenaltyType)1, 0);
-    router->setRoutingPenalty((PenaltyType)2, 0);
-    router->setRoutingPenalty((PenaltyType)3, 4000);
-    router->setRoutingPenalty((PenaltyType)4, 0);
+    router->setRoutingPenalty(segmentPenalty, 50);
+    router->setRoutingPenalty(anglePenalty, 0);
+    router->setRoutingPenalty(crossingPenalty, 0);
+    router->setRoutingPenalty(clusterCrossingPenalty, 4000);
+    router->setRoutingPenalty(fixedSharedPathPenalty, 0);
 
     Polygon poly73(4);
     poly73.ps[0] = Point(232, 362);
@@ -1714,7 +1714,7 @@ int main(void) {
     connRef315->setRoutingType((ConnType)2);
 
     router->processTransaction();
-    router->outputDiagram("output/orderassertion");
+    router->outputDiagram(IMAGE_OUTPUT_PATH "output/orderassertion");
     delete router;
     return 0;
 };

@@ -2,20 +2,20 @@
 using namespace Avoid;
 int main(void) {
     Router *router = new Router(OrthogonalRouting);
-    router->setRoutingParameter((RoutingParameter)0, 50);
-    router->setRoutingParameter((RoutingParameter)1, 0);
-    router->setRoutingParameter((RoutingParameter)2, 200);
-    router->setRoutingParameter((RoutingParameter)3, 4000);
-    router->setRoutingParameter((RoutingParameter)4, 20000);
-    router->setRoutingParameter((RoutingParameter)5, 100);
-    router->setRoutingParameter((RoutingParameter)6, 0);
-    router->setRoutingParameter((RoutingParameter)7, 25);
-    router->setRoutingOption((RoutingOption)0, false);
-    router->setRoutingOption((RoutingOption)1, true);
-    router->setRoutingOption((RoutingOption)2, true);
-    router->setRoutingOption((RoutingOption)3, false);
-    router->setRoutingOption((RoutingOption)4, true);
-    router->setRoutingOption((RoutingOption)5, true);
+    router->setRoutingParameter(segmentPenalty, 50);
+    router->setRoutingParameter(anglePenalty, 0);
+    router->setRoutingParameter(crossingPenalty, 200);
+    router->setRoutingParameter(clusterCrossingPenalty, 4000);
+    router->setRoutingParameter(fixedSharedPathPenalty, 20000);
+    router->setRoutingParameter(portDirectionPenalty, 100);
+    router->setRoutingParameter(shapeBufferDistance, 0);
+    router->setRoutingParameter(idealNudgingDistance, 25);
+    router->setRoutingOption(nudgeOrthogonalSegmentsConnectedToShapes, false);
+    router->setRoutingOption(improveHyperedgeRoutesMovingJunctions, true);
+    router->setRoutingOption(penaliseOrthogonalSharedPathsAtConnEnds, true);
+    router->setRoutingOption(nudgeOrthogonalTouchingColinearSegments, false);
+    router->setRoutingOption(performUnifyingNudgingPreprocessingStep, true);
+    router->setRoutingOption(improveHyperedgeRoutesMovingAddingAndDeletingJunctions, true);
     Polygon polygon;
     ConnRef *connRef = nullptr;
     ConnEnd srcPt;
@@ -86,7 +86,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     router->processTransaction();
-    router->outputDiagram("output/inlineoverlap10");
+    router->outputDiagram(IMAGE_OUTPUT_PATH "output/inlineoverlap10");
     bool overlap = router->existsOrthogonalFixedSegmentOverlap();
     delete router;
     return (overlap) ? 1 : 0;

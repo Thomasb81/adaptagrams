@@ -3,11 +3,11 @@ using namespace Avoid;
 int main(void) {
     Router *router = new Router(
             PolyLineRouting | OrthogonalRouting);
-    router->setRoutingPenalty((PenaltyType)0, 50);
-    router->setRoutingPenalty((PenaltyType)1, 0);
-    router->setRoutingPenalty((PenaltyType)2, 0);
-    router->setRoutingPenalty((PenaltyType)3, 4000);
-    router->setRoutingPenalty((PenaltyType)4, 0);
+    router->setRoutingPenalty(segmentPenalty, 50);
+    router->setRoutingPenalty(anglePenalty, 0);
+    router->setRoutingPenalty(crossingPenalty, 0);
+    router->setRoutingPenalty(clusterCrossingPenalty, 4000);
+    router->setRoutingPenalty(fixedSharedPathPenalty, 0);
 
     Polygon poly2(4);
     poly2.ps[0] = Point(348, 1286.05);
@@ -3314,7 +3314,8 @@ int main(void) {
     connRef410->setRoutingType((ConnType)2);
 
     router->processTransaction();
-    router->outputDiagram("output/freeFloatingDirection01");
+    router->outputDiagram(IMAGE_OUTPUT_PATH "output/freeFloatingDirection01");
+    router->outputDiagramSVG(IMAGE_OUTPUT_PATH "output/freeFloatingDirection01");
     assert(connRef239->displayRoute().size() == 4);
     delete router;
     return 0;

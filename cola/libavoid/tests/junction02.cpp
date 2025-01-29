@@ -2,11 +2,11 @@
 using namespace Avoid;
 int main(void) {
     Router *router = new Router(OrthogonalRouting);
-    router->setRoutingPenalty((PenaltyType)0, 50);
-    router->setRoutingPenalty((PenaltyType)1, 0);
-    router->setRoutingPenalty((PenaltyType)2, 0);
-    router->setRoutingPenalty((PenaltyType)3, 4000);
-    router->setRoutingPenalty((PenaltyType)4, 105);
+    router->setRoutingPenalty(segmentPenalty, 50);
+    router->setRoutingPenalty(anglePenalty, 0);
+    router->setRoutingPenalty(crossingPenalty, 0);
+    router->setRoutingPenalty(clusterCrossingPenalty, 4000);
+    router->setRoutingPenalty(fixedSharedPathPenalty, 105);
     router->setRoutingParameter(idealNudgingDistance, 25);
 
     JunctionRef *junction478845150 = new JunctionRef(router, Point(50700, 51075));
@@ -45,10 +45,10 @@ int main(void) {
     ConnEnd dstPt716502036(Point(51800, 50925), 15);
     new ConnRef(router, srcPt716502036, dstPt716502036, 716502036);
     router->processTransaction();
-    router->outputDiagram("output/junction02-1");
+    router->outputDiagram(IMAGE_OUTPUT_PATH "output/junction02-1");
     router->moveJunction(junction478845150, 585, 0);
     router->processTransaction();
-    router->outputDiagram("output/junction02-2");
+    router->outputDiagram(IMAGE_OUTPUT_PATH "output/junction02-2");
     delete router;
     return 0;
 };

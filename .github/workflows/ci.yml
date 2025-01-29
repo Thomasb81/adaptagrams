@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+    types: [opened, reopened]
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  CI:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        os: [ubuntu-20.04, macos-11, windows-2022]
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Build(cmake)
+        run: |
+          pushd cola
+          mkdir -p build
+          pushd build
+          cmake ..
+          cmake --build .
+          popd
+          popd
+
+      - name: Run unit tests
+        run: |
+          pushd cola
+          mkdir -p build_tests
+          pushd build_tests
+          cmake -DBUILD_TESTING=ON ..
+          cmake --build .
+          ctest --output-on-failure
+          popd
+          popd
+
+      - name: Build(make)
+        run: |
+          pushd cola
+          ./autogen.sh
+          popd
+
+      - name: Set up Python 3.11.6
+        if: runner.os == 'Linux'
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11.6
+
+      - name: Build bindings(webassembly)
+        if: runner.os == 'Linux'
+        run: |
+          pushd cola/bindings/webassembly/libavoid-js/
+          npm install
+          python3.11 ./tools/generate.py

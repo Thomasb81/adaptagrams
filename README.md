@@ -68,38 +68,52 @@ Software using one or more of the Adaptagrams libraries include:
  *  [Gaphas][gaphor], an open source Python-based diagramming widget for GTK+, and
  *  [BRL-CAD][brlcad], a powerful cross-platform open source solid modeling system that includes interactive geometry editing, high-performance ray-tracing for rendering and geometric analysis, image and signal-processing tools, a system performance analysis benchmark suite, libraries for robust geometric representation, with more than 20 years of active development.
 
-
-
 Building
 --------
 
 The library code is all contained in the `cola` directory of the repository.
 
-We use GNU `automake` to build.  We've tried to make the contents of the
-repository as platform agnostic as possible, so you'll need to call `aclocal`,
-`autoconf`, and `automake` before `configure`.
+The only dependency is [Cairo][cairo] if debugging SVG output is to be included in several example test cases. The libraries themselves have no dependencies.
 
-The only dependency is [Cairo][cairo] if debugging SVG output is to be included in several example test cases.  The libraries themselves have no dependencies.
+Both `cmake` and GNU `automake` can be used to build. We've tried to make the contents of the
+repository as platform-agnostic as possible.
+
+### CMake
+
+Use common `cmake`, `make` and `make install`. Default options have values to build library as in release mode. Tests, debug logs and more can be enabled with apropriate options, see `CMakeLists.txt` of the library you want to build.
+
+To enable tests use cmake builtin option `BUILD_TESTING` (`-DBUILD_TESTING=ON` in cmake command).
+
+### GNU automake
+
+You'll need to call `aclocal`,
+`autoconf`, and `automake` before `configure`.
 
 Run `./autogen.sh` to compile from scratch.
 
 Use from other languages
 ------------------------
 
-Bindings for use of the Adaptagrams libraries can be generated using [SWIG][swig].  The repository contains a SWIG interface file `cola/adaptagrams.i`.  We have successfully tested and used Adaptagrams from Java and Python in this way.
+### Web/Javascript
 
-Cola in the browser
--------------------
+* [webcola][webcola] (cola.js) is a JavaScript based rewrite of libcola which works well with [D3.js][d3]
+* [webcola-wasm][webcola-wasm] fork of WebCola partially rewritten in Rust and compiled to WebAssembly
+* [libavoid-js][libavoid-js] Javascript/WebAssembly bindings of C++ libavoid library
 
-[cola.js][webcola] (a.k.a. WebCola) is a JavaScript based rewrite of libcola which works well with [D3.js][d3]
+### SWIG (Python & Java)
 
-[d3]: http://d3js.org/
-[webcola]: http://ialab.it.monash.edu/webcola/
+Bindings for use of the Adaptagrams libraries can be generated using [SWIG][swig]. The repository contains a SWIG interface file `cola/adaptagrams.i`. We have successfully tested and used Adaptagrams from Java and Python in this way.
+
+**Current state:** untested and can be buggy([one of issues][swigissue]).
+
+
+[d3]: https://d3js.org/
+[webcola]: https://ialab.it.monash.edu/webcola/
+[webcola-wasm]: https://github.com/Ameobea/webcola-wasm
 [swig]: http://www.swig.org/
-[td]: http://users.monash.edu/~tdwyer/
-[km]: http://users.monash.edu/~kmarriott/
-[mw]: http://users.monash.edu/~mwybrow/
-[sk]: http://skieffer.info/
+[td]: https://users.monash.edu/~tdwyer/
+[mw]: https://users.monash.edu/~mwybrow/
+[sk]: https://skieffer.info/
 [ialab]: http://ialab.it.monash.edu/
 [monash]: http://wwww.csse.monash.edu.au/
 [libvpsc]: http://www.adaptagrams.org/documentation/libvpsc.html
@@ -115,4 +129,5 @@ Cola in the browser
 [cairo]: http://cairographics.org/
 [repo]: https://github.com/mjwybrow/adaptagrams/
 [brlcad]: http://brlcad.org/
-
+[libavoid-js]: https://github.com/Aksem/libavoid-js
+[swigissue]: https://github.com/mjwybrow/adaptagrams/issues/50

@@ -1,4 +1,4 @@
-AM_CPPFLAGS = -I$(top_srcdir)
+AM_CPPFLAGS = -I$(top_srcdir) -DIMAGE_OUTPUT_PATH="" -DTEST_DATA_PATH=""
 
 LDADD = $(top_builddir)/libavoid/libavoid.la
 
@@ -11,7 +11,7 @@ check_PROGRAMS = \
 	penaltyRerouting01 \
 	treeRootCrash01 \
 	treeRootCrash02 \
-        forwardFlowingConnectors01 \
+	forwardFlowingConnectors01 \
 	example \
 	endlessLoop01 \
 	complex \
@@ -19,14 +19,14 @@ check_PROGRAMS = \
 	inline \
 	infinity \
 	latesetup \
-	inlineoverlap01 \
-	inlineoverlap02 \
-	inlineoverlap03 \
-	inlineoverlap04 \
-	inlineoverlap05 \
-	inlineoverlap06 \
-	inlineoverlap07 \
-	inlineoverlap08 \
+	inlineOverlap01 \
+	inlineOverlap02 \
+	inlineOverlap03 \
+	inlineOverlap04 \
+	inlineOverlap05 \
+	inlineOverlap06 \
+	inlineOverlap07 \
+	inlineOverlap08 \
 	inlineOverlap09 \
 	inlineOverlap10 \
 	inlineOverlap11 \
@@ -174,14 +174,14 @@ node1_SOURCES = node1.cpp
 
 vertlineassertion_SOURCES = vertlineassertion.cpp
 
-inlineoverlap01_SOURCES = inlineoverlap01.cpp
-inlineoverlap02_SOURCES = inlineoverlap02.cpp
-inlineoverlap03_SOURCES = inlineoverlap03.cpp
-inlineoverlap04_SOURCES = inlineoverlap04.cpp
-inlineoverlap05_SOURCES = inlineoverlap05.cpp
-inlineoverlap06_SOURCES = inlineoverlap06.cpp
-inlineoverlap07_SOURCES = inlineoverlap07.cpp
-inlineoverlap08_SOURCES = inlineoverlap08.cpp
+inlineOverlap01_SOURCES = inlineOverlap01.cpp
+inlineOverlap02_SOURCES = inlineOverlap02.cpp
+inlineOverlap03_SOURCES = inlineOverlap03.cpp
+inlineOverlap04_SOURCES = inlineOverlap04.cpp
+inlineOverlap05_SOURCES = inlineOverlap05.cpp
+inlineOverlap06_SOURCES = inlineOverlap06.cpp
+inlineOverlap07_SOURCES = inlineOverlap07.cpp
+inlineOverlap08_SOURCES = inlineOverlap08.cpp
 inlineOverlap09_SOURCES = inlineOverlap09.cpp
 inlineOverlap10_SOURCES = inlineOverlap10.cpp
 inlineOverlap11_SOURCES = inlineOverlap11.cpp

@@ -27,8 +27,8 @@
 #include "libdialect/commontypes.h"
 #include "libdialect/io.h"
 #include "libdialect/graphs.h"
-#include "libdialect/util.h"
 #include "libdialect/routing.h"
+
 
 using namespace dialect;
 
@@ -37,14 +37,15 @@ int main(void) {
     // Test that libavoid will route in between nodes that are touching, but
     // not if they are overlapping.
 
-    Graph_SP graph = buildGraphFromTglfFile("graphs/" "special/routing01.tglf");
+    Graph_SP graph = buildGraphFromTglfFile(TEST_DATA_PATH "graphs/" "special/routing01.tglf");
 
     RoutingAdapter ra(Avoid::OrthogonalRouting);
     ra.addNodes(graph->getNodeLookup());
     ra.addEdges(graph->getEdgeLookup());
     ra.route();
 
-    writeStringToFile(graph->writeTglf(), "output/" "routing01_" "routed.tglf");
+    writeStringToFile(graph->writeTglf(), IMAGE_OUTPUT_PATH "output/" "routing01_" "routed.tglf");
+    writeStringToFile(graph->writeSvg(), IMAGE_OUTPUT_PATH "output/routing01_routed.svg");
 
     return 0;
 }

@@ -13,7 +13,7 @@ int test()
 	router1->setRoutingPenalty(Avoid::crossingPenalty);
 	router1->setRoutingPenalty(Avoid::fixedSharedPathPenalty);
 	router1->setRoutingOption(Avoid::penaliseOrthogonalSharedPathsAtConnEnds, true);
-	router1->setRoutingParameter(idealNudgingDistance, 25);
+	router1->setRoutingParameter(Avoid::idealNudgingDistance, 25);
 	poly = Avoid::Polygon(4);
 	poly.setPoint(0, Avoid::Point(51410, 50640));
 	poly.setPoint(1, Avoid::Point(51410, 50960));
@@ -45,7 +45,7 @@ int test()
 	Avoid::ConnRef * conn18168360 = new Avoid::ConnRef(router1, end1, end2);
 	router1->processTransaction();
 
-	router1->outputDiagram("output/2junctions-1");
+	router1->outputDiagram(IMAGE_OUTPUT_PATH "output/2junctions-1");
 	poly = Avoid::Polygon(4);
 	poly.setPoint(0, Avoid::Point(50879, 50885));
 	poly.setPoint(1, Avoid::Point(50879, 50960));
@@ -71,7 +71,7 @@ int test()
 	conn149180423->makePathInvalid();
 	router1->processTransaction();
 
-	router1->outputDiagram("output/2junctions-2");
+	router1->outputDiagram(IMAGE_OUTPUT_PATH "output/2junctions-2");
 	/*
 	junction550292508->setPositionFixed(true);
 	router1->deleteShape(shape365249936);
@@ -97,9 +97,9 @@ int test()
 	router1->processTransaction();
 */
 	bool atEnds = true;
-        bool overlap = router1->existsOrthogonalFixedSegmentOverlap(atEnds);
-        delete router1;
-        return (overlap) ? 1 : 0;
+	bool overlap = router1->existsOrthogonalFixedSegmentOverlap(atEnds);
+	delete router1;
+	return (overlap) ? 1 : 0;
 }
 
 extern "C" int main(void)

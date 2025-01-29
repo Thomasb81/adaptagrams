@@ -182,7 +182,7 @@ void JunctionRef::moveAttachedConns(const Point& newPosition)
             m_connection_pins.begin(); curr != m_connection_pins.end(); ++curr)
     {
         ShapeConnectionPin *pin = *curr;
-        pin->updatePosition(newPosition);
+        pin->setPosition(newPosition);
     }
 }
 

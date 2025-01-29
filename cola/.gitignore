@@ -46,15 +46,12 @@ ltmain.sh
 
 libcola/config.h.in
 libcola/stamp-h1
-libcola/config.h
 libcola/config.h.in~
 
 diff
 
-*/tests/*
-!*/tests/*.cpp
-!*/tests/*.h
-!*/tests/Makefile.am
+*/tests/**/*.tglf
+*/tests/**/*.txt
 !libdialect/tests/swig_tests
 libdialect/tests/swig_tests/output/*
 !libdialect/tests/swig_tests/output/README.txt
@@ -70,3 +67,6 @@ adaptagrams*
 swig-worked
 test-driver
 
+# CLion dirs
+cmake-build-*
+.idea/

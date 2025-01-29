@@ -106,6 +106,10 @@ ConnEnd::ConnEnd(JunctionRef *junctionRef)
 }
 
 
+ConnEnd ConnEnd::createConnEndFromJunctionRef(JunctionRef *junctionRef) {
+    return ConnEnd(junctionRef);
+}
+
 ConnEnd::~ConnEnd()
 {
 }

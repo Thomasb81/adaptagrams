@@ -4,11 +4,11 @@ using namespace Avoid;
 int main(void) {
     Router *router = new Router(
             PolyLineRouting | OrthogonalRouting);
-    router->setRoutingPenalty((PenaltyType)0, 50);
-    router->setRoutingPenalty((PenaltyType)1, 0);
-    router->setRoutingPenalty((PenaltyType)2, 0);
-    router->setRoutingPenalty((PenaltyType)3, 4000);
-    router->setRoutingPenalty((PenaltyType)4, 110);
+    router->setRoutingPenalty(segmentPenalty, 50);
+    router->setRoutingPenalty(anglePenalty, 0);
+    router->setRoutingPenalty(crossingPenalty, 0);
+    router->setRoutingPenalty(clusterCrossingPenalty, 4000);
+    router->setRoutingPenalty(fixedSharedPathPenalty, 110);
     router->setRoutingParameter(idealNudgingDistance, 25);
 
     Polygon poly421433292(4);
@@ -47,7 +47,7 @@ int main(void) {
     connRef223495632->setRoutingType((ConnType)2);
 
     router->processTransaction();
-    router->outputDiagram("output/inlineoverlap03");
+    router->outputDiagram(IMAGE_OUTPUT_PATH "output/inlineoverlap03");
     bool overlap = router->existsOrthogonalFixedSegmentOverlap();
     delete router;
     return (overlap) ? 1 : 0;

@@ -781,7 +781,11 @@ public:
         }
         if (!found)
         {
-            found = new VertInf(router, dummyOrthogID, Point(posX, pos));
+            VertID vertId = dummyOrthogID;
+            if (shapeSide) {
+                vertId = dummyOrthogShapeID;
+            }
+            found = new VertInf(router, vertId, Point(posX, pos));
             vertInfs.insert(found);
         }
         return found;
@@ -1437,7 +1441,6 @@ static void processEventVert(Router *router, NodeSet& scanline,
             else
             {
                 // There are overlapping shapes along this shape edge.
-
                 if ((minLimitMax > minLimit) && (minLimitMax >= minShape))
                 {
                     LineSegment *line = segments.insert(
@@ -1590,7 +1593,10 @@ static void processEventHori(Router *router, NodeSet& scanline,
             double maxShape = v->max[YDIM];
             // As far as we can see.
             double minLimit, maxLimit;
+            // minLimitMax - minimal Y value below the shape, if shape has no neighbours below, it's Y value of line below the bottom side of this shape
+            // maxLimitMin - maximal Y value above the shape
             double minLimitMax, maxLimitMin;
+
             v->findFirstPointAboveAndBelow(YDIM, lineX, minLimit, maxLimit,
                     minLimitMax, maxLimitMin);
 
@@ -1808,8 +1814,8 @@ extern void generateStaticOrthogonalVisGraph(Router *router)
     fixConnectionPointVisibilityOnOutsideOfVisibilityGraph(events, totalEvents,
             (ConnDirLeft | ConnDirRight));
 
-    // Process the vertical sweep -- creating cadidate horizontal edges.
-    // We do multiple passes over sections of the list so we can add relevant
+    // Process the vertical sweep -- creating candidate horizontal edges.
+    // We do multiple passes over sections of the list, so we can add relevant
     // entries to the scanline that might follow, before processing them.
     SegmentListWrapper segments;
     NodeSet scanline;
@@ -1859,6 +1865,7 @@ extern void generateStaticOrthogonalVisGraph(Router *router)
     }
 
     segments.list().sort();
+    // DEBUG HELPER: here you can check horizontal lines, see `segments` variable
 
     // Set up the events for the horizontal sweep.
     SegmentListWrapper vertSegments;
@@ -1928,6 +1935,7 @@ extern void generateStaticOrthogonalVisGraph(Router *router)
             {
                 for (unsigned j = posStartIndex; j < posFinishIndex; ++j)
                 {
+                    // DEBUG HELPER: create vertical lines
                     processEventHori(router, scanline, vertSegments,
                             events[j], pass);
                 }

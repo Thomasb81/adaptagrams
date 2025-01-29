@@ -4,11 +4,11 @@ using namespace Avoid;
 int main(void) {
     Router *router = new Router(
             PolyLineRouting | OrthogonalRouting);
-    router->setRoutingPenalty((PenaltyType)0, 50);
-    router->setRoutingPenalty((PenaltyType)1, 0);
-    router->setRoutingPenalty((PenaltyType)2, 400);
-    router->setRoutingPenalty((PenaltyType)3, 4000);
-    router->setRoutingPenalty((PenaltyType)4, 110);
+    router->setRoutingPenalty(segmentPenalty, 50);
+    router->setRoutingPenalty(anglePenalty, 0);
+    router->setRoutingPenalty(crossingPenalty, 400);
+    router->setRoutingPenalty(clusterCrossingPenalty, 4000);
+    router->setRoutingPenalty(fixedSharedPathPenalty, 110);
     router->setRoutingParameter(idealNudgingDistance, 25);
 
     Polygon poly143407352(4);
@@ -82,7 +82,7 @@ int main(void) {
     connRef387080925->setRoutingType((ConnType)2);
 
     router->processTransaction();
-    router->outputDiagram("output/orthordering-01");
+    router->outputDiagram(IMAGE_OUTPUT_PATH "output/orthordering-01");
     
     int crossings = router->existsCrossings();
 

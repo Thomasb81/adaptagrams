@@ -3,15 +3,15 @@ using namespace Avoid;
 int main(void) {
     Router *router = new Router(
             PolyLineRouting | OrthogonalRouting);
-    router->setRoutingPenalty((PenaltyType)0, 50);
-    router->setRoutingPenalty((PenaltyType)1, 0);
-    router->setRoutingPenalty((PenaltyType)2, 200);
-    router->setRoutingPenalty((PenaltyType)3, 4000);
-    router->setRoutingPenalty((PenaltyType)4, 9000);
+    router->setRoutingPenalty(segmentPenalty, 50);
+    router->setRoutingPenalty(anglePenalty, 0);
+    router->setRoutingPenalty(crossingPenalty, 200);
+    router->setRoutingPenalty(clusterCrossingPenalty, 4000);
+    router->setRoutingPenalty(fixedSharedPathPenalty, 9000);
     router->setRoutingPenalty((PenaltyType)5, 100);
-    router->setRoutingOption((RoutingOption)0, false);
-    router->setRoutingOption((RoutingOption)1, true);
-    router->setRoutingOption((RoutingOption)2, true);
+    router->setRoutingOption(nudgeOrthogonalSegmentsConnectedToShapes, false);
+    router->setRoutingOption(improveHyperedgeRoutesMovingJunctions, true);
+    router->setRoutingOption(penaliseOrthogonalSharedPathsAtConnEnds, true);
     router->setRoutingOption(improveHyperedgeRoutesMovingAddingAndDeletingJunctions, true);
     router->setRoutingParameter(idealNudgingDistance, 25);
 
@@ -82,7 +82,7 @@ int main(void) {
     connRef513246012->setRoutingType((ConnType)2);
 
     router->processTransaction();
-    router->outputDiagram("output/improveHyperedge03");
+    router->outputDiagram(IMAGE_OUTPUT_PATH "output/improveHyperedge03");
 
     bool overlaps = router->existsOrthogonalSegmentOverlap(true);
     delete router;

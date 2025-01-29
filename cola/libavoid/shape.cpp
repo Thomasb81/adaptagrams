@@ -70,7 +70,7 @@ void ShapeRef::moveAttachedConns(const Polygon& newPoly)
             m_connection_pins.begin(); curr != m_connection_pins.end(); ++curr)
     {
         ShapeConnectionPin *pin = *curr;
-        pin->updatePosition(newPoly);
+        pin->setPosition(newPoly);
     }
 }
 

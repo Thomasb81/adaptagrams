@@ -173,6 +173,17 @@ class AVOID_EXPORT ConnEnd
         //!
         ConnEnd(JunctionRef *junctionRef);
 
+        //! @brief Constructs a ConnEnd attached to one of the connection
+        //!        pins on a junction on the same way as `ConnEnd(JunctionRef
+        //!        *junctionRef);` . It's a helper for libavoid-js, because
+        //!        wasm compiler doesn't support multiple constructors with
+        //!        the same number of arguments.
+        //!
+        //! @param[in]  junctionRef           A pointer to the containing
+        //!                                   junction's junctionRef.
+        //!
+        static ConnEnd createConnEndFromJunctionRef(JunctionRef *junctionRef);
+
 
         //! @brief Returns the kind of connection this ConnEnd represents.
         //!

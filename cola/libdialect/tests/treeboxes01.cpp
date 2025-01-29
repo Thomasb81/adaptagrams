@@ -39,6 +39,7 @@
 #include "libdialect/trees.h"
 #include "libdialect/treeplacement.h"
 
+
 using namespace dialect;
 
 using std::vector;
@@ -55,7 +56,7 @@ int main(void) {
 
     HolaOpts opts;
     // Build a graph.
-    Graph_SP graph = buildGraphFromTglfFile("graphs/" "special/treeplacement4.tglf");
+    Graph_SP graph = buildGraphFromTglfFile(TEST_DATA_PATH "graphs/" "special/treeplacement4.tglf");
     // Peel.
     Trees trees = peel(*graph);
     // There should be two trees.
@@ -69,7 +70,7 @@ int main(void) {
     lor.route();
     OrthoPlanariser op(graph);
     Graph_SP P = op.planarise();
-    writeStringToFile(P->writeTglf(), "output/" "treeboxes01_" "planar_layout.tglf");
+    writeStringToFile(P->writeTglf(), IMAGE_OUTPUT_PATH "output/" "treeboxes01_" "planar_layout.tglf");
 
     // Compute the face set.
     FaceSet faceSet(P);
@@ -83,7 +84,8 @@ int main(void) {
         }
     }
     // Show the tree's layout.
-    writeStringToFile(t0->underlyingGraph()->writeTglf(), "output/" "treeboxes01_" "tree_layout.tglf");
+    writeStringToFile(t0->underlyingGraph()->writeTglf(), IMAGE_OUTPUT_PATH "output/" "treeboxes01_" "tree_layout.tglf");
+    writeStringToFile(t0->underlyingGraph()->writeSvg(), IMAGE_OUTPUT_PATH "output/treeboxes01_tree_layout.svg");
 
     bool verbose = false;
 
@@ -106,7 +108,7 @@ int main(void) {
     best->insertTreeNode(padding);
     // Show the result.
     std::string tglfWithBox = P->writeTglf();
-    writeStringToFile(tglfWithBox, "output/" "treeboxes01_" "with_tree_box.tglf");
+    writeStringToFile(tglfWithBox, IMAGE_OUTPUT_PATH "output/" "treeboxes01_" "with_tree_box.tglf");
 
     cout << tglfWithBox << endl;
 

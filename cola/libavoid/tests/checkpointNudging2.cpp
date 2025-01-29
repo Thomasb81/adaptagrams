@@ -5,15 +5,15 @@ using namespace Avoid;
 int main(void) {
     Router *router = new Router(
             PolyLineRouting | OrthogonalRouting);
-    router->setRoutingParameter((RoutingParameter)0, 50);
-    router->setRoutingParameter((RoutingParameter)1, 0);
-    router->setRoutingParameter((RoutingParameter)2, 0);
-    router->setRoutingParameter((RoutingParameter)3, 4000);
-    router->setRoutingParameter((RoutingParameter)4, 0);
-    router->setRoutingParameter((RoutingParameter)5, 100);
-    router->setRoutingOption((RoutingOption)0, true);
-    router->setRoutingOption((RoutingOption)1, true);
-    router->setRoutingOption((RoutingOption)2, false);
+    router->setRoutingParameter(segmentPenalty, 50);
+    router->setRoutingParameter(anglePenalty, 0);
+    router->setRoutingParameter(crossingPenalty, 0);
+    router->setRoutingParameter(clusterCrossingPenalty, 4000);
+    router->setRoutingParameter(fixedSharedPathPenalty, 0);
+    router->setRoutingParameter(portDirectionPenalty, 100);
+    router->setRoutingOption(nudgeOrthogonalSegmentsConnectedToShapes, true);
+    router->setRoutingOption(improveHyperedgeRoutesMovingJunctions, true);
+    router->setRoutingOption(penaliseOrthogonalSharedPathsAtConnEnds, false);
 
 
     Polygon poly1(4);
@@ -2593,7 +2593,7 @@ int main(void) {
 #endif
 
     router->processTransaction();
-    router->outputDiagram("output/checkpointNudging2");
+    router->outputDiagram(IMAGE_OUTPUT_PATH "output/checkpointNudging2");
 
     // Second last segment of connector 256 and 258 should be in line with each other 
     // in the y dimension, in line with the checkpoint.
