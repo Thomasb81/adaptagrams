@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 option(ENABLE_CAIRO "Cairo support for SVG generation" OFF)
 
 add_library(${PROJECT_NAME}
+    SHARED
     box.cpp
     cc_clustercontainmentconstraints.cpp
     cc_nonoverlapconstraints.cpp

@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 project(topology)
 
 add_library(${PROJECT_NAME}
+    SHARED
     cola_topology_addon.cpp
     compute_forces.cpp
     orthogonal_topology.cpp

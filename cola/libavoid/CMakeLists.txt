@@ -9,6 +9,7 @@ option(ESTIMATED_COST_DEBUG "Debug estimated cost" OFF)
 option(ASTAR_DEBUG "Debug ASTAR" OFF)
 
 add_library(${PROJECT_NAME}
+    SHARED
     actioninfo.cpp
     connectionpin.cpp
     connector.cpp

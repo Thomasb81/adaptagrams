@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 project(dialect)
 
 add_library(${PROJECT_NAME}
+    SHARED
     aca.cpp
     bendseqlookup.cpp
     chains.cpp
