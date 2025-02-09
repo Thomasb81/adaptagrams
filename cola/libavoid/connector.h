@@ -32,6 +32,7 @@
 #include <utility>
 #include <list>
 #include <vector>
+#include <memory>
 
 #include "libavoid/dllexport.h"
 #include "libavoid/vertices.h"
@@ -45,7 +46,7 @@ class Router;
 class ConnRef;
 class JunctionRef;
 class ShapeRef;
-typedef std::list<ConnRef *> ConnRefList;
+typedef std::list<std::shared_ptr<ConnRef> > ConnRefList;
 
 
 //! @brief  Describes the type of routing that is performed for each 
@@ -128,7 +129,7 @@ class AVOID_EXPORT Checkpoint
 //! Usually, it is expected that you would create a ConnRef for each connector 
 //! in your diagram and keep that reference in your own connector class.
 //!
-class AVOID_EXPORT ConnRef
+class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
 {
     public:
         //! @brief Constructs a connector with no endpoints specified.
@@ -153,6 +154,7 @@ class AVOID_EXPORT ConnRef
         //!                     among all objects.
         //!
         ConnRef(Router *router, const unsigned int id = 0);
+        static std::shared_ptr<ConnRef> createConnRef(Router *router, const unsigned int id = 0);
         //! @brief Constructs a connector with endpoints specified.
         //!
         //! The constructor requires a valid Router instance.  This router
@@ -174,6 +176,10 @@ class AVOID_EXPORT ConnRef
         //!
         ConnRef(Router *router, const ConnEnd& src, const ConnEnd& dst,
                 const unsigned int id = 0);
+        static std::shared_ptr<ConnRef> createConnRef(Router *router, const ConnEnd& src, const ConnEnd& dst,
+                const unsigned int id = 0);
+        std::shared_ptr<ConnRef> getPtr();
+
 
 // To prevent C++ objects from being destroyed in garbage collected languages
 // when the libraries are called from SWIG, we hide the declarations of the
@@ -298,7 +304,7 @@ class AVOID_EXPORT ConnRef
         //!
         //! @return  A pair containing pointers to the new JunctionRef and 
         //!          ConnRef.
-        std::pair<JunctionRef *, ConnRef *> splitAtSegment(
+        std::pair<JunctionRef *, std::shared_ptr<ConnRef> > splitAtSegment(
                 const size_t segmentN);
 
         //! @brief  Allows the user to specify a set of checkpoints that this

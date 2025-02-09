@@ -70,9 +70,9 @@ ActionInfo::ActionInfo(ActionType t, JunctionRef *j)
             (type == JunctionMove));
 }
 
-ActionInfo::ActionInfo(ActionType t, ConnRef *c)
+ActionInfo::ActionInfo(ActionType t, std::shared_ptr<ConnRef> c)
     : type(t),
-      objPtr(c)
+      objPtr(c.get())
 {
     COLA_ASSERT(type == ConnChange);
 }

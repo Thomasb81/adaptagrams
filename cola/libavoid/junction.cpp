@@ -170,7 +170,7 @@ void JunctionRef::outputCode(FILE *fp) const
 void JunctionRef::moveAttachedConns(const Point& newPosition)
 {
     // Update positions of attached connector ends.
-    for (std::set<ConnEnd *>::iterator curr = m_following_conns.begin();
+    for (std::set<ConnEnd * >::iterator curr = m_following_conns.begin();
             curr != m_following_conns.end(); ++curr)
     {
         ConnEnd *connEnd = *curr;
@@ -194,7 +194,7 @@ ConnRef *JunctionRef::removeJunctionAndMergeConnectors(void)
         return nullptr;
     }
 
-    std::set<ConnEnd *>::iterator curr = m_following_conns.begin();
+    std::set<ConnEnd * >::iterator curr = m_following_conns.begin();
     ConnEnd *connEnd1 = *curr;
     ++curr;
     ConnEnd *connEnd2 = *curr;
@@ -202,7 +202,7 @@ ConnRef *JunctionRef::removeJunctionAndMergeConnectors(void)
     COLA_ASSERT(connEnd1->m_conn_ref != nullptr);
 
     // The second conn will be the one we will delete.
-    ConnRef *conn2 = connEnd2->m_conn_ref;
+    ConnRef *conn2 = connEnd2->m_conn_ref.get();
     // Determine its endpoint that is not attached to the junction.
     ConnEnd *connEnd2Other = (conn2->m_src_connend == connEnd2) ? 
             conn2->m_dst_connend : conn2->m_src_connend;
@@ -217,13 +217,13 @@ ConnRef *JunctionRef::removeJunctionAndMergeConnectors(void)
             connEnd1->endpointType(), *connEnd2Other);
 
     // Delete the second connector.
-    m_router->deleteConnector(conn2);
+    m_router->deleteConnector(conn2->getPtr());
 
     // Remove the junction from the router scene.  It should get deleted later.
     m_router->deleteJunction(this);
 
     // Return the first (i.e. merged) connector.
-    return connEnd1->m_conn_ref;
+    return connEnd1->m_conn_ref.get();
 }
 
 

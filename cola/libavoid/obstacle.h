@@ -32,7 +32,7 @@
 
 #include <list>
 #include <set>
-
+#include <memory>
 #include <cstdio>
 
 #include "libavoid/geometry.h"
@@ -47,7 +47,7 @@ class Obstacle;
 class ConnEnd;
 class ConnRef;
 typedef std::list<Obstacle *> ObstacleList;
-typedef std::list<ConnRef *> ConnRefList;
+typedef std::list<std::shared_ptr<ConnRef> > ConnRefList;
 
 
 // @brief   The Obstacle class represents an obstacle that must be 

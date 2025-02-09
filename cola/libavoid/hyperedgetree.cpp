@@ -133,7 +133,7 @@ void HyperedgeTreeNode::writeEdgesToConns(HyperedgeTreeEdge *ignored,
 // appropriate ConnEnds for each connector.
 //
 void HyperedgeTreeNode::addConns(HyperedgeTreeEdge *ignored, Router *router,
-        ConnRefList& oldConns, ConnRef *conn)
+        ConnRefList& oldConns, std::shared_ptr<ConnRef> conn)
 {
     // If no connector is set, then we must be starting off at a junction.
     COLA_ASSERT(conn || junction);
@@ -151,8 +151,8 @@ void HyperedgeTreeNode::addConns(HyperedgeTreeEdge *ignored, Router *router,
                 // If we're at a junction, then we are effectively starting
                 // our traversal along a connector, so create this new connector
                 // and set it's start ConnEnd to be this junction.
-                conn = new ConnRef(router);
-                router->removeObjectFromQueuedActions(conn);
+                conn = ConnRef::createConnRef(router);
+                router->removeObjectFromQueuedActions(conn.get());
                 conn->makeActive();
                 conn->m_initialised = true;
                 ConnEnd connend(junction);
@@ -160,7 +160,7 @@ void HyperedgeTreeNode::addConns(HyperedgeTreeEdge *ignored, Router *router,
             }
     
             // Set the connector for this edge.
-            (*curr)->conn = conn;
+            (*curr)->conn = conn->getPtr();
             
             // Continue recursive traversal.
             (*curr)->addConns(this, router, oldConns);
@@ -210,7 +210,7 @@ void HyperedgeTreeNode::updateConnEnds(HyperedgeTreeEdge *ignored,
                 // If we're at a junction, then we are effectively starting
                 // our traversal along a connector, so create this new connector
                 // and set it's start ConnEnd to be this junction.
-                forward = travellingForwardOnConnector(edge->conn, junction);
+                forward = travellingForwardOnConnector(edge->conn.get(), junction);
 
                 std::pair<ConnEnd, ConnEnd> existingEnds = 
                         edge->conn->endpointConnEnds();
@@ -391,7 +391,7 @@ bool HyperedgeTreeNode::isImmovable(void) const
 // Constructs a new hyperedge tree edge, given two endpoint nodes.
 //
 HyperedgeTreeEdge::HyperedgeTreeEdge(HyperedgeTreeNode *node1,
-        HyperedgeTreeNode *node2, ConnRef *conn)
+        HyperedgeTreeNode *node2, std::shared_ptr<ConnRef> conn)
     : conn(conn),
       hasFixedRoute(false)
 {
@@ -555,7 +555,7 @@ void HyperedgeTreeEdge::writeEdgesToConns(HyperedgeTreeNode *ignored,
         if (conn->router()->debugHandler())
         {
             conn->router()->debugHandler()->updateConnectorRoute(
-                    conn, -1, -1);
+                    conn.get(), -1, -1);
         }
 #endif
     }

@@ -313,7 +313,7 @@ void buildConnectorRouteCheckpointCache(Router *router)
     for (ConnRefList::const_iterator curr = router->connRefs.begin(); 
             curr != router->connRefs.end(); ++curr) 
     {
-        ConnRef *conn = *curr;
+        ConnRef *conn = (*curr).get();
         if (conn->routingType() != ConnType_Orthogonal)
         {
             continue;
@@ -364,7 +364,7 @@ void clearConnectorRouteCheckpointCache(Router *router)
     for (ConnRefList::const_iterator curr = router->connRefs.begin(); 
             curr != router->connRefs.end(); ++curr) 
     {
-        ConnRef *conn = *curr;
+        ConnRef *conn = (*curr).get();
         if (conn->routingType() != ConnType_Orthogonal)
         {
             continue;

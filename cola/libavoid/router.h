@@ -333,11 +333,11 @@ class ConnRerouteFlagDelegate {
     public:
         ConnRerouteFlagDelegate();
         ~ConnRerouteFlagDelegate();
-        bool *addConn(ConnRef *conn);
-        void removeConn(ConnRef *conn);
+        bool *addConn(std::shared_ptr<ConnRef> conn);
+        void removeConn(std::shared_ptr<ConnRef> conn);
         void alertConns(void);
     private:
-        std::list<std::pair<ConnRef *, bool> > m_mapping;
+        std::list<std::pair<std::shared_ptr<ConnRef> , bool> > m_mapping;
 };
 
 static const double zeroParamValue = 0;
@@ -560,7 +560,7 @@ class AVOID_EXPORT Router {
         //! @param[in]  connector  Pointer reference to the connector being
         //!                        removed.
         //!
-        void deleteConnector(ConnRef *connector);
+        void deleteConnector(std::shared_ptr<ConnRef> connector);
 
         //! @brief Move an existing junction within the router scene.
         //!
@@ -833,8 +833,8 @@ class AVOID_EXPORT Router {
         void addShape(ShapeRef *shape);
         void addJunction(JunctionRef *junction);
         void addCluster(ClusterRef *cluster);
-        void modifyConnector(ConnRef *conn);
-        void modifyConnector(ConnRef *conn, unsigned int type,
+        void modifyConnector(std::shared_ptr<ConnRef> conn);
+        void modifyConnector(std::shared_ptr<ConnRef> conn, unsigned int type,
                 const ConnEnd &connEnd, bool connPinUpdate = false);
         void modifyConnectionPin(ShapeConnectionPin *pin);
 

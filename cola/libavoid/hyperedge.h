@@ -32,7 +32,7 @@
 #include <list>
 #include <vector>
 #include <set>
-
+#include <memory>
 #include "libavoid/dllexport.h"
 
 namespace Avoid {
@@ -47,7 +47,7 @@ class VertInf;
 typedef std::list<ConnEnd> ConnEndList;
 
 //! @brief   A list of ConnRef objects.
-typedef std::list<ConnRef *> ConnRefList;
+typedef std::list<std::shared_ptr<ConnRef> > ConnRefList;
 
 //! @brief   A list of JunctionRef objects.
 typedef std::list<JunctionRef *> JunctionRefList;

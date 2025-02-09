@@ -34,7 +34,7 @@
 #include <list>
 #include <vector>
 #include <utility>
-
+#include <memory>
 #include "libavoid/dllexport.h"
 #include "libavoid/geometry.h"
 
@@ -47,7 +47,7 @@ class JunctionRef;
 class Router;
 class ConnRef;
 class ShapeConnectionPin;
-typedef std::list<ConnRef *> ConnRefList;
+typedef std::list<std::shared_ptr<ConnRef> > ConnRefList;
 class VertInf;
 
 
@@ -252,7 +252,7 @@ class AVOID_EXPORT ConnEnd
         
         // For referencing ConnEnds
         Obstacle *m_anchor_obj;  // The shape/junction this is attached to.
-        ConnRef *m_conn_ref;    // The parent connector.
+        std::shared_ptr<ConnRef> m_conn_ref;    // The parent connector.
         
         // The pin to which the ConnEnd is attached.
         ShapeConnectionPin *m_active_pin;  

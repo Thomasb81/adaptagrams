@@ -2103,7 +2103,7 @@ static void buildOrthogonalNudgingSegments(Router *router,
                     // This segment includes one of the routing
                     // checkpoints so we shouldn't shift it.
                     segmentList.push_back(new NudgingShiftSegment(
-                            *curr, indexLow, indexHigh, dim));
+                            (*curr).get(), indexLow, indexHigh, dim));
                     continue;
                 }
 
@@ -2164,14 +2164,14 @@ static void buildOrthogonalNudgingSegments(Router *router,
                         if ((minLim == maxLim) || (*curr)->hasFixedRoute())
                         {
                             // Fixed.
-                            segmentList.push_back(new NudgingShiftSegment(*curr,
+                            segmentList.push_back(new NudgingShiftSegment((*curr).get(),
                                     indexLow, indexHigh, dim));
                         }
                         else
                         {
                             // Shiftable.
                             NudgingShiftSegment *segment = new NudgingShiftSegment(
-                                    *curr, indexLow, indexHigh, false, false, dim,
+                                    (*curr).get(), indexLow, indexHigh, false, false, dim,
                                     minLim, maxLim);
                             segment->finalSegment = true;
                             segment->endsInShape = (endsInShapes > 0);
@@ -2190,7 +2190,7 @@ static void buildOrthogonalNudgingSegments(Router *router,
                     {
                         // The first and last segment of a connector can't be
                         // shifted.  We call them fixed segments.
-                        segmentList.push_back(new NudgingShiftSegment(*curr,
+                        segmentList.push_back(new NudgingShiftSegment((*curr).get(),
                                indexLow, indexHigh, dim));
                     }
                     continue;
@@ -2264,7 +2264,7 @@ static void buildOrthogonalNudgingSegments(Router *router,
                     }
                 }
 
-                NudgingShiftSegment *nss = new NudgingShiftSegment(*curr,
+                NudgingShiftSegment *nss = new NudgingShiftSegment((*curr).get(),
                         indexLow, indexHigh, isSBend, isZBend, dim,
                         minLim, maxLim);
                 nss->checkpoints = checkpoints;
@@ -2275,7 +2275,7 @@ static void buildOrthogonalNudgingSegments(Router *router,
 }
 
 
-typedef std::vector<ConnRef *> ConnRefVector;
+typedef std::vector<std::shared_ptr<ConnRef> > ConnRefVector;
 typedef std::vector<Polygon> RouteVector;
 
 
@@ -3176,7 +3176,7 @@ void ImproveOrthogonalRoutes::buildOrthogonalNudgingOrderInfo(void)
     // Do segment splitting.
     for (size_t ind1 = 0; ind1 < connRefs.size(); ++ind1)
     {
-        ConnRef *conn = connRefs[ind1];
+        ConnRef *conn = connRefs[ind1].get();
         if (conn->routingType() != ConnType_Orthogonal)
         {
             continue;
@@ -3189,7 +3189,7 @@ void ImproveOrthogonalRoutes::buildOrthogonalNudgingOrderInfo(void)
                 continue;
             }
 
-            ConnRef *conn2 = connRefs[ind2];
+            ConnRef *conn2 = connRefs[ind2].get();
             if (conn2->routingType() != ConnType_Orthogonal)
             {
                 continue;
@@ -3203,7 +3203,7 @@ void ImproveOrthogonalRoutes::buildOrthogonalNudgingOrderInfo(void)
 
     for (size_t ind1 = 0; ind1 < connRefs.size(); ++ind1)
     {
-        ConnRef *conn = connRefs[ind1];
+        ConnRef *conn = connRefs[ind1].get();
         if (conn->routingType() != ConnType_Orthogonal)
         {
             continue;
@@ -3211,7 +3211,7 @@ void ImproveOrthogonalRoutes::buildOrthogonalNudgingOrderInfo(void)
 
         for (size_t ind2 = ind1 + 1; ind2 < connRefs.size(); ++ind2)
         {
-            ConnRef *conn2 = connRefs[ind2];
+            ConnRef *conn2 = connRefs[ind2].get();
             if (conn2->routingType() != ConnType_Orthogonal)
             {
                 continue;

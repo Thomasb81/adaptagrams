@@ -62,7 +62,7 @@ class ActionInfo {
         ActionInfo(ActionType t, ShapeRef *s);
         ActionInfo(ActionType t, JunctionRef *j, const Point& p);
         ActionInfo(ActionType t, JunctionRef *j);
-        ActionInfo(ActionType t, ConnRef *c);
+        ActionInfo(ActionType t, std::shared_ptr<ConnRef> c);
         ActionInfo(ActionType t, ShapeConnectionPin *p);
         ~ActionInfo();
         Obstacle *obstacle(void) const;

@@ -503,7 +503,7 @@ void HyperedgeImprover::removeZeroLengthEdges(HyperedgeTreeNode *self,
                     fprintf(stderr, "                   Deleted junction %u\n",
                             other->junction->id());
                     fprintf(stderr, "                   Deleted connector %u\n",
-                            edge->conn->id());
+                            edge->conn.get()->id());
 #endif
 
                     // Delete one of the junctions.
@@ -522,7 +522,7 @@ void HyperedgeImprover::removeZeroLengthEdges(HyperedgeTreeNode *self,
                     other->junction = nullptr;
 
                     // Delete the connector on the zero length edge.
-                    m_deleted_connectors.push_back(edge->conn);
+                    m_deleted_connectors.push_back(edge->conn->getPtr());
                     edge->conn = nullptr;
 
                     target = self;
@@ -743,15 +743,15 @@ void HyperedgeImprover::outputHyperedgesToSVG(unsigned int pass,
 void HyperedgeImprover::getEndpoints(JunctionRef *junction, JunctionRef *ignore,
         std::set<VertInf *>& endpoints)
 {
-    for (std::set<ConnEnd *>::iterator curr =
+    for (std::set<ConnEnd * >::iterator curr =
             junction->m_following_conns.begin();
             curr != junction->m_following_conns.end(); ++curr)
     {
         ConnEnd *connEnd = *curr;
         COLA_ASSERT(connEnd->m_conn_ref != nullptr);
-        ConnRef *connRef = connEnd->m_conn_ref;
+        std::shared_ptr<ConnRef> connRef = connEnd->m_conn_ref;
         std::pair<Obstacle *, Obstacle *> anchors =
-                connRef->endpointAnchors();
+                connRef.get()->endpointAnchors();
 
         JunctionRef *junction1 =
                 dynamic_cast<JunctionRef *> (anchors.first);
@@ -764,7 +764,7 @@ void HyperedgeImprover::getEndpoints(JunctionRef *junction, JunctionRef *ignore,
         }
         else
         {
-            endpoints.insert(connRef->m_src_vert);
+            endpoints.insert(connRef.get()->m_src_vert);
         }
 
         JunctionRef *junction2 =
@@ -778,7 +778,7 @@ void HyperedgeImprover::getEndpoints(JunctionRef *junction, JunctionRef *ignore,
         }
         else
         {
-            endpoints.insert(connRef->m_dst_vert);
+            endpoints.insert(connRef.get()->m_dst_vert);
         }
     }
 }
@@ -792,7 +792,7 @@ void HyperedgeImprover::execute(bool canMakeMajorChanges)
     ConnRefList::iterator connRefIt = m_router->connRefs.begin();
     while (connRefIt != m_router->connRefs.end())
     {
-        ConnRef *connRef = *connRefIt;
+        ConnRef *connRef = (*connRefIt).get();
         JunctionRef *jFront = nullptr;
         JunctionRef *jBack = nullptr;
 
@@ -880,7 +880,7 @@ void HyperedgeImprover::execute(bool canMakeMajorChanges)
                 nodeFront->point = route.at(0);
                 nodeFront->isConnectorSource = true;
             }
-            new HyperedgeTreeEdge(prev, node, connRef);
+            new HyperedgeTreeEdge(prev, node, connRef->getPtr());
             prev = node;
         }
         ++connRefIt;
@@ -1196,7 +1196,7 @@ HyperedgeTreeNode *HyperedgeImprover::moveJunctionAlongCommonEdge(
 
             // And we create a new connector between the original junction
             // and the new junction.
-            ConnRef *conn = new ConnRef(m_router);
+            ConnRef *conn = ConnRef::createConnRef(m_router).get();
             m_router->removeObjectFromQueuedActions(conn);
             conn->makeActive();
             conn->m_initialised = true;
@@ -1204,8 +1204,8 @@ HyperedgeTreeNode *HyperedgeImprover::moveJunctionAlongCommonEdge(
             conn->updateEndPoint(VertID::src, srcConnend);
             ConnEnd tarConnend(self->junction);
             conn->updateEndPoint(VertID::tar, tarConnend);
-            commonEdges[0]->conn = conn;
-            m_new_connectors.push_back(conn);
+            commonEdges[0]->conn = conn->getPtr();
+            m_new_connectors.push_back(conn->getPtr());
 
 #ifdef MAJOR_HYPEREDGE_IMPROVEMENT_DEBUG
             fprintf(stderr, "HyperedgeImprover: Split junction %u:\n",

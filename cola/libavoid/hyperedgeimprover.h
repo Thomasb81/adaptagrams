@@ -28,7 +28,7 @@
 #include <map>
 #include <set>
 #include <list>
-
+#include <memory>
 
 namespace Avoid {
 
@@ -45,7 +45,7 @@ typedef std::map<JunctionRef *, ShiftSegmentList> RootSegmentsMap;
 typedef std::map<JunctionRef *, HyperedgeTreeNode *>
         JunctionHyperedgeTreeNodeMap;
 typedef std::set<JunctionRef *> JunctionSet;
-typedef std::list<ConnRef *> ConnRefList;
+typedef std::list<std::shared_ptr<ConnRef> > ConnRefList;
 typedef std::list<JunctionRef *> JunctionRefList;
 
 class HyperedgeImprover

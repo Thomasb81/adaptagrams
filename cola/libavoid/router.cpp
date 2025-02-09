@@ -113,7 +113,8 @@ Router::~Router()
     while (conn != connRefs.end())
     {
         db_printf("Deleting connector %u in ~Router()\n", (*conn)->id());
-        delete *conn;
+        //delete *conn;
+        (*conn).reset();
         conn = connRefs.begin();
     }
 
@@ -173,7 +174,7 @@ ShapeRef *Router::shapeContainingPoint(const Point& point)
     return nullptr;
 }
 
-void Router::modifyConnector(ConnRef *conn, const unsigned int type,
+void Router::modifyConnector(std::shared_ptr<ConnRef> conn, const unsigned int type,
         const ConnEnd& connEnd, bool connPinMoveUpdate)
 {
     ActionInfo modInfo(ConnChange, conn);
@@ -199,7 +200,7 @@ void Router::modifyConnector(ConnRef *conn, const unsigned int type,
 }
 
 
-void Router::modifyConnector(ConnRef *conn)
+void Router::modifyConnector(std::shared_ptr<ConnRef> conn)
 {
     ActionInfo modInfo(ConnChange, conn);
     
@@ -309,10 +310,11 @@ void Router::deleteShape(ShapeRef *shape)
 }
 
 
-void Router::deleteConnector(ConnRef *connector)
+void Router::deleteConnector(std::shared_ptr<ConnRef> connector)
 {
     m_currently_calling_destructors = true;
-    delete connector;
+    //delete connector;
+    connector.reset();
     m_currently_calling_destructors = false;
 }
 
@@ -955,7 +957,7 @@ void Router::rerouteAndCallbackConnectors(void)
                 numOfReroutedConns, totalConns);
         ++numOfReroutedConns;
 
-        ConnRef *connector = *i;
+        ConnRef *connector = (*i).get();
         if (hyperedgeConns.find(connector) != hyperedgeConns.end())
         {
             // This will be rerouted by the hyperedge code, so do nothing.
@@ -973,7 +975,7 @@ void Router::rerouteAndCallbackConnectors(void)
         bool rerouted = connector->generatePath();
         if (rerouted)
         {
-            reroutedConns.push_back(connector);
+            reroutedConns.push_back(connector->getPtr());
         }
         TIMER_STOP(this);
     }
@@ -1013,11 +1015,11 @@ void Router::rerouteAndCallbackConnectors(void)
     fin = reroutedConns.end();
     for (ConnRefList::const_iterator i = reroutedConns.begin(); i != fin; ++i) 
     {
-        ConnRef *conn = *i;
+        ConnRef *conn = (*i).get();
         
         // Skip hyperedge connectors which have been deleted.
         ConnRefList::iterator findIt = std::find(
-                deletedConns.begin(), deletedConns.end(), conn);
+                deletedConns.begin(), deletedConns.end(), conn->getPtr());
         if (findIt != deletedConns.end())
         {
             // Connector deleted, skip.
@@ -1446,7 +1448,7 @@ void Router::improveCrossings(void)
         ConnRefList::iterator j = i;
         for (++j; j != fin; ++j) 
         {
-            if (crossingConnInfo.connsKnownToCross(*i, *j))
+            if (crossingConnInfo.connsKnownToCross((*i).get(), (*j).get()))
             {
                 // We already know both these have crossings.
                 continue;
@@ -1454,7 +1456,7 @@ void Router::improveCrossings(void)
 
             // Determine if this pair cross.
             Avoid::Polygon& jRoute = (*j)->routeRef();
-            ConnectorCrossings cross(iRoute, true, jRoute, *i, *j);
+            ConnectorCrossings cross(iRoute, true, jRoute, (*i).get(), (*j).get());
             for (size_t jInd = 1; jInd < jRoute.size(); ++jInd)
             {
                 const bool finalSegment = ((jInd + 1) == jRoute.size());
@@ -1468,13 +1470,13 @@ void Router::improveCrossings(void)
                 {
                     // We are penalising fixedSharedPaths and there is a
                     // fixedSharedPath.
-                    crossingConnInfo.addCrossing(*i, *j);
+                    crossingConnInfo.addCrossing((*i).get(), (*j).get());
                     break;
                 }
                 else if ((crossing_penalty > 0) && (cross.crossingCount > 0))
                 {
                     // We are penalising crossings and this is a crossing.
-                    crossingConnInfo.addCrossing(*i, *j);
+                    crossingConnInfo.addCrossing((*i).get(), (*j).get());
                     break;
                 }
             }
@@ -1780,7 +1782,7 @@ void Router::markPolylineConnectorsNeedingReroutingForDeletedObstacle(
     ConnRefList::const_iterator end = connRefs.end();
     for (ConnRefList::const_iterator it = connRefs.begin(); it != end; ++it)
     {
-        ConnRef *conn = (*it);
+        ConnRef *conn = (*it).get();
 
         if (conn->m_route.empty())
         {
@@ -2182,7 +2184,7 @@ bool Router::existsOrthogonalSegmentOverlap(const bool atEnds)
         {
             // Determine if this pair overlap
             Avoid::Polygon jRoute = (*j)->displayRoute();
-            ConnectorCrossings cross(iRoute, true, jRoute, *i, *j);
+            ConnectorCrossings cross(iRoute, true, jRoute, (*i).get(), (*j).get());
             cross.checkForBranchingSegments = true;
             for (size_t jInd = 1; jInd < jRoute.size(); ++jInd)
             {
@@ -2215,7 +2217,7 @@ bool Router::existsOrthogonalFixedSegmentOverlap(const bool atEnds)
         {
             // Determine if this pair overlap
             Avoid::Polygon jRoute = (*j)->displayRoute();
-            ConnectorCrossings cross(iRoute, true, jRoute, *i, *j);
+            ConnectorCrossings cross(iRoute, true, jRoute, (*i).get(), (*j).get());
             cross.checkForBranchingSegments = true;
             for (size_t jInd = 1; jInd < jRoute.size(); ++jInd)
             {
@@ -2249,7 +2251,7 @@ bool Router::existsOrthogonalTouchingPaths(void)
         {
             // Determine if this pair overlap
             Avoid::Polygon jRoute = (*j)->displayRoute();
-            ConnectorCrossings cross(iRoute, true, jRoute, *i, *j);
+            ConnectorCrossings cross(iRoute, true, jRoute, (*i).get(), (*j).get());
             cross.checkForBranchingSegments = true;
             for (size_t jInd = 1; jInd < jRoute.size(); ++jInd)
             {
@@ -2286,8 +2288,8 @@ int Router::existsCrossings(const bool optimisedForConnectorType)
         {
             // Determine if this pair overlap
             Avoid::Polygon jRoute = (*j)->displayRoute();
-            ConnRef *iConn = (optimisedForConnectorType) ? *i : nullptr;
-            ConnRef *jConn = (optimisedForConnectorType) ? *j : nullptr;
+            ConnRef *iConn = (optimisedForConnectorType) ? (*i).get() : nullptr;
+            ConnRef *jConn = (optimisedForConnectorType) ? (*j).get() : nullptr;
             ConnectorCrossings cross(iRoute, true, jRoute, iConn, jConn);
             cross.checkForBranchingSegments = true;
             for (size_t jInd = 1; jInd < jRoute.size(); ++jInd)
@@ -2481,7 +2483,7 @@ void Router::outputInstanceToSVG(std::string instanceName)
     ConnRefList::reverse_iterator revConnRefIt = connRefs.rbegin();
     while (revConnRefIt != connRefs.rend())
     {
-        ConnRef *connRef = *revConnRefIt;
+        ConnRef *connRef = (*revConnRefIt).get();
         connRef->outputCode(fp);
         ++revConnRefIt;
     }
@@ -2727,7 +2729,7 @@ void Router::outputInstanceToSVG(std::string instanceName)
     ConnRefList::iterator connRefIt = connRefs.begin();
     while (connRefIt != connRefs.end())
     {
-        ConnRef *connRef = *connRefIt;
+        ConnRef *connRef = (*connRefIt).get();
     
         PolyLine route = connRef->route();
         if (!route.empty())
@@ -2760,7 +2762,7 @@ void Router::outputInstanceToSVG(std::string instanceName)
     connRefIt = connRefs.begin();
     while (connRefIt != connRefs.end())
     {
-        ConnRef *connRef = *connRefIt;
+        ConnRef *connRef = (*connRefIt).get();
     
         PolyLine route = connRef->displayRoute().curvedPolyline(8);
         if (!route.empty())
@@ -2805,7 +2807,7 @@ void Router::outputInstanceToSVG(std::string instanceName)
     connRefIt = connRefs.begin();
     while (connRefIt != connRefs.end())
     {
-        ConnRef *connRef = *connRefIt;
+        ConnRef *connRef = (*connRefIt).get();
     
         PolyLine route = connRef->displayRoute();
         if (!route.empty())
@@ -2837,7 +2839,7 @@ void Router::outputInstanceToSVG(std::string instanceName)
     connRefIt = connRefs.begin();
     while (connRefIt != connRefs.end())
     {
-        ConnRef *connRef = *connRefIt;
+        ConnRef *connRef = (*connRefIt).get();
     
         for (size_t i = 0; i < connRef->m_checkpoints.size(); ++i)
         {
@@ -2948,7 +2950,7 @@ void Router::outputDiagramSVG(std::string instanceName, LineReps *lineReps)
     ConnRefList::iterator connRefIt = connRefs.begin();
     while (connRefIt != connRefs.end())
     {
-        ConnRef *connRef = *connRefIt;
+        ConnRef *connRef = (*connRefIt).get();
     
         PolyLine route = connRef->displayRoute();
         if (!route.empty())
@@ -3056,7 +3058,7 @@ void Router::outputDiagramText(std::string instanceName)
     ConnRefList::iterator connRefIt = connRefs.begin();
     while (connRefIt != connRefs.end())
     {
-        ConnRef *connRef = *connRefIt;
+        ConnRef *connRef = (*connRefIt).get();
 
         PolyLine route = connRef->displayRoute();
         if (!route.empty())
@@ -3094,15 +3096,15 @@ ConnRerouteFlagDelegate::~ConnRerouteFlagDelegate()
 {
 }
 
-bool *ConnRerouteFlagDelegate::addConn(ConnRef *conn)
+bool *ConnRerouteFlagDelegate::addConn(std::shared_ptr<ConnRef> conn)
 {
     m_mapping.push_back(std::make_pair(conn, false));
     return &(m_mapping.back().second);
 }
 
-void ConnRerouteFlagDelegate::removeConn(ConnRef *conn)
+void ConnRerouteFlagDelegate::removeConn(std::shared_ptr<ConnRef> conn)
 {
-    std::list<std::pair<ConnRef *, bool> >::iterator it;
+    std::list<std::pair<std::shared_ptr<ConnRef> , bool> >::iterator it;
     for (it = m_mapping.begin(); it != m_mapping.end(); ++it)
     {
         if (it->first == conn)
@@ -3115,7 +3117,7 @@ void ConnRerouteFlagDelegate::removeConn(ConnRef *conn)
 
 void ConnRerouteFlagDelegate::alertConns(void)
 {
-    std::list<std::pair<ConnRef *, bool> >::iterator it;
+    std::list<std::pair<std::shared_ptr<ConnRef> , bool> >::iterator it;
     for (it = m_mapping.begin(); it != m_mapping.end(); ++it)
     {
         if ((it->first != nullptr) && (it->second == true))

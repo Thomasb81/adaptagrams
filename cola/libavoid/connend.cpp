@@ -241,7 +241,7 @@ void ConnEnd::connect(ConnRef *conn)
     COLA_ASSERT(m_conn_ref == nullptr);
 
     m_anchor_obj->addFollowingConnEnd(this);
-    m_conn_ref = conn;
+    m_conn_ref = conn->getPtr();
 }
 
 

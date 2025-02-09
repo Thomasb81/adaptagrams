@@ -70,9 +70,14 @@ ConnRef::ConnRef(Router *router, const unsigned int id)
     // TODO: Store endpoints and details.
     m_route.clear();
 
-    m_reroute_flag_ptr = m_router->m_conn_reroute_flags.addConn(this);
+    //m_reroute_flag_ptr = m_router->m_conn_reroute_flags.addConn(this);
 }
 
+std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const unsigned int id){
+    std::shared_ptr<ConnRef> ptr = std::make_shared<ConnRef>(router,id);
+    ptr.get()->m_reroute_flag_ptr = router->m_conn_reroute_flags.addConn(ptr->getPtr());
+    return ptr;
+}
 
 ConnRef::ConnRef(Router *router, const ConnEnd& src, const ConnEnd& dst,
         const unsigned int id)
@@ -100,7 +105,17 @@ ConnRef::ConnRef(Router *router, const ConnEnd& src, const ConnEnd& dst,
     // Set endpoint values.
     setEndpoints(src, dst);
 
-    m_reroute_flag_ptr = m_router->m_conn_reroute_flags.addConn(this);
+    //m_reroute_flag_ptr = m_router->m_conn_reroute_flags.addConn(this);
+}
+
+std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const ConnEnd& src, const ConnEnd& dst, const unsigned int id) {
+    std::shared_ptr<ConnRef> ptr = std::make_shared<ConnRef>(router,src,dst,id);
+    ptr.get()->m_reroute_flag_ptr = router->m_conn_reroute_flags.addConn(ptr->getPtr());
+    return ptr;
+}
+
+std::shared_ptr<ConnRef> ConnRef::getPtr(){
+    return shared_from_this();
 }
 
 
@@ -115,9 +130,9 @@ ConnRef::~ConnRef()
         abort();
     }
 
-    m_router->m_conn_reroute_flags.removeConn(this);
+    m_router->m_conn_reroute_flags.removeConn(this->getPtr());
 
-    m_router->removeObjectFromQueuedActions(this);
+    m_router->removeObjectFromQueuedActions(this->getPtr().get());
 
     freeRoutes();
 
@@ -182,7 +197,7 @@ void ConnRef::setRoutingType(ConnType type)
 
         makePathInvalid();
 
-        m_router->modifyConnector(this);
+        m_router->modifyConnector(this->getPtr());
     }
 }
 
@@ -322,26 +337,26 @@ void ConnRef::common_updateEndPoint(const unsigned int type, ConnEnd connEnd)
 
 void ConnRef::setEndpoints(const ConnEnd& srcPoint, const ConnEnd& dstPoint)
 {
-    m_router->modifyConnector(this, VertID::src, srcPoint);
-    m_router->modifyConnector(this, VertID::tar, dstPoint);
+    m_router->modifyConnector(this->getPtr(), VertID::src, srcPoint);
+    m_router->modifyConnector(this->getPtr(), VertID::tar, dstPoint);
 }
 
 
 void ConnRef::setEndpoint(const unsigned int type, const ConnEnd& connEnd)
 {
-    m_router->modifyConnector(this, type, connEnd);
+    m_router->modifyConnector(this->getPtr(), type, connEnd);
 }
 
 
 void ConnRef::setSourceEndpoint(const ConnEnd& srcPoint)
 {
-    m_router->modifyConnector(this, VertID::src, srcPoint);
+    m_router->modifyConnector(this->getPtr(), VertID::src, srcPoint);
 }
 
 
 void ConnRef::setDestEndpoint(const ConnEnd& dstPoint)
 {
-    m_router->modifyConnector(this, VertID::tar, dstPoint);
+    m_router->modifyConnector(this->getPtr(), VertID::tar, dstPoint);
 }
 
 
@@ -552,7 +567,7 @@ void ConnRef::makeActive(void)
     COLA_ASSERT(!m_active);
     
     // Add to connRefs list.
-    m_connrefs_pos = m_router->connRefs.insert(m_router->connRefs.begin(), this);
+    m_connrefs_pos = m_router->connRefs.insert(m_router->connRefs.begin(), this->getPtr());
     m_active = true;
 }
 
@@ -691,10 +706,10 @@ Point midpoint(Point a, Point b)
 }
 
 
-std::pair<JunctionRef *, ConnRef *> ConnRef::splitAtSegment(
+std::pair<JunctionRef *, std::shared_ptr<ConnRef> > ConnRef::splitAtSegment(
                 const size_t segmentN)
 {
-    ConnRef *newConn = nullptr;
+    std::shared_ptr<ConnRef> newConn;
     JunctionRef *newJunction = nullptr;
 
     if (m_display_route.size() > segmentN)
@@ -714,7 +729,7 @@ std::pair<JunctionRef *, ConnRef *> ConnRef::splitAtSegment(
         // connector's endpoint.
         ConnEnd newConnSrc = ConnEnd(newJunction);
         ConnEnd newConnDst = *m_dst_connend;
-        newConn = new ConnRef(router(), newConnSrc, newConnDst);
+        newConn = ConnRef::createConnRef(router(), newConnSrc, newConnDst);
         
         // Reroute the endpoint of the original connector to attach to the
         // new junction.

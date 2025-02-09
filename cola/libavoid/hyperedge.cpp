@@ -132,7 +132,7 @@ bool HyperedgeRerouter::findAttachedObjects(size_t index,
 
     connector->assignConnectionPinVisibility(true);
 
-    m_deleted_connectors_vector[index].push_back(connector);
+    m_deleted_connectors_vector[index].push_back(connector->getPtr());
     hyperedgeConns.insert(connector);
 
     std::pair<Obstacle *, Obstacle *> anchors = connector->endpointAnchors();
@@ -194,13 +194,13 @@ bool HyperedgeRerouter::findAttachedObjects(size_t index,
     for (ConnRefList::iterator curr  = connectors.begin();
             curr != connectors.end(); ++curr)
     {
-        if (*curr == ignore)
+        if (*curr == ignore->getPtr())
         {
             continue;
         }
 
         COLA_ASSERT(*curr != nullptr);
-        validHyperedge |= findAttachedObjects(index, (*curr), junction, hyperedgeConns);
+        validHyperedge |= findAttachedObjects(index, (*curr).get(), junction, hyperedgeConns);
     }
     return validHyperedge;
 }

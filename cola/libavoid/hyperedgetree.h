@@ -30,6 +30,7 @@
 #include <map>
 #include <set>
 #include <utility>
+#include <memory>
 
 #include "libavoid/geomtypes.h"
 
@@ -55,7 +56,7 @@ typedef std::map<JunctionRef *, HyperedgeTreeNode *>
         JunctionHyperedgeTreeNodeMap;
 typedef std::set<JunctionRef *> JunctionSet;
 typedef std::list<JunctionRef *> JunctionRefList;
-typedef std::list<ConnRef *> ConnRefList;
+typedef std::list<std::shared_ptr<ConnRef> > ConnRefList;
 
 class CmpNodesInDim;
 
@@ -74,7 +75,7 @@ struct HyperedgeTreeNode
     void spliceEdgesFrom(HyperedgeTreeNode *oldNode);
     void writeEdgesToConns(HyperedgeTreeEdge *ignored, size_t pass);
     void addConns(HyperedgeTreeEdge *ignored, Router *router, 
-            ConnRefList& oldConns, ConnRef *conn);
+            ConnRefList& oldConns, std::shared_ptr<ConnRef> conn);
     void updateConnEnds(HyperedgeTreeEdge *ignored, bool forward,
             ConnRefList& changedConns);
     void listJunctionsAndConnectors(HyperedgeTreeEdge *ignored,
@@ -96,7 +97,7 @@ struct HyperedgeTreeNode
 struct HyperedgeTreeEdge
 {
     HyperedgeTreeEdge(HyperedgeTreeNode *node1, HyperedgeTreeNode *node2,
-            ConnRef *conn);
+            std::shared_ptr<ConnRef> conn);
 
     HyperedgeTreeNode *followFrom(HyperedgeTreeNode *from) const;
     bool zeroLength(void) const;
@@ -120,7 +121,7 @@ struct HyperedgeTreeEdge
             const size_t dist) const;
 
     std::pair<HyperedgeTreeNode *, HyperedgeTreeNode *> ends;
-    ConnRef *conn;
+    std::shared_ptr<ConnRef> conn;
     bool hasFixedRoute;
 };
 

@@ -451,7 +451,7 @@ static double cost(ConnRef *lineRef, const double dist, VertInf *inf2,
         ConnRefList::const_iterator curr, finish = router->connRefs.end();
         for (curr = router->connRefs.begin(); curr != finish; ++curr)
         {
-            ConnRef *connRef = *curr;
+            ConnRef *connRef = (*curr).get();
 
             if (connRef->id() == lineRef->id())
             {
