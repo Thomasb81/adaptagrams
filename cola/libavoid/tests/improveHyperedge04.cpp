@@ -63,42 +63,42 @@ int main(void) {
     */
     JunctionRef *junctionRef4 = new JunctionRef(router, Point(50725, 50725), 4);
 
-    ConnRef *connRef3 = new ConnRef(router, 3);
+    ConnRef *connRef3 = ConnRef::createConnRef(router, 3).get();
     ConnEnd srcPt3(shapeRef2, 1);
     connRef3->setSourceEndpoint(srcPt3);
     ConnEnd dstPt3(junctionRef513246008);
     connRef3->setDestEndpoint(dstPt3);
     connRef3->setRoutingType((ConnType)2);
     
-    ConnRef *connRef5 = new ConnRef(router, 5);
+    ConnRef *connRef5 = ConnRef::createConnRef(router, 5).get();
     ConnEnd srcPt5(junctionRef4);
     connRef5->setSourceEndpoint(srcPt5);
     ConnEnd dstPt5(junctionRef513246008);
     connRef5->setDestEndpoint(dstPt5);
     connRef5->setRoutingType((ConnType)2);
 
-    ConnRef *connRef513246009 = new ConnRef(router, 513246009);
+    ConnRef *connRef513246009 = ConnRef::createConnRef(router, 513246009).get();
     ConnEnd srcPt513246009(shapeRef39761567, 1);
     connRef513246009->setSourceEndpoint(srcPt513246009);
     ConnEnd dstPt513246009(junctionRef4);
     connRef513246009->setDestEndpoint(dstPt513246009);
     connRef513246009->setRoutingType((ConnType)2);
 
-    ConnRef *connRef513246010 = new ConnRef(router, 513246010);
+    ConnRef *connRef513246010 = ConnRef::createConnRef(router, 513246010).get();
     ConnEnd srcPt513246010(junctionRef513246008);
     connRef513246010->setSourceEndpoint(srcPt513246010);
     ConnEnd dstPt513246010(shapeRef430971008, 1);
     connRef513246010->setDestEndpoint(dstPt513246010);
     connRef513246010->setRoutingType((ConnType)2);
 
-    ConnRef *connRef513246011 = new ConnRef(router, 513246011);
+    ConnRef *connRef513246011 = ConnRef::createConnRef(router, 513246011).get();
     ConnEnd srcPt513246011(junctionRef4);
     connRef513246011->setSourceEndpoint(srcPt513246011);
     ConnEnd dstPt513246011(shapeRef238475293, 1);
     connRef513246011->setDestEndpoint(dstPt513246011);
     connRef513246011->setRoutingType((ConnType)2);
 
-    ConnRef *connRef513246012 = new ConnRef(router, 513246012);
+    ConnRef *connRef513246012 = ConnRef::createConnRef(router, 513246012).get();
     ConnEnd srcPt513246012(shapeRef115776716, 1);
     connRef513246012->setSourceEndpoint(srcPt513246012);
     ConnEnd dstPt513246012(junctionRef513246008);

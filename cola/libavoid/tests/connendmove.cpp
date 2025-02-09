@@ -44,7 +44,7 @@ int main(void)
 
     ConnEnd dstPt(shapeRef1, CENTRE); 
     Point srcPt(1.5, 4);
-    ConnRef *connRef = new ConnRef(router, srcPt, dstPt);
+    ConnRef *connRef = ConnRef::createConnRef(router, srcPt, dstPt).get();
     // Force inital callback:
     router->processTransaction();
     router->outputDiagram("output/connendmove-1");

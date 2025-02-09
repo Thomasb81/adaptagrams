@@ -60,11 +60,11 @@ int main(void)
     // Create connectors from each shape to an input pin on shape 3.
     ConnEnd srcEnd(shapeRef2, CONNECTIONPIN_CENTRE);
     ConnEnd dstEnd(shapeRef3, INPUT);
-    new ConnRef(router, srcEnd, dstEnd);
+    ConnRef::createConnRef(router, srcEnd, dstEnd).get();
     
     srcEnd = ConnEnd(shapeRef1, CONNECTIONPIN_CENTRE);
     dstEnd = ConnEnd(shapeRef3, INPUT);
-    new ConnRef(router, srcEnd, dstEnd);
+    ConnRef::createConnRef(router, srcEnd, dstEnd).get();
 
     router->processTransaction();
     router->outputDiagram("output/connectionpin02-1");

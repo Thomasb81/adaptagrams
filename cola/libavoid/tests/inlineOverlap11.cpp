@@ -156,13 +156,13 @@ extern "C" int main(void)
 	pin0_100128936_1->setExclusive(true);
 	end1_0 = ConnEnd(shape0_100128936, 2);
 	end2_0 = ConnEnd(shape0_288069558, 12);
-	new ConnRef(router0, end1_0, end2_0, 105958336);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 105958336).get();
 	end1_0 = ConnEnd(shape0_574489840, 2);
 	end2_0 = ConnEnd(shape0_288069558, 13);
-	new ConnRef(router0, end1_0, end2_0, 377294085);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 377294085).get();
 	end1_0 = ConnEnd(shape0_59726400, 2);
 	end2_0 = ConnEnd(shape0_288069558, 14);
-	new ConnRef(router0, end1_0, end2_0, 870686312);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 870686312).get();
 	router0->processTransaction();
 
 	poly0 = Polygon(4);
@@ -175,7 +175,7 @@ extern "C" int main(void)
 	pin0_91346832_0->setExclusive(false);
 	end1_0 = ConnEnd(shape0_91346832, CONNECTIONPIN_CENTRE);
 	end2_0 = ConnEnd(shape0_288069558, 11);
-	new ConnRef(router0, end1_0, end2_0, 214417907);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 214417907).get();
 	router0->processTransaction();
 
 	router0->outputDiagram("output/inlineOverlap11");

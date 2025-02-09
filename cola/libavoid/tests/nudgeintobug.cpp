@@ -26,10 +26,10 @@ int main(void) {
     ConnEnd dstPt45398340(Point(51500, 49925), 8);
     ConnEnd srcPt29344262(Point(51150, 50500), 4);
     ConnEnd dstPt29344262(Point(51925, 50000), 4);
-    new ConnRef(router, srcPt29344262, dstPt29344262, 29344262);
-    new ConnRef(router, srcPt45398340, dstPt45398340, 45398340);
-    new ConnRef(router, srcPt144520410, dstPt144520410, 144520410);
-    new ConnRef(router, srcPt463223880, dstPt463223880, 463223880);
+    ConnRef::createConnRef(router, srcPt29344262, dstPt29344262, 29344262).get();
+    ConnRef::createConnRef(router, srcPt45398340, dstPt45398340, 45398340).get();
+    ConnRef::createConnRef(router, srcPt144520410, dstPt144520410, 144520410).get();
+    ConnRef::createConnRef(router, srcPt463223880, dstPt463223880, 463223880).get();
     router->processTransaction();
     router->outputDiagram("output/nudgeintobug");
     bool overlap = router->existsOrthogonalFixedSegmentOverlap();

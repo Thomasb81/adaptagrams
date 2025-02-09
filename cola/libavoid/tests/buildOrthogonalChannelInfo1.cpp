@@ -45,13 +45,13 @@ void test()
 	JunctionRef * junction502411221 = new JunctionRef(router1, Point(50825, 50850), 502411221);
 	end1 = ConnEnd(shape386142480, 2);
 	end2 = ConnEnd(junction502411221);
-	new ConnRef(router1, end1, end2);
+	ConnRef::createConnRef(router1, end1, end2).get();
 	end1 = ConnEnd(junction502411221);
 	end2 = ConnEnd(shape300136482, 1);
-	new ConnRef(router1, end1, end2);
+	ConnRef::createConnRef(router1, end1, end2).get();
 	end1 = ConnEnd(shape51003942, 1);
 	end2 = ConnEnd(junction502411221);
-	new ConnRef(router1, end1, end2);
+	ConnRef::createConnRef(router1, end1, end2).get();
 	router1->processTransaction();
 
 	router1->outputDiagram("output/buildOrthogonalChannelInfo1");

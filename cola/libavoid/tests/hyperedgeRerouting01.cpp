@@ -96,33 +96,33 @@ int test()
 	
 	end1_0 = ConnEnd(shape0_646972128, 1);
 	end2_0 = ConnEnd(junction0_16268769);
-	new ConnRef(router0, end1_0, end2_0, 64950216);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 64950216).get();
 	end1_0 = ConnEnd(junction0_16268769);
 	end2_0 = ConnEnd(shape0_478041183, 7);
-	new ConnRef(router0, end1_0, end2_0, 278089510);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 278089510).get();
 	end1_0 = ConnEnd(shape0_241539284, 1);
 	end2_0 = ConnEnd(junction0_16268769);
-	new ConnRef(router0, end1_0, end2_0, 41268690);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 41268690).get();
 
 	end1_0 = ConnEnd(shape0_478041183, 9);
 	end2_0 = ConnEnd(junction0_142222080);
-	new ConnRef(router0, end1_0, end2_0, 60256130);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 60256130).get();
 	end1_0 = ConnEnd(shape0_478041183, 3);
 	end2_0 = ConnEnd(junction0_142222080);
-	new ConnRef(router0, end1_0, end2_0, 73835204);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 73835204).get();
 	end1_0 = ConnEnd(shape0_478041183, 4);
 	end2_0 = ConnEnd(junction0_142222080);
-	new ConnRef(router0, end1_0, end2_0, 93872527);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 93872527).get();
 
 	end1_0 = ConnEnd(shape0_53041512, 1);
 	end2_0 = ConnEnd(junction0_471289251);
-	new ConnRef(router0, end1_0, end2_0, 448284384);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 448284384).get();
 	end1_0 = ConnEnd(shape0_478041183, 1);
 	end2_0 = ConnEnd(junction0_471289251);
-	new ConnRef(router0, end1_0, end2_0, 392836745);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 392836745).get();
 	end1_0 = ConnEnd(shape0_241539284, 2);
 	end2_0 = ConnEnd(junction0_471289251);
-	new ConnRef(router0, end1_0, end2_0, 836242673);
+	ConnRef::createConnRef(router0, end1_0, end2_0, 836242673).get();
 
 	router0->processTransaction();
 

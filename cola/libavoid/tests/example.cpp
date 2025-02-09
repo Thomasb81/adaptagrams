@@ -49,7 +49,7 @@ int main(void)
     
     Point srcPt(1.2, 0.5);
     Point dstPt(1.5, 4);
-    ConnRef *connRef = new ConnRef(router, srcPt, dstPt);
+    ConnRef *connRef = ConnRef::createConnRef(router, srcPt, dstPt).get();
     connRef->setCallback(connCallback, connRef);
     // Force inital callback:
     router->processTransaction();

@@ -39,28 +39,28 @@ int main(void) {
     poly190150804.ps[3] = Point(50290, 51340);
     new ShapeRef(router, poly190150804, 190150804);
     
-    ConnRef *connRef562170592 = new ConnRef(router, 562170592);
+    ConnRef *connRef562170592 = ConnRef::createConnRef(router, 562170592).get();
     ConnEnd srcPt562170592(Point(52110, 50800), 4);
     connRef562170592->setSourceEndpoint(srcPt562170592);
     ConnEnd dstPt562170592(Point(51815, 51100), 8);
     connRef562170592->setDestEndpoint(dstPt562170592);
     connRef562170592->setRoutingType((ConnType)2);
 
-    ConnRef *connRef171593006 = new ConnRef(router, 171593006);
+    ConnRef *connRef171593006 = ConnRef::createConnRef(router, 171593006).get();
     ConnEnd srcPt171593006(Point(52110, 50750), 4);
     connRef171593006->setSourceEndpoint(srcPt171593006);
     ConnEnd dstPt171593006(Point(51840, 50725), 8);
     connRef171593006->setDestEndpoint(dstPt171593006);
     connRef171593006->setRoutingType((ConnType)2);
 
-    ConnRef *connRef172593160 = new ConnRef(router, 172593160);
+    ConnRef *connRef172593160 = ConnRef::createConnRef(router, 172593160).get();
     ConnEnd srcPt172593160(Point(51815, 51150), 8);
     connRef172593160->setSourceEndpoint(srcPt172593160);
     ConnEnd dstPt172593160(Point(52110, 50900), 4);
     connRef172593160->setDestEndpoint(dstPt172593160);
     connRef172593160->setRoutingType((ConnType)2);
 
-    ConnRef *connRef116944564 = new ConnRef(router, 116944564);
+    ConnRef *connRef116944564 = ConnRef::createConnRef(router, 116944564).get();
     ConnEnd srcPt116944564(Point(51840, 50775), 8);
     connRef116944564->setSourceEndpoint(srcPt116944564);
     ConnEnd dstPt116944564(Point(52110, 50850), 4);

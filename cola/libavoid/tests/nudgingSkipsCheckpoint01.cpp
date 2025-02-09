@@ -731,7 +731,7 @@ int main(void) {
     new ShapeRef(router, polygon, 87);
 
     // connRef88
-    connRef = new ConnRef(router, 88);
+    connRef = ConnRef::createConnRef(router, 88).get();
     srcPt = ConnEnd(Point(111.8192818798844, 648.315092940984), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(-111.1807181201156, 856.315092940984), 15);
@@ -739,7 +739,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef89
-    connRef = new ConnRef(router, 89);
+    connRef = ConnRef::createConnRef(router, 89).get();
     srcPt = ConnEnd(Point(126.8192818798844, 289.9817596056507), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(-111.1807181201156, 856.315092940984), 15);
@@ -748,7 +748,7 @@ int main(void) {
 #endif
 
     // connRef90
-    connRef = new ConnRef(router, 90);
+    connRef = ConnRef::createConnRef(router, 90).get();
     srcPt = ConnEnd(Point(72.81928187988439, 985.8150929419839), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, -55.0182403953493), 15);
@@ -760,7 +760,7 @@ int main(void) {
     ConnRef *connRef90 = connRef;
 
     // connRef91
-    connRef = new ConnRef(router, 91);
+    connRef = ConnRef::createConnRef(router, 91).get();
     srcPt = ConnEnd(Point(72.81928187988439, 1027.815092941984), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, -55.0182403953493), 15);
@@ -773,7 +773,7 @@ int main(void) {
 
 #if ALL
     // connRef92
-    connRef = new ConnRef(router, 92);
+    connRef = ConnRef::createConnRef(router, 92).get();
     srcPt = ConnEnd(Point(471.8192818798844, -171.0182403963493), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, -55.0182403953493), 15);
@@ -784,7 +784,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints92);
 
     // connRef93
-    connRef = new ConnRef(router, 93);
+    connRef = ConnRef::createConnRef(router, 93).get();
     srcPt = ConnEnd(Point(589.1049961655988, -55.0182403953493), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, -168.0182403963493), 2);
@@ -792,7 +792,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef94
-    connRef = new ConnRef(router, 94);
+    connRef = ConnRef::createConnRef(router, 94).get();
     srcPt = ConnEnd(Point(589.1049961655988, -55.0182403953493), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(471.8192818798844, -22.0182403953493), 8);
@@ -800,7 +800,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef95
-    connRef = new ConnRef(router, 95);
+    connRef = ConnRef::createConnRef(router, 95).get();
     srcPt = ConnEnd(Point(823.1049961675988, 154.9817596056507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, -55.0182403953493), 15);
@@ -811,7 +811,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints95);
 
     // connRef96
-    connRef = new ConnRef(router, 96);
+    connRef = ConnRef::createConnRef(router, 96).get();
     srcPt = ConnEnd(Point(823.1049961675988, 196.9817596056507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, -55.0182403953493), 15);
@@ -822,7 +822,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints96);
 
     // connRef97
-    connRef = new ConnRef(router, 97);
+    connRef = ConnRef::createConnRef(router, 97).get();
     srcPt = ConnEnd(Point(471.8192818798844, -129.0182403963493), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, -55.0182403953493), 15);
@@ -833,7 +833,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints97);
 
     // connRef98
-    connRef = new ConnRef(router, 98);
+    connRef = ConnRef::createConnRef(router, 98).get();
     srcPt = ConnEnd(Point(823.1049961675988, 79.98175960565069), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, -55.0182403953493), 15);
@@ -844,7 +844,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints98);
 
     // connRef99
-    connRef = new ConnRef(router, 99);
+    connRef = ConnRef::createConnRef(router, 99).get();
     srcPt = ConnEnd(Point(1013.504996167599, 526.9817596066507), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(1013.504996167599, 573.9817596076507), 1);
@@ -852,7 +852,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef100
-    connRef = new ConnRef(router, 100);
+    connRef = ConnRef::createConnRef(router, 100).get();
     srcPt = ConnEnd(Point(1013.504996167599, 450.9817596066507), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(1013.504996167599, 526.9817596066507), 15);
@@ -860,7 +860,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef101
-    connRef = new ConnRef(router, 101);
+    connRef = ConnRef::createConnRef(router, 101).get();
     srcPt = ConnEnd(Point(318.8192818798844, 648.315092940984), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(141.8192818798844, 648.315092940984), 8);
@@ -868,7 +868,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef102
-    connRef = new ConnRef(router, 102);
+    connRef = ConnRef::createConnRef(router, 102).get();
     srcPt = ConnEnd(Point(441.8192818798844, 493.9817596066507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, 648.315092940984), 15);
@@ -876,7 +876,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef103
-    connRef = new ConnRef(router, 103);
+    connRef = ConnRef::createConnRef(router, 103).get();
     srcPt = ConnEnd(Point(102.8192818798844, 985.8150929419839), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, 911.815092940984), 15);
@@ -887,7 +887,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints103);
 
     // connRef104
-    connRef = new ConnRef(router, 104);
+    connRef = ConnRef::createConnRef(router, 104).get();
     srcPt = ConnEnd(Point(102.8192818798844, 1027.815092941984), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, 911.815092940984), 15);
@@ -898,7 +898,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints104);
 
     // connRef105
-    connRef = new ConnRef(router, 105);
+    connRef = ConnRef::createConnRef(router, 105).get();
     srcPt = ConnEnd(Point(318.8192818798844, 988.8150929419839), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, 1039.815092941984), 15);
@@ -906,7 +906,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef106
-    connRef = new ConnRef(router, 106);
+    connRef = ConnRef::createConnRef(router, 106).get();
     srcPt = ConnEnd(Point(318.8192818798844, 911.815092940984), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, 958.8150929419839), 1);
@@ -914,7 +914,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef107
-    connRef = new ConnRef(router, 107);
+    connRef = ConnRef::createConnRef(router, 107).get();
     srcPt = ConnEnd(Point(-18.18071812011561, 911.815092940984), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(-111.1807181201156, 856.315092940984), 15);
@@ -922,7 +922,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef108
-    connRef = new ConnRef(router, 108);
+    connRef = ConnRef::createConnRef(router, 108).get();
     srcPt = ConnEnd(Point(318.8192818798844, 911.815092940984), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(11.81928187988439, 911.815092940984), 8);
@@ -930,7 +930,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef109
-    connRef = new ConnRef(router, 109);
+    connRef = ConnRef::createConnRef(router, 109).get();
     srcPt = ConnEnd(Point(456.8192818798844, 871.315092940984), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, 911.815092940984), 15);
@@ -938,7 +938,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef110
-    connRef = new ConnRef(router, 110);
+    connRef = ConnRef::createConnRef(router, 110).get();
     srcPt = ConnEnd(Point(589.1049961655988, 648.315092940984), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(456.8192818798844, 841.315092940984), 1);
@@ -946,7 +946,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef111
-    connRef = new ConnRef(router, 111);
+    connRef = ConnRef::createConnRef(router, 111).get();
     srcPt = ConnEnd(Point(1013.504996167599, 603.9817596076507), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(1013.504996167599, 750.315092940984), 15);
@@ -954,7 +954,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef112
-    connRef = new ConnRef(router, 112);
+    connRef = ConnRef::createConnRef(router, 112).get();
     srcPt = ConnEnd(Point(970.1049961675988, 307.9817596056507), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(886.1049961675988, 648.315092940984), 8);
@@ -962,7 +962,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef113
-    connRef = new ConnRef(router, 113);
+    connRef = ConnRef::createConnRef(router, 113).get();
     srcPt = ConnEnd(Point(856.1049961675988, 648.315092940984), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, 648.315092940984), 15);
@@ -970,7 +970,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef114
-    connRef = new ConnRef(router, 114);
+    connRef = ConnRef::createConnRef(router, 114).get();
     srcPt = ConnEnd(Point(441.8192818798844, 681.315092940984), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, 648.315092940984), 15);
@@ -978,7 +978,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef115
-    connRef = new ConnRef(router, 115);
+    connRef = ConnRef::createConnRef(router, 115).get();
     srcPt = ConnEnd(Point(589.1049961655988, 307.9817596056507), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, 420.9817596066507), 1);
@@ -986,7 +986,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef116
-    connRef = new ConnRef(router, 116);
+    connRef = ConnRef::createConnRef(router, 116).get();
     srcPt = ConnEnd(Point(589.1049961655988, 450.9817596066507), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, 526.9817596066507), 15);
@@ -994,7 +994,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef117
-    connRef = new ConnRef(router, 117);
+    connRef = ConnRef::createConnRef(router, 117).get();
     srcPt = ConnEnd(Point(589.1049961655988, 307.9817596056507), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(471.8192818798844, 493.9817596066507), 8);
@@ -1002,7 +1002,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef118
-    connRef = new ConnRef(router, 118);
+    connRef = ConnRef::createConnRef(router, 118).get();
     srcPt = ConnEnd(Point(471.8192818798844, 144.9817596056507), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, 307.9817596056507), 15);
@@ -1013,7 +1013,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints118);
 
     // connRef119
-    connRef = new ConnRef(router, 119);
+    connRef = ConnRef::createConnRef(router, 119).get();
     srcPt = ConnEnd(Point(441.8192818798844, 144.9817596056507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, -55.0182403953493), 15);
@@ -1024,7 +1024,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints119);
 
     // connRef120
-    connRef = new ConnRef(router, 120);
+    connRef = ConnRef::createConnRef(router, 120).get();
     srcPt = ConnEnd(Point(970.1049961675988, 307.9817596056507), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(1013.504996167599, 420.9817596066507), 1);
@@ -1032,7 +1032,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef121
-    connRef = new ConnRef(router, 121);
+    connRef = ConnRef::createConnRef(router, 121).get();
     srcPt = ConnEnd(Point(750.1049961665988, 286.9817596056507), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(970.1049961675988, 307.9817596056507), 15);
@@ -1043,7 +1043,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints121);
 
     // connRef122
-    connRef = new ConnRef(router, 122);
+    connRef = ConnRef::createConnRef(router, 122).get();
     srcPt = ConnEnd(Point(720.1049961665988, 286.9817596056507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, 307.9817596056507), 15);
@@ -1054,7 +1054,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints122);
 
     // connRef123
-    connRef = new ConnRef(router, 123);
+    connRef = ConnRef::createConnRef(router, 123).get();
     srcPt = ConnEnd(Point(471.8192818798844, 219.9817596056507), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, 307.9817596056507), 15);
@@ -1065,7 +1065,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints123);
 
     // connRef124
-    connRef = new ConnRef(router, 124);
+    connRef = ConnRef::createConnRef(router, 124).get();
     srcPt = ConnEnd(Point(441.8192818798844, 219.9817596056507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, -55.0182403953493), 15);
@@ -1076,7 +1076,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints124);
 
     // connRef125
-    connRef = new ConnRef(router, 125);
+    connRef = ConnRef::createConnRef(router, 125).get();
     srcPt = ConnEnd(Point(750.1049961665988, 328.9817596056507), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(970.1049961675988, 307.9817596056507), 15);
@@ -1087,7 +1087,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints125);
 
     // connRef126
-    connRef = new ConnRef(router, 126);
+    connRef = ConnRef::createConnRef(router, 126).get();
     srcPt = ConnEnd(Point(441.8192818798844, -171.0182403963493), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, -150.0182403963493), 15);
@@ -1098,7 +1098,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints126);
 
     // connRef127
-    connRef = new ConnRef(router, 127);
+    connRef = ConnRef::createConnRef(router, 127).get();
     srcPt = ConnEnd(Point(589.1049961655988, -198.0182403963493), 1);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, -245.0182403973492), 15);
@@ -1106,7 +1106,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef128
-    connRef = new ConnRef(router, 128);
+    connRef = ConnRef::createConnRef(router, 128).get();
     srcPt = ConnEnd(Point(471.8192818798844, 261.9817596056507), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, 307.9817596056507), 15);
@@ -1117,7 +1117,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints128);
 
     // connRef129
-    connRef = new ConnRef(router, 129);
+    connRef = ConnRef::createConnRef(router, 129).get();
     srcPt = ConnEnd(Point(441.8192818798844, 261.9817596056507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, -55.0182403953493), 15);
@@ -1129,7 +1129,7 @@ int main(void) {
 #endif
 
     // connRef130
-    connRef = new ConnRef(router, 130);
+    connRef = ConnRef::createConnRef(router, 130).get();
     srcPt = ConnEnd(Point(47.81928187988439, -55.0182403953493), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(111.8192818798844, -55.0182403953493), 4);
@@ -1138,7 +1138,7 @@ int main(void) {
 
 #if ALL
     // connRef131
-    connRef = new ConnRef(router, 131);
+    connRef = ConnRef::createConnRef(router, 131).get();
     srcPt = ConnEnd(Point(141.8192818798844, -55.0182403953493), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, -55.0182403953493), 15);
@@ -1146,7 +1146,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef132
-    connRef = new ConnRef(router, 132);
+    connRef = ConnRef::createConnRef(router, 132).get();
     srcPt = ConnEnd(Point(-21.18071812011561, -55.0182403953493), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(47.81928187988439, -55.0182403953493), 15);
@@ -1154,7 +1154,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef133
-    connRef = new ConnRef(router, 133);
+    connRef = ConnRef::createConnRef(router, 133).get();
     srcPt = ConnEnd(Point(-111.1807181201156, -55.0182403953493), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(-51.18071812011561, -55.0182403953493), 4);
@@ -1162,7 +1162,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef134
-    connRef = new ConnRef(router, 134);
+    connRef = ConnRef::createConnRef(router, 134).get();
     srcPt = ConnEnd(Point(257.8192818798844, 355.9817596056507), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(257.8192818798844, 402.9817596066507), 15);
@@ -1170,7 +1170,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef135
-    connRef = new ConnRef(router, 135);
+    connRef = ConnRef::createConnRef(router, 135).get();
     srcPt = ConnEnd(Point(318.8192818798844, -55.0182403953493), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(257.8192818798844, 325.9817596056507), 1);
@@ -1178,7 +1178,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef136
-    connRef = new ConnRef(router, 136);
+    connRef = ConnRef::createConnRef(router, 136).get();
     srcPt = ConnEnd(Point(318.8192818798844, -55.0182403953493), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(126.8192818798844, 259.9817596056507), 1);
@@ -1186,7 +1186,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef137
-    connRef = new ConnRef(router, 137);
+    connRef = ConnRef::createConnRef(router, 137).get();
     srcPt = ConnEnd(Point(441.8192818798844, -22.0182403953493), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, -55.0182403953493), 15);
@@ -1194,7 +1194,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef138
-    connRef = new ConnRef(router, 138);
+    connRef = ConnRef::createConnRef(router, 138).get();
     srcPt = ConnEnd(Point(853.1049961675988, 154.9817596056507), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(970.1049961675988, 307.9817596056507), 15);
@@ -1205,7 +1205,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints138);
 
     // connRef139
-    connRef = new ConnRef(router, 139);
+    connRef = ConnRef::createConnRef(router, 139).get();
     srcPt = ConnEnd(Point(853.1049961675988, 196.9817596056507), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(970.1049961675988, 307.9817596056507), 15);
@@ -1216,7 +1216,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints139);
 
     // connRef140
-    connRef = new ConnRef(router, 140);
+    connRef = ConnRef::createConnRef(router, 140).get();
     srcPt = ConnEnd(Point(853.1049961675988, 79.98175960565069), 8);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(970.1049961675988, 307.9817596056507), 15);
@@ -1227,7 +1227,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints140);
 
     // connRef141
-    connRef = new ConnRef(router, 141);
+    connRef = ConnRef::createConnRef(router, 141).get();
     srcPt = ConnEnd(Point(441.8192818798844, -129.0182403963493), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, -150.0182403963493), 15);
@@ -1238,7 +1238,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints141);
 
     // connRef142
-    connRef = new ConnRef(router, 142);
+    connRef = ConnRef::createConnRef(router, 142).get();
     srcPt = ConnEnd(Point(720.1049961665988, 328.9817596056507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, 307.9817596056507), 15);
@@ -1249,7 +1249,7 @@ int main(void) {
     connRef->setRoutingCheckpoints(checkpoints142);
 
     // connRef143
-    connRef = new ConnRef(router, 143);
+    connRef = ConnRef::createConnRef(router, 143).get();
     srcPt = ConnEnd(Point(589.1049961655988, 648.315092940984), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(471.8192818798844, 681.315092940984), 8);
@@ -1257,7 +1257,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef144
-    connRef = new ConnRef(router, 144);
+    connRef = ConnRef::createConnRef(router, 144).get();
     srcPt = ConnEnd(Point(87.81928187988439, 935.8150929419839), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(87.81928187988439, 985.8150929419839), 1);
@@ -1265,7 +1265,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef145
-    connRef = new ConnRef(router, 145);
+    connRef = ConnRef::createConnRef(router, 145).get();
     srcPt = ConnEnd(Point(87.81928187988439, 1077.815092941984), 1);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(87.81928187988439, 1027.815092941984), 2);
@@ -1273,7 +1273,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef146
-    connRef = new ConnRef(router, 146);
+    connRef = ConnRef::createConnRef(router, 146).get();
     srcPt = ConnEnd(Point(376.8192818798844, 973.8150929419839), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(318.8192818798844, 973.8150929419839), 8);
@@ -1281,7 +1281,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef147
-    connRef = new ConnRef(router, 147);
+    connRef = ConnRef::createConnRef(router, 147).get();
     srcPt = ConnEnd(Point(-3.180718120115614, 861.815092940984), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(-3.180718120115614, 911.815092940984), 1);
@@ -1289,7 +1289,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef148
-    connRef = new ConnRef(router, 148);
+    connRef = ConnRef::createConnRef(router, 148).get();
     srcPt = ConnEnd(Point(514.8192818798843, 856.315092940984), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(456.8192818798844, 856.315092940984), 8);
@@ -1297,7 +1297,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef149
-    connRef = new ConnRef(router, 149);
+    connRef = ConnRef::createConnRef(router, 149).get();
     srcPt = ConnEnd(Point(1071.504996167599, 588.9817596076507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(1013.504996167599, 588.9817596076507), 8);
@@ -1305,7 +1305,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef150
-    connRef = new ConnRef(router, 150);
+    connRef = ConnRef::createConnRef(router, 150).get();
     srcPt = ConnEnd(Point(871.1049961675988, 598.315092940984), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(871.1049961675988, 648.315092940984), 1);
@@ -1313,7 +1313,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef151
-    connRef = new ConnRef(router, 151);
+    connRef = ConnRef::createConnRef(router, 151).get();
     srcPt = ConnEnd(Point(456.8192818798844, 731.315092940984), 1);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(456.8192818798844, 681.315092940984), 2);
@@ -1321,7 +1321,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef152
-    connRef = new ConnRef(router, 152);
+    connRef = ConnRef::createConnRef(router, 152).get();
     srcPt = ConnEnd(Point(126.8192818798844, 598.315092940984), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(126.8192818798844, 648.315092940984), 1);
@@ -1329,7 +1329,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef153
-    connRef = new ConnRef(router, 153);
+    connRef = ConnRef::createConnRef(router, 153).get();
     srcPt = ConnEnd(Point(647.1049961655988, 435.9817596066507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, 435.9817596066507), 8);
@@ -1337,7 +1337,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef154
-    connRef = new ConnRef(router, 154);
+    connRef = ConnRef::createConnRef(router, 154).get();
     srcPt = ConnEnd(Point(456.8192818798844, 443.9817596066507), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(456.8192818798844, 493.9817596066507), 1);
@@ -1345,7 +1345,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef155
-    connRef = new ConnRef(router, 155);
+    connRef = ConnRef::createConnRef(router, 155).get();
     srcPt = ConnEnd(Point(456.8192818798844, 94.98175960565069), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(456.8192818798844, 144.9817596056507), 1);
@@ -1353,7 +1353,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef156
-    connRef = new ConnRef(router, 156);
+    connRef = ConnRef::createConnRef(router, 156).get();
     srcPt = ConnEnd(Point(1071.504996167599, 435.9817596066507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(1013.504996167599, 435.9817596066507), 8);
@@ -1361,7 +1361,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef157
-    connRef = new ConnRef(router, 157);
+    connRef = ConnRef::createConnRef(router, 157).get();
     srcPt = ConnEnd(Point(735.1049961665988, 236.9817596056507), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(735.1049961665988, 286.9817596056507), 1);
@@ -1369,7 +1369,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef158
-    connRef = new ConnRef(router, 158);
+    connRef = ConnRef::createConnRef(router, 158).get();
     srcPt = ConnEnd(Point(456.8192818798844, 169.9817596056507), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(456.8192818798844, 219.9817596056507), 1);
@@ -1377,7 +1377,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef159
-    connRef = new ConnRef(router, 159);
+    connRef = ConnRef::createConnRef(router, 159).get();
     srcPt = ConnEnd(Point(735.1049961665988, 378.9817596056507), 1);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(735.1049961665988, 328.9817596056507), 2);
@@ -1385,7 +1385,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef160
-    connRef = new ConnRef(router, 160);
+    connRef = ConnRef::createConnRef(router, 160).get();
     srcPt = ConnEnd(Point(456.8192818798844, -221.0182403963493), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(456.8192818798844, -171.0182403963493), 1);
@@ -1393,7 +1393,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef161
-    connRef = new ConnRef(router, 161);
+    connRef = ConnRef::createConnRef(router, 161).get();
     srcPt = ConnEnd(Point(647.1049961655988, -183.0182403963493), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(589.1049961655988, -183.0182403963493), 8);
@@ -1401,7 +1401,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef162
-    connRef = new ConnRef(router, 162);
+    connRef = ConnRef::createConnRef(router, 162).get();
     srcPt = ConnEnd(Point(456.8192818798844, 311.9817596056507), 1);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(456.8192818798844, 261.9817596056507), 2);
@@ -1409,7 +1409,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef163
-    connRef = new ConnRef(router, 163);
+    connRef = ConnRef::createConnRef(router, 163).get();
     srcPt = ConnEnd(Point(126.8192818798844, -105.0182403953493), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(126.8192818798844, -55.0182403953493), 1);
@@ -1417,7 +1417,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef164
-    connRef = new ConnRef(router, 164);
+    connRef = ConnRef::createConnRef(router, 164).get();
     srcPt = ConnEnd(Point(-36.18071812011561, -105.0182403953493), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(-36.18071812011561, -55.0182403953493), 1);
@@ -1425,7 +1425,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef165
-    connRef = new ConnRef(router, 165);
+    connRef = ConnRef::createConnRef(router, 165).get();
     srcPt = ConnEnd(Point(315.8192818798844, 340.9817596056507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(257.8192818798844, 340.9817596056507), 8);
@@ -1433,7 +1433,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef166
-    connRef = new ConnRef(router, 166);
+    connRef = ConnRef::createConnRef(router, 166).get();
     srcPt = ConnEnd(Point(184.8192818798844, 274.9817596056507), 4);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(126.8192818798844, 274.9817596056507), 8);
@@ -1441,7 +1441,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef167
-    connRef = new ConnRef(router, 167);
+    connRef = ConnRef::createConnRef(router, 167).get();
     srcPt = ConnEnd(Point(456.8192818798844, 27.9817596046507), 1);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(456.8192818798844, -22.0182403953493), 2);
@@ -1449,7 +1449,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef168
-    connRef = new ConnRef(router, 168);
+    connRef = ConnRef::createConnRef(router, 168).get();
     srcPt = ConnEnd(Point(838.1049961675988, 104.9817596056507), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(838.1049961675988, 154.9817596056507), 1);
@@ -1457,7 +1457,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef169
-    connRef = new ConnRef(router, 169);
+    connRef = ConnRef::createConnRef(router, 169).get();
     srcPt = ConnEnd(Point(838.1049961675988, 246.9817596056507), 1);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(838.1049961675988, 196.9817596056507), 2);
@@ -1465,7 +1465,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef170
-    connRef = new ConnRef(router, 170);
+    connRef = ConnRef::createConnRef(router, 170).get();
     srcPt = ConnEnd(Point(456.8192818798844, -79.01824039634928), 1);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(456.8192818798844, -129.0182403963493), 2);
@@ -1473,7 +1473,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef171
-    connRef = new ConnRef(router, 171);
+    connRef = ConnRef::createConnRef(router, 171).get();
     srcPt = ConnEnd(Point(838.1049961675988, 29.98175960565069), 2);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(838.1049961675988, 79.98175960565069), 1);
@@ -1481,7 +1481,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef172
-    connRef = new ConnRef(router, 172);
+    connRef = ConnRef::createConnRef(router, 172).get();
     srcPt = ConnEnd(Point(-111.1807181201156, -55.0182403953493), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(-111.1807181201156, 460.9817596066507), 1);
@@ -1489,7 +1489,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef173
-    connRef = new ConnRef(router, 173);
+    connRef = ConnRef::createConnRef(router, 173).get();
     srcPt = ConnEnd(Point(-111.1807181201156, 856.315092940984), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(-111.1807181201156, 614.9817596066507), 2);

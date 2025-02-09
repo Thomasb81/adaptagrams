@@ -51,16 +51,16 @@ int main(void)
     printf("\nCreate connector.\n");
     Point srcPt(1.2, 0.5);
     Point dstPt(1.5, 4);
-    ConnRef *connRef = new ConnRef(router);
+    ConnRef *connRef = ConnRef::createConnRef(router).get();
     connRef->setCallback(connCallback, connRef);
     // Force inital callback:
     router->processTransaction();
 
-    ConnRef *connRef2 = new ConnRef(router);
+    ConnRef *connRef2 = ConnRef::createConnRef(router).get();
     connRef2->setCallback(connCallback, connRef2);
     router->processTransaction();
 
-    router->deleteConnector(connRef2);
+    router->deleteConnector(connRef2->getPtr());
     connRef2 = nullptr;
     router->processTransaction();
 

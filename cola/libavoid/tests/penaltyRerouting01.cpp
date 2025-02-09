@@ -162,7 +162,7 @@ int main(void) {
     new ShapeRef(router, polygon, 16);
 
     // connRef17
-    connRef = new ConnRef(router, 17);
+    connRef = ConnRef::createConnRef(router, 17).get();
     srcPt = ConnEnd(Point(464, 598), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(369, 598), 15);
@@ -175,7 +175,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef18
-    connRef = new ConnRef(router, 18);
+    connRef = ConnRef::createConnRef(router, 18).get();
     srcPt = ConnEnd(Point(267.5, 598), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(166, 598), 15);
@@ -188,7 +188,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef19
-    connRef = new ConnRef(router, 19);
+    connRef = ConnRef::createConnRef(router, 19).get();
     srcPt = ConnEnd(Point(369, 598), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(369, 369), 15);
@@ -201,7 +201,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef20
-    connRef = new ConnRef(router, 20);
+    connRef = ConnRef::createConnRef(router, 20).get();
     srcPt = ConnEnd(Point(464, 506), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(464, 598), 15);
@@ -214,7 +214,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef21
-    connRef = new ConnRef(router, 21);
+    connRef = ConnRef::createConnRef(router, 21).get();
     srcPt = ConnEnd(Point(756, 598), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(756, 145), 15);
@@ -227,7 +227,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef22
-    connRef = new ConnRef(router, 22);
+    connRef = ConnRef::createConnRef(router, 22).get();
     srcPt = ConnEnd(Point(369, 369), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(267.5, 369), 15);
@@ -240,7 +240,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef23
-    connRef = new ConnRef(router, 23);
+    connRef = ConnRef::createConnRef(router, 23).get();
     srcPt = ConnEnd(Point(166, 145), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(756, 145), 15);
@@ -253,7 +253,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef24
-    connRef = new ConnRef(router, 24);
+    connRef = ConnRef::createConnRef(router, 24).get();
     srcPt = ConnEnd(Point(464, 486.495), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(706.495, 486.495), 15);
@@ -261,7 +261,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef25
-    connRef = new ConnRef(router, 25);
+    connRef = ConnRef::createConnRef(router, 25).get();
     srcPt = ConnEnd(Point(535, 369), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(535, 506), 15);
@@ -274,7 +274,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef26
-    connRef = new ConnRef(router, 26);
+    connRef = ConnRef::createConnRef(router, 26).get();
     srcPt = ConnEnd(Point(648, 598), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(648, 369), 15);
@@ -287,7 +287,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef27
-    connRef = new ConnRef(router, 27);
+    connRef = ConnRef::createConnRef(router, 27).get();
     srcPt = ConnEnd(Point(464, 486.495), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(217, 486.495), 15);
@@ -295,7 +295,7 @@ int main(void) {
     connRef->setRoutingType((ConnType)2);
 
     // connRef28
-    connRef = new ConnRef(router, 28);
+    connRef = ConnRef::createConnRef(router, 28).get();
     srcPt = ConnEnd(Point(648, 598), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(756, 598), 15);
@@ -308,7 +308,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef29
-    connRef = new ConnRef(router, 29);
+    connRef = ConnRef::createConnRef(router, 29).get();
     srcPt = ConnEnd(Point(166, 598), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(166, 145), 15);
@@ -321,7 +321,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef30
-    connRef = new ConnRef(router, 30);
+    connRef = ConnRef::createConnRef(router, 30).get();
     srcPt = ConnEnd(Point(648, 369), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(535, 369), 15);
@@ -334,7 +334,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef31
-    connRef = new ConnRef(router, 31);
+    connRef = ConnRef::createConnRef(router, 31).get();
     srcPt = ConnEnd(Point(267.5, 369), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(267.5, 598), 15);
@@ -347,7 +347,7 @@ int main(void) {
     connRef->setFixedRoute(newRoute);
 
     // connRef32
-    connRef = new ConnRef(router, 32);
+    connRef = ConnRef::createConnRef(router, 32).get();
     srcPt = ConnEnd(Point(535, 506), 15);
     connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(464, 506), 15);

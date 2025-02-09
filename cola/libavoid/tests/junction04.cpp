@@ -60,13 +60,13 @@ int main(void)
 
     ConnEnd srcEnd(shapeRef1, CONNECTIONPIN_CENTRE);
     ConnEnd dstEnd(shapeRef6, CONNECTIONPIN_CENTRE);
-    ConnRef *conn1= new ConnRef(router, srcEnd, dstEnd);
+    ConnRef *conn1= ConnRef::createConnRef(router, srcEnd, dstEnd).get();
     
     router->processTransaction();
     router->outputDiagram("output/junction04-1");
 
     // Split the connector on its second segment and add a junction point.
-    std::pair<JunctionRef *, ConnRef *> newObjs = 
+    std::pair<JunctionRef *, std::shared_ptr<ConnRef> > newObjs = 
             conn1->splitAtSegment(2);
 
     router->processTransaction();
@@ -76,13 +76,13 @@ int main(void)
     // the junction.
     ConnEnd srcEnd3(shapeRef5, CONNECTIONPIN_CENTRE);
     ConnEnd dstEnd3(newObjs.first);
-    new ConnRef(router, srcEnd3, dstEnd3);
+    ConnRef::createConnRef(router, srcEnd3, dstEnd3).get();
 
     router->processTransaction();
     router->outputDiagram("output/junction04-3");
 
     // Delete one half of the original connector, up to the junction.
-    router->deleteConnector(conn1);
+    router->deleteConnector(conn1->getPtr());
     conn1 = nullptr;
 
     router->processTransaction();

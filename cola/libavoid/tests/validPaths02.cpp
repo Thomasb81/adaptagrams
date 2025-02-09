@@ -31,14 +31,14 @@ int main(void) {
     new ShapeConnectionPin(shapeRef197692264, 1, 0.5, 0.39759, true, 0, (ConnDirFlags) 13);
     new ShapeConnectionPin(shapeRef197692264, 2, 0.5, 1, true, 10, (ConnDirFlags) 2);
 
-    ConnRef *connRef111820287 = new ConnRef(router, 111820287);
+    ConnRef *connRef111820287 = ConnRef::createConnRef(router, 111820287).get();
     ConnEnd srcPt111820287(shapeRef186982048, 13);
     connRef111820287->setSourceEndpoint(srcPt111820287);
     ConnEnd dstPt111820287(shapeRef197692264, 2);
     connRef111820287->setDestEndpoint(dstPt111820287);
     connRef111820287->setRoutingType((ConnType)2);
 
-    ConnRef *connRef744282799 = new ConnRef(router, 744282799);
+    ConnRef *connRef744282799 = ConnRef::createConnRef(router, 744282799).get();
     ConnEnd srcPt744282799(shapeRef186982048, 5);
     connRef744282799->setSourceEndpoint(srcPt744282799);
     ConnEnd dstPt744282799(shapeRef197692264, 1);

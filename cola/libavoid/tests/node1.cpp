@@ -40,21 +40,21 @@ int main(void) {
 
     JunctionRef *junctionRef265539540 = new JunctionRef(router, Point(51625, 50950), 265539540);
 
-    ConnRef *connRef985644192 = new ConnRef(router, 985644192);
+    ConnRef *connRef985644192 = ConnRef::createConnRef(router, 985644192).get();
     ConnEnd srcPt985644192(shapeRef404900496, 1);
     connRef985644192->setSourceEndpoint(srcPt985644192);
     ConnEnd dstPt985644192(junctionRef265539540);
     connRef985644192->setDestEndpoint(dstPt985644192);
     connRef985644192->setRoutingType((ConnType)2);
 
-    ConnRef *connRef467016913 = new ConnRef(router, 467016913);
+    ConnRef *connRef467016913 = ConnRef::createConnRef(router, 467016913).get();
     ConnEnd srcPt467016913(junctionRef265539540);
     connRef467016913->setSourceEndpoint(srcPt467016913);
     ConnEnd dstPt467016913(shapeRef807558175, 1);
     connRef467016913->setDestEndpoint(dstPt467016913);
     connRef467016913->setRoutingType((ConnType)2);
 
-    ConnRef *connRef45740440 = new ConnRef(router, 45740440);
+    ConnRef *connRef45740440 = ConnRef::createConnRef(router, 45740440).get();
     ConnEnd srcPt45740440(shapeRef342721632, 1);
     connRef45740440->setSourceEndpoint(srcPt45740440);
     ConnEnd dstPt45740440(junctionRef265539540);

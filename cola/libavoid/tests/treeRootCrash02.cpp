@@ -120,13 +120,13 @@ void test()
 	junction0_24560921->setPositionFixed(true);
 	end1_0 = ConnEnd(shape0_145706592, 2);
 	end2_0 = ConnEnd(junction0_144230940);
-	ConnRef * conn0_61425638 = new ConnRef(router0, end1_0, end2_0, 61425638);
+	ConnRef * conn0_61425638 = ConnRef::createConnRef(router0, end1_0, end2_0, 61425638).get();
 	end1_0 = ConnEnd(junction0_144230940);
 	end2_0 = ConnEnd(shape0_368159034, 1);
-	ConnRef * conn0_378385232 = new ConnRef(router0, end1_0, end2_0, 378385232);
+	ConnRef * conn0_378385232 = ConnRef::createConnRef(router0, end1_0, end2_0, 378385232).get();
 	end1_0 = ConnEnd(Point(49975, 50450), 15);
 	end2_0 = ConnEnd(Point(49600, 50525), 15);
-	ConnRef * conn0_117136925 = new ConnRef(router0, end1_0, end2_0, 117136925);
+	ConnRef * conn0_117136925 = ConnRef::createConnRef(router0, end1_0, end2_0, 117136925).get();
 	poly0 = PolyLine(3);
 	poly0.setPoint(0, Point(49975, 50450));
 	poly0.setPoint(1, Point(49600, 50450));
@@ -136,10 +136,10 @@ void test()
 	conn0_117136925->setDestEndpoint(end2_0);
 	end1_0 = ConnEnd(shape0_1023802233, 3);
 	end2_0 = ConnEnd(junction0_526491597);
-	ConnRef * conn0_224626788 = new ConnRef(router0, end1_0, end2_0, 224626788);
+	ConnRef * conn0_224626788 = ConnRef::createConnRef(router0, end1_0, end2_0, 224626788).get();
 	end1_0 = ConnEnd(Point(49600, 50525), 15);
 	end2_0 = ConnEnd(Point(49600, 50650), 15);
-	ConnRef * conn0_446423927 = new ConnRef(router0, end1_0, end2_0, 446423927);
+	ConnRef * conn0_446423927 = ConnRef::createConnRef(router0, end1_0, end2_0, 446423927).get();
 	poly0 = PolyLine(3);
 	poly0.setPoint(0, Point(49600, 50525));
 	poly0.setPoint(1, Point(49600, 50587));
@@ -149,7 +149,7 @@ void test()
 	conn0_446423927->setDestEndpoint(end2_0);
 	end1_0 = ConnEnd(Point(49600, 50650), 15);
 	end2_0 = ConnEnd(Point(49475, 50725), 15);
-	ConnRef * conn0_880789055 = new ConnRef(router0, end1_0, end2_0, 880789055);
+	ConnRef * conn0_880789055 = ConnRef::createConnRef(router0, end1_0, end2_0, 880789055).get();
 	poly0 = PolyLine(3);
 	poly0.setPoint(0, Point(49600, 50650));
 	poly0.setPoint(1, Point(49600, 50725));
@@ -159,7 +159,7 @@ void test()
 	conn0_880789055->setDestEndpoint(end2_0);
 	end1_0 = ConnEnd(Point(49975, 50600), 15);
 	end2_0 = ConnEnd(Point(49600, 50650), 15);
-	ConnRef * conn0_11189244 = new ConnRef(router0, end1_0, end2_0, 11189244);
+	ConnRef * conn0_11189244 = ConnRef::createConnRef(router0, end1_0, end2_0, 11189244).get();
 	poly0 = PolyLine(3);
 	poly0.setPoint(0, Point(49975, 50600));
 	poly0.setPoint(1, Point(49600, 50600));
@@ -169,16 +169,16 @@ void test()
 	conn0_11189244->setDestEndpoint(end2_0);
 	end1_0 = ConnEnd(shape0_59732242, 3);
 	end2_0 = ConnEnd(junction0_24560921);
-	ConnRef * conn0_605306624 = new ConnRef(router0, end1_0, end2_0, 605306624);
+	ConnRef * conn0_605306624 = ConnRef::createConnRef(router0, end1_0, end2_0, 605306624).get();
 	end1_0 = ConnEnd(junction0_24560921);
 	end2_0 = ConnEnd(shape0_1023802233, 15);
-	ConnRef * conn0_61198110 = new ConnRef(router0, end1_0, end2_0, 61198110);
+	ConnRef * conn0_61198110 = ConnRef::createConnRef(router0, end1_0, end2_0, 61198110).get();
 	end1_0 = ConnEnd(shape0_1023802233, 19);
 	end2_0 = ConnEnd(junction0_24560921);
-	ConnRef * conn0_323306544 = new ConnRef(router0, end1_0, end2_0, 323306544);
+	ConnRef * conn0_323306544 = ConnRef::createConnRef(router0, end1_0, end2_0, 323306544).get();
 	end1_0 = ConnEnd(shape0_152071508, 1);
 	end2_0 = ConnEnd(junction0_24560921);
-	ConnRef * conn0_2415000 = new ConnRef(router0, end1_0, end2_0, 2415000);
+	ConnRef * conn0_2415000 = ConnRef::createConnRef(router0, end1_0, end2_0, 2415000).get();
 	router0->processTransaction();
 
 	newanddeletedobjects_0 = router0->newAndDeletedObjectListsFromHyperedgeImprovement();
