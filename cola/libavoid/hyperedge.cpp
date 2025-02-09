@@ -194,7 +194,7 @@ bool HyperedgeRerouter::findAttachedObjects(size_t index,
     for (ConnRefList::iterator curr  = connectors.begin();
             curr != connectors.end(); ++curr)
     {
-        if (*curr == ignore->getPtr())
+        if ((*curr).get() == ignore)
         {
             continue;
         }

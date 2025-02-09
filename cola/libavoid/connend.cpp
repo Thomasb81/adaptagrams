@@ -251,11 +251,13 @@ void ConnEnd::disconnect(const bool shapeDeleted)
     if (m_conn_ref == nullptr)
     {
         // Not connected.
-        return;
+      //  return;
     }
 
     m_point = position();
-    m_anchor_obj->removeFollowingConnEnd(this);
+    if (m_anchor_obj) {
+        m_anchor_obj->removeFollowingConnEnd(this);
+    }
     m_conn_ref = nullptr;
 
     if (shapeDeleted)

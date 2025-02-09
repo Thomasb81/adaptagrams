@@ -64,17 +64,17 @@ ConnRef::ConnRef(Router *router, const unsigned int id)
       m_src_connend(nullptr),
       m_dst_connend(nullptr)
 {
-    COLA_ASSERT(m_router != nullptr);
-    m_id = m_router->assignId(id);
-
-    // TODO: Store endpoints and details.
-    m_route.clear();
-
-    //m_reroute_flag_ptr = m_router->m_conn_reroute_flags.addConn(this);
 }
 
 std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const unsigned int id){
     std::shared_ptr<ConnRef> ptr = std::make_shared<ConnRef>(router,id);
+
+    COLA_ASSERT(ptr.get()->m_router != nullptr);
+    ptr.get()->m_id = ptr.get()->m_router->assignId(id);
+
+    // TODO: Store endpoints and details.
+    ptr.get()->m_route.clear();
+
     ptr.get()->m_reroute_flag_ptr = router->m_conn_reroute_flags.addConn(ptr->getPtr());
     return ptr;
 }
@@ -98,19 +98,21 @@ ConnRef::ConnRef(Router *router, const ConnEnd& src, const ConnEnd& dst,
       m_src_connend(nullptr),
       m_dst_connend(nullptr)
 {
-    COLA_ASSERT(m_router != nullptr);
-    m_id = m_router->assignId(id);
-    m_route.clear();
 
-    // Set endpoint values.
-    setEndpoints(src, dst);
-
-    //m_reroute_flag_ptr = m_router->m_conn_reroute_flags.addConn(this);
 }
 
 std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const ConnEnd& src, const ConnEnd& dst, const unsigned int id) {
     std::shared_ptr<ConnRef> ptr = std::make_shared<ConnRef>(router,src,dst,id);
+
+    COLA_ASSERT(ptr.get()->m_router != nullptr);
+    ptr.get()->m_id = ptr.get()->m_router->assignId(id);
+    ptr.get()->m_route.clear();
+
+    // Set endpoint values.
+    ptr.get()->setEndpoints(src, dst);
+
     ptr.get()->m_reroute_flag_ptr = router->m_conn_reroute_flags.addConn(ptr->getPtr());
+
     return ptr;
 }
 
@@ -125,14 +127,16 @@ ConnRef::~ConnRef()
 
     if (m_router->m_currently_calling_destructors == false)
     {
-        err_printf("ERROR: ConnRef::~ConnRef() shouldn't be called directly.\n");
-        err_printf("       It is owned by the router.  Call Router::deleteConnector() instead.\n");
-        abort();
+        //err_printf("ERROR: ConnRef::~ConnRef() shouldn't be called directly.\n");
+        //err_printf("       It is owned by the router.  Call Router::deleteConnector() instead.\n");
+        //abort();
     }
 
-    m_router->m_conn_reroute_flags.removeConn(this->getPtr());
+    //move to Router::deleteConnector
+    //m_router->m_conn_reroute_flags.removeConn(this->getPtr());
 
-    m_router->removeObjectFromQueuedActions(this->getPtr().get());
+    //move to Router::deleteConnector
+    //m_router->removeObjectFromQueuedActions(this->getPtr().get());
 
     freeRoutes();
 
@@ -588,9 +592,12 @@ void ConnRef::freeActivePins(void)
 void ConnRef::makeInactive(void)
 {
     COLA_ASSERT(m_active);
-    
+
+    // move to Router::deleteConnector    
     // Remove from connRefs list.
-    m_router->connRefs.erase(m_connrefs_pos);
+//    if (m_router->connRefs.size() > 0) {
+//        m_router->connRefs.erase(m_connrefs_pos);
+//    }
     m_active = false;
 }
 

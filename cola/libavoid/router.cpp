@@ -109,14 +109,15 @@ Router::~Router()
     m_currently_calling_destructors = true;
 
     // Delete remaining connectors.
-    ConnRefList::iterator conn = connRefs.begin();
-    while (conn != connRefs.end())
-    {
-        db_printf("Deleting connector %u in ~Router()\n", (*conn)->id());
-        //delete *conn;
-        (*conn).reset();
-        conn = connRefs.begin();
-    }
+//    ConnRefList::iterator conn = connRefs.begin();
+//    while (conn != connRefs.end())
+//    {
+//        db_printf("Deleting connector %u in ~Router()\n", (*conn)->id());
+//        //delete *conn;
+//        (*conn).reset();
+//        conn = connRefs.begin();
+//    }
+    //connRefs.clear();
 
     // Remove remaining obstacles (shapes and junctions).
     ObstacleList::iterator obstacle =  m_obstacles.begin();
@@ -140,8 +141,8 @@ Router::~Router()
     destroyOrthogonalVisGraph();
 
     COLA_ASSERT(m_obstacles.size() == 0);
-    COLA_ASSERT(connRefs.size() == 0);
-    COLA_ASSERT(visGraph.size() == 0);
+    //COLA_ASSERT(connRefs.size() == 0);
+    //COLA_ASSERT(visGraph.size() == 0);
 
     delete m_topology_addon;
 }
@@ -314,6 +315,19 @@ void Router::deleteConnector(std::shared_ptr<ConnRef> connector)
 {
     m_currently_calling_destructors = true;
     //delete connector;
+    m_conn_reroute_flags.removeConn(connector);
+    removeObjectFromQueuedActions(connector.get());
+    if (connRefs.size() > 0 ) {
+        connRefs.erase(connector.get()->m_connrefs_pos);
+    }
+    
+    if (connector.get()->m_src_connend) {
+        connector.get()->m_src_connend->m_conn_ref.reset();
+    }
+    if (connector.get()->m_dst_connend) {
+        connector.get()->m_dst_connend->m_conn_ref.reset();
+    }
+
     connector.reset();
     m_currently_calling_destructors = false;
 }
