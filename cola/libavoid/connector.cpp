@@ -45,7 +45,7 @@
 namespace Avoid {
 
     
-ConnRef::ConnRef(Router *router, const unsigned int id)
+ConnRef::ConnRef(Router *router)
     : m_router(router),
       m_type(router->validConnType()),
       m_reroute_flag_ptr(nullptr),
@@ -67,7 +67,7 @@ ConnRef::ConnRef(Router *router, const unsigned int id)
 }
 
 std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const unsigned int id){
-    std::shared_ptr<ConnRef> ptr = std::make_shared<ConnRef>(router,id);
+    std::shared_ptr<ConnRef> ptr = std::make_shared<ConnRef>(router);
 
     COLA_ASSERT(ptr.get()->m_router != nullptr);
     ptr.get()->m_id = ptr.get()->m_router->assignId(id);
@@ -79,30 +79,8 @@ std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const unsigned i
     return ptr;
 }
 
-ConnRef::ConnRef(Router *router, const ConnEnd& src, const ConnEnd& dst,
-        const unsigned int id)
-    : m_router(router),
-      m_type(router->validConnType()),
-      m_reroute_flag_ptr(nullptr),
-      m_needs_reroute_flag(true),
-      m_false_path(false),
-      m_needs_repaint(false),
-      m_active(false),
-      m_hate_crossings(false),
-      m_has_fixed_route(false),
-      m_route_dist(0),
-      m_src_vert(nullptr),
-      m_dst_vert(nullptr),
-      m_callback_func(nullptr),
-      m_connector(nullptr),
-      m_src_connend(nullptr),
-      m_dst_connend(nullptr)
-{
-
-}
-
-std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const ConnEnd& src, const ConnEnd& dst, const unsigned int id) {
-    std::shared_ptr<ConnRef> ptr = std::make_shared<ConnRef>(router,src,dst,id);
+std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const ConnEnd& src,  const ConnEnd& dst, const unsigned int id) {
+    std::shared_ptr<ConnRef> ptr = std::make_shared<ConnRef>(router);
 
     COLA_ASSERT(ptr.get()->m_router != nullptr);
     ptr.get()->m_id = ptr.get()->m_router->assignId(id);
