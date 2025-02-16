@@ -43,7 +43,7 @@ ShapeRef::ShapeRef(Router *router, Polygon& ply, const unsigned int id)
 }
 
 std::shared_ptr<ShapeRef> ShapeRef::createShapeRef(Router *router, Polygon& poly, const unsigned int id) {
-    std::shared_ptr<ShapeRef> ptr = std::make_shared<ShapeRef>(router,poly,id);
+    std::shared_ptr<ShapeRef> ptr = std::shared_ptr<ShapeRef>(new ShapeRef(router,poly,id));
     router->addShape(ptr->getPtr());
     return ptr; 
 }

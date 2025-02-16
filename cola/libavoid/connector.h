@@ -153,7 +153,9 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         //! @param[in]  id      Optionally, a positive integer ID unique
         //!                     among all objects.
         //!
+    private:
         ConnRef(Router *router);
+    public:
         static std::shared_ptr<ConnRef> createConnRef(Router *router, const unsigned int id = 0);
         //! @brief Constructs a connector with endpoints specified.
         //!

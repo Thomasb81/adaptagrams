@@ -116,7 +116,9 @@ class AVOID_EXPORT ShapeRef : public std::enable_shared_from_this<ShapeRef>, pub
         //! @param[in]  id      Optionally, a positive integer ID unique
         //!                     among all objects.
         //!
+    private:
         ShapeRef(Router *router, Polygon& poly, const unsigned int id = 0);
+    public:
         static std::shared_ptr<ShapeRef> createShapeRef(Router *router, Polygon& poly, const unsigned int id = 0);
         std::shared_ptr<ShapeRef> getPtr();
 

@@ -67,7 +67,7 @@ ConnRef::ConnRef(Router *router)
 }
 
 std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const unsigned int id){
-    std::shared_ptr<ConnRef> ptr = std::make_shared<ConnRef>(router);
+    std::shared_ptr<ConnRef> ptr = std::shared_ptr<ConnRef>(new ConnRef(router));
 
     COLA_ASSERT(ptr.get()->m_router != nullptr);
     ptr.get()->m_id = ptr.get()->m_router->assignId(id);
@@ -80,7 +80,7 @@ std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const unsigned i
 }
 
 std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const ConnEnd& src,  const ConnEnd& dst, const unsigned int id) {
-    std::shared_ptr<ConnRef> ptr = std::make_shared<ConnRef>(router);
+    std::shared_ptr<ConnRef> ptr = std::shared_ptr<ConnRef>(new ConnRef(router));
 
     COLA_ASSERT(ptr.get()->m_router != nullptr);
     ptr.get()->m_id = ptr.get()->m_router->assignId(id);

@@ -50,7 +50,7 @@ JunctionRef::JunctionRef(Router *router, Point position, const unsigned int id)
 }
 
 std::shared_ptr<JunctionRef> JunctionRef::createJunctionRef(Router *router, Point position, const unsigned int id) {
-    std::shared_ptr<JunctionRef> ptr = std::make_shared<JunctionRef>(router, position,id);
+    std::shared_ptr<JunctionRef> ptr =  std::shared_ptr<JunctionRef>(new JunctionRef(router, position,id));
     
     ShapeConnectionPin *pin = new Avoid::ShapeConnectionPin(ptr,
             Avoid::CONNECTIONPIN_CENTRE, ConnDirAll);
@@ -237,7 +237,7 @@ ConnRef *JunctionRef::removeJunctionAndMergeConnectors(void)
     m_router->deleteConnector(conn2->getPtr());
 
     // Remove the junction from the router scene.  It should get deleted later.
-    m_router->deleteJunction(this);
+    m_router->deleteJunction(this->getPtr());
 
     // Return the first (i.e. merged) connector.
     return connEnd1->m_conn_ref.get();

@@ -109,7 +109,9 @@ class AVOID_EXPORT JunctionRef : public std::enable_shared_from_this<JunctionRef
         //! @param[in]  id       Optionally, a positive integer ID unique
         //!                      among all objects.
         //!
+    private :
         JunctionRef(Router *router, Point position, const unsigned int id = 0);
+    public:
         static std::shared_ptr<JunctionRef> createJunctionRef(Router *router, Point position, const unsigned int id = 0);
         std::shared_ptr<JunctionRef> getPtr();
 
