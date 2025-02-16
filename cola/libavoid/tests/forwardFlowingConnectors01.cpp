@@ -28,7 +28,7 @@ int main(void) {
     polygon.ps[1] = Point(0, 0);
     polygon.ps[2] = Point(0, 0);
     polygon.ps[3] = Point(0, 0);
-    new ShapeRef(router, polygon, 1);
+    ShapeRef::createShapeRef(router, polygon, 1);
 
     // shapeRef2
     polygon = Polygon(4);
@@ -36,7 +36,7 @@ int main(void) {
     polygon.ps[1] = Point(0, 0);
     polygon.ps[2] = Point(0, 0);
     polygon.ps[3] = Point(0, 0);
-    new ShapeRef(router, polygon, 2);
+    ShapeRef::createShapeRef(router, polygon, 2);
 
     // shapeRef3
     polygon = Polygon(4);
@@ -44,7 +44,7 @@ int main(void) {
     polygon.ps[1] = Point(0, 0);
     polygon.ps[2] = Point(0, 0);
     polygon.ps[3] = Point(0, 0);
-    new ShapeRef(router, polygon, 3);
+    ShapeRef::createShapeRef(router, polygon, 3);
 
     // shapeRef4
     polygon = Polygon(4);
@@ -52,7 +52,7 @@ int main(void) {
     polygon.ps[1] = Point(0, 0);
     polygon.ps[2] = Point(0, 0);
     polygon.ps[3] = Point(0, 0);
-    new ShapeRef(router, polygon, 4);
+    ShapeRef::createShapeRef(router, polygon, 4);
 
     // shapeRef5
     polygon = Polygon(4);
@@ -60,7 +60,7 @@ int main(void) {
     polygon.ps[1] = Point(501, 404);
     polygon.ps[2] = Point(421, 404);
     polygon.ps[3] = Point(421, 345);
-    ShapeRef *shapeRef5 = new ShapeRef(router, polygon, 5);
+    auto shapeRef5 = ShapeRef::createShapeRef(router, polygon, 5);
     new ShapeConnectionPin(shapeRef5, 5, 1, 0.652542, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef5, 6, 0, 0.79096, true, 0, (ConnDirFlags) 4);
     new ShapeConnectionPin(shapeRef5, 7, 0, 0.514124, true, 0, (ConnDirFlags) 4);
@@ -71,7 +71,7 @@ int main(void) {
     polygon.ps[1] = Point(94, 315.5);
     polygon.ps[2] = Point(12, 315.5);
     polygon.ps[3] = Point(12, 251.5);
-    ShapeRef *shapeRef6 = new ShapeRef(router, polygon, 6);
+    auto shapeRef6 = ShapeRef::createShapeRef(router, polygon, 6);
     new ShapeConnectionPin(shapeRef6, 8, 1, 0.640625, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef6, 9, 0, 0.640625, true, 0, (ConnDirFlags) 4);
 
@@ -81,7 +81,7 @@ int main(void) {
     polygon.ps[1] = Point(634.366, 305);
     polygon.ps[2] = Point(416.366, 305);
     polygon.ps[3] = Point(416.366, 262);
-    ShapeRef *shapeRef7 = new ShapeRef(router, polygon, 7);
+    auto shapeRef7 = ShapeRef::createShapeRef(router, polygon, 7);
     new ShapeConnectionPin(shapeRef7, 10, 1, 0.709302, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef7, 11, 0, 0.709302, true, 0, (ConnDirFlags) 4);
 
@@ -91,7 +91,7 @@ int main(void) {
     polygon.ps[1] = Point(324, 206.167);
     polygon.ps[2] = Point(236, 206.167);
     polygon.ps[3] = Point(236, 147.167);
-    ShapeRef *shapeRef8 = new ShapeRef(router, polygon, 8);
+    auto shapeRef8 = ShapeRef::createShapeRef(router, polygon, 8);
     new ShapeConnectionPin(shapeRef8, 12, 1, 0.652542, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef8, 13, 0, 0.79096, true, 0, (ConnDirFlags) 4);
     new ShapeConnectionPin(shapeRef8, 14, 0, 0.514124, true, 0, (ConnDirFlags) 4);
@@ -102,7 +102,7 @@ int main(void) {
     polygon.ps[1] = Point(816, 412.167);
     polygon.ps[2] = Point(735, 412.167);
     polygon.ps[3] = Point(735, 353.167);
-    ShapeRef *shapeRef9 = new ShapeRef(router, polygon, 9);
+    auto shapeRef9 = ShapeRef::createShapeRef(router, polygon, 9);
     new ShapeConnectionPin(shapeRef9, 15, 1, 0.514124, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef9, 16, 1, 0.79096, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef9, 17, 0, 0.79096, true, 0, (ConnDirFlags) 4);
@@ -114,7 +114,7 @@ int main(void) {
     polygon.ps[1] = Point(981, 321.833);
     polygon.ps[2] = Point(828, 321.833);
     polygon.ps[3] = Point(828, 263.833);
-    ShapeRef *shapeRef10 = new ShapeRef(router, polygon, 10);
+    auto shapeRef10 = ShapeRef::createShapeRef(router, polygon, 10);
     new ShapeConnectionPin(shapeRef10, 19, 0, 0.655172, true, 0, (ConnDirFlags) 4);
 
     // shapeRef11
@@ -123,7 +123,7 @@ int main(void) {
     polygon.ps[1] = Point(1011.49, 419.833);
     polygon.ps[2] = Point(834.489, 419.833);
     polygon.ps[3] = Point(834.489, 361.833);
-    ShapeRef *shapeRef11 = new ShapeRef(router, polygon, 11);
+    auto shapeRef11 = ShapeRef::createShapeRef(router, polygon, 11);
     new ShapeConnectionPin(shapeRef11, 20, 0, 0.655172, true, 0, (ConnDirFlags) 4);
 
     // shapeRef12
@@ -132,7 +132,7 @@ int main(void) {
     polygon.ps[1] = Point(511, 214.333);
     polygon.ps[2] = Point(422, 214.333);
     polygon.ps[3] = Point(422, 155.333);
-    ShapeRef *shapeRef12 = new ShapeRef(router, polygon, 12);
+    auto shapeRef12 = ShapeRef::createShapeRef(router, polygon, 12);
     new ShapeConnectionPin(shapeRef12, 21, 1, 0.514124, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef12, 22, 1, 0.79096, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef12, 23, 0, 0.79096, true, 0, (ConnDirFlags) 4);
@@ -144,7 +144,7 @@ int main(void) {
     polygon.ps[1] = Point(690, 124);
     polygon.ps[2] = Point(523, 124);
     polygon.ps[3] = Point(523, 66);
-    ShapeRef *shapeRef13 = new ShapeRef(router, polygon, 13);
+    auto shapeRef13 = ShapeRef::createShapeRef(router, polygon, 13);
     new ShapeConnectionPin(shapeRef13, 25, 0, 0.655172, true, 0, (ConnDirFlags) 4);
 
     // shapeRef14
@@ -153,7 +153,7 @@ int main(void) {
     polygon.ps[1] = Point(720.212, 222);
     polygon.ps[2] = Point(529.212, 222);
     polygon.ps[3] = Point(529.212, 164);
-    ShapeRef *shapeRef14 = new ShapeRef(router, polygon, 14);
+    auto shapeRef14 = ShapeRef::createShapeRef(router, polygon, 14);
     new ShapeConnectionPin(shapeRef14, 26, 0, 0.655172, true, 0, (ConnDirFlags) 4);
 
     // shapeRef15
@@ -162,7 +162,7 @@ int main(void) {
     polygon.ps[1] = Point(217, 395.833);
     polygon.ps[2] = Point(98, 395.833);
     polygon.ps[3] = Point(98, 336.833);
-    ShapeRef *shapeRef15 = new ShapeRef(router, polygon, 15);
+    auto shapeRef15 = ShapeRef::createShapeRef(router, polygon, 15);
     new ShapeConnectionPin(shapeRef15, 27, 1, 0.652542, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef15, 28, 0, 0.652542, true, 0, (ConnDirFlags) 4);
 
@@ -172,7 +172,7 @@ int main(void) {
     polygon.ps[1] = Point(413, 206.167);
     polygon.ps[2] = Point(336, 206.167);
     polygon.ps[3] = Point(336, 147.167);
-    ShapeRef *shapeRef16 = new ShapeRef(router, polygon, 16);
+    auto shapeRef16 = ShapeRef::createShapeRef(router, polygon, 16);
     new ShapeConnectionPin(shapeRef16, 29, 1, 0.652542, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef16, 30, 0, 0.652542, true, 0, (ConnDirFlags) 4);
 
@@ -182,7 +182,7 @@ int main(void) {
     polygon.ps[1] = Point(306, 395.833);
     polygon.ps[2] = Point(229, 395.833);
     polygon.ps[3] = Point(229, 336.833);
-    ShapeRef *shapeRef17 = new ShapeRef(router, polygon, 17);
+    auto shapeRef17 = ShapeRef::createShapeRef(router, polygon, 17);
     new ShapeConnectionPin(shapeRef17, 31, 1, 0.652542, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef17, 32, 0, 0.652542, true, 0, (ConnDirFlags) 4);
 
@@ -192,7 +192,7 @@ int main(void) {
     polygon.ps[1] = Point(175, 198);
     polygon.ps[2] = Point(98, 198);
     polygon.ps[3] = Point(98, 139);
-    ShapeRef *shapeRef18 = new ShapeRef(router, polygon, 18);
+    auto shapeRef18 = ShapeRef::createShapeRef(router, polygon, 18);
     new ShapeConnectionPin(shapeRef18, 33, 1, 0.652542, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef18, 34, 0, 0.652542, true, 0, (ConnDirFlags) 4);
 
@@ -202,7 +202,7 @@ int main(void) {
     polygon.ps[1] = Point(409, 458.333);
     polygon.ps[2] = Point(298, 458.333);
     polygon.ps[3] = Point(298, 399.333);
-    ShapeRef *shapeRef19 = new ShapeRef(router, polygon, 19);
+    auto shapeRef19 = ShapeRef::createShapeRef(router, polygon, 19);
     new ShapeConnectionPin(shapeRef19, 35, 1, 0.652542, true, 0, (ConnDirFlags) 8);
 
     // shapeRef20
@@ -211,7 +211,7 @@ int main(void) {
     polygon.ps[1] = Point(224, 99);
     polygon.ps[2] = Point(106, 99);
     polygon.ps[3] = Point(106, 40);
-    ShapeRef *shapeRef20 = new ShapeRef(router, polygon, 20);
+    auto shapeRef20 = ShapeRef::createShapeRef(router, polygon, 20);
     new ShapeConnectionPin(shapeRef20, 36, 1, 0.652542, true, 0, (ConnDirFlags) 8);
 
     // shapeRef21
@@ -220,7 +220,7 @@ int main(void) {
     polygon.ps[1] = Point(604, 404);
     polygon.ps[2] = Point(513, 404);
     polygon.ps[3] = Point(513, 345);
-    ShapeRef *shapeRef21 = new ShapeRef(router, polygon, 21);
+    auto shapeRef21 = ShapeRef::createShapeRef(router, polygon, 21);
     new ShapeConnectionPin(shapeRef21, 37, 1, 0.652542, true, 0, (ConnDirFlags) 8);
     new ShapeConnectionPin(shapeRef21, 38, 0, 0.652542, true, 0, (ConnDirFlags) 4);
 

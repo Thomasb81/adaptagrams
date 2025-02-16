@@ -1738,7 +1738,7 @@ extern void generateStaticOrthogonalVisGraph(Router *router)
     ObstacleList::iterator obstacleIt = router->m_obstacles.begin();
     for (unsigned i = 0; i < n; i++)
     {
-        Obstacle *obstacle = *obstacleIt;
+        Obstacle *obstacle = (*obstacleIt).get();
 #ifndef PAPER
         JunctionRef *junction = dynamic_cast<JunctionRef *> (obstacle);
         if (junction && ! junction->positionFixed())
@@ -1766,7 +1766,7 @@ extern void generateStaticOrthogonalVisGraph(Router *router)
         ObstacleList::iterator obstacleIt = router->m_obstacles.begin();
         for (unsigned i = 0; i < n; i++)
         {
-            Obstacle *obstacle = *obstacleIt;
+            Obstacle *obstacle = (*obstacleIt).get();
             JunctionRef *junction = dynamic_cast<JunctionRef *> (obstacle);
             if (junction && ! junction->positionFixed())
             {
@@ -1866,7 +1866,7 @@ extern void generateStaticOrthogonalVisGraph(Router *router)
     obstacleIt = router->m_obstacles.begin();
     for (unsigned i = 0; i < n; i++)
     {
-        Obstacle *obstacle = *obstacleIt;
+        Obstacle *obstacle = (*obstacleIt).get();
 #ifndef PAPER
         JunctionRef *junction = dynamic_cast<JunctionRef *> (obstacle);
         if (junction && ! junction->positionFixed())
@@ -2037,8 +2037,8 @@ static void buildOrthogonalNudgingSegments(Router *router,
         ObstacleList::iterator obstacleIt = router->m_obstacles.begin();
         for (unsigned i = 0; i < n; i++)
         {
-            ShapeRef *shape = dynamic_cast<ShapeRef *> (*obstacleIt);
-            JunctionRef *junction = dynamic_cast<JunctionRef *> (*obstacleIt);
+            ShapeRef *shape = dynamic_cast<ShapeRef *> ((*obstacleIt).get());
+            JunctionRef *junction = dynamic_cast<JunctionRef *> ((*obstacleIt).get());
             if (shape)
             {
                 // Take the real bounds of the shape

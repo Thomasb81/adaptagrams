@@ -39,18 +39,28 @@ namespace Avoid {
 ShapeRef::ShapeRef(Router *router, Polygon& ply, const unsigned int id)
     : Obstacle(router, ply, id)
 {
-    m_router->addShape(this);
+//    m_router->addShape(this);
+}
+
+std::shared_ptr<ShapeRef> ShapeRef::createShapeRef(Router *router, Polygon& poly, const unsigned int id) {
+    std::shared_ptr<ShapeRef> ptr = std::make_shared<ShapeRef>(router,poly,id);
+    router->addShape(ptr->getPtr());
+    return ptr; 
+}
+
+std::shared_ptr<ShapeRef> ShapeRef::getPtr() {
+    return shared_from_this();
 }
 
 
 ShapeRef::~ShapeRef()
 {
-    if (m_router->m_currently_calling_destructors == false)
-    {
-        err_printf("ERROR: ShapeRef::~ShapeRef() shouldn't be called directly.\n");
-        err_printf("       It is owned by the router.  Call Router::deleteShape() instead.\n");
-        abort();
-    }
+//    if (m_router->m_currently_calling_destructors == false)
+//    {
+//        err_printf("ERROR: ShapeRef::~ShapeRef() shouldn't be called directly.\n");
+//        err_printf("       It is owned by the router.  Call Router::deleteShape() instead.\n");
+//        abort();
+//    }
 }
 
 

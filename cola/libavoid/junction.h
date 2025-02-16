@@ -54,7 +54,7 @@ typedef std::list<JunctionRef *> JunctionRefList;
 //! be used to specify an intermediate point that a single connector must route
 //! through.
 //!
-class AVOID_EXPORT JunctionRef : public Obstacle
+class AVOID_EXPORT JunctionRef : public std::enable_shared_from_this<JunctionRef>, public Obstacle
 {
     public:
         //! @brief  Junction reference constructor.
@@ -110,6 +110,8 @@ class AVOID_EXPORT JunctionRef : public Obstacle
         //!                      among all objects.
         //!
         JunctionRef(Router *router, Point position, const unsigned int id = 0);
+        static std::shared_ptr<JunctionRef> createJunctionRef(Router *router, Point position, const unsigned int id = 0);
+        std::shared_ptr<JunctionRef> getPtr();
 
 // To prevent C++ objects from being destroyed in garbage collected languages
 // when the libraries are called from SWIG, we hide the declarations of the

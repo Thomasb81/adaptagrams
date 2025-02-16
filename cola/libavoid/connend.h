@@ -160,6 +160,7 @@ class AVOID_EXPORT ConnEnd
         //!                                   connect to.
         //!
         ConnEnd(ShapeRef *shapeRef, const unsigned int connectionPinClassID);
+        ConnEnd(std::shared_ptr<ShapeRef> shapeRef, const unsigned int connectionPinClassID);
 
         //! @brief Constructs a ConnEnd attached to one of the connection 
         //!        pins on a junction.
@@ -172,6 +173,7 @@ class AVOID_EXPORT ConnEnd
         //!                                   junction's junctionRef.
         //!
         ConnEnd(JunctionRef *junctionRef);
+        ConnEnd(std::shared_ptr<JunctionRef> junctionRef);
 
 
         //! @brief Returns the kind of connection this ConnEnd represents.

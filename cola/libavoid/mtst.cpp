@@ -156,7 +156,7 @@ HyperedgeTreeNode *MinimumTerminalSpanningTree::addNode(VertInf *vertex,
         if (junctionNode->junction == nullptr)
         {
             // Create a junction, if one has not already been created.
-            junctionNode->junction = new JunctionRef(router, vertex->point);
+            junctionNode->junction = JunctionRef::createJunctionRef(router, vertex->point).get();
             if (m_rootJunction == nullptr)
             {
                 // Remember the first junction node, so we can use it to

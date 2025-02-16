@@ -92,6 +92,21 @@ ConnEnd::ConnEnd(ShapeRef *shapeRef, const unsigned int connectionPinClassID)
     COLA_ASSERT(m_connection_pin_class_id != CONNECTIONPIN_UNSET);
 }
 
+ConnEnd::ConnEnd(std::shared_ptr<ShapeRef> shapeRef, const unsigned int connectionPinClassID)
+    : m_type(ConnEndShapePin),
+      m_point(Point(0,0)),
+      m_directions(ConnDirAll),
+      m_connection_pin_class_id(connectionPinClassID),
+      m_anchor_obj(shapeRef.get()),
+      m_conn_ref(nullptr),
+      m_active_pin(nullptr)
+{
+    COLA_ASSERT(m_anchor_obj != nullptr);
+    COLA_ASSERT(m_connection_pin_class_id > 0);
+
+    m_point = m_anchor_obj->position();
+    COLA_ASSERT(m_connection_pin_class_id != CONNECTIONPIN_UNSET);
+}
 
 ConnEnd::ConnEnd(JunctionRef *junctionRef)
     : m_type(ConnEndJunction),
@@ -105,6 +120,17 @@ ConnEnd::ConnEnd(JunctionRef *junctionRef)
     m_point = m_anchor_obj->position();
 }
 
+ConnEnd::ConnEnd(std::shared_ptr<JunctionRef> junctionRef) 
+    : m_type(ConnEndJunction),
+      m_directions(ConnDirAll),
+      m_connection_pin_class_id(CONNECTIONPIN_CENTRE),
+      m_anchor_obj(junctionRef.get()),
+      m_conn_ref(nullptr),
+      m_active_pin(nullptr)
+{
+    COLA_ASSERT(m_anchor_obj != nullptr);
+    m_point = m_anchor_obj->position();
+}
 
 ConnEnd::~ConnEnd()
 {

@@ -120,27 +120,26 @@ Router::~Router()
     //connRefs.clear();
 
     // Remove remaining obstacles (shapes and junctions).
-    ObstacleList::iterator obstacle =  m_obstacles.begin();
-    while (obstacle != m_obstacles.end())
-    {
-        Obstacle *obstaclePtr = *obstacle;
-        ShapeRef *shape = dynamic_cast<ShapeRef *> (obstaclePtr);
-        db_printf("Deleting %s %u in ~Router()\n", 
-                (shape) ? "shape" : "junction", obstaclePtr->id());
-        if (obstaclePtr->isActive())
-        {
-            obstaclePtr->removeFromGraph();
-            obstaclePtr->makeInactive();
-        }
-        delete obstaclePtr;
-        obstacle = m_obstacles.begin();
-    }
-    m_currently_calling_destructors = false;
+//    ObstacleList::iterator obstacle =  m_obstacles.begin();
+//    while (obstacle != m_obstacles.end())
+//    {
+//        Obstacle *obstaclePtr = (*obstacle).get();
+//        if (obstaclePtr->isActive())
+//        {
+//            obstaclePtr->removeFromGraph();
+//            obstaclePtr->makeInactive();
+//        }
+//        obstacle->reset();
+//        obstacle = m_obstacles.begin();
+//    }
+    m_shareRefList.clear();
+    m_junctionRefList.clear();
+    //m_currently_calling_destructors = false;
 
     // Cleanup orphaned orthogonal graph vertices.
     destroyOrthogonalVisGraph();
 
-    COLA_ASSERT(m_obstacles.size() == 0);
+    //COLA_ASSERT(m_obstacles.size() == 0);
     //COLA_ASSERT(connRefs.size() == 0);
     //COLA_ASSERT(visGraph.size() == 0);
 
@@ -166,7 +165,7 @@ ShapeRef *Router::shapeContainingPoint(const Point& point)
     ObstacleList::const_iterator finish = m_obstacles.end();
     for (ObstacleList::const_iterator i = m_obstacles.begin(); i != finish; ++i)
     {
-        ShapeRef *shape = dynamic_cast<ShapeRef *>(*i);
+        ShapeRef *shape = dynamic_cast<ShapeRef *>((*i).get());
         if (shape && inPoly(shape->routingPolygon(), point, countBorder))
         {
             return shape;
@@ -278,6 +277,11 @@ void Router::addShape(ShapeRef *shape)
         processTransaction();
     }
 }
+void Router::addShape(std::shared_ptr<ShapeRef> shape){
+    addShape(shape.get());
+    m_shareRefList.push_back(shape);
+    
+}
 
 
 void Router::deleteShape(ShapeRef *shape)
@@ -310,6 +314,10 @@ void Router::deleteShape(ShapeRef *shape)
     }
 }
 
+void Router::deleteShape(std::shared_ptr<ShapeRef> shape){
+    deleteShape(shape.get());
+    //m_shareRefList.remove(shape);
+}
 
 void Router::deleteConnector(std::shared_ptr<ConnRef> connector)
 {
@@ -353,6 +361,9 @@ void Router::moveShape(ShapeRef *shape, const double xDiff, const double yDiff)
 
     moveShape(shape, newPoly);
 }
+void Router::moveShape(std::shared_ptr<ShapeRef> shape, const double xDiff, const double yDiff){
+    moveShape(shape.get(), xDiff, yDiff);
+}
 
 
 void Router::markAllObstaclesAsMoved(void)
@@ -360,8 +371,8 @@ void Router::markAllObstaclesAsMoved(void)
     for (ObstacleList::iterator obstacleIt = m_obstacles.begin();
             obstacleIt != m_obstacles.end(); ++obstacleIt)
     {
-        ShapeRef *shape = dynamic_cast<ShapeRef *> (*obstacleIt);
-        JunctionRef *junction = dynamic_cast<JunctionRef *> (*obstacleIt);
+        ShapeRef *shape = dynamic_cast<ShapeRef *> ((*obstacleIt).get());
+        JunctionRef *junction = dynamic_cast<JunctionRef *> ((*obstacleIt).get());
         if (shape)
         {
             moveShape(shape, 0, 0);
@@ -413,6 +424,11 @@ void Router::moveShape(ShapeRef *shape, const Polygon& newPoly,
     {
         processTransaction();
     }
+}
+
+void Router::moveShape(std::shared_ptr<ShapeRef> shape, const Polygon& newPoly, 
+        const bool first_move){
+    moveShape(shape.get(), newPoly, first_move);
 }
 
 
@@ -542,7 +558,7 @@ void Router::processActions(void)
             // Free deleted obstacle.
             m_currently_calling_destructors = true;
             deletedObstacles.push_back(obstacle->id());
-            delete obstacle;
+            //delete obstacle;
             m_currently_calling_destructors = false;
         }
     }
@@ -697,6 +713,10 @@ void Router::addJunction(JunctionRef *junction)
     }
 }
 
+void Router::addJunction(std::shared_ptr<JunctionRef> junction) {
+    m_junctionRefList.push_back(junction);
+    addJunction(junction.get());
+}
 
 void Router::deleteJunction(JunctionRef *junction)
 {
@@ -728,6 +748,11 @@ void Router::deleteJunction(JunctionRef *junction)
     }
 }
 
+void Router::deleteJunction(std::shared_ptr<JunctionRef> junction) {
+    deleteJunction(junction.get());
+    //m_junctionRefList.remove(junction);
+}
+
 
 void Router::moveJunction(JunctionRef *junction, const double xDiff, 
         const double yDiff)
@@ -751,6 +776,11 @@ void Router::moveJunction(JunctionRef *junction, const double xDiff,
     newPosition.y += yDiff;
 
     moveJunction(junction, newPosition);
+}
+
+void Router::moveJunction(std::shared_ptr<JunctionRef> junction, const double xDiff, 
+        const double yDiff){
+    moveJunction(junction.get(),xDiff,yDiff);
 }
 
 
@@ -791,6 +821,9 @@ void Router::moveJunction(JunctionRef *junction, const Point& newPosition)
     {
         processTransaction();
     }
+}
+void Router::moveJunction(std::shared_ptr<JunctionRef> junction, const Point& newPosition){
+    moveJunction(junction.get(),newPosition);
 }
 
 void Router::addCluster(ClusterRef *cluster)
@@ -2490,7 +2523,7 @@ void Router::outputInstanceToSVG(std::string instanceName)
     ObstacleList::reverse_iterator revObstacleIt = m_obstacles.rbegin();
     while (revObstacleIt != m_obstacles.rend())
     {
-        Obstacle *obstacle = *revObstacleIt;
+        Obstacle *obstacle = (*revObstacleIt).get();
         obstacle->outputCode(fp);
         ++revObstacleIt;
     }
@@ -2549,7 +2582,7 @@ void Router::outputInstanceToSVG(std::string instanceName)
     ObstacleList::iterator obstacleIt = m_obstacles.begin();
     while (obstacleIt != m_obstacles.end())
     {
-        Obstacle *obstacle = *obstacleIt;
+        Obstacle *obstacle = (*obstacleIt).get();
         bool isShape = (nullptr != dynamic_cast<ShapeRef *> (obstacle));
 
         if ( ! isShape )
@@ -2578,7 +2611,7 @@ void Router::outputInstanceToSVG(std::string instanceName)
     obstacleIt = m_obstacles.begin();
     while (obstacleIt != m_obstacles.end())
     {
-        Obstacle *obstacle = *obstacleIt;
+        Obstacle *obstacle = (*obstacleIt).get();
         bool isShape = (nullptr != dynamic_cast<ShapeRef *> (obstacle));
 
         if ( ! isShape )
@@ -2608,7 +2641,7 @@ void Router::outputInstanceToSVG(std::string instanceName)
     for (ObstacleList::iterator obstacleIt = m_obstacles.begin();
             obstacleIt != m_obstacles.end(); ++obstacleIt)
     {
-        JunctionRef *junction = dynamic_cast<JunctionRef *> (*obstacleIt);
+        JunctionRef *junction = dynamic_cast<JunctionRef *> ((*obstacleIt).get());
         if (junction)
         {
             fprintf(fp, "<circle id=\"idealJunction-%u\" cx=\"%g\" cy=\"%g\" "
@@ -2626,7 +2659,7 @@ void Router::outputInstanceToSVG(std::string instanceName)
     obstacleIt = m_obstacles.begin();
     while (obstacleIt != m_obstacles.end())
     {
-        Obstacle *obstacle = *obstacleIt;
+        Obstacle *obstacle = (*obstacleIt).get();
         bool isShape = (nullptr != dynamic_cast<ShapeRef *> (obstacle));
 
         if ( ! isShape )
@@ -2937,7 +2970,7 @@ void Router::outputDiagramSVG(std::string instanceName, LineReps *lineReps)
     ObstacleList::iterator obstacleIt = m_obstacles.begin();
     while (obstacleIt != m_obstacles.end())
     {
-        Obstacle *obstacle = *obstacleIt;
+        Obstacle *obstacle = (*obstacleIt).get();
         bool isShape = (nullptr != dynamic_cast<ShapeRef *> (obstacle));
 
         if ( ! isShape )
@@ -3046,7 +3079,7 @@ void Router::outputDiagramText(std::string instanceName)
     ObstacleList::iterator obstacleIt = m_obstacles.begin();
     while (obstacleIt != m_obstacles.end())
     {
-        Obstacle *obstacle = *obstacleIt;
+        Obstacle *obstacle = (*obstacleIt).get();
         bool isShape = (nullptr != dynamic_cast<ShapeRef *> (obstacle));
 
         if ( ! isShape )

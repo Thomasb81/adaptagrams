@@ -21,7 +21,7 @@ void test()
 	poly.setPoint(1, Point(50760, 50680));
 	poly.setPoint(2, Point(50590, 50680));
 	poly.setPoint(3, Point(50590, 50620));
-	ShapeRef * shape147006780 = new ShapeRef(router1, poly, 147006780);
+	auto  shape147006780 = ShapeRef::createShapeRef(router1, poly, 147006780);
 	ShapeConnectionPin * pin147006780_1 = new ShapeConnectionPin(shape147006780, 2, 0.941176, 0.5, true, 10, 8);
 	pin147006780_1->setExclusive(true);
 
@@ -30,7 +30,7 @@ void test()
 	poly.setPoint(1, Point(50585, 50935));
 	poly.setPoint(2, Point(50365, 50935));
 	poly.setPoint(3, Point(50365, 50765));
-	ShapeRef * shape69758810 = new ShapeRef(router1, poly, 69758810);
+	auto  shape69758810 = ShapeRef::createShapeRef(router1, poly, 69758810);
 	ShapeConnectionPin * pin69758810_1 = new ShapeConnectionPin(shape69758810, 2, 0.954545, 0.5, true, 10, 8);
 	pin69758810_1->setExclusive(true);
 
@@ -39,11 +39,11 @@ void test()
 	poly.setPoint(1, Point(51060, 51080));
 	poly.setPoint(2, Point(50890, 51080));
 	poly.setPoint(3, Point(50890, 51020));
-	ShapeRef * shape149922619 = new ShapeRef(router1, poly, 149922619);
+	auto  shape149922619 = ShapeRef::createShapeRef(router1, poly, 149922619);
 	ShapeConnectionPin * pin149922619_1 = new ShapeConnectionPin(shape149922619, 2, 0.941176, 0.5, true, 10, 8);
 	pin149922619_1->setExclusive(true);
 
-	JunctionRef * junction228834480 = new JunctionRef(router1, Point(51050, 51050), 228834480);
+	auto  junction228834480 = JunctionRef::createJunctionRef(router1, Point(51050, 51050), 228834480);
 	end1 = ConnEnd(shape69758810, 2);
 	end2 = ConnEnd(junction228834480);
 	ConnRef * conn159270000 = ConnRef::createConnRef(router1, end1, end2).get();
@@ -69,11 +69,11 @@ void test()
 	shape149922619 = nullptr;
 	router1->deleteJunction(junction228834480);
 	junction228834480 = nullptr;
-	router1->deleteConnector(conn159270000->getPtr());
+	router1->deleteConnector(conn159270000->getPtr()->getPtr());
 	conn159270000 = nullptr;
-	router1->deleteConnector(conn199495942->getPtr());
+	router1->deleteConnector(conn199495942->getPtr()->getPtr());
 	conn199495942 = nullptr;
-	router1->deleteConnector(conn8326760->getPtr());
+	router1->deleteConnector(conn8326760->getPtr()->getPtr());
 	conn8326760 = nullptr;
 	router1->processTransaction();
 

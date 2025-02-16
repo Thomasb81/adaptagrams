@@ -162,6 +162,7 @@ class AVOID_EXPORT HyperedgeRerouter
         //!         resulting routing of the hyperedge.
         //!
         size_t registerHyperedgeForRerouting(JunctionRef *junction);
+        size_t registerHyperedgeForRerouting(std::shared_ptr<JunctionRef> junction);
 
         //! @brief  Returns a HyperedgeNewAndDeletedObjectLists detailing the
         //!         lists of junctions and connectors created and deleted

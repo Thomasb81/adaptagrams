@@ -18,21 +18,21 @@ int main(void) {
     poly3075375.ps[1] = Point(51925, 52130);
     poly3075375.ps[2] = Point(51725, 52130);
     poly3075375.ps[3] = Point(51725, 52070);
-    new ShapeRef(router, poly3075375, 3075375);
+    ShapeRef::createShapeRef(router, poly3075375, 3075375);
 
     Polygon poly101599344(4);
     poly101599344.ps[0] = Point(50275, 52410);
     poly101599344.ps[1] = Point(50275, 52490);
     poly101599344.ps[2] = Point(50075, 52490);
     poly101599344.ps[3] = Point(50075, 52410);
-    new ShapeRef(router, poly101599344, 101599344);
+    ShapeRef::createShapeRef(router, poly101599344, 101599344);
 
     Polygon poly127957550(4);
     poly127957550.ps[0] = Point(52010, 51617);
     poly127957550.ps[1] = Point(52010, 51683);
     poly127957550.ps[2] = Point(51890, 51683);
     poly127957550.ps[3] = Point(51890, 51617);
-    ShapeRef *shapeRef127957550 = new ShapeRef(router, poly127957550, 127957550);
+    auto shapeRef127957550 = ShapeRef::createShapeRef(router, poly127957550, 127957550);
     new ShapeConnectionPin(shapeRef127957550, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 1);
     new ShapeConnectionPin(shapeRef127957550, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 2);
     new ShapeConnectionPin(shapeRef127957550, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 4);
@@ -43,35 +43,35 @@ int main(void) {
     poly129612347.ps[1] = Point(51900, 51754);
     poly129612347.ps[2] = Point(51815, 51754);
     poly129612347.ps[3] = Point(51815, 51696);
-    new ShapeRef(router, poly129612347, 129612347);
+    ShapeRef::createShapeRef(router, poly129612347, 129612347);
 
     Polygon poly203389050(4);
     poly203389050.ps[0] = Point(51825, 52260);
     poly203389050.ps[1] = Point(51825, 52340);
     poly203389050.ps[2] = Point(51625, 52340);
     poly203389050.ps[3] = Point(51625, 52260);
-    new ShapeRef(router, poly203389050, 203389050);
+    ShapeRef::createShapeRef(router, poly203389050, 203389050);
 
     Polygon poly208676910(4);
     poly208676910.ps[0] = Point(51950, 51760);
     poly208676910.ps[1] = Point(51950, 51840);
     poly208676910.ps[2] = Point(51750, 51840);
     poly208676910.ps[3] = Point(51750, 51760);
-    new ShapeRef(router, poly208676910, 208676910);
+    ShapeRef::createShapeRef(router, poly208676910, 208676910);
 
     Polygon poly219117032(4);
     poly219117032.ps[0] = Point(50225, 52070);
     poly219117032.ps[1] = Point(50225, 52130);
     poly219117032.ps[2] = Point(50025, 52130);
     poly219117032.ps[3] = Point(50025, 52070);
-    new ShapeRef(router, poly219117032, 219117032);
+    ShapeRef::createShapeRef(router, poly219117032, 219117032);
 
     Polygon poly258454350(4);
     poly258454350.ps[0] = Point(50185, 51617);
     poly258454350.ps[1] = Point(50185, 51683);
     poly258454350.ps[2] = Point(50065, 51683);
     poly258454350.ps[3] = Point(50065, 51617);
-    ShapeRef *shapeRef258454350 = new ShapeRef(router, poly258454350, 258454350);
+    auto shapeRef258454350 = ShapeRef::createShapeRef(router, poly258454350, 258454350);
     new ShapeConnectionPin(shapeRef258454350, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 1);
     new ShapeConnectionPin(shapeRef258454350, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 2);
     new ShapeConnectionPin(shapeRef258454350, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 4);
@@ -82,91 +82,91 @@ int main(void) {
     poly274504590.ps[1] = Point(51400, 52530);
     poly274504590.ps[2] = Point(51150, 52530);
     poly274504590.ps[3] = Point(51150, 52470);
-    new ShapeRef(router, poly274504590, 274504590);
+    ShapeRef::createShapeRef(router, poly274504590, 274504590);
 
     Polygon poly320957826(4);
     poly320957826.ps[0] = Point(50275, 51910);
     poly320957826.ps[1] = Point(50275, 51990);
     poly320957826.ps[2] = Point(50075, 51990);
     poly320957826.ps[3] = Point(50075, 51910);
-    new ShapeRef(router, poly320957826, 320957826);
+    ShapeRef::createShapeRef(router, poly320957826, 320957826);
 
     Polygon poly368436384(4);
     poly368436384.ps[0] = Point(50325, 51696);
     poly368436384.ps[1] = Point(50325, 51754);
     poly368436384.ps[2] = Point(50240, 51754);
     poly368436384.ps[3] = Point(50240, 51696);
-    new ShapeRef(router, poly368436384, 368436384);
+    ShapeRef::createShapeRef(router, poly368436384, 368436384);
 
     Polygon poly381499178(4);
     poly381499178.ps[0] = Point(51850, 51345);
     poly381499178.ps[1] = Point(51850, 51405);
     poly381499178.ps[2] = Point(51650, 51405);
     poly381499178.ps[3] = Point(51650, 51345);
-    new ShapeRef(router, poly381499178, 381499178);
+    ShapeRef::createShapeRef(router, poly381499178, 381499178);
 
     Polygon poly426410694(4);
     poly426410694.ps[0] = Point(50325, 52270);
     poly426410694.ps[1] = Point(50325, 52330);
     poly426410694.ps[2] = Point(50125, 52330);
     poly426410694.ps[3] = Point(50125, 52270);
-    new ShapeRef(router, poly426410694, 426410694);
+    ShapeRef::createShapeRef(router, poly426410694, 426410694);
 
     Polygon poly428912890(4);
     poly428912890.ps[0] = Point(51825, 51510);
     poly428912890.ps[1] = Point(51825, 51590);
     poly428912890.ps[2] = Point(51625, 51590);
     poly428912890.ps[3] = Point(51625, 51510);
-    new ShapeRef(router, poly428912890, 428912890);
+    ShapeRef::createShapeRef(router, poly428912890, 428912890);
 
     Polygon poly468897320(4);
     poly468897320.ps[0] = Point(50425, 51520);
     poly468897320.ps[1] = Point(50425, 51580);
     poly468897320.ps[2] = Point(50225, 51580);
     poly468897320.ps[3] = Point(50225, 51520);
-    new ShapeRef(router, poly468897320, 468897320);
+    ShapeRef::createShapeRef(router, poly468897320, 468897320);
 
     Polygon poly517518507(4);
     poly517518507.ps[0] = Point(51925, 51910);
     poly517518507.ps[1] = Point(51925, 51990);
     poly517518507.ps[2] = Point(51725, 51990);
     poly517518507.ps[3] = Point(51725, 51910);
-    new ShapeRef(router, poly517518507, 517518507);
+    ShapeRef::createShapeRef(router, poly517518507, 517518507);
 
     Polygon poly565878858(4);
     poly565878858.ps[0] = Point(51160, 52500);
     poly565878858.ps[1] = Point(51160, 52810);
     poly565878858.ps[2] = Point(50890, 52810);
     poly565878858.ps[3] = Point(50890, 52500);
-    new ShapeRef(router, poly565878858, 565878858);
+    ShapeRef::createShapeRef(router, poly565878858, 565878858);
 
     Polygon poly706147100(4);
     poly706147100.ps[0] = Point(51160, 50990);
     poly706147100.ps[1] = Point(51160, 51300);
     poly706147100.ps[2] = Point(50890, 51300);
     poly706147100.ps[3] = Point(50890, 50990);
-    new ShapeRef(router, poly706147100, 706147100);
+    ShapeRef::createShapeRef(router, poly706147100, 706147100);
 
     Polygon poly746254622(4);
     poly746254622.ps[0] = Point(50275, 51760);
     poly746254622.ps[1] = Point(50275, 51840);
     poly746254622.ps[2] = Point(50075, 51840);
     poly746254622.ps[3] = Point(50075, 51760);
-    new ShapeRef(router, poly746254622, 746254622);
+    ShapeRef::createShapeRef(router, poly746254622, 746254622);
 
     Polygon poly829835240(4);
     poly829835240.ps[0] = Point(50425, 51360);
     poly829835240.ps[1] = Point(50425, 51440);
     poly829835240.ps[2] = Point(50225, 51440);
     poly829835240.ps[3] = Point(50225, 51360);
-    new ShapeRef(router, poly829835240, 829835240);
+    ShapeRef::createShapeRef(router, poly829835240, 829835240);
 
     Polygon poly157548160(4);
     poly157548160.ps[0] = Point(51550, 51500);
     poly157548160.ps[1] = Point(51550, 52225);
     poly157548160.ps[2] = Point(50525, 52225);
     poly157548160.ps[3] = Point(50525, 51500);
-    new ShapeRef(router, poly157548160, 157548160);
+    ShapeRef::createShapeRef(router, poly157548160, 157548160);
 
     ConnRef *connRef6675422 = ConnRef::createConnRef(router, 6675422).get();
     ConnEnd srcPt6675422(Point(51100, 51290), 2);

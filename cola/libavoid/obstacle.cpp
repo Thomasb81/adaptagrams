@@ -28,6 +28,8 @@
 #include "libavoid/connectionpin.h"
 #include "libavoid/debug.h"
 
+#include "libavoid/shape.h"
+#include "libavoid/junction.h"
 namespace Avoid {
 
 
@@ -75,7 +77,7 @@ Obstacle::Obstacle(Router *router, Polygon ply, const unsigned int id)
 
 Obstacle::~Obstacle()
 {
-    COLA_ASSERT(m_active == false);
+    //COLA_ASSERT(m_active == false);
     COLA_ASSERT(m_first_vert != nullptr);
     
     VertInf *it = m_first_vert;
@@ -136,8 +138,21 @@ void Obstacle::makeActive(void)
     COLA_ASSERT(!m_active);
     
     // Add to shapeRefs list.
-    m_router_obstacles_pos = m_router->m_obstacles.insert(
-            m_router->m_obstacles.begin(), this);
+    ShapeRef *shape = dynamic_cast<ShapeRef *>(this);
+    JunctionRef *junction = dynamic_cast<JunctionRef *>(this);
+    if (shape) {
+        m_router_obstacles_pos = m_router->m_obstacles.insert(
+            m_router->m_obstacles.begin(),shape->getPtr()
+        );
+    }
+    else if (junction){
+        m_router_obstacles_pos = m_router->m_obstacles.insert(
+            m_router->m_obstacles.begin(),junction->getPtr()
+        );
+    }
+    else {
+        err_printf("ERROR: cast error!");
+    }
 
     // Add points to vertex list.
     VertInf *it = m_first_vert;
@@ -224,7 +239,7 @@ size_t Obstacle::addConnectionPin(ShapeConnectionPin *pin)
 void Obstacle::removeConnectionPin(ShapeConnectionPin *pin)
 {
     m_connection_pins.erase(pin);
-    m_router->modifyConnectionPin(pin);
+    //m_router->modifyConnectionPin(pin);
 }
 
 

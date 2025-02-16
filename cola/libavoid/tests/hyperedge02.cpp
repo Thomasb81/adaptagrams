@@ -19,7 +19,7 @@ int main(void) {
     poly1.ps[1] = Point(461.05, 65.6665);
     poly1.ps[2] = Point(376.05, 65.6665);
     poly1.ps[3] = Point(376.05, 1.66648);
-    ShapeRef *shapeRef1 = new ShapeRef(router, poly1, 1);
+    auto shapeRef1 = ShapeRef::createShapeRef(router, poly1, 1);
     new ShapeConnectionPin(shapeRef1, 102, 0.5, 1, true, 10, (ConnDirFlags) 2);
     hyperedgeTerminals.push_back(ConnEnd(shapeRef1, 102));
 
@@ -28,7 +28,7 @@ int main(void) {
     poly2.ps[1] = Point(404, 227);
     poly2.ps[2] = Point(320, 227);
     poly2.ps[3] = Point(320, 166);
-    ShapeRef *shapeRef2 = new ShapeRef(router, poly2, 2);
+    auto shapeRef2 = ShapeRef::createShapeRef(router, poly2, 2);
     new ShapeConnectionPin(shapeRef2, 102, 0, 0.5, true, 10, (ConnDirFlags) 4);
     hyperedgeTerminals.push_back(ConnEnd(shapeRef2, 102));
 
@@ -37,7 +37,7 @@ int main(void) {
     poly3.ps[1] = Point(240.001, 227);
     poly3.ps[2] = Point(178.001, 227);
     poly3.ps[3] = Point(178.001, 185);
-    ShapeRef *shapeRef3 = new ShapeRef(router, poly3, 3);
+    auto shapeRef3 = ShapeRef::createShapeRef(router, poly3, 3);
     new ShapeConnectionPin(shapeRef3, 102, 1, 0.5, true, 10, (ConnDirFlags) 8);
     hyperedgeTerminals.push_back(ConnEnd(shapeRef3, 102));
 
@@ -46,14 +46,14 @@ int main(void) {
     poly4.ps[1] = Point(274.526, 174);
     poly4.ps[2] = Point(90.526, 174);
     poly4.ps[3] = Point(90.526, 132);
-    new ShapeRef(router, poly4, 4);
+    ShapeRef::createShapeRef(router, poly4, 4);
 
     Polygon poly5(4);
     poly5.ps[0] = Point(152.526, 1.66648);
     poly5.ps[1] = Point(152.526, 40);
     poly5.ps[2] = Point(90.526, 40);
     poly5.ps[3] = Point(90.526, 1.66648);
-    ShapeRef *shapeRef5 = new ShapeRef(router, poly5, 5);
+    auto shapeRef5 = ShapeRef::createShapeRef(router, poly5, 5);
     new ShapeConnectionPin(shapeRef5, 102, 0.5, 1, true, 10, (ConnDirFlags) 2);
     hyperedgeTerminals.push_back(ConnEnd(shapeRef5, 102));
 
@@ -62,21 +62,21 @@ int main(void) {
     poly6.ps[1] = Point(366.925, 92.6665);
     poly6.ps[2] = Point(304.925, 92.6665);
     poly6.ps[3] = Point(304.925, 1.66648);
-    new ShapeRef(router, poly6, 6);
+    ShapeRef::createShapeRef(router, poly6, 6);
 
     Polygon poly8(4);
     poly8.ps[0] = Point(345, 115);
     poly8.ps[1] = Point(345, 140);
     poly8.ps[2] = Point(320, 140);
     poly8.ps[3] = Point(320, 115);
-    new ShapeRef(router, poly8, 8);
+    ShapeRef::createShapeRef(router, poly8, 8);
 
     Polygon poly7(4);
     poly7.ps[0] = Point(223.675, 1.66648);
     poly7.ps[1] = Point(223.675, 50.3333);
     poly7.ps[2] = Point(161.675, 50.3333);
     poly7.ps[3] = Point(161.675, 1.66648);
-    ShapeRef *shapeRef7 = new ShapeRef(router, poly7, 7);
+    auto shapeRef7 = ShapeRef::createShapeRef(router, poly7, 7);
     new ShapeConnectionPin(shapeRef7, 102, 0.5, 1, true, 10, (ConnDirFlags) 2);
     hyperedgeTerminals.push_back(ConnEnd(shapeRef7, 102));
 
@@ -85,7 +85,7 @@ int main(void) {
     poly10.ps[1] = Point(295.3, 40);
     poly10.ps[2] = Point(233.3, 40);
     poly10.ps[3] = Point(233.3, 1.66648);
-    ShapeRef *shapeRef10 = new ShapeRef(router, poly10, 10);
+    auto shapeRef10 = ShapeRef::createShapeRef(router, poly10, 10);
     new ShapeConnectionPin(shapeRef10, 102, 0.5, 1, true, 10, (ConnDirFlags) 2);
     hyperedgeTerminals.push_back(ConnEnd(shapeRef10, 102));
 

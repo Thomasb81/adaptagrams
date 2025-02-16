@@ -38,7 +38,7 @@ void test()
 	poly0.setPoint(1, Point(51885, 50935));
 	poly0.setPoint(2, Point(51700, 50935));
 	poly0.setPoint(3, Point(51700, 50715));
-	ShapeRef * shape0_68611488 = new ShapeRef(router0, poly0, 68611488);
+	auto  shape0_68611488 = ShapeRef::createShapeRef(router0, poly0, 68611488);
 	ShapeConnectionPin * pin0_68611488_0 = new ShapeConnectionPin(shape0_68611488, 1, 0.810810810811, 0.0454545454545, true, 10, 1);
 	pin0_68611488_0->setExclusive(true);
 	ShapeConnectionPin * pin0_68611488_1 = new ShapeConnectionPin(shape0_68611488, 2, 0, 0.5, true, 10, 4);
@@ -50,7 +50,7 @@ void test()
 	poly0.setPoint(1, Point(51600, 50855));
 	poly0.setPoint(2, Point(51440, 50855));
 	poly0.setPoint(3, Point(51440, 50795));
-	ShapeRef * shape0_84988680 = new ShapeRef(router0, poly0, 84988680);
+	auto  shape0_84988680 = ShapeRef::createShapeRef(router0, poly0, 84988680);
 	ShapeConnectionPin * pin0_84988680_0 = new ShapeConnectionPin(shape0_84988680, 1, 0.0625, 0.5, true, 10, 4);
 	pin0_84988680_0->setExclusive(true);
 	ShapeConnectionPin * pin0_84988680_1 = new ShapeConnectionPin(shape0_84988680, 2, 1, 0.5, true, 10, 8);
@@ -60,18 +60,18 @@ void test()
 	poly0.setPoint(1, Point(51705, 50800));
 	poly0.setPoint(2, Point(51645, 50800));
 	poly0.setPoint(3, Point(51645, 50640));
-	ShapeRef * shape0_170757006 = new ShapeRef(router0, poly0, 170757006);
+	auto  shape0_170757006 = ShapeRef::createShapeRef(router0, poly0, 170757006);
 	ShapeConnectionPin * pin0_170757006_0 = new ShapeConnectionPin(shape0_170757006, 1, 0.5, 1, true, 10, 2);
 	pin0_170757006_0->setExclusive(true);
 	ShapeConnectionPin * pin0_170757006_1 = new ShapeConnectionPin(shape0_170757006, 2, 0.5, 0.0625, true, 10, 1);
 	pin0_170757006_1->setExclusive(true);
-	JunctionRef * junction0_185122667 = new JunctionRef(router0, Point(51675, 50825), 185122667);
+	auto  junction0_185122667 = JunctionRef::createJunctionRef(router0, Point(51675, 50825), 185122667);
 	poly0 = Polygon(4);
 	poly0.setPoint(0, Point(51705, 50925));
 	poly0.setPoint(1, Point(51705, 51085));
 	poly0.setPoint(2, Point(51645, 51085));
 	poly0.setPoint(3, Point(51645, 50925));
-	ShapeRef * shape0_300278382 = new ShapeRef(router0, poly0, 300278382);
+	auto  shape0_300278382 = ShapeRef::createShapeRef(router0, poly0, 300278382);
 	ShapeConnectionPin * pin0_300278382_0 = new ShapeConnectionPin(shape0_300278382, 1, 0.5, 0.9375, true, 10, 2);
 	pin0_300278382_0->setExclusive(true);
 	ShapeConnectionPin * pin0_300278382_1 = new ShapeConnectionPin(shape0_300278382, 2, 0.5, 0, true, 10, 1);
@@ -105,7 +105,7 @@ void test()
 
 	newanddeletedobjects_0 = router0->newAndDeletedObjectListsFromHyperedgeImprovement();
 	junctionit_0 = newanddeletedobjects_0.newJunctionList.begin();
-	JunctionRef * junction0_436653030 = *junctionit_0;
+	auto junction0_436653030 = *junctionit_0;
 	junction0_436653030->position();
 	//printf("%d %d\n", junction0_185122667->attachedConnectors().size(),
 	//		junction0_436653030->attachedConnectors().size());

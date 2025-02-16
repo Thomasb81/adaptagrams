@@ -62,7 +62,7 @@ class JunctionRef;
 class ClusterRef;
 typedef std::list<ClusterRef *> ClusterRefList;
 class Obstacle;
-typedef std::list<Obstacle *> ObstacleList;
+typedef std::list<std::shared_ptr<Obstacle> > ObstacleList;
 class DebugHandler;
 
 //! @brief  Flags that can be passed to the router during initialisation 
@@ -493,6 +493,7 @@ class AVOID_EXPORT Router {
         //! @param[in]  shape  Pointer reference to the shape being removed.
         //!
         void deleteShape(ShapeRef *shape);
+        void deleteShape(std::shared_ptr<ShapeRef> shape);
 
         //! @brief Move or resize an existing shape within the router scene.
         //!
@@ -514,6 +515,8 @@ class AVOID_EXPORT Router {
         //!
         void moveShape(ShapeRef *shape, const Polygon& newPoly,
                 const bool first_move = false);
+        void moveShape(std::shared_ptr<ShapeRef> shape, const Polygon& newPoly,
+                const bool first_move = false);
 
         //! @brief Move an existing shape within the router scene by a relative
         //!        distance.
@@ -533,6 +536,7 @@ class AVOID_EXPORT Router {
         //!                         y dimension.
         //!
         void moveShape(ShapeRef *shape, const double xDiff, const double yDiff);
+        void moveShape(std::shared_ptr<ShapeRef> shape, const double xDiff, const double yDiff);
 
         //! @brief Remove a junction from the router scene.
         //!
@@ -547,6 +551,7 @@ class AVOID_EXPORT Router {
         //!                       removed.
         //!
         void deleteJunction(JunctionRef *junction);
+        void deleteJunction(std::shared_ptr<JunctionRef> junction);
         
         //! @brief Remove a connector from the router scene.
         //!
@@ -576,6 +581,7 @@ class AVOID_EXPORT Router {
         //! @param[in]  newPosition  The new position for the junction.
         //!
         void moveJunction(JunctionRef *junction, const Point& newPosition);
+        void moveJunction(std::shared_ptr<JunctionRef> junction, const Point& newPosition);
 
         //! @brief Move an existing junction within the router scene by a 
         //!        relative distance.
@@ -595,6 +601,8 @@ class AVOID_EXPORT Router {
         //!                         y dimension.
         //!
         void moveJunction(JunctionRef *junction, const double xDiff, 
+                const double yDiff);
+        void moveJunction(std::shared_ptr<JunctionRef> junction, const double xDiff, 
                 const double yDiff);
         
         //! @brief  Sets values for routing parameters, including routing 
@@ -831,7 +839,9 @@ class AVOID_EXPORT Router {
 
         unsigned int assignId(const unsigned int suggestedId);
         void addShape(ShapeRef *shape);
+        void addShape(std::shared_ptr<ShapeRef> shape);
         void addJunction(JunctionRef *junction);
+        void addJunction(std::shared_ptr<JunctionRef> junction);
         void addCluster(ClusterRef *cluster);
         void modifyConnector(std::shared_ptr<ConnRef> conn);
         void modifyConnector(std::shared_ptr<ConnRef> conn, unsigned int type,
@@ -878,6 +888,8 @@ class AVOID_EXPORT Router {
         HyperedgeImprover m_hyperedge_improver;
 
         DebugHandler *m_debug_handler;
+        std::list<std::shared_ptr<ShapeRef> > m_shareRefList;
+        std::list<std::shared_ptr<JunctionRef> > m_junctionRefList;
 };
 
 

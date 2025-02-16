@@ -35,11 +35,11 @@ int main(void)
     
     // Create the ShapeRef:
     Rectangle shapeRect1(Point(0, 0), Point(10, 10));
-    ShapeRef *shapeRef1 = new ShapeRef(router, shapeRect1);
+    auto shapeRef1 = ShapeRef::createShapeRef(router, shapeRect1);
 
     
     Rectangle shapeRect2(Point(40, 20), Point(50, 30));
-    ShapeRef *shapeRef2 = new ShapeRef(router, shapeRect2);
+    auto shapeRef2 = ShapeRef::createShapeRef(router, shapeRect2);
 
     const unsigned int CENTRE = 1;
     new ShapeConnectionPin(shapeRef1, CENTRE, ATTACH_POS_CENTRE, 

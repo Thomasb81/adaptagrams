@@ -479,7 +479,7 @@ void buildOrthogonalChannelInfo(Router *router,
     ObstacleList::iterator obstacleIt = router->m_obstacles.begin();
     for (unsigned i = 0; i < n; i++)
     {
-        Obstacle *obstacle = *obstacleIt;
+        Obstacle *obstacle = (*obstacleIt).get();
         JunctionRef *junction = dynamic_cast<JunctionRef *> (obstacle);
         if (junction && ! junction->positionFixed())
         {

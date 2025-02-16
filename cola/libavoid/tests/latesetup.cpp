@@ -60,7 +60,7 @@ int main(void)
     connRef2->setCallback(connCallback, connRef2);
     router->processTransaction();
 
-    router->deleteConnector(connRef2->getPtr());
+    router->deleteConnector(connRef2->getPtr()->getPtr());
     connRef2 = nullptr;
     router->processTransaction();
 
@@ -74,7 +74,7 @@ int main(void)
     shapePoly.ps[0] = Point(1, 1);
     shapePoly.ps[1] = Point(2.5, 1.5);
     shapePoly.ps[2] = Point(1.5, 2.5);
-    ShapeRef *shapeRef = new ShapeRef(router, shapePoly);
+    auto shapeRef = ShapeRef::createShapeRef(router, shapePoly);
     router->processTransaction();
 
     printf("\nShifting endpoint.\n");

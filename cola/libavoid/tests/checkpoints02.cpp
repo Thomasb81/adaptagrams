@@ -26,42 +26,42 @@ int main(void) {
     poly5.ps[1] = Point(365.3425124847556, 214.0752314071785);
     poly5.ps[2] = Point(303.3425124847556, 214.0752314071785);
     poly5.ps[3] = Point(303.3425124847556, 152.0752314071785);
-    new ShapeRef(router, poly5, 5);
+    ShapeRef::createShapeRef(router, poly5, 5);
     
     Polygon poly7(4);
     poly7.ps[0] = Point(365.3425124847556, 24.07523140617849);
     poly7.ps[1] = Point(365.3425124847556, 86.07523140617849);
     poly7.ps[2] = Point(303.3425124847556, 86.07523140617849);
     poly7.ps[3] = Point(303.3425124847556, 24.07523140617849);
-    new ShapeRef(router, poly7, 7);
+    ShapeRef::createShapeRef(router, poly7, 7);
 
     Polygon poly8(4);
     poly8.ps[0] = Point(541.6758458190889, 24.07523140617849);
     poly8.ps[1] = Point(541.6758458190889, 44.07523140617849);
     poly8.ps[2] = Point(509.6758458190889, 44.07523140617849);
     poly8.ps[3] = Point(509.6758458190889, 24.07523140617849);
-    new ShapeRef(router, poly8, 8);
+    ShapeRef::createShapeRef(router, poly8, 8);
 
     Polygon poly10(4);
     poly10.ps[0] = Point(541.6758458190889, 66.07523140617849);
     poly10.ps[1] = Point(541.6758458190889, 86.07523140617849);
     poly10.ps[2] = Point(509.6758458190889, 86.07523140617849);
     poly10.ps[3] = Point(509.6758458190889, 66.07523140617849);
-    new ShapeRef(router, poly10, 10);
+    ShapeRef::createShapeRef(router, poly10, 10);
 
     Polygon poly61(4);
     poly61.ps[0] = Point(420.3425124847556, 101.0752314061785);
     poly61.ps[1] = Point(420.3425124847556, 141.0752314061785);
     poly61.ps[2] = Point(344.3425124847556, 141.0752314061785);
     poly61.ps[3] = Point(344.3425124847556, 101.0752314061785);
-    new ShapeRef(router, poly61, 61);
+    ShapeRef::createShapeRef(router, poly61, 61);
 
     Polygon poly92(4);
     poly92.ps[0] = Point(563.5758458190888, 34.07523140617849);
     poly92.ps[1] = Point(563.5758458190888, 76.07523140617849);
     poly92.ps[2] = Point(487.7758458190889, 76.07523140617849);
     poly92.ps[3] = Point(487.7758458190889, 34.07523140617849);
-    new ShapeRef(router, poly92, 92);
+    ShapeRef::createShapeRef(router, poly92, 92);
 
     ConnRef *connRef109 = ConnRef::createConnRef(router, 109).get();
     ConnEnd srcPt109(Point(510.6758458190889, 34.07523140617849), 4);

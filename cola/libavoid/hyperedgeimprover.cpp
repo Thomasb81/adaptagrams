@@ -690,7 +690,7 @@ void HyperedgeImprover::outputHyperedgesToSVG(unsigned int pass,
     ObstacleList::iterator obstacleIt = m_router->m_obstacles.begin();
     while (obstacleIt != m_router->m_obstacles.end())
     {
-        Obstacle *obstacle = *obstacleIt;
+        Obstacle *obstacle = (*obstacleIt).get();
         bool isShape = (nullptr != dynamic_cast<ShapeRef *> (obstacle));
 
         if ( ! isShape )
@@ -1187,7 +1187,7 @@ HyperedgeTreeNode *HyperedgeImprover::moveJunctionAlongCommonEdge(
 
             // Create the additional junction at the target node for
             // the otherEdges to attach to.
-            targetNode->junction = new JunctionRef(m_router, targetNode->point);
+            targetNode->junction = JunctionRef::createJunctionRef(m_router, targetNode->point).get();
             m_router->removeObjectFromQueuedActions(targetNode->junction);
             targetNode->junction->makeActive();
             m_hyperedge_tree_junctions[targetNode->junction] = targetNode;

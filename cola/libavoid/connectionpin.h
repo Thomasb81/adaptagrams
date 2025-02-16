@@ -166,13 +166,20 @@ class AVOID_EXPORT ShapeConnectionPin
         //!                            be directional if a pin is on the shape
         //!                            edge or in all directions otherwise.
         //!
-        ShapeConnectionPin(ShapeRef *shape, const unsigned int classId,
+//        ShapeConnectionPin(ShapeRef *shape, const unsigned int classId,
+//                const double xOffset, const double yOffset, 
+//                const bool proportional, const double insideOffset,
+//                const ConnDirFlags visDirs);
+        ShapeConnectionPin(std::shared_ptr<ShapeRef> shape, const unsigned int classId,
                 const double xOffset, const double yOffset, 
                 const bool proportional, const double insideOffset,
                 const ConnDirFlags visDirs);
         
         // Old constructor.  Provided for compatibility with old debug files.
-        ShapeConnectionPin(ShapeRef *shape, const unsigned int classId,
+//        ShapeConnectionPin(ShapeRef *shape, const unsigned int classId,
+//                const double xOffset, const double yOffset, 
+//                const double insideOffset, const ConnDirFlags visDirs);
+        ShapeConnectionPin(std::shared_ptr<ShapeRef> shape, const unsigned int classId,
                 const double xOffset, const double yOffset, 
                 const double insideOffset, const ConnDirFlags visDirs);
  
@@ -194,7 +201,9 @@ class AVOID_EXPORT ShapeConnectionPin
         //!                            specifying the directions that this 
         //!                            connection point has visibility. 
         //!
-        ShapeConnectionPin(JunctionRef *junction, const unsigned int classId,
+//        ShapeConnectionPin(JunctionRef *junction, const unsigned int classId,
+//                const ConnDirFlags visDirs = ConnDirNone);
+        ShapeConnectionPin(std::shared_ptr<JunctionRef> junction, const unsigned int classId,
                 const ConnDirFlags visDirs = ConnDirNone);
         
 // To prevent C++ objects from being destroyed in garbage collected languages
@@ -263,8 +272,8 @@ class AVOID_EXPORT ShapeConnectionPin
 
         // Unique properties
         Router *m_router;
-        ShapeRef *m_shape;
-        JunctionRef *m_junction;
+        std::shared_ptr<ShapeRef> m_shape;
+        std::shared_ptr<JunctionRef> m_junction;
         unsigned int m_class_id;
         double m_x_offset;
         double m_y_offset;

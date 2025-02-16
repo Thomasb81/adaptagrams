@@ -35,10 +35,29 @@
 
 namespace Avoid {
 
-ShapeConnectionPin::ShapeConnectionPin(ShapeRef *shape, 
+//ShapeConnectionPin::ShapeConnectionPin(ShapeRef *shape, 
+//        const unsigned int classId, const double xPortionOffset,
+//        const double yPortionOffset, const bool proportional,
+//        const double insideOffset, const ConnDirFlags visDirs)
+//    : m_shape(shape),
+//      m_junction(nullptr),
+//      m_class_id(classId),
+//      m_x_offset(xPortionOffset),
+//      m_y_offset(yPortionOffset),
+//      m_inside_offset(insideOffset),
+//      m_visibility_directions(visDirs),
+//      m_exclusive(true),
+//      m_connection_cost(0.0),
+//      m_vertex(nullptr),
+//      m_using_proportional_offsets(proportional)
+//{
+//    commonInitForShapeConnection();
+//}
+
+ShapeConnectionPin::ShapeConnectionPin(std::shared_ptr<ShapeRef> shape, 
         const unsigned int classId, const double xPortionOffset,
         const double yPortionOffset, const bool proportional,
-        const double insideOffset, const ConnDirFlags visDirs)
+        const double insideOffset, const ConnDirFlags visDirs) 
     : m_shape(shape),
       m_junction(nullptr),
       m_class_id(classId),
@@ -54,10 +73,29 @@ ShapeConnectionPin::ShapeConnectionPin(ShapeRef *shape,
     commonInitForShapeConnection();
 }
 
-ShapeConnectionPin::ShapeConnectionPin(ShapeRef *shape, 
+//ShapeConnectionPin::ShapeConnectionPin(ShapeRef *shape, 
+//        const unsigned int classId, const double xOffset,
+//        const double yOffset, const double insideOffset,
+//        const ConnDirFlags visDirs)
+//    : m_shape(shape),
+//      m_junction(nullptr),
+//      m_class_id(classId),
+//      m_x_offset(xOffset),
+//      m_y_offset(yOffset),
+//      m_inside_offset(insideOffset),
+//      m_visibility_directions(visDirs),
+//      m_exclusive(true),
+//      m_connection_cost(0.0),
+//      m_vertex(nullptr),
+//      m_using_proportional_offsets(true)
+//{
+//    commonInitForShapeConnection();
+//}
+
+ShapeConnectionPin::ShapeConnectionPin(std::shared_ptr<ShapeRef> shape, 
         const unsigned int classId, const double xOffset,
         const double yOffset, const double insideOffset,
-        const ConnDirFlags visDirs)
+        const ConnDirFlags visDirs) 
     : m_shape(shape),
       m_junction(nullptr),
       m_class_id(classId),
@@ -76,7 +114,7 @@ ShapeConnectionPin::ShapeConnectionPin(ShapeRef *shape,
 
 void ShapeConnectionPin::commonInitForShapeConnection(void)
 {
-    COLA_ASSERT(m_shape != nullptr);
+    COLA_ASSERT(m_shape.get() != nullptr);
     COLA_ASSERT(m_class_id > 0);
 
     if (m_using_proportional_offsets)
@@ -95,7 +133,7 @@ void ShapeConnectionPin::commonInitForShapeConnection(void)
     }
     else
     {
-        const Box shapeBox = m_shape->polygon().offsetBoundingBox(0.0);
+        const Box shapeBox = m_shape.get()->polygon().offsetBoundingBox(0.0);
         // Parameter checking
         if (m_x_offset > shapeBox.width())
         {
@@ -111,11 +149,11 @@ void ShapeConnectionPin::commonInitForShapeConnection(void)
         }
     }
 
-    m_router = m_shape->router();
-    m_shape->addConnectionPin(this);
+    m_router = m_shape.get()->router();
+    m_shape.get()->addConnectionPin(this);
     
     // Create a visibility vertex for this ShapeConnectionPin.
-    VertID id(m_shape->id(), kShapeConnectionPin, 
+    VertID id(m_shape.get()->id(), kShapeConnectionPin, 
             VertID::PROP_ConnPoint | VertID::PROP_ConnectionPin);
     m_vertex = new VertInf(m_router, id, this->position());
     m_vertex->visDirections = this->directions();
@@ -134,7 +172,7 @@ void ShapeConnectionPin::commonInitForShapeConnection(void)
 }
 
 
-ShapeConnectionPin::ShapeConnectionPin(JunctionRef *junction, 
+ShapeConnectionPin::ShapeConnectionPin(std::shared_ptr<JunctionRef> junction, 
         const unsigned int classId, const ConnDirFlags visDirs)
     : m_shape(nullptr),
       m_junction(junction),
@@ -156,9 +194,9 @@ ShapeConnectionPin::ShapeConnectionPin(JunctionRef *junction,
     // XXX These IDs should really be uniquely identifiable in case there
     //     are multiple pins on a shape.  I think currently this case will
     //     break rubber-band routing.
-    VertID id(m_junction->id(), kShapeConnectionPin, 
+    VertID id(m_junction.get()->id(), kShapeConnectionPin, 
             VertID::PROP_ConnPoint | VertID::PROP_ConnectionPin);
-    m_vertex = new VertInf(m_router, id, m_junction->position());
+    m_vertex = new VertInf(m_router, id, m_junction.get()->position());
     m_vertex->visDirections = visDirs;
 
     if (m_router->m_allows_polyline_routing)
@@ -170,14 +208,14 @@ ShapeConnectionPin::ShapeConnectionPin(JunctionRef *junction,
 
 ShapeConnectionPin::~ShapeConnectionPin()
 {
-    COLA_ASSERT(m_shape || m_junction);
-    if (m_shape)
+    COLA_ASSERT(m_shape.get() || m_junction.get());
+    if (m_shape.get())
     {
-        m_shape->removeConnectionPin(this);
+        m_shape.get()->removeConnectionPin(this);
     }
-    else if (m_junction)
+    else if (m_junction.get())
     {
-        m_junction->removeConnectionPin(this);
+        m_junction.get()->removeConnectionPin(this);
     }
 
     // Disconnect connend using this pin.
@@ -244,12 +282,12 @@ void ShapeConnectionPin::updatePosition(const Polygon& newPoly)
 
 const Point ShapeConnectionPin::position(const Polygon& newPoly) const
 {
-    if (m_junction)
+    if (m_junction.get())
     {
-        return m_junction->position();
+        return m_junction.get()->position();
     }
 
-    const Polygon& poly = (newPoly.empty()) ? m_shape->polygon() : newPoly;
+    const Polygon& poly = (newPoly.empty()) ? m_shape.get()->polygon() : newPoly;
     const Box shapeBox = poly.offsetBoundingBox(0.0);
 
     Point point;
@@ -362,19 +400,19 @@ ConnDirFlags ShapeConnectionPin::directions(void) const
 
 void ShapeConnectionPin::outputCode(FILE *fp) const
 {
-    COLA_ASSERT(m_shape || m_junction);
-    if (m_shape)
+    COLA_ASSERT(m_shape.get() || m_junction.get());
+    if (m_shape.get())
     {
         fprintf(fp, "    connPin = new ShapeConnectionPin(shapeRef%u, %u, "
                 "%" PREC "g, %" PREC "g, %s, %g, (ConnDirFlags) %u);\n",
-                m_shape->id(), m_class_id, m_x_offset, m_y_offset, 
+                m_shape.get()->id(), m_class_id, m_x_offset, m_y_offset, 
                 (m_using_proportional_offsets ? "true" : "false"),
                 m_inside_offset, (unsigned int) m_visibility_directions);
     }
-    else if (m_junction)
+    else if (m_junction.get())
     {
         fprintf(fp, "    connPin = new ShapeConnectionPin(junctionRef%u, %u, "
-                "(ConnDirFlags) %u);\n", m_junction->id(), m_class_id, 
+                "(ConnDirFlags) %u);\n", m_junction.get()->id(), m_class_id, 
                 (unsigned int) m_visibility_directions);
     }
 
@@ -392,8 +430,8 @@ ConnectionPinIds ShapeConnectionPin::ids(void) const
 
 unsigned int ShapeConnectionPin::containingObjectId(void) const
 {
-    COLA_ASSERT(m_shape || m_junction);
-    return (m_shape) ? m_shape->id() : m_junction->id();
+    COLA_ASSERT(m_shape.get() || m_junction.get());
+    return (m_shape.get()) ? m_shape.get()->id() : m_junction.get()->id();
 }
 
 bool ShapeConnectionPin::operator==(const ShapeConnectionPin& rhs) const

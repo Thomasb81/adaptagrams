@@ -16,7 +16,7 @@ int main(void) {
     poly342721632.ps[1] = Point(51910, 51004);
     poly342721632.ps[2] = Point(51825, 51004);
     poly342721632.ps[3] = Point(51825, 50946);
-    ShapeRef *shapeRef342721632 = new ShapeRef(router, poly342721632, 342721632);
+    auto shapeRef342721632 = ShapeRef::createShapeRef(router, poly342721632, 342721632);
     new ShapeConnectionPin(shapeRef342721632, 1, 
             ATTACH_POS_LEFT, ATTACH_POS_CENTRE, true, buffer, ConnDirLeft);
 
@@ -25,7 +25,7 @@ int main(void) {
     poly807558175.ps[1] = Point(51604, 51085);
     poly807558175.ps[2] = Point(51546, 51085);
     poly807558175.ps[3] = Point(51546, 51000);
-    ShapeRef *shapeRef807558175 = new ShapeRef(router, poly807558175, 807558175);
+    auto shapeRef807558175 = ShapeRef::createShapeRef(router, poly807558175, 807558175);
     new ShapeConnectionPin(shapeRef807558175, 1, 
 	    ATTACH_POS_CENTRE, ATTACH_POS_TOP, true, buffer, ConnDirNone);
 
@@ -34,11 +34,11 @@ int main(void) {
     poly404900496.ps[1] = Point(51525, 51004);
     poly404900496.ps[2] = Point(51440, 51004);
     poly404900496.ps[3] = Point(51440, 50946);
-    ShapeRef *shapeRef404900496 = new ShapeRef(router, poly404900496, 404900496);
+    auto shapeRef404900496 = ShapeRef::createShapeRef(router, poly404900496, 404900496);
     new ShapeConnectionPin(shapeRef404900496, 1, 
 	    ATTACH_POS_RIGHT, ATTACH_POS_CENTRE, true, buffer, (ConnDirFlags) 8);
 
-    JunctionRef *junctionRef265539540 = new JunctionRef(router, Point(51625, 50950), 265539540);
+    auto junctionRef265539540 = JunctionRef::createJunctionRef(router, Point(51625, 50950), 265539540);
 
     ConnRef *connRef985644192 = ConnRef::createConnRef(router, 985644192).get();
     ConnEnd srcPt985644192(shapeRef404900496, 1);

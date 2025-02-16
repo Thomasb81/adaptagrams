@@ -65,6 +65,9 @@ size_t HyperedgeRerouter::registerHyperedgeForRerouting(
 
     return m_terminals_vector.size() - 1;
 }
+size_t HyperedgeRerouter::registerHyperedgeForRerouting(std::shared_ptr<JunctionRef> junction){
+    return registerHyperedgeForRerouting(junction.get());
+}
 
 size_t HyperedgeRerouter::count(void) const
 {
@@ -290,7 +293,7 @@ void HyperedgeRerouter::performRerouting(void)
         ObstacleList::iterator obstacleIt = m_router->m_obstacles.begin();
         while (obstacleIt != m_router->m_obstacles.end())
         {
-            Obstacle *obstacle = *obstacleIt;
+            Obstacle *obstacle = (*obstacleIt).get();
             JunctionRef *junction = dynamic_cast<JunctionRef *> (obstacle);
             if (junction && ! junction->positionFixed())
             {

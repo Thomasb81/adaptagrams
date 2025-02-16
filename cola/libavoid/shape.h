@@ -31,7 +31,7 @@
 
 #include <list>
 #include <set>
-
+#include <memory>
 #include <cstdio>
 
 #include "libavoid/dllexport.h"
@@ -78,7 +78,7 @@ enum ShapeTransformationType
 //! Usually, it is expected that you would create a ShapeRef for each shape 
 //! in your diagram and keep that reference in your own shape class.
 //!
-class AVOID_EXPORT ShapeRef : public Obstacle
+class AVOID_EXPORT ShapeRef : public std::enable_shared_from_this<ShapeRef>, public Obstacle
 {
     public:
         //! @brief  Shape reference constructor.
@@ -117,6 +117,8 @@ class AVOID_EXPORT ShapeRef : public Obstacle
         //!                     among all objects.
         //!
         ShapeRef(Router *router, Polygon& poly, const unsigned int id = 0);
+        static std::shared_ptr<ShapeRef> createShapeRef(Router *router, Polygon& poly, const unsigned int id = 0);
+        std::shared_ptr<ShapeRef> getPtr();
 
 // To prevent C++ objects from being destroyed in garbage collected languages
 // when the libraries are called from SWIG, we hide the declarations of the

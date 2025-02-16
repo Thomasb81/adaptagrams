@@ -31,7 +31,7 @@ int main(void) {
     polygon.ps[1] = Point(490, 330);
     polygon.ps[2] = Point(490, 450);
     polygon.ps[3] = Point(450, 450);
-    ShapeRef *shapeRef1 = new ShapeRef(router, polygon, 1);
+    auto shapeRef1 = ShapeRef::createShapeRef(router, polygon, 1);
     connPin = new ShapeConnectionPin(shapeRef1, 1, 0, 0.333333, true, 10, (ConnDirFlags) 0);
     connPin->setExclusive(false);
     connPin = new ShapeConnectionPin(shapeRef1, 2, 0, 0.666667, true, 10, (ConnDirFlags) 0);
@@ -47,13 +47,13 @@ int main(void) {
     polygon.ps[1] = Point(502, 262.5);
     polygon.ps[2] = Point(438, 262.5);
     polygon.ps[3] = Point(438, 237.5);
-    ShapeRef *shapeRef8 = new ShapeRef(router, polygon, 8);
+    auto shapeRef8 = ShapeRef::createShapeRef(router, polygon, 8);
     connPin = new ShapeConnectionPin(shapeRef8, 1, 0, 0.5, true, 1, (ConnDirFlags) 0);
     connPin = new ShapeConnectionPin(shapeRef8, 2, 1, 0.5, true, 1, (ConnDirFlags) 0);
     connPin = new ShapeConnectionPin(shapeRef8, 3, 0.5, 1, true, 1, (ConnDirFlags) 0);
     connPin = new ShapeConnectionPin(shapeRef8, 4, 0.5, 0, true, 1, (ConnDirFlags) 0);
 
-    JunctionRef *junctionRef6 = new JunctionRef(router, Point(470, 300), 6);
+    auto junctionRef6 = JunctionRef::createJunctionRef(router, Point(470, 300), 6);
     /*
     // This may be useful if junction pins are modified.
     connPin = new ShapeConnectionPin(junctionRef6, 2147483646, (ConnDirFlags) 15);
@@ -85,7 +85,7 @@ int main(void) {
     connRef10->setRoutingType((ConnType)2);
 #endif
 
-    //    router->deleteConnector(connRef5->getPtr());
+    //    router->deleteConnector(connRef5->getPtr()->getPtr());
     router->processTransaction();
 
     ConnRef *mergedConn = junctionRef6->removeJunctionAndMergeConnectors();
@@ -96,7 +96,7 @@ int main(void) {
 
     // Expected result: output images should be virtually identical.
     // Result: An endpoint seems to be disconnected from shapeRef8.
-    bool isConnected = (ends.first.shape() == shapeRef8) || (ends.second.shape() == shapeRef8);
+    bool isConnected = (ends.first.shape() == shapeRef8.get()) || (ends.second.shape() == shapeRef8.get());
     
     delete router;
     return isConnected ? 0 : 1;

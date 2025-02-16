@@ -33,22 +33,22 @@ int main(void)
     router->setRoutingPenalty((PenaltyType)0, 50);
     
     Rectangle shapeRect1(Point(0, 0), Point(30, 20));
-    ShapeRef *shapeRef1 = new ShapeRef(router, shapeRect1);
+    auto shapeRef1 = ShapeRef::createShapeRef(router, shapeRect1);
     
     Rectangle shapeRect2(Point(70, 7), Point(100, 27));
-    new ShapeRef(router, shapeRect2);
+    ShapeRef::createShapeRef(router, shapeRect2);
     
     Rectangle shapeRect3(Point(50, 60), Point(80, 155));
-    new ShapeRef(router, shapeRect3);
+    ShapeRef::createShapeRef(router, shapeRect3);
     
     Rectangle shapeRect4(Point(125, 60), Point(155, 80));
-    new ShapeRef(router, shapeRect4);
+    ShapeRef::createShapeRef(router, shapeRect4);
     
     Rectangle shapeRect5(Point(15, 150), Point(45, 170));
-    ShapeRef *shapeRef5 = new ShapeRef(router, shapeRect5);
+    auto shapeRef5 = ShapeRef::createShapeRef(router, shapeRect5);
     
     Rectangle shapeRect6(Point(130, 130), Point(160, 150));
-    ShapeRef *shapeRef6 = new ShapeRef(router, shapeRect6);
+    auto shapeRef6 = ShapeRef::createShapeRef(router, shapeRect6);
     
     // Add a centre connection pin for the three shapes we'll be using.
     new ShapeConnectionPin(shapeRef1, CONNECTIONPIN_CENTRE, 
@@ -82,7 +82,7 @@ int main(void)
     router->outputDiagram("output/junction04-3");
 
     // Delete one half of the original connector, up to the junction.
-    router->deleteConnector(conn1->getPtr());
+    router->deleteConnector(conn1->getPtr()->getPtr());
     conn1 = nullptr;
 
     router->processTransaction();

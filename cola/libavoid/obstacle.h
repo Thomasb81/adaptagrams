@@ -46,7 +46,7 @@ class Router;
 class Obstacle;
 class ConnEnd;
 class ConnRef;
-typedef std::list<Obstacle *> ObstacleList;
+typedef std::list<std::shared_ptr<Obstacle> > ObstacleList;
 typedef std::list<std::shared_ptr<ConnRef> > ConnRefList;
 
 

@@ -704,7 +704,7 @@ std::pair<JunctionRef *, std::shared_ptr<ConnRef> > ConnRef::splitAtSegment(
                 m_display_route.at(segmentN));
 
         // Create the new junction.
-        newJunction = new JunctionRef(router(), junctionPos);
+        newJunction = JunctionRef::createJunctionRef(router(), junctionPos).get();
         router()->addJunction(newJunction);
         newJunction->preferOrthogonalDimension(
                 (m_display_route.at(segmentN - 1).x == 

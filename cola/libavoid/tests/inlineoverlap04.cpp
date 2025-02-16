@@ -16,28 +16,28 @@ int main(void) {
     poly170253204.ps[1] = Point(50450, 50360);
     poly170253204.ps[2] = Point(50265, 50360);
     poly170253204.ps[3] = Point(50265, 50190);
-    new ShapeRef(router, poly170253204, 170253204);
+    ShapeRef::createShapeRef(router, poly170253204, 170253204);
 
     Polygon poly914700248(4);
     poly914700248.ps[0] = Point(50800, 50390);
     poly914700248.ps[1] = Point(50800, 50560);
     poly914700248.ps[2] = Point(50615, 50560);
     poly914700248.ps[3] = Point(50615, 50390);
-    new ShapeRef(router, poly914700248, 914700248);
+    ShapeRef::createShapeRef(router, poly914700248, 914700248);
 
     Polygon poly285103539(4);
     poly285103539.ps[0] = Point(51385, 50390);
     poly285103539.ps[1] = Point(51385, 50560);
     poly285103539.ps[2] = Point(51200, 50560);
     poly285103539.ps[3] = Point(51200, 50390);
-    new ShapeRef(router, poly285103539, 285103539);
+    ShapeRef::createShapeRef(router, poly285103539, 285103539);
 
     Polygon poly252459412(4);
     poly252459412.ps[0] = Point(51360, 50190);
     poly252459412.ps[1] = Point(51360, 50360);
     poly252459412.ps[2] = Point(51175, 50360);
     poly252459412.ps[3] = Point(51175, 50190);
-    new ShapeRef(router, poly252459412, 252459412);
+    ShapeRef::createShapeRef(router, poly252459412, 252459412);
 
     ConnRef *connRef573390636 = ConnRef::createConnRef(router, 573390636).get();
     ConnEnd srcPt573390636(Point(50790, 50475), 8);

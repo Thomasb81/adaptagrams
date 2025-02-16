@@ -32,7 +32,7 @@ int main(void)
     
     // Create the ShapeRef:
     Rectangle shapePoly(Point(0, 0), Point(100, 100));
-    new ShapeRef(router, shapePoly);
+    ShapeRef::createShapeRef(router, shapePoly);
 
     ConnEnd srcPt(Point(200, 200));
 

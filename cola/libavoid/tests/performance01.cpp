@@ -24,7 +24,7 @@ int main(void) {
     polygon.ps[1] = Point(1015.25, 632.918);
     polygon.ps[2] = Point(995.246, 632.918);
     polygon.ps[3] = Point(995.246, 612.918);
-    new ShapeRef(router, polygon, 1);
+    ShapeRef::createShapeRef(router, polygon, 1);
 
     // shapeRef2
     polygon = Polygon(4);
@@ -32,7 +32,7 @@ int main(void) {
     polygon.ps[1] = Point(859.246, 632.918);
     polygon.ps[2] = Point(839.246, 632.918);
     polygon.ps[3] = Point(839.246, 612.918);
-    new ShapeRef(router, polygon, 2);
+    ShapeRef::createShapeRef(router, polygon, 2);
 
     // shapeRef3
     polygon = Polygon(4);
@@ -40,7 +40,7 @@ int main(void) {
     polygon.ps[1] = Point(703.246, 632.918);
     polygon.ps[2] = Point(683.246, 632.918);
     polygon.ps[3] = Point(683.246, 612.918);
-    new ShapeRef(router, polygon, 3);
+    ShapeRef::createShapeRef(router, polygon, 3);
 
     // shapeRef4
     polygon = Polygon(4);
@@ -48,7 +48,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 632.918);
     polygon.ps[2] = Point(527.246, 632.918);
     polygon.ps[3] = Point(527.246, 612.918);
-    new ShapeRef(router, polygon, 4);
+    ShapeRef::createShapeRef(router, polygon, 4);
 
     // shapeRef5
     polygon = Polygon(4);
@@ -56,7 +56,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 632.918);
     polygon.ps[2] = Point(371.246, 632.918);
     polygon.ps[3] = Point(371.246, 612.918);
-    new ShapeRef(router, polygon, 5);
+    ShapeRef::createShapeRef(router, polygon, 5);
 
     // shapeRef6
     polygon = Polygon(4);
@@ -64,7 +64,7 @@ int main(void) {
     polygon.ps[1] = Point(235.246, 632.918);
     polygon.ps[2] = Point(215.246, 632.918);
     polygon.ps[3] = Point(215.246, 612.918);
-    new ShapeRef(router, polygon, 6);
+    ShapeRef::createShapeRef(router, polygon, 6);
 
     // shapeRef7
     polygon = Polygon(4);
@@ -72,7 +72,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 664.918);
     polygon.ps[2] = Point(57.2456, 664.918);
     polygon.ps[3] = Point(57.2456, 644.918);
-    new ShapeRef(router, polygon, 7);
+    ShapeRef::createShapeRef(router, polygon, 7);
 
     // shapeRef8
     polygon = Polygon(4);
@@ -80,7 +80,7 @@ int main(void) {
     polygon.ps[1] = Point(1223.25, 696.918);
     polygon.ps[2] = Point(1183.25, 696.918);
     polygon.ps[3] = Point(1183.25, 656.918);
-    new ShapeRef(router, polygon, 8);
+    ShapeRef::createShapeRef(router, polygon, 8);
 
     // shapeRef9
     polygon = Polygon(4);
@@ -88,7 +88,7 @@ int main(void) {
     polygon.ps[1] = Point(1223.25, 578.918);
     polygon.ps[2] = Point(1183.25, 578.918);
     polygon.ps[3] = Point(1183.25, 538.918);
-    new ShapeRef(router, polygon, 9);
+    ShapeRef::createShapeRef(router, polygon, 9);
 
     // shapeRef10
     polygon = Polygon(4);
@@ -96,7 +96,7 @@ int main(void) {
     polygon.ps[1] = Point(1223.25, 467.955);
     polygon.ps[2] = Point(1183.25, 467.955);
     polygon.ps[3] = Point(1183.25, 427.955);
-    new ShapeRef(router, polygon, 10);
+    ShapeRef::createShapeRef(router, polygon, 10);
 
     // shapeRef11
     polygon = Polygon(4);
@@ -104,7 +104,7 @@ int main(void) {
     polygon.ps[1] = Point(1223.25, 352.918);
     polygon.ps[2] = Point(1183.25, 352.918);
     polygon.ps[3] = Point(1183.25, 312.918);
-    new ShapeRef(router, polygon, 11);
+    ShapeRef::createShapeRef(router, polygon, 11);
 
     // shapeRef12
     polygon = Polygon(4);
@@ -112,7 +112,7 @@ int main(void) {
     polygon.ps[1] = Point(1469.25, 770.918);
     polygon.ps[2] = Point(1429.25, 770.918);
     polygon.ps[3] = Point(1429.25, 730.918);
-    new ShapeRef(router, polygon, 12);
+    ShapeRef::createShapeRef(router, polygon, 12);
 
     // shapeRef13
     polygon = Polygon(4);
@@ -120,7 +120,7 @@ int main(void) {
     polygon.ps[1] = Point(1223.25, 770.918);
     polygon.ps[2] = Point(1183.25, 770.918);
     polygon.ps[3] = Point(1183.25, 730.918);
-    new ShapeRef(router, polygon, 13);
+    ShapeRef::createShapeRef(router, polygon, 13);
 
     // shapeRef14
     polygon = Polygon(4);
@@ -128,7 +128,7 @@ int main(void) {
     polygon.ps[1] = Point(1191.25, 770.918);
     polygon.ps[2] = Point(1151.25, 770.918);
     polygon.ps[3] = Point(1151.25, 730.918);
-    new ShapeRef(router, polygon, 14);
+    ShapeRef::createShapeRef(router, polygon, 14);
 
     // shapeRef15
     polygon = Polygon(4);
@@ -136,7 +136,7 @@ int main(void) {
     polygon.ps[1] = Point(1469.25, 696.918);
     polygon.ps[2] = Point(1429.25, 696.918);
     polygon.ps[3] = Point(1429.25, 656.918);
-    new ShapeRef(router, polygon, 15);
+    ShapeRef::createShapeRef(router, polygon, 15);
 
     // shapeRef16
     polygon = Polygon(4);
@@ -144,7 +144,7 @@ int main(void) {
     polygon.ps[1] = Point(1191.25, 696.918);
     polygon.ps[2] = Point(1151.25, 696.918);
     polygon.ps[3] = Point(1151.25, 656.918);
-    new ShapeRef(router, polygon, 16);
+    ShapeRef::createShapeRef(router, polygon, 16);
 
     // shapeRef17
     polygon = Polygon(4);
@@ -152,7 +152,7 @@ int main(void) {
     polygon.ps[1] = Point(843.246, 770.918);
     polygon.ps[2] = Point(803.246, 770.918);
     polygon.ps[3] = Point(803.246, 730.918);
-    new ShapeRef(router, polygon, 17);
+    ShapeRef::createShapeRef(router, polygon, 17);
 
     // shapeRef18
     polygon = Polygon(4);
@@ -160,7 +160,7 @@ int main(void) {
     polygon.ps[1] = Point(693.933, 770.918);
     polygon.ps[2] = Point(653.933, 770.918);
     polygon.ps[3] = Point(653.933, 730.918);
-    new ShapeRef(router, polygon, 18);
+    ShapeRef::createShapeRef(router, polygon, 18);
 
     // shapeRef19
     polygon = Polygon(4);
@@ -168,7 +168,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 770.918);
     polygon.ps[2] = Point(507.246, 770.918);
     polygon.ps[3] = Point(507.246, 730.918);
-    new ShapeRef(router, polygon, 19);
+    ShapeRef::createShapeRef(router, polygon, 19);
 
     // shapeRef20
     polygon = Polygon(4);
@@ -176,7 +176,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 770.918);
     polygon.ps[2] = Point(351.246, 770.918);
     polygon.ps[3] = Point(351.246, 730.918);
-    new ShapeRef(router, polygon, 20);
+    ShapeRef::createShapeRef(router, polygon, 20);
 
     // shapeRef21
     polygon = Polygon(4);
@@ -184,7 +184,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 728.918);
     polygon.ps[2] = Point(791.246, 728.918);
     polygon.ps[3] = Point(791.246, 708.918);
-    new ShapeRef(router, polygon, 21);
+    ShapeRef::createShapeRef(router, polygon, 21);
 
     // shapeRef22
     polygon = Polygon(4);
@@ -192,7 +192,7 @@ int main(void) {
     polygon.ps[1] = Point(1171.25, 728.918);
     polygon.ps[2] = Point(1151.25, 728.918);
     polygon.ps[3] = Point(1151.25, 708.918);
-    new ShapeRef(router, polygon, 22);
+    ShapeRef::createShapeRef(router, polygon, 22);
 
     // shapeRef23
     polygon = Polygon(4);
@@ -200,7 +200,7 @@ int main(void) {
     polygon.ps[1] = Point(1183.25, 728.918);
     polygon.ps[2] = Point(1163.25, 728.918);
     polygon.ps[3] = Point(1163.25, 708.918);
-    new ShapeRef(router, polygon, 23);
+    ShapeRef::createShapeRef(router, polygon, 23);
 
     // shapeRef24
     polygon = Polygon(4);
@@ -208,7 +208,7 @@ int main(void) {
     polygon.ps[1] = Point(537.246, 728.918);
     polygon.ps[2] = Point(517.246, 728.918);
     polygon.ps[3] = Point(517.246, 708.918);
-    new ShapeRef(router, polygon, 24);
+    ShapeRef::createShapeRef(router, polygon, 24);
 
     // shapeRef25
     polygon = Polygon(4);
@@ -216,7 +216,7 @@ int main(void) {
     polygon.ps[1] = Point(381.246, 728.918);
     polygon.ps[2] = Point(361.246, 728.918);
     polygon.ps[3] = Point(361.246, 708.918);
-    new ShapeRef(router, polygon, 25);
+    ShapeRef::createShapeRef(router, polygon, 25);
 
     // shapeRef26
     polygon = Polygon(4);
@@ -224,7 +224,7 @@ int main(void) {
     polygon.ps[1] = Point(1381.25, 686.918);
     polygon.ps[2] = Point(1361.25, 686.918);
     polygon.ps[3] = Point(1361.25, 666.918);
-    new ShapeRef(router, polygon, 26);
+    ShapeRef::createShapeRef(router, polygon, 26);
 
     // shapeRef27
     polygon = Polygon(4);
@@ -232,7 +232,7 @@ int main(void) {
     polygon.ps[1] = Point(1303.25, 585.942);
     polygon.ps[2] = Point(1283.25, 585.942);
     polygon.ps[3] = Point(1283.25, 565.942);
-    new ShapeRef(router, polygon, 27);
+    ShapeRef::createShapeRef(router, polygon, 27);
 
     // shapeRef28
     polygon = Polygon(4);
@@ -240,7 +240,7 @@ int main(void) {
     polygon.ps[1] = Point(1015.25, 664.918);
     polygon.ps[2] = Point(995.246, 664.918);
     polygon.ps[3] = Point(995.246, 644.918);
-    new ShapeRef(router, polygon, 28);
+    ShapeRef::createShapeRef(router, polygon, 28);
 
     // shapeRef29
     polygon = Polygon(4);
@@ -248,7 +248,7 @@ int main(void) {
     polygon.ps[1] = Point(859.246, 664.918);
     polygon.ps[2] = Point(839.246, 664.918);
     polygon.ps[3] = Point(839.246, 644.918);
-    new ShapeRef(router, polygon, 29);
+    ShapeRef::createShapeRef(router, polygon, 29);
 
     // shapeRef30
     polygon = Polygon(4);
@@ -256,7 +256,7 @@ int main(void) {
     polygon.ps[1] = Point(703.246, 664.918);
     polygon.ps[2] = Point(683.246, 664.918);
     polygon.ps[3] = Point(683.246, 644.918);
-    new ShapeRef(router, polygon, 30);
+    ShapeRef::createShapeRef(router, polygon, 30);
 
     // shapeRef31
     polygon = Polygon(4);
@@ -264,7 +264,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 664.918);
     polygon.ps[2] = Point(527.246, 664.918);
     polygon.ps[3] = Point(527.246, 644.918);
-    new ShapeRef(router, polygon, 31);
+    ShapeRef::createShapeRef(router, polygon, 31);
 
     // shapeRef32
     polygon = Polygon(4);
@@ -272,7 +272,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 664.918);
     polygon.ps[2] = Point(371.246, 664.918);
     polygon.ps[3] = Point(371.246, 644.918);
-    new ShapeRef(router, polygon, 32);
+    ShapeRef::createShapeRef(router, polygon, 32);
 
     // shapeRef33
     polygon = Polygon(4);
@@ -280,7 +280,7 @@ int main(void) {
     polygon.ps[1] = Point(235.246, 664.918);
     polygon.ps[2] = Point(215.246, 664.918);
     polygon.ps[3] = Point(215.246, 644.918);
-    new ShapeRef(router, polygon, 33);
+    ShapeRef::createShapeRef(router, polygon, 33);
 
     // shapeRef34
     polygon = Polygon(4);
@@ -288,7 +288,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 632.918);
     polygon.ps[2] = Point(57.2456, 632.918);
     polygon.ps[3] = Point(57.2456, 612.918);
-    new ShapeRef(router, polygon, 34);
+    ShapeRef::createShapeRef(router, polygon, 34);
 
     // shapeRef35
     polygon = Polygon(4);
@@ -296,7 +296,7 @@ int main(void) {
     polygon.ps[1] = Point(1303.25, 524.918);
     polygon.ps[2] = Point(1283.25, 524.918);
     polygon.ps[3] = Point(1283.25, 504.918);
-    new ShapeRef(router, polygon, 35);
+    ShapeRef::createShapeRef(router, polygon, 35);
 
     // shapeRef36
     polygon = Polygon(4);
@@ -304,7 +304,7 @@ int main(void) {
     polygon.ps[1] = Point(1015.25, 546.918);
     polygon.ps[2] = Point(995.246, 546.918);
     polygon.ps[3] = Point(995.246, 526.918);
-    new ShapeRef(router, polygon, 36);
+    ShapeRef::createShapeRef(router, polygon, 36);
 
     // shapeRef37
     polygon = Polygon(4);
@@ -312,7 +312,7 @@ int main(void) {
     polygon.ps[1] = Point(859.246, 546.918);
     polygon.ps[2] = Point(839.246, 546.918);
     polygon.ps[3] = Point(839.246, 526.918);
-    new ShapeRef(router, polygon, 37);
+    ShapeRef::createShapeRef(router, polygon, 37);
 
     // shapeRef38
     polygon = Polygon(4);
@@ -320,7 +320,7 @@ int main(void) {
     polygon.ps[1] = Point(703.246, 546.918);
     polygon.ps[2] = Point(683.246, 546.918);
     polygon.ps[3] = Point(683.246, 526.918);
-    new ShapeRef(router, polygon, 38);
+    ShapeRef::createShapeRef(router, polygon, 38);
 
     // shapeRef39
     polygon = Polygon(4);
@@ -328,7 +328,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 546.918);
     polygon.ps[2] = Point(527.246, 546.918);
     polygon.ps[3] = Point(527.246, 526.918);
-    new ShapeRef(router, polygon, 39);
+    ShapeRef::createShapeRef(router, polygon, 39);
 
     // shapeRef40
     polygon = Polygon(4);
@@ -336,7 +336,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 546.918);
     polygon.ps[2] = Point(371.246, 546.918);
     polygon.ps[3] = Point(371.246, 526.918);
-    new ShapeRef(router, polygon, 40);
+    ShapeRef::createShapeRef(router, polygon, 40);
 
     // shapeRef41
     polygon = Polygon(4);
@@ -344,7 +344,7 @@ int main(void) {
     polygon.ps[1] = Point(235.246, 546.918);
     polygon.ps[2] = Point(215.246, 546.918);
     polygon.ps[3] = Point(215.246, 526.918);
-    new ShapeRef(router, polygon, 41);
+    ShapeRef::createShapeRef(router, polygon, 41);
 
     // shapeRef42
     polygon = Polygon(4);
@@ -352,7 +352,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 546.918);
     polygon.ps[2] = Point(57.2456, 546.918);
     polygon.ps[3] = Point(57.2456, 526.918);
-    new ShapeRef(router, polygon, 42);
+    ShapeRef::createShapeRef(router, polygon, 42);
 
     // shapeRef43
     polygon = Polygon(4);
@@ -360,7 +360,7 @@ int main(void) {
     polygon.ps[1] = Point(1303.25, 298.918);
     polygon.ps[2] = Point(1283.25, 298.918);
     polygon.ps[3] = Point(1283.25, 278.918);
-    new ShapeRef(router, polygon, 43);
+    ShapeRef::createShapeRef(router, polygon, 43);
 
     // shapeRef44
     polygon = Polygon(4);
@@ -368,7 +368,7 @@ int main(void) {
     polygon.ps[1] = Point(1093.25, 686.918);
     polygon.ps[2] = Point(1073.25, 686.918);
     polygon.ps[3] = Point(1073.25, 666.918);
-    new ShapeRef(router, polygon, 44);
+    ShapeRef::createShapeRef(router, polygon, 44);
 
     // shapeRef45
     polygon = Polygon(4);
@@ -376,7 +376,7 @@ int main(void) {
     polygon.ps[1] = Point(1303.25, 428.918);
     polygon.ps[2] = Point(1283.25, 428.918);
     polygon.ps[3] = Point(1283.25, 408.918);
-    new ShapeRef(router, polygon, 45);
+    ShapeRef::createShapeRef(router, polygon, 45);
 
     // shapeRef46
     polygon = Polygon(4);
@@ -384,7 +384,7 @@ int main(void) {
     polygon.ps[1] = Point(1303.25, 728.918);
     polygon.ps[2] = Point(1283.25, 728.918);
     polygon.ps[3] = Point(1283.25, 708.918);
-    new ShapeRef(router, polygon, 46);
+    ShapeRef::createShapeRef(router, polygon, 46);
 
     // shapeRef47
     polygon = Polygon(4);
@@ -392,7 +392,7 @@ int main(void) {
     polygon.ps[1] = Point(1459.25, 728.918);
     polygon.ps[2] = Point(1439.25, 728.918);
     polygon.ps[3] = Point(1439.25, 708.918);
-    new ShapeRef(router, polygon, 47);
+    ShapeRef::createShapeRef(router, polygon, 47);
 
     // shapeRef48
     polygon = Polygon(4);
@@ -400,7 +400,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 728.918);
     polygon.ps[2] = Point(635.246, 728.918);
     polygon.ps[3] = Point(635.246, 708.918);
-    new ShapeRef(router, polygon, 48);
+    ShapeRef::createShapeRef(router, polygon, 48);
 
     // shapeRef49
     polygon = Polygon(4);
@@ -408,7 +408,7 @@ int main(void) {
     polygon.ps[1] = Point(859.246, 728.918);
     polygon.ps[2] = Point(839.246, 728.918);
     polygon.ps[3] = Point(839.246, 708.918);
-    new ShapeRef(router, polygon, 49);
+    ShapeRef::createShapeRef(router, polygon, 49);
 
     // shapeRef50
     polygon = Polygon(4);
@@ -416,7 +416,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 42.9179);
     polygon.ps[2] = Point(57.2456, 42.9179);
     polygon.ps[3] = Point(57.2456, 22.9179);
-    new ShapeRef(router, polygon, 50);
+    ShapeRef::createShapeRef(router, polygon, 50);
 
     // shapeRef51
     polygon = Polygon(4);
@@ -424,7 +424,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 320.918);
     polygon.ps[2] = Point(57.2456, 320.918);
     polygon.ps[3] = Point(57.2456, 300.918);
-    new ShapeRef(router, polygon, 51);
+    ShapeRef::createShapeRef(router, polygon, 51);
 
     // shapeRef52
     polygon = Polygon(4);
@@ -432,7 +432,7 @@ int main(void) {
     polygon.ps[1] = Point(1015.25, 298.918);
     polygon.ps[2] = Point(995.246, 298.918);
     polygon.ps[3] = Point(995.246, 278.918);
-    new ShapeRef(router, polygon, 52);
+    ShapeRef::createShapeRef(router, polygon, 52);
 
     // shapeRef53
     polygon = Polygon(4);
@@ -440,7 +440,7 @@ int main(void) {
     polygon.ps[1] = Point(859.246, 298.918);
     polygon.ps[2] = Point(839.246, 298.918);
     polygon.ps[3] = Point(839.246, 278.918);
-    new ShapeRef(router, polygon, 53);
+    ShapeRef::createShapeRef(router, polygon, 53);
 
     // shapeRef54
     polygon = Polygon(4);
@@ -448,7 +448,7 @@ int main(void) {
     polygon.ps[1] = Point(703.246, 298.918);
     polygon.ps[2] = Point(683.246, 298.918);
     polygon.ps[3] = Point(683.246, 278.918);
-    new ShapeRef(router, polygon, 54);
+    ShapeRef::createShapeRef(router, polygon, 54);
 
     // shapeRef55
     polygon = Polygon(4);
@@ -456,7 +456,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 298.918);
     polygon.ps[2] = Point(527.246, 298.918);
     polygon.ps[3] = Point(527.246, 278.918);
-    new ShapeRef(router, polygon, 55);
+    ShapeRef::createShapeRef(router, polygon, 55);
 
     // shapeRef56
     polygon = Polygon(4);
@@ -464,7 +464,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 298.918);
     polygon.ps[2] = Point(371.246, 298.918);
     polygon.ps[3] = Point(371.246, 278.918);
-    new ShapeRef(router, polygon, 56);
+    ShapeRef::createShapeRef(router, polygon, 56);
 
     // shapeRef57
     polygon = Polygon(4);
@@ -472,7 +472,7 @@ int main(void) {
     polygon.ps[1] = Point(235.246, 298.918);
     polygon.ps[2] = Point(215.246, 298.918);
     polygon.ps[3] = Point(215.246, 278.918);
-    new ShapeRef(router, polygon, 57);
+    ShapeRef::createShapeRef(router, polygon, 57);
 
     // shapeRef58
     polygon = Polygon(4);
@@ -480,7 +480,7 @@ int main(void) {
     polygon.ps[1] = Point(1047.75, 802.422);
     polygon.ps[2] = Point(910.746, 802.422);
     polygon.ps[3] = Point(910.746, 767.422);
-    new ShapeRef(router, polygon, 58);
+    ShapeRef::createShapeRef(router, polygon, 58);
 
     // shapeRef59
     polygon = Polygon(4);
@@ -488,7 +488,7 @@ int main(void) {
     polygon.ps[1] = Point(207.246, -93.0821);
     polygon.ps[2] = Point(-12.7544, -93.0821);
     polygon.ps[3] = Point(-12.7544, -128.082);
-    new ShapeRef(router, polygon, 59);
+    ShapeRef::createShapeRef(router, polygon, 59);
 
     // shapeRef60
     polygon = Polygon(4);
@@ -496,7 +496,7 @@ int main(void) {
     polygon.ps[1] = Point(590.455, 64.9179);
     polygon.ps[2] = Point(312.455, 64.9179);
     polygon.ps[3] = Point(312.455, 4.91795);
-    new ShapeRef(router, polygon, 60);
+    ShapeRef::createShapeRef(router, polygon, 60);
 
     // shapeRef61
     polygon = Polygon(4);
@@ -504,7 +504,7 @@ int main(void) {
     polygon.ps[1] = Point(222.246, -41.0821);
     polygon.ps[2] = Point(-12.7544, -41.0821);
     polygon.ps[3] = Point(-12.7544, -101.082);
-    new ShapeRef(router, polygon, 61);
+    ShapeRef::createShapeRef(router, polygon, 61);
 
     // shapeRef62
     polygon = Polygon(4);
@@ -512,7 +512,7 @@ int main(void) {
     polygon.ps[1] = Point(1015.25, 728.918);
     polygon.ps[2] = Point(995.246, 728.918);
     polygon.ps[3] = Point(995.246, 708.918);
-    new ShapeRef(router, polygon, 62);
+    ShapeRef::createShapeRef(router, polygon, 62);
 
     // shapeRef63
     polygon = Polygon(4);
@@ -520,7 +520,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 696.918);
     polygon.ps[2] = Point(947.246, 696.918);
     polygon.ps[3] = Point(947.246, 676.918);
-    new ShapeRef(router, polygon, 63);
+    ShapeRef::createShapeRef(router, polygon, 63);
 
     // shapeRef64
     polygon = Polygon(4);
@@ -528,7 +528,7 @@ int main(void) {
     polygon.ps[1] = Point(1015.25, 600.918);
     polygon.ps[2] = Point(995.246, 600.918);
     polygon.ps[3] = Point(995.246, 580.918);
-    new ShapeRef(router, polygon, 64);
+    ShapeRef::createShapeRef(router, polygon, 64);
 
     // shapeRef65
     polygon = Polygon(4);
@@ -536,7 +536,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 632.918);
     polygon.ps[2] = Point(947.246, 632.918);
     polygon.ps[3] = Point(947.246, 612.918);
-    new ShapeRef(router, polygon, 65);
+    ShapeRef::createShapeRef(router, polygon, 65);
 
     // shapeRef66
     polygon = Polygon(4);
@@ -544,7 +544,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 600.918);
     polygon.ps[2] = Point(947.246, 600.918);
     polygon.ps[3] = Point(947.246, 580.918);
-    new ShapeRef(router, polygon, 66);
+    ShapeRef::createShapeRef(router, polygon, 66);
 
     // shapeRef67
     polygon = Polygon(4);
@@ -552,7 +552,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 524.918);
     polygon.ps[2] = Point(947.246, 524.918);
     polygon.ps[3] = Point(947.246, 504.918);
-    new ShapeRef(router, polygon, 67);
+    ShapeRef::createShapeRef(router, polygon, 67);
 
     // shapeRef68
     polygon = Polygon(4);
@@ -560,7 +560,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 492.918);
     polygon.ps[2] = Point(947.246, 492.918);
     polygon.ps[3] = Point(947.246, 472.918);
-    new ShapeRef(router, polygon, 68);
+    ShapeRef::createShapeRef(router, polygon, 68);
 
     // shapeRef69
     polygon = Polygon(4);
@@ -568,7 +568,7 @@ int main(void) {
     polygon.ps[1] = Point(1015.25, 428.918);
     polygon.ps[2] = Point(995.246, 428.918);
     polygon.ps[3] = Point(995.246, 408.918);
-    new ShapeRef(router, polygon, 69);
+    ShapeRef::createShapeRef(router, polygon, 69);
 
     // shapeRef70
     polygon = Polygon(4);
@@ -576,7 +576,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 428.918);
     polygon.ps[2] = Point(947.246, 428.918);
     polygon.ps[3] = Point(947.246, 408.918);
-    new ShapeRef(router, polygon, 70);
+    ShapeRef::createShapeRef(router, polygon, 70);
 
     // shapeRef71
     polygon = Polygon(4);
@@ -584,7 +584,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 396.918);
     polygon.ps[2] = Point(947.246, 396.918);
     polygon.ps[3] = Point(947.246, 376.918);
-    new ShapeRef(router, polygon, 71);
+    ShapeRef::createShapeRef(router, polygon, 71);
 
     // shapeRef72
     polygon = Polygon(4);
@@ -592,7 +592,7 @@ int main(void) {
     polygon.ps[1] = Point(1015.25, 266.918);
     polygon.ps[2] = Point(995.246, 266.918);
     polygon.ps[3] = Point(995.246, 246.918);
-    new ShapeRef(router, polygon, 72);
+    ShapeRef::createShapeRef(router, polygon, 72);
 
     // shapeRef73
     polygon = Polygon(4);
@@ -600,7 +600,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 288.918);
     polygon.ps[2] = Point(947.246, 288.918);
     polygon.ps[3] = Point(947.246, 268.918);
-    new ShapeRef(router, polygon, 73);
+    ShapeRef::createShapeRef(router, polygon, 73);
 
     // shapeRef74
     polygon = Polygon(4);
@@ -608,7 +608,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 256.918);
     polygon.ps[2] = Point(947.246, 256.918);
     polygon.ps[3] = Point(947.246, 236.918);
-    new ShapeRef(router, polygon, 74);
+    ShapeRef::createShapeRef(router, polygon, 74);
 
     // shapeRef75
     polygon = Polygon(4);
@@ -616,7 +616,7 @@ int main(void) {
     polygon.ps[1] = Point(859.246, 600.918);
     polygon.ps[2] = Point(839.246, 600.918);
     polygon.ps[3] = Point(839.246, 580.918);
-    new ShapeRef(router, polygon, 75);
+    ShapeRef::createShapeRef(router, polygon, 75);
 
     // shapeRef76
     polygon = Polygon(4);
@@ -624,7 +624,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 632.918);
     polygon.ps[2] = Point(791.246, 632.918);
     polygon.ps[3] = Point(791.246, 612.918);
-    new ShapeRef(router, polygon, 76);
+    ShapeRef::createShapeRef(router, polygon, 76);
 
     // shapeRef77
     polygon = Polygon(4);
@@ -632,7 +632,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 600.918);
     polygon.ps[2] = Point(791.246, 600.918);
     polygon.ps[3] = Point(791.246, 580.918);
-    new ShapeRef(router, polygon, 77);
+    ShapeRef::createShapeRef(router, polygon, 77);
 
     // shapeRef78
     polygon = Polygon(4);
@@ -640,7 +640,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 524.918);
     polygon.ps[2] = Point(791.246, 524.918);
     polygon.ps[3] = Point(791.246, 504.918);
-    new ShapeRef(router, polygon, 78);
+    ShapeRef::createShapeRef(router, polygon, 78);
 
     // shapeRef79
     polygon = Polygon(4);
@@ -648,7 +648,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 492.918);
     polygon.ps[2] = Point(791.246, 492.918);
     polygon.ps[3] = Point(791.246, 472.918);
-    new ShapeRef(router, polygon, 79);
+    ShapeRef::createShapeRef(router, polygon, 79);
 
     // shapeRef80
     polygon = Polygon(4);
@@ -656,7 +656,7 @@ int main(void) {
     polygon.ps[1] = Point(859.246, 428.918);
     polygon.ps[2] = Point(839.246, 428.918);
     polygon.ps[3] = Point(839.246, 408.918);
-    new ShapeRef(router, polygon, 80);
+    ShapeRef::createShapeRef(router, polygon, 80);
 
     // shapeRef81
     polygon = Polygon(4);
@@ -664,7 +664,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 428.918);
     polygon.ps[2] = Point(791.246, 428.918);
     polygon.ps[3] = Point(791.246, 408.918);
-    new ShapeRef(router, polygon, 81);
+    ShapeRef::createShapeRef(router, polygon, 81);
 
     // shapeRef82
     polygon = Polygon(4);
@@ -672,7 +672,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 396.918);
     polygon.ps[2] = Point(791.246, 396.918);
     polygon.ps[3] = Point(791.246, 376.918);
-    new ShapeRef(router, polygon, 82);
+    ShapeRef::createShapeRef(router, polygon, 82);
 
     // shapeRef83
     polygon = Polygon(4);
@@ -680,7 +680,7 @@ int main(void) {
     polygon.ps[1] = Point(859.246, 266.918);
     polygon.ps[2] = Point(839.246, 266.918);
     polygon.ps[3] = Point(839.246, 246.918);
-    new ShapeRef(router, polygon, 83);
+    ShapeRef::createShapeRef(router, polygon, 83);
 
     // shapeRef84
     polygon = Polygon(4);
@@ -688,7 +688,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 288.918);
     polygon.ps[2] = Point(791.246, 288.918);
     polygon.ps[3] = Point(791.246, 268.918);
-    new ShapeRef(router, polygon, 84);
+    ShapeRef::createShapeRef(router, polygon, 84);
 
     // shapeRef85
     polygon = Polygon(4);
@@ -696,7 +696,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 256.918);
     polygon.ps[2] = Point(791.246, 256.918);
     polygon.ps[3] = Point(791.246, 236.918);
-    new ShapeRef(router, polygon, 85);
+    ShapeRef::createShapeRef(router, polygon, 85);
 
     // shapeRef86
     polygon = Polygon(4);
@@ -704,7 +704,7 @@ int main(void) {
     polygon.ps[1] = Point(703.246, 600.918);
     polygon.ps[2] = Point(683.246, 600.918);
     polygon.ps[3] = Point(683.246, 580.918);
-    new ShapeRef(router, polygon, 86);
+    ShapeRef::createShapeRef(router, polygon, 86);
 
     // shapeRef87
     polygon = Polygon(4);
@@ -712,7 +712,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 632.918);
     polygon.ps[2] = Point(635.246, 632.918);
     polygon.ps[3] = Point(635.246, 612.918);
-    new ShapeRef(router, polygon, 87);
+    ShapeRef::createShapeRef(router, polygon, 87);
 
     // shapeRef88
     polygon = Polygon(4);
@@ -720,7 +720,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 600.918);
     polygon.ps[2] = Point(635.246, 600.918);
     polygon.ps[3] = Point(635.246, 580.918);
-    new ShapeRef(router, polygon, 88);
+    ShapeRef::createShapeRef(router, polygon, 88);
 
     // shapeRef89
     polygon = Polygon(4);
@@ -728,7 +728,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 524.918);
     polygon.ps[2] = Point(635.246, 524.918);
     polygon.ps[3] = Point(635.246, 504.918);
-    new ShapeRef(router, polygon, 89);
+    ShapeRef::createShapeRef(router, polygon, 89);
 
     // shapeRef90
     polygon = Polygon(4);
@@ -736,7 +736,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 492.918);
     polygon.ps[2] = Point(635.246, 492.918);
     polygon.ps[3] = Point(635.246, 472.918);
-    new ShapeRef(router, polygon, 90);
+    ShapeRef::createShapeRef(router, polygon, 90);
 
     // shapeRef91
     polygon = Polygon(4);
@@ -744,7 +744,7 @@ int main(void) {
     polygon.ps[1] = Point(703.246, 428.918);
     polygon.ps[2] = Point(683.246, 428.918);
     polygon.ps[3] = Point(683.246, 408.918);
-    new ShapeRef(router, polygon, 91);
+    ShapeRef::createShapeRef(router, polygon, 91);
 
     // shapeRef92
     polygon = Polygon(4);
@@ -752,7 +752,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 428.918);
     polygon.ps[2] = Point(635.246, 428.918);
     polygon.ps[3] = Point(635.246, 408.918);
-    new ShapeRef(router, polygon, 92);
+    ShapeRef::createShapeRef(router, polygon, 92);
 
     // shapeRef93
     polygon = Polygon(4);
@@ -760,7 +760,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 396.918);
     polygon.ps[2] = Point(635.246, 396.918);
     polygon.ps[3] = Point(635.246, 376.918);
-    new ShapeRef(router, polygon, 93);
+    ShapeRef::createShapeRef(router, polygon, 93);
 
     // shapeRef94
     polygon = Polygon(4);
@@ -768,7 +768,7 @@ int main(void) {
     polygon.ps[1] = Point(703.246, 266.918);
     polygon.ps[2] = Point(683.246, 266.918);
     polygon.ps[3] = Point(683.246, 246.918);
-    new ShapeRef(router, polygon, 94);
+    ShapeRef::createShapeRef(router, polygon, 94);
 
     // shapeRef95
     polygon = Polygon(4);
@@ -776,7 +776,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 288.918);
     polygon.ps[2] = Point(635.246, 288.918);
     polygon.ps[3] = Point(635.246, 268.918);
-    new ShapeRef(router, polygon, 95);
+    ShapeRef::createShapeRef(router, polygon, 95);
 
     // shapeRef96
     polygon = Polygon(4);
@@ -784,7 +784,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 256.918);
     polygon.ps[2] = Point(635.246, 256.918);
     polygon.ps[3] = Point(635.246, 236.918);
-    new ShapeRef(router, polygon, 96);
+    ShapeRef::createShapeRef(router, polygon, 96);
 
     // shapeRef97
     polygon = Polygon(4);
@@ -792,7 +792,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 600.918);
     polygon.ps[2] = Point(527.246, 600.918);
     polygon.ps[3] = Point(527.246, 580.918);
-    new ShapeRef(router, polygon, 97);
+    ShapeRef::createShapeRef(router, polygon, 97);
 
     // shapeRef98
     polygon = Polygon(4);
@@ -800,7 +800,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 632.918);
     polygon.ps[2] = Point(479.246, 632.918);
     polygon.ps[3] = Point(479.246, 612.918);
-    new ShapeRef(router, polygon, 98);
+    ShapeRef::createShapeRef(router, polygon, 98);
 
     // shapeRef99
     polygon = Polygon(4);
@@ -808,7 +808,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 600.918);
     polygon.ps[2] = Point(479.246, 600.918);
     polygon.ps[3] = Point(479.246, 580.918);
-    new ShapeRef(router, polygon, 99);
+    ShapeRef::createShapeRef(router, polygon, 99);
 
     // shapeRef100
     polygon = Polygon(4);
@@ -816,7 +816,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 496.951);
     polygon.ps[2] = Point(527.246, 496.951);
     polygon.ps[3] = Point(527.246, 476.951);
-    new ShapeRef(router, polygon, 100);
+    ShapeRef::createShapeRef(router, polygon, 100);
 
     // shapeRef101
     polygon = Polygon(4);
@@ -824,7 +824,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 524.918);
     polygon.ps[2] = Point(479.246, 524.918);
     polygon.ps[3] = Point(479.246, 504.918);
-    new ShapeRef(router, polygon, 101);
+    ShapeRef::createShapeRef(router, polygon, 101);
 
     // shapeRef102
     polygon = Polygon(4);
@@ -832,7 +832,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 492.918);
     polygon.ps[2] = Point(479.246, 492.918);
     polygon.ps[3] = Point(479.246, 472.918);
-    new ShapeRef(router, polygon, 102);
+    ShapeRef::createShapeRef(router, polygon, 102);
 
     // shapeRef103
     polygon = Polygon(4);
@@ -840,7 +840,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 428.918);
     polygon.ps[2] = Point(527.246, 428.918);
     polygon.ps[3] = Point(527.246, 408.918);
-    new ShapeRef(router, polygon, 103);
+    ShapeRef::createShapeRef(router, polygon, 103);
 
     // shapeRef104
     polygon = Polygon(4);
@@ -848,7 +848,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 428.918);
     polygon.ps[2] = Point(479.246, 428.918);
     polygon.ps[3] = Point(479.246, 408.918);
-    new ShapeRef(router, polygon, 104);
+    ShapeRef::createShapeRef(router, polygon, 104);
 
     // shapeRef105
     polygon = Polygon(4);
@@ -856,7 +856,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 396.918);
     polygon.ps[2] = Point(479.246, 396.918);
     polygon.ps[3] = Point(479.246, 376.918);
-    new ShapeRef(router, polygon, 105);
+    ShapeRef::createShapeRef(router, polygon, 105);
 
     // shapeRef106
     polygon = Polygon(4);
@@ -864,7 +864,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 266.918);
     polygon.ps[2] = Point(527.246, 266.918);
     polygon.ps[3] = Point(527.246, 246.918);
-    new ShapeRef(router, polygon, 106);
+    ShapeRef::createShapeRef(router, polygon, 106);
 
     // shapeRef107
     polygon = Polygon(4);
@@ -872,7 +872,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 288.918);
     polygon.ps[2] = Point(479.246, 288.918);
     polygon.ps[3] = Point(479.246, 268.918);
-    new ShapeRef(router, polygon, 107);
+    ShapeRef::createShapeRef(router, polygon, 107);
 
     // shapeRef108
     polygon = Polygon(4);
@@ -880,7 +880,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 256.918);
     polygon.ps[2] = Point(479.246, 256.918);
     polygon.ps[3] = Point(479.246, 236.918);
-    new ShapeRef(router, polygon, 108);
+    ShapeRef::createShapeRef(router, polygon, 108);
 
     // shapeRef109
     polygon = Polygon(4);
@@ -888,7 +888,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 600.918);
     polygon.ps[2] = Point(371.246, 600.918);
     polygon.ps[3] = Point(371.246, 580.918);
-    new ShapeRef(router, polygon, 109);
+    ShapeRef::createShapeRef(router, polygon, 109);
 
     // shapeRef110
     polygon = Polygon(4);
@@ -896,7 +896,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 632.918);
     polygon.ps[2] = Point(323.246, 632.918);
     polygon.ps[3] = Point(323.246, 612.918);
-    new ShapeRef(router, polygon, 110);
+    ShapeRef::createShapeRef(router, polygon, 110);
 
     // shapeRef111
     polygon = Polygon(4);
@@ -904,7 +904,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 600.918);
     polygon.ps[2] = Point(323.246, 600.918);
     polygon.ps[3] = Point(323.246, 580.918);
-    new ShapeRef(router, polygon, 111);
+    ShapeRef::createShapeRef(router, polygon, 111);
 
     // shapeRef112
     polygon = Polygon(4);
@@ -912,7 +912,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 524.918);
     polygon.ps[2] = Point(323.246, 524.918);
     polygon.ps[3] = Point(323.246, 504.918);
-    new ShapeRef(router, polygon, 112);
+    ShapeRef::createShapeRef(router, polygon, 112);
 
     // shapeRef113
     polygon = Polygon(4);
@@ -920,7 +920,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 492.918);
     polygon.ps[2] = Point(323.246, 492.918);
     polygon.ps[3] = Point(323.246, 472.918);
-    new ShapeRef(router, polygon, 113);
+    ShapeRef::createShapeRef(router, polygon, 113);
 
     // shapeRef114
     polygon = Polygon(4);
@@ -928,7 +928,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 428.918);
     polygon.ps[2] = Point(371.246, 428.918);
     polygon.ps[3] = Point(371.246, 408.918);
-    new ShapeRef(router, polygon, 114);
+    ShapeRef::createShapeRef(router, polygon, 114);
 
     // shapeRef115
     polygon = Polygon(4);
@@ -936,7 +936,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 428.918);
     polygon.ps[2] = Point(323.246, 428.918);
     polygon.ps[3] = Point(323.246, 408.918);
-    new ShapeRef(router, polygon, 115);
+    ShapeRef::createShapeRef(router, polygon, 115);
 
     // shapeRef116
     polygon = Polygon(4);
@@ -944,7 +944,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 396.918);
     polygon.ps[2] = Point(323.246, 396.918);
     polygon.ps[3] = Point(323.246, 376.918);
-    new ShapeRef(router, polygon, 116);
+    ShapeRef::createShapeRef(router, polygon, 116);
 
     // shapeRef117
     polygon = Polygon(4);
@@ -952,7 +952,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 266.918);
     polygon.ps[2] = Point(371.246, 266.918);
     polygon.ps[3] = Point(371.246, 246.918);
-    new ShapeRef(router, polygon, 117);
+    ShapeRef::createShapeRef(router, polygon, 117);
 
     // shapeRef118
     polygon = Polygon(4);
@@ -960,7 +960,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 288.918);
     polygon.ps[2] = Point(323.246, 288.918);
     polygon.ps[3] = Point(323.246, 268.918);
-    new ShapeRef(router, polygon, 118);
+    ShapeRef::createShapeRef(router, polygon, 118);
 
     // shapeRef119
     polygon = Polygon(4);
@@ -968,7 +968,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 256.918);
     polygon.ps[2] = Point(323.246, 256.918);
     polygon.ps[3] = Point(323.246, 236.918);
-    new ShapeRef(router, polygon, 119);
+    ShapeRef::createShapeRef(router, polygon, 119);
 
     // shapeRef120
     polygon = Polygon(4);
@@ -976,7 +976,7 @@ int main(void) {
     polygon.ps[1] = Point(235.246, 600.918);
     polygon.ps[2] = Point(215.246, 600.918);
     polygon.ps[3] = Point(215.246, 580.918);
-    new ShapeRef(router, polygon, 120);
+    ShapeRef::createShapeRef(router, polygon, 120);
 
     // shapeRef121
     polygon = Polygon(4);
@@ -984,7 +984,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 632.918);
     polygon.ps[2] = Point(183.246, 632.918);
     polygon.ps[3] = Point(183.246, 612.918);
-    new ShapeRef(router, polygon, 121);
+    ShapeRef::createShapeRef(router, polygon, 121);
 
     // shapeRef122
     polygon = Polygon(4);
@@ -992,7 +992,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 600.918);
     polygon.ps[2] = Point(183.246, 600.918);
     polygon.ps[3] = Point(183.246, 580.918);
-    new ShapeRef(router, polygon, 122);
+    ShapeRef::createShapeRef(router, polygon, 122);
 
     // shapeRef123
     polygon = Polygon(4);
@@ -1000,7 +1000,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 524.918);
     polygon.ps[2] = Point(183.246, 524.918);
     polygon.ps[3] = Point(183.246, 504.918);
-    new ShapeRef(router, polygon, 123);
+    ShapeRef::createShapeRef(router, polygon, 123);
 
     // shapeRef124
     polygon = Polygon(4);
@@ -1008,7 +1008,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 492.918);
     polygon.ps[2] = Point(183.246, 492.918);
     polygon.ps[3] = Point(183.246, 472.918);
-    new ShapeRef(router, polygon, 124);
+    ShapeRef::createShapeRef(router, polygon, 124);
 
     // shapeRef125
     polygon = Polygon(4);
@@ -1016,7 +1016,7 @@ int main(void) {
     polygon.ps[1] = Point(235.246, 428.918);
     polygon.ps[2] = Point(215.246, 428.918);
     polygon.ps[3] = Point(215.246, 408.918);
-    new ShapeRef(router, polygon, 125);
+    ShapeRef::createShapeRef(router, polygon, 125);
 
     // shapeRef126
     polygon = Polygon(4);
@@ -1024,7 +1024,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 428.918);
     polygon.ps[2] = Point(183.246, 428.918);
     polygon.ps[3] = Point(183.246, 408.918);
-    new ShapeRef(router, polygon, 126);
+    ShapeRef::createShapeRef(router, polygon, 126);
 
     // shapeRef127
     polygon = Polygon(4);
@@ -1032,7 +1032,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 396.918);
     polygon.ps[2] = Point(183.246, 396.918);
     polygon.ps[3] = Point(183.246, 376.918);
-    new ShapeRef(router, polygon, 127);
+    ShapeRef::createShapeRef(router, polygon, 127);
 
     // shapeRef128
     polygon = Polygon(4);
@@ -1040,7 +1040,7 @@ int main(void) {
     polygon.ps[1] = Point(235.246, 266.918);
     polygon.ps[2] = Point(215.246, 266.918);
     polygon.ps[3] = Point(215.246, 246.918);
-    new ShapeRef(router, polygon, 128);
+    ShapeRef::createShapeRef(router, polygon, 128);
 
     // shapeRef129
     polygon = Polygon(4);
@@ -1048,7 +1048,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 256.918);
     polygon.ps[2] = Point(183.246, 256.918);
     polygon.ps[3] = Point(183.246, 236.918);
-    new ShapeRef(router, polygon, 129);
+    ShapeRef::createShapeRef(router, polygon, 129);
 
     // shapeRef130
     polygon = Polygon(4);
@@ -1056,7 +1056,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 288.918);
     polygon.ps[2] = Point(183.246, 288.918);
     polygon.ps[3] = Point(183.246, 268.918);
-    new ShapeRef(router, polygon, 130);
+    ShapeRef::createShapeRef(router, polygon, 130);
 
     // shapeRef131
     polygon = Polygon(4);
@@ -1064,7 +1064,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 600.918);
     polygon.ps[2] = Point(57.2456, 600.918);
     polygon.ps[3] = Point(57.2456, 580.918);
-    new ShapeRef(router, polygon, 131);
+    ShapeRef::createShapeRef(router, polygon, 131);
 
     // shapeRef132
     polygon = Polygon(4);
@@ -1072,7 +1072,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 632.918);
     polygon.ps[2] = Point(7.24557, 632.918);
     polygon.ps[3] = Point(7.24557, 612.918);
-    new ShapeRef(router, polygon, 132);
+    ShapeRef::createShapeRef(router, polygon, 132);
 
     // shapeRef133
     polygon = Polygon(4);
@@ -1080,7 +1080,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 600.918);
     polygon.ps[2] = Point(7.24557, 600.918);
     polygon.ps[3] = Point(7.24557, 580.918);
-    new ShapeRef(router, polygon, 133);
+    ShapeRef::createShapeRef(router, polygon, 133);
 
     // shapeRef134
     polygon = Polygon(4);
@@ -1088,7 +1088,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 524.918);
     polygon.ps[2] = Point(7.24557, 524.918);
     polygon.ps[3] = Point(7.24557, 504.918);
-    new ShapeRef(router, polygon, 134);
+    ShapeRef::createShapeRef(router, polygon, 134);
 
     // shapeRef135
     polygon = Polygon(4);
@@ -1096,7 +1096,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 492.918);
     polygon.ps[2] = Point(7.24557, 492.918);
     polygon.ps[3] = Point(7.24557, 472.918);
-    new ShapeRef(router, polygon, 135);
+    ShapeRef::createShapeRef(router, polygon, 135);
 
     // shapeRef136
     polygon = Polygon(4);
@@ -1104,7 +1104,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 428.918);
     polygon.ps[2] = Point(57.2456, 428.918);
     polygon.ps[3] = Point(57.2456, 408.918);
-    new ShapeRef(router, polygon, 136);
+    ShapeRef::createShapeRef(router, polygon, 136);
 
     // shapeRef137
     polygon = Polygon(4);
@@ -1112,7 +1112,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 428.918);
     polygon.ps[2] = Point(7.24557, 428.918);
     polygon.ps[3] = Point(7.24557, 408.918);
-    new ShapeRef(router, polygon, 137);
+    ShapeRef::createShapeRef(router, polygon, 137);
 
     // shapeRef138
     polygon = Polygon(4);
@@ -1120,7 +1120,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 396.918);
     polygon.ps[2] = Point(7.24557, 396.918);
     polygon.ps[3] = Point(7.24557, 376.918);
-    new ShapeRef(router, polygon, 138);
+    ShapeRef::createShapeRef(router, polygon, 138);
 
     // shapeRef139
     polygon = Polygon(4);
@@ -1128,7 +1128,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 288.918);
     polygon.ps[2] = Point(7.24557, 288.918);
     polygon.ps[3] = Point(7.24557, 268.918);
-    new ShapeRef(router, polygon, 139);
+    ShapeRef::createShapeRef(router, polygon, 139);
 
     // shapeRef140
     polygon = Polygon(4);
@@ -1136,7 +1136,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 256.918);
     polygon.ps[2] = Point(7.24557, 256.918);
     polygon.ps[3] = Point(7.24557, 236.918);
-    new ShapeRef(router, polygon, 140);
+    ShapeRef::createShapeRef(router, polygon, 140);
 
     // shapeRef141
     polygon = Polygon(4);
@@ -1144,7 +1144,7 @@ int main(void) {
     polygon.ps[1] = Point(254.976, 180.918);
     polygon.ps[2] = Point(234.976, 180.918);
     polygon.ps[3] = Point(234.976, 160.918);
-    new ShapeRef(router, polygon, 141);
+    ShapeRef::createShapeRef(router, polygon, 141);
 
     // shapeRef142
     polygon = Polygon(4);
@@ -1152,7 +1152,7 @@ int main(void) {
     polygon.ps[1] = Point(155.246, 96.9179);
     polygon.ps[2] = Point(135.246, 96.9179);
     polygon.ps[3] = Point(135.246, 76.9179);
-    new ShapeRef(router, polygon, 142);
+    ShapeRef::createShapeRef(router, polygon, 142);
 
     // shapeRef143
     polygon = Polygon(4);
@@ -1160,7 +1160,7 @@ int main(void) {
     polygon.ps[1] = Point(155.246, 64.9179);
     polygon.ps[2] = Point(135.246, 64.9179);
     polygon.ps[3] = Point(135.246, 44.9179);
-    new ShapeRef(router, polygon, 143);
+    ShapeRef::createShapeRef(router, polygon, 143);
 
     // shapeRef144
     polygon = Polygon(4);
@@ -1168,7 +1168,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 180.918);
     polygon.ps[2] = Point(7.24557, 180.918);
     polygon.ps[3] = Point(7.24557, 160.918);
-    new ShapeRef(router, polygon, 144);
+    ShapeRef::createShapeRef(router, polygon, 144);
 
     // shapeRef145
     polygon = Polygon(4);
@@ -1176,7 +1176,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 42.9179);
     polygon.ps[2] = Point(7.24557, 42.9179);
     polygon.ps[3] = Point(7.24557, 22.9179);
-    new ShapeRef(router, polygon, 145);
+    ShapeRef::createShapeRef(router, polygon, 145);
 
     // shapeRef146
     polygon = Polygon(4);
@@ -1184,7 +1184,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 10.9179);
     polygon.ps[2] = Point(7.24557, 10.9179);
     polygon.ps[3] = Point(7.24557, -9.08205);
-    new ShapeRef(router, polygon, 146);
+    ShapeRef::createShapeRef(router, polygon, 146);
 
     // shapeRef147
     polygon = Polygon(4);
@@ -1192,7 +1192,7 @@ int main(void) {
     polygon.ps[1] = Point(329.219, -19.0821);
     polygon.ps[2] = Point(309.219, -19.0821);
     polygon.ps[3] = Point(309.219, -39.0821);
-    new ShapeRef(router, polygon, 147);
+    ShapeRef::createShapeRef(router, polygon, 147);
 
     // shapeRef148
     polygon = Polygon(4);
@@ -1200,7 +1200,7 @@ int main(void) {
     polygon.ps[1] = Point(207.246, -19.0821);
     polygon.ps[2] = Point(187.246, -19.0821);
     polygon.ps[3] = Point(187.246, -39.0821);
-    new ShapeRef(router, polygon, 148);
+    ShapeRef::createShapeRef(router, polygon, 148);
 
     // shapeRef149
     polygon = Polygon(4);
@@ -1208,7 +1208,7 @@ int main(void) {
     polygon.ps[1] = Point(601.954, 116.918);
     polygon.ps[2] = Point(311.954, 116.918);
     polygon.ps[3] = Point(311.954, 56.9179);
-    new ShapeRef(router, polygon, 149);
+    ShapeRef::createShapeRef(router, polygon, 149);
 
     // shapeRef150
     polygon = Polygon(4);
@@ -1216,7 +1216,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 145.987);
     polygon.ps[2] = Point(37.2456, 145.987);
     polygon.ps[3] = Point(37.2456, 105.987);
-    new ShapeRef(router, polygon, 150);
+    ShapeRef::createShapeRef(router, polygon, 150);
 
     // shapeRef151
     polygon = Polygon(4);
@@ -1224,7 +1224,7 @@ int main(void) {
     polygon.ps[1] = Point(339.219, -31.0821);
     polygon.ps[2] = Point(299.219, -31.0821);
     polygon.ps[3] = Point(299.219, -71.0821);
-    new ShapeRef(router, polygon, 151);
+    ShapeRef::createShapeRef(router, polygon, 151);
 
     // shapeRef152
     polygon = Polygon(4);
@@ -1232,7 +1232,7 @@ int main(void) {
     polygon.ps[1] = Point(339.219, 12.9179);
     polygon.ps[2] = Point(299.219, 12.9179);
     polygon.ps[3] = Point(299.219, -27.0821);
-    new ShapeRef(router, polygon, 152);
+    ShapeRef::createShapeRef(router, polygon, 152);
 
     // shapeRef153
     polygon = Polygon(4);
@@ -1240,7 +1240,7 @@ int main(void) {
     polygon.ps[1] = Point(217.246, 116.918);
     polygon.ps[2] = Point(177.246, 116.918);
     polygon.ps[3] = Point(177.246, 76.9179);
-    new ShapeRef(router, polygon, 153);
+    ShapeRef::createShapeRef(router, polygon, 153);
 
     // shapeRef154
     polygon = Polygon(4);
@@ -1248,7 +1248,7 @@ int main(void) {
     polygon.ps[1] = Point(217.246, 180.918);
     polygon.ps[2] = Point(177.246, 180.918);
     polygon.ps[3] = Point(177.246, 140.918);
-    new ShapeRef(router, polygon, 154);
+    ShapeRef::createShapeRef(router, polygon, 154);
 
     // shapeRef155
     polygon = Polygon(4);
@@ -1256,7 +1256,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 180.918);
     polygon.ps[2] = Point(37.2456, 180.918);
     polygon.ps[3] = Point(37.2456, 140.918);
-    new ShapeRef(router, polygon, 155);
+    ShapeRef::createShapeRef(router, polygon, 155);
 
     // shapeRef156
     polygon = Polygon(4);
@@ -1264,7 +1264,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 352.918);
     polygon.ps[2] = Point(37.2456, 352.918);
     polygon.ps[3] = Point(37.2456, 312.918);
-    new ShapeRef(router, polygon, 156);
+    ShapeRef::createShapeRef(router, polygon, 156);
 
     // shapeRef157
     polygon = Polygon(4);
@@ -1272,7 +1272,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 467.955);
     polygon.ps[2] = Point(37.2456, 467.955);
     polygon.ps[3] = Point(37.2456, 427.955);
-    new ShapeRef(router, polygon, 157);
+    ShapeRef::createShapeRef(router, polygon, 157);
 
     // shapeRef158
     polygon = Polygon(4);
@@ -1280,7 +1280,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 578.918);
     polygon.ps[2] = Point(37.2456, 578.918);
     polygon.ps[3] = Point(37.2456, 538.918);
-    new ShapeRef(router, polygon, 158);
+    ShapeRef::createShapeRef(router, polygon, 158);
 
     // shapeRef159
     polygon = Polygon(4);
@@ -1288,7 +1288,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 696.918);
     polygon.ps[2] = Point(37.2456, 696.918);
     polygon.ps[3] = Point(37.2456, 656.918);
-    new ShapeRef(router, polygon, 159);
+    ShapeRef::createShapeRef(router, polygon, 159);
 
     // shapeRef160
     polygon = Polygon(4);
@@ -1296,7 +1296,7 @@ int main(void) {
     polygon.ps[1] = Point(45.2456, 116.918);
     polygon.ps[2] = Point(5.24557, 116.918);
     polygon.ps[3] = Point(5.24557, 76.9179);
-    new ShapeRef(router, polygon, 160);
+    ShapeRef::createShapeRef(router, polygon, 160);
 
     // shapeRef161
     polygon = Polygon(4);
@@ -1304,7 +1304,7 @@ int main(void) {
     polygon.ps[1] = Point(235.246, 352.918);
     polygon.ps[2] = Point(195.246, 352.918);
     polygon.ps[3] = Point(195.246, 312.918);
-    new ShapeRef(router, polygon, 161);
+    ShapeRef::createShapeRef(router, polygon, 161);
 
     // shapeRef162
     polygon = Polygon(4);
@@ -1312,7 +1312,7 @@ int main(void) {
     polygon.ps[1] = Point(235.246, 467.955);
     polygon.ps[2] = Point(195.246, 467.955);
     polygon.ps[3] = Point(195.246, 427.955);
-    new ShapeRef(router, polygon, 162);
+    ShapeRef::createShapeRef(router, polygon, 162);
 
     // shapeRef163
     polygon = Polygon(4);
@@ -1320,7 +1320,7 @@ int main(void) {
     polygon.ps[1] = Point(235.246, 578.918);
     polygon.ps[2] = Point(195.246, 578.918);
     polygon.ps[3] = Point(195.246, 538.918);
-    new ShapeRef(router, polygon, 163);
+    ShapeRef::createShapeRef(router, polygon, 163);
 
     // shapeRef164
     polygon = Polygon(4);
@@ -1328,7 +1328,7 @@ int main(void) {
     polygon.ps[1] = Point(235.246, 696.918);
     polygon.ps[2] = Point(195.246, 696.918);
     polygon.ps[3] = Point(195.246, 656.918);
-    new ShapeRef(router, polygon, 164);
+    ShapeRef::createShapeRef(router, polygon, 164);
 
     // shapeRef165
     polygon = Polygon(4);
@@ -1336,7 +1336,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 696.918);
     polygon.ps[2] = Point(351.246, 696.918);
     polygon.ps[3] = Point(351.246, 656.918);
-    new ShapeRef(router, polygon, 165);
+    ShapeRef::createShapeRef(router, polygon, 165);
 
     // shapeRef166
     polygon = Polygon(4);
@@ -1344,7 +1344,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 578.918);
     polygon.ps[2] = Point(351.246, 578.918);
     polygon.ps[3] = Point(351.246, 538.918);
-    new ShapeRef(router, polygon, 166);
+    ShapeRef::createShapeRef(router, polygon, 166);
 
     // shapeRef167
     polygon = Polygon(4);
@@ -1352,7 +1352,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 467.955);
     polygon.ps[2] = Point(351.246, 467.955);
     polygon.ps[3] = Point(351.246, 427.955);
-    new ShapeRef(router, polygon, 167);
+    ShapeRef::createShapeRef(router, polygon, 167);
 
     // shapeRef168
     polygon = Polygon(4);
@@ -1360,7 +1360,7 @@ int main(void) {
     polygon.ps[1] = Point(391.246, 352.918);
     polygon.ps[2] = Point(351.246, 352.918);
     polygon.ps[3] = Point(351.246, 312.918);
-    new ShapeRef(router, polygon, 168);
+    ShapeRef::createShapeRef(router, polygon, 168);
 
     // shapeRef169
     polygon = Polygon(4);
@@ -1368,7 +1368,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 352.918);
     polygon.ps[2] = Point(507.246, 352.918);
     polygon.ps[3] = Point(507.246, 312.918);
-    new ShapeRef(router, polygon, 169);
+    ShapeRef::createShapeRef(router, polygon, 169);
 
     // shapeRef170
     polygon = Polygon(4);
@@ -1376,7 +1376,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 467.955);
     polygon.ps[2] = Point(507.246, 467.955);
     polygon.ps[3] = Point(507.246, 427.955);
-    new ShapeRef(router, polygon, 170);
+    ShapeRef::createShapeRef(router, polygon, 170);
 
     // shapeRef171
     polygon = Polygon(4);
@@ -1384,7 +1384,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 578.918);
     polygon.ps[2] = Point(507.246, 578.918);
     polygon.ps[3] = Point(507.246, 538.918);
-    new ShapeRef(router, polygon, 171);
+    ShapeRef::createShapeRef(router, polygon, 171);
 
     // shapeRef172
     polygon = Polygon(4);
@@ -1392,7 +1392,7 @@ int main(void) {
     polygon.ps[1] = Point(547.246, 696.918);
     polygon.ps[2] = Point(507.246, 696.918);
     polygon.ps[3] = Point(507.246, 656.918);
-    new ShapeRef(router, polygon, 172);
+    ShapeRef::createShapeRef(router, polygon, 172);
 
     // shapeRef173
     polygon = Polygon(4);
@@ -1400,7 +1400,7 @@ int main(void) {
     polygon.ps[1] = Point(693.933, 696.918);
     polygon.ps[2] = Point(653.933, 696.918);
     polygon.ps[3] = Point(653.933, 656.918);
-    new ShapeRef(router, polygon, 173);
+    ShapeRef::createShapeRef(router, polygon, 173);
 
     // shapeRef174
     polygon = Polygon(4);
@@ -1408,7 +1408,7 @@ int main(void) {
     polygon.ps[1] = Point(693.933, 578.918);
     polygon.ps[2] = Point(653.933, 578.918);
     polygon.ps[3] = Point(653.933, 538.918);
-    new ShapeRef(router, polygon, 174);
+    ShapeRef::createShapeRef(router, polygon, 174);
 
     // shapeRef175
     polygon = Polygon(4);
@@ -1416,7 +1416,7 @@ int main(void) {
     polygon.ps[1] = Point(693.933, 467.955);
     polygon.ps[2] = Point(653.933, 467.955);
     polygon.ps[3] = Point(653.933, 427.955);
-    new ShapeRef(router, polygon, 175);
+    ShapeRef::createShapeRef(router, polygon, 175);
 
     // shapeRef176
     polygon = Polygon(4);
@@ -1424,7 +1424,7 @@ int main(void) {
     polygon.ps[1] = Point(693.933, 352.918);
     polygon.ps[2] = Point(653.933, 352.918);
     polygon.ps[3] = Point(653.933, 312.918);
-    new ShapeRef(router, polygon, 176);
+    ShapeRef::createShapeRef(router, polygon, 176);
 
     // shapeRef177
     polygon = Polygon(4);
@@ -1432,7 +1432,7 @@ int main(void) {
     polygon.ps[1] = Point(843.246, 352.918);
     polygon.ps[2] = Point(803.246, 352.918);
     polygon.ps[3] = Point(803.246, 312.918);
-    new ShapeRef(router, polygon, 177);
+    ShapeRef::createShapeRef(router, polygon, 177);
 
     // shapeRef178
     polygon = Polygon(4);
@@ -1440,7 +1440,7 @@ int main(void) {
     polygon.ps[1] = Point(843.246, 467.955);
     polygon.ps[2] = Point(803.246, 467.955);
     polygon.ps[3] = Point(803.246, 427.955);
-    new ShapeRef(router, polygon, 178);
+    ShapeRef::createShapeRef(router, polygon, 178);
 
     // shapeRef179
     polygon = Polygon(4);
@@ -1448,7 +1448,7 @@ int main(void) {
     polygon.ps[1] = Point(843.246, 578.918);
     polygon.ps[2] = Point(803.246, 578.918);
     polygon.ps[3] = Point(803.246, 538.918);
-    new ShapeRef(router, polygon, 179);
+    ShapeRef::createShapeRef(router, polygon, 179);
 
     // shapeRef180
     polygon = Polygon(4);
@@ -1456,7 +1456,7 @@ int main(void) {
     polygon.ps[1] = Point(843.246, 696.918);
     polygon.ps[2] = Point(803.246, 696.918);
     polygon.ps[3] = Point(803.246, 656.918);
-    new ShapeRef(router, polygon, 180);
+    ShapeRef::createShapeRef(router, polygon, 180);
 
     // shapeRef181
     polygon = Polygon(4);
@@ -1464,7 +1464,7 @@ int main(void) {
     polygon.ps[1] = Point(999.246, 770.918);
     polygon.ps[2] = Point(959.246, 770.918);
     polygon.ps[3] = Point(959.246, 730.918);
-    new ShapeRef(router, polygon, 181);
+    ShapeRef::createShapeRef(router, polygon, 181);
 
     // shapeRef182
     polygon = Polygon(4);
@@ -1472,7 +1472,7 @@ int main(void) {
     polygon.ps[1] = Point(999.246, 696.918);
     polygon.ps[2] = Point(959.246, 696.918);
     polygon.ps[3] = Point(959.246, 656.918);
-    new ShapeRef(router, polygon, 182);
+    ShapeRef::createShapeRef(router, polygon, 182);
 
     // shapeRef183
     polygon = Polygon(4);
@@ -1480,7 +1480,7 @@ int main(void) {
     polygon.ps[1] = Point(999.246, 578.918);
     polygon.ps[2] = Point(959.246, 578.918);
     polygon.ps[3] = Point(959.246, 538.918);
-    new ShapeRef(router, polygon, 183);
+    ShapeRef::createShapeRef(router, polygon, 183);
 
     // shapeRef184
     polygon = Polygon(4);
@@ -1488,7 +1488,7 @@ int main(void) {
     polygon.ps[1] = Point(999.246, 467.955);
     polygon.ps[2] = Point(959.246, 467.955);
     polygon.ps[3] = Point(959.246, 427.955);
-    new ShapeRef(router, polygon, 184);
+    ShapeRef::createShapeRef(router, polygon, 184);
 
     // shapeRef185
     polygon = Polygon(4);
@@ -1496,7 +1496,7 @@ int main(void) {
     polygon.ps[1] = Point(999.246, 352.918);
     polygon.ps[2] = Point(959.246, 352.918);
     polygon.ps[3] = Point(959.246, 312.918);
-    new ShapeRef(router, polygon, 185);
+    ShapeRef::createShapeRef(router, polygon, 185);
 
     // shapeRef186
     polygon = Polygon(4);
@@ -1504,7 +1504,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 320.918);
     polygon.ps[2] = Point(7.24557, 320.918);
     polygon.ps[3] = Point(7.24557, 300.918);
-    new ShapeRef(router, polygon, 186);
+    ShapeRef::createShapeRef(router, polygon, 186);
 
     // shapeRef187
     polygon = Polygon(4);
@@ -1512,7 +1512,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 320.918);
     polygon.ps[2] = Point(183.246, 320.918);
     polygon.ps[3] = Point(183.246, 300.918);
-    new ShapeRef(router, polygon, 187);
+    ShapeRef::createShapeRef(router, polygon, 187);
 
     // shapeRef188
     polygon = Polygon(4);
@@ -1520,7 +1520,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 320.918);
     polygon.ps[2] = Point(323.246, 320.918);
     polygon.ps[3] = Point(323.246, 300.918);
-    new ShapeRef(router, polygon, 188);
+    ShapeRef::createShapeRef(router, polygon, 188);
 
     // shapeRef189
     polygon = Polygon(4);
@@ -1528,7 +1528,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 320.918);
     polygon.ps[2] = Point(479.246, 320.918);
     polygon.ps[3] = Point(479.246, 300.918);
-    new ShapeRef(router, polygon, 189);
+    ShapeRef::createShapeRef(router, polygon, 189);
 
     // shapeRef190
     polygon = Polygon(4);
@@ -1536,7 +1536,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 320.918);
     polygon.ps[2] = Point(635.246, 320.918);
     polygon.ps[3] = Point(635.246, 300.918);
-    new ShapeRef(router, polygon, 190);
+    ShapeRef::createShapeRef(router, polygon, 190);
 
     // shapeRef191
     polygon = Polygon(4);
@@ -1544,7 +1544,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 320.918);
     polygon.ps[2] = Point(791.246, 320.918);
     polygon.ps[3] = Point(791.246, 300.918);
-    new ShapeRef(router, polygon, 191);
+    ShapeRef::createShapeRef(router, polygon, 191);
 
     // shapeRef192
     polygon = Polygon(4);
@@ -1552,7 +1552,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 320.918);
     polygon.ps[2] = Point(947.246, 320.918);
     polygon.ps[3] = Point(947.246, 300.918);
-    new ShapeRef(router, polygon, 192);
+    ShapeRef::createShapeRef(router, polygon, 192);
 
     // shapeRef193
     polygon = Polygon(4);
@@ -1560,7 +1560,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 460.918);
     polygon.ps[2] = Point(7.24557, 460.918);
     polygon.ps[3] = Point(7.24557, 440.918);
-    new ShapeRef(router, polygon, 193);
+    ShapeRef::createShapeRef(router, polygon, 193);
 
     // shapeRef194
     polygon = Polygon(4);
@@ -1568,7 +1568,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 460.918);
     polygon.ps[2] = Point(183.246, 460.918);
     polygon.ps[3] = Point(183.246, 440.918);
-    new ShapeRef(router, polygon, 194);
+    ShapeRef::createShapeRef(router, polygon, 194);
 
     // shapeRef195
     polygon = Polygon(4);
@@ -1576,7 +1576,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 460.918);
     polygon.ps[2] = Point(323.246, 460.918);
     polygon.ps[3] = Point(323.246, 440.918);
-    new ShapeRef(router, polygon, 195);
+    ShapeRef::createShapeRef(router, polygon, 195);
 
     // shapeRef196
     polygon = Polygon(4);
@@ -1584,7 +1584,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 460.918);
     polygon.ps[2] = Point(479.246, 460.918);
     polygon.ps[3] = Point(479.246, 440.918);
-    new ShapeRef(router, polygon, 196);
+    ShapeRef::createShapeRef(router, polygon, 196);
 
     // shapeRef197
     polygon = Polygon(4);
@@ -1592,7 +1592,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 460.918);
     polygon.ps[2] = Point(791.246, 460.918);
     polygon.ps[3] = Point(791.246, 440.918);
-    new ShapeRef(router, polygon, 197);
+    ShapeRef::createShapeRef(router, polygon, 197);
 
     // shapeRef198
     polygon = Polygon(4);
@@ -1600,7 +1600,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 460.918);
     polygon.ps[2] = Point(947.246, 460.918);
     polygon.ps[3] = Point(947.246, 440.918);
-    new ShapeRef(router, polygon, 198);
+    ShapeRef::createShapeRef(router, polygon, 198);
 
     // shapeRef199
     polygon = Polygon(4);
@@ -1608,7 +1608,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 460.918);
     polygon.ps[2] = Point(635.246, 460.918);
     polygon.ps[3] = Point(635.246, 440.918);
-    new ShapeRef(router, polygon, 199);
+    ShapeRef::createShapeRef(router, polygon, 199);
 
     // shapeRef200
     polygon = Polygon(4);
@@ -1616,7 +1616,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 568.918);
     polygon.ps[2] = Point(7.24557, 568.918);
     polygon.ps[3] = Point(7.24557, 548.918);
-    new ShapeRef(router, polygon, 200);
+    ShapeRef::createShapeRef(router, polygon, 200);
 
     // shapeRef201
     polygon = Polygon(4);
@@ -1624,7 +1624,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 568.918);
     polygon.ps[2] = Point(183.246, 568.918);
     polygon.ps[3] = Point(183.246, 548.918);
-    new ShapeRef(router, polygon, 201);
+    ShapeRef::createShapeRef(router, polygon, 201);
 
     // shapeRef202
     polygon = Polygon(4);
@@ -1632,7 +1632,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 568.918);
     polygon.ps[2] = Point(323.246, 568.918);
     polygon.ps[3] = Point(323.246, 548.918);
-    new ShapeRef(router, polygon, 202);
+    ShapeRef::createShapeRef(router, polygon, 202);
 
     // shapeRef203
     polygon = Polygon(4);
@@ -1640,7 +1640,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 568.918);
     polygon.ps[2] = Point(479.246, 568.918);
     polygon.ps[3] = Point(479.246, 548.918);
-    new ShapeRef(router, polygon, 203);
+    ShapeRef::createShapeRef(router, polygon, 203);
 
     // shapeRef204
     polygon = Polygon(4);
@@ -1648,7 +1648,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 568.918);
     polygon.ps[2] = Point(635.246, 568.918);
     polygon.ps[3] = Point(635.246, 548.918);
-    new ShapeRef(router, polygon, 204);
+    ShapeRef::createShapeRef(router, polygon, 204);
 
     // shapeRef205
     polygon = Polygon(4);
@@ -1656,7 +1656,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 568.918);
     polygon.ps[2] = Point(791.246, 568.918);
     polygon.ps[3] = Point(791.246, 548.918);
-    new ShapeRef(router, polygon, 205);
+    ShapeRef::createShapeRef(router, polygon, 205);
 
     // shapeRef206
     polygon = Polygon(4);
@@ -1664,7 +1664,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 568.918);
     polygon.ps[2] = Point(947.246, 568.918);
     polygon.ps[3] = Point(947.246, 548.918);
-    new ShapeRef(router, polygon, 206);
+    ShapeRef::createShapeRef(router, polygon, 206);
 
     // shapeRef207
     polygon = Polygon(4);
@@ -1672,7 +1672,7 @@ int main(void) {
     polygon.ps[1] = Point(27.2456, 664.918);
     polygon.ps[2] = Point(7.24557, 664.918);
     polygon.ps[3] = Point(7.24557, 644.918);
-    new ShapeRef(router, polygon, 207);
+    ShapeRef::createShapeRef(router, polygon, 207);
 
     // shapeRef208
     polygon = Polygon(4);
@@ -1680,7 +1680,7 @@ int main(void) {
     polygon.ps[1] = Point(203.246, 664.918);
     polygon.ps[2] = Point(183.246, 664.918);
     polygon.ps[3] = Point(183.246, 644.918);
-    new ShapeRef(router, polygon, 208);
+    ShapeRef::createShapeRef(router, polygon, 208);
 
     // shapeRef209
     polygon = Polygon(4);
@@ -1688,7 +1688,7 @@ int main(void) {
     polygon.ps[1] = Point(343.246, 664.918);
     polygon.ps[2] = Point(323.246, 664.918);
     polygon.ps[3] = Point(323.246, 644.918);
-    new ShapeRef(router, polygon, 209);
+    ShapeRef::createShapeRef(router, polygon, 209);
 
     // shapeRef210
     polygon = Polygon(4);
@@ -1696,7 +1696,7 @@ int main(void) {
     polygon.ps[1] = Point(499.246, 664.918);
     polygon.ps[2] = Point(479.246, 664.918);
     polygon.ps[3] = Point(479.246, 644.918);
-    new ShapeRef(router, polygon, 210);
+    ShapeRef::createShapeRef(router, polygon, 210);
 
     // shapeRef211
     polygon = Polygon(4);
@@ -1704,7 +1704,7 @@ int main(void) {
     polygon.ps[1] = Point(655.246, 664.918);
     polygon.ps[2] = Point(635.246, 664.918);
     polygon.ps[3] = Point(635.246, 644.918);
-    new ShapeRef(router, polygon, 211);
+    ShapeRef::createShapeRef(router, polygon, 211);
 
     // shapeRef212
     polygon = Polygon(4);
@@ -1712,7 +1712,7 @@ int main(void) {
     polygon.ps[1] = Point(811.246, 664.918);
     polygon.ps[2] = Point(791.246, 664.918);
     polygon.ps[3] = Point(791.246, 644.918);
-    new ShapeRef(router, polygon, 212);
+    ShapeRef::createShapeRef(router, polygon, 212);
 
     // shapeRef213
     polygon = Polygon(4);
@@ -1720,7 +1720,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 664.918);
     polygon.ps[2] = Point(947.246, 664.918);
     polygon.ps[3] = Point(947.246, 644.918);
-    new ShapeRef(router, polygon, 213);
+    ShapeRef::createShapeRef(router, polygon, 213);
 
     // shapeRef214
     polygon = Polygon(4);
@@ -1728,7 +1728,7 @@ int main(void) {
     polygon.ps[1] = Point(1243.25, 288.918);
     polygon.ps[2] = Point(1223.25, 288.918);
     polygon.ps[3] = Point(1223.25, 268.918);
-    new ShapeRef(router, polygon, 214);
+    ShapeRef::createShapeRef(router, polygon, 214);
 
     // shapeRef215
     polygon = Polygon(4);
@@ -1736,7 +1736,7 @@ int main(void) {
     polygon.ps[1] = Point(1243.25, 428.918);
     polygon.ps[2] = Point(1223.25, 428.918);
     polygon.ps[3] = Point(1223.25, 408.918);
-    new ShapeRef(router, polygon, 215);
+    ShapeRef::createShapeRef(router, polygon, 215);
 
     // shapeRef216
     polygon = Polygon(4);
@@ -1744,7 +1744,7 @@ int main(void) {
     polygon.ps[1] = Point(1243.25, 524.918);
     polygon.ps[2] = Point(1223.25, 524.918);
     polygon.ps[3] = Point(1223.25, 504.918);
-    new ShapeRef(router, polygon, 216);
+    ShapeRef::createShapeRef(router, polygon, 216);
 
     // shapeRef217
     polygon = Polygon(4);
@@ -1752,7 +1752,7 @@ int main(void) {
     polygon.ps[1] = Point(1243.25, 632.918);
     polygon.ps[2] = Point(1223.25, 632.918);
     polygon.ps[3] = Point(1223.25, 612.918);
-    new ShapeRef(router, polygon, 217);
+    ShapeRef::createShapeRef(router, polygon, 217);
 
     // shapeRef218
     polygon = Polygon(4);
@@ -1760,7 +1760,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 728.918);
     polygon.ps[2] = Point(947.246, 728.918);
     polygon.ps[3] = Point(947.246, 708.918);
-    new ShapeRef(router, polygon, 218);
+    ShapeRef::createShapeRef(router, polygon, 218);
 
     // shapeRef219
     polygon = Polygon(4);
@@ -1768,7 +1768,7 @@ int main(void) {
     polygon.ps[1] = Point(967.246, 760.918);
     polygon.ps[2] = Point(947.246, 760.918);
     polygon.ps[3] = Point(947.246, 740.918);
-    new ShapeRef(router, polygon, 219);
+    ShapeRef::createShapeRef(router, polygon, 219);
 
     // shapeRef220
     polygon = Polygon(4);
@@ -1776,7 +1776,7 @@ int main(void) {
     polygon.ps[1] = Point(1243.25, 728.918);
     polygon.ps[2] = Point(1223.25, 728.918);
     polygon.ps[3] = Point(1223.25, 708.918);
-    new ShapeRef(router, polygon, 220);
+    ShapeRef::createShapeRef(router, polygon, 220);
 
     // shapeRef221
     polygon = Polygon(4);
@@ -1784,7 +1784,7 @@ int main(void) {
     polygon.ps[1] = Point(1303.25, 266.918);
     polygon.ps[2] = Point(1283.25, 266.918);
     polygon.ps[3] = Point(1283.25, 246.918);
-    new ShapeRef(router, polygon, 221);
+    ShapeRef::createShapeRef(router, polygon, 221);
 
     // shapeRef222
     polygon = Polygon(4);
@@ -1792,7 +1792,7 @@ int main(void) {
     polygon.ps[1] = Point(1303.25, 654.918);
     polygon.ps[2] = Point(1283.25, 654.918);
     polygon.ps[3] = Point(1283.25, 634.918);
-    new ShapeRef(router, polygon, 222);
+    ShapeRef::createShapeRef(router, polygon, 222);
 
     // shapeRef223
     polygon = Polygon(4);
@@ -1800,7 +1800,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 256.918);
     polygon.ps[2] = Point(57.2456, 256.918);
     polygon.ps[3] = Point(57.2456, 236.918);
-    new ShapeRef(router, polygon, 223);
+    ShapeRef::createShapeRef(router, polygon, 223);
 
     // shapeRef224
     polygon = Polygon(4);
@@ -1808,7 +1808,7 @@ int main(void) {
     polygon.ps[1] = Point(77.2456, 288.918);
     polygon.ps[2] = Point(57.2456, 288.918);
     polygon.ps[3] = Point(57.2456, 268.918);
-    new ShapeRef(router, polygon, 224);
+    ShapeRef::createShapeRef(router, polygon, 224);
 
     // shapeRef225
     polygon = Polygon(4);
@@ -1816,7 +1816,7 @@ int main(void) {
     polygon.ps[1] = Point(1159.25, 642.918);
     polygon.ps[2] = Point(1103.25, 642.918);
     polygon.ps[3] = Point(1103.25, 602.918);
-    new ShapeRef(router, polygon, 225);
+    ShapeRef::createShapeRef(router, polygon, 225);
 
     // shapeRef226
     polygon = Polygon(4);
@@ -1824,7 +1824,7 @@ int main(void) {
     polygon.ps[1] = Point(955.246, 642.918);
     polygon.ps[2] = Point(899.246, 642.918);
     polygon.ps[3] = Point(899.246, 602.918);
-    new ShapeRef(router, polygon, 226);
+    ShapeRef::createShapeRef(router, polygon, 226);
 
     // shapeRef227
     polygon = Polygon(4);
@@ -1832,7 +1832,7 @@ int main(void) {
     polygon.ps[1] = Point(799.246, 642.918);
     polygon.ps[2] = Point(743.246, 642.918);
     polygon.ps[3] = Point(743.246, 602.918);
-    new ShapeRef(router, polygon, 227);
+    ShapeRef::createShapeRef(router, polygon, 227);
 
     // shapeRef228
     polygon = Polygon(4);
@@ -1840,7 +1840,7 @@ int main(void) {
     polygon.ps[1] = Point(643.246, 642.918);
     polygon.ps[2] = Point(587.246, 642.918);
     polygon.ps[3] = Point(587.246, 602.918);
-    new ShapeRef(router, polygon, 228);
+    ShapeRef::createShapeRef(router, polygon, 228);
 
     // shapeRef229
     polygon = Polygon(4);
@@ -1848,7 +1848,7 @@ int main(void) {
     polygon.ps[1] = Point(487.246, 642.918);
     polygon.ps[2] = Point(431.246, 642.918);
     polygon.ps[3] = Point(431.246, 602.918);
-    new ShapeRef(router, polygon, 229);
+    ShapeRef::createShapeRef(router, polygon, 229);
 
     // shapeRef230
     polygon = Polygon(4);
@@ -1856,7 +1856,7 @@ int main(void) {
     polygon.ps[1] = Point(331.246, 642.918);
     polygon.ps[2] = Point(275.246, 642.918);
     polygon.ps[3] = Point(275.246, 602.918);
-    new ShapeRef(router, polygon, 230);
+    ShapeRef::createShapeRef(router, polygon, 230);
 
     // shapeRef231
     polygon = Polygon(4);
@@ -1864,7 +1864,7 @@ int main(void) {
     polygon.ps[1] = Point(173.246, 674.918);
     polygon.ps[2] = Point(117.246, 674.918);
     polygon.ps[3] = Point(117.246, 634.918);
-    new ShapeRef(router, polygon, 231);
+    ShapeRef::createShapeRef(router, polygon, 231);
 
     // shapeRef232
     polygon = Polygon(4);
@@ -1872,7 +1872,7 @@ int main(void) {
     polygon.ps[1] = Point(907.246, 738.918);
     polygon.ps[2] = Point(851.246, 738.918);
     polygon.ps[3] = Point(851.246, 698.918);
-    new ShapeRef(router, polygon, 232);
+    ShapeRef::createShapeRef(router, polygon, 232);
 
     // shapeRef233
     polygon = Polygon(4);
@@ -1880,7 +1880,7 @@ int main(void) {
     polygon.ps[1] = Point(1231.25, 738.918);
     polygon.ps[2] = Point(1175.25, 738.918);
     polygon.ps[3] = Point(1175.25, 698.918);
-    new ShapeRef(router, polygon, 233);
+    ShapeRef::createShapeRef(router, polygon, 233);
 
     // shapeRef234
     polygon = Polygon(4);
@@ -1888,7 +1888,7 @@ int main(void) {
     polygon.ps[1] = Point(1291.25, 738.918);
     polygon.ps[2] = Point(1235.25, 738.918);
     polygon.ps[3] = Point(1235.25, 698.918);
-    new ShapeRef(router, polygon, 234);
+    ShapeRef::createShapeRef(router, polygon, 234);
 
     // shapeRef235
     polygon = Polygon(4);
@@ -1896,7 +1896,7 @@ int main(void) {
     polygon.ps[1] = Point(622.941, 738.918);
     polygon.ps[2] = Point(566.941, 738.918);
     polygon.ps[3] = Point(566.941, 698.918);
-    new ShapeRef(router, polygon, 235);
+    ShapeRef::createShapeRef(router, polygon, 235);
 
     // shapeRef236
     polygon = Polygon(4);
@@ -1904,7 +1904,7 @@ int main(void) {
     polygon.ps[1] = Point(479.455, 738.918);
     polygon.ps[2] = Point(423.455, 738.918);
     polygon.ps[3] = Point(423.455, 698.918);
-    new ShapeRef(router, polygon, 236);
+    ShapeRef::createShapeRef(router, polygon, 236);
 
     // shapeRef237
     polygon = Polygon(4);
@@ -1912,7 +1912,7 @@ int main(void) {
     polygon.ps[1] = Point(1399.25, 642.918);
     polygon.ps[2] = Point(1343.25, 642.918);
     polygon.ps[3] = Point(1343.25, 602.918);
-    new ShapeRef(router, polygon, 237);
+    ShapeRef::createShapeRef(router, polygon, 237);
 
     // shapeRef238
     polygon = Polygon(4);
@@ -1920,7 +1920,7 @@ int main(void) {
     polygon.ps[1] = Point(1447.25, 595.942);
     polygon.ps[2] = Point(1391.25, 595.942);
     polygon.ps[3] = Point(1391.25, 555.942);
-    new ShapeRef(router, polygon, 238);
+    ShapeRef::createShapeRef(router, polygon, 238);
 
     // shapeRef239
     polygon = Polygon(4);
@@ -1928,7 +1928,7 @@ int main(void) {
     polygon.ps[1] = Point(1159.25, 674.918);
     polygon.ps[2] = Point(1103.25, 674.918);
     polygon.ps[3] = Point(1103.25, 634.918);
-    new ShapeRef(router, polygon, 239);
+    ShapeRef::createShapeRef(router, polygon, 239);
 
     // shapeRef240
     polygon = Polygon(4);
@@ -1936,7 +1936,7 @@ int main(void) {
     polygon.ps[1] = Point(955.246, 674.918);
     polygon.ps[2] = Point(899.246, 674.918);
     polygon.ps[3] = Point(899.246, 634.918);
-    new ShapeRef(router, polygon, 240);
+    ShapeRef::createShapeRef(router, polygon, 240);
 
     // shapeRef241
     polygon = Polygon(4);
@@ -1944,7 +1944,7 @@ int main(void) {
     polygon.ps[1] = Point(799.246, 674.918);
     polygon.ps[2] = Point(743.246, 674.918);
     polygon.ps[3] = Point(743.246, 634.918);
-    new ShapeRef(router, polygon, 241);
+    ShapeRef::createShapeRef(router, polygon, 241);
 
     // shapeRef242
     polygon = Polygon(4);
@@ -1952,7 +1952,7 @@ int main(void) {
     polygon.ps[1] = Point(643.246, 674.918);
     polygon.ps[2] = Point(587.246, 674.918);
     polygon.ps[3] = Point(587.246, 634.918);
-    new ShapeRef(router, polygon, 242);
+    ShapeRef::createShapeRef(router, polygon, 242);
 
     // shapeRef243
     polygon = Polygon(4);
@@ -1960,7 +1960,7 @@ int main(void) {
     polygon.ps[1] = Point(487.246, 674.918);
     polygon.ps[2] = Point(431.246, 674.918);
     polygon.ps[3] = Point(431.246, 634.918);
-    new ShapeRef(router, polygon, 243);
+    ShapeRef::createShapeRef(router, polygon, 243);
 
     // shapeRef244
     polygon = Polygon(4);
@@ -1968,7 +1968,7 @@ int main(void) {
     polygon.ps[1] = Point(331.246, 674.918);
     polygon.ps[2] = Point(275.246, 674.918);
     polygon.ps[3] = Point(275.246, 634.918);
-    new ShapeRef(router, polygon, 244);
+    ShapeRef::createShapeRef(router, polygon, 244);
 
     // shapeRef245
     polygon = Polygon(4);
@@ -1976,7 +1976,7 @@ int main(void) {
     polygon.ps[1] = Point(173.246, 642.918);
     polygon.ps[2] = Point(117.246, 642.918);
     polygon.ps[3] = Point(117.246, 602.918);
-    new ShapeRef(router, polygon, 245);
+    ShapeRef::createShapeRef(router, polygon, 245);
 
     // shapeRef246
     polygon = Polygon(4);
@@ -1984,7 +1984,7 @@ int main(void) {
     polygon.ps[1] = Point(1447.25, 534.918);
     polygon.ps[2] = Point(1391.25, 534.918);
     polygon.ps[3] = Point(1391.25, 494.918);
-    new ShapeRef(router, polygon, 246);
+    ShapeRef::createShapeRef(router, polygon, 246);
 
     // shapeRef247
     polygon = Polygon(4);
@@ -1992,7 +1992,7 @@ int main(void) {
     polygon.ps[1] = Point(1159.25, 556.918);
     polygon.ps[2] = Point(1103.25, 556.918);
     polygon.ps[3] = Point(1103.25, 516.918);
-    new ShapeRef(router, polygon, 247);
+    ShapeRef::createShapeRef(router, polygon, 247);
 
     // shapeRef248
     polygon = Polygon(4);
@@ -2000,7 +2000,7 @@ int main(void) {
     polygon.ps[1] = Point(955.246, 556.918);
     polygon.ps[2] = Point(899.246, 556.918);
     polygon.ps[3] = Point(899.246, 516.918);
-    new ShapeRef(router, polygon, 248);
+    ShapeRef::createShapeRef(router, polygon, 248);
 
     // shapeRef249
     polygon = Polygon(4);
@@ -2008,7 +2008,7 @@ int main(void) {
     polygon.ps[1] = Point(799.246, 556.918);
     polygon.ps[2] = Point(743.246, 556.918);
     polygon.ps[3] = Point(743.246, 516.918);
-    new ShapeRef(router, polygon, 249);
+    ShapeRef::createShapeRef(router, polygon, 249);
 
     // shapeRef250
     polygon = Polygon(4);
@@ -2016,7 +2016,7 @@ int main(void) {
     polygon.ps[1] = Point(643.246, 556.918);
     polygon.ps[2] = Point(587.246, 556.918);
     polygon.ps[3] = Point(587.246, 516.918);
-    new ShapeRef(router, polygon, 250);
+    ShapeRef::createShapeRef(router, polygon, 250);
 
     // shapeRef251
     polygon = Polygon(4);
@@ -2024,7 +2024,7 @@ int main(void) {
     polygon.ps[1] = Point(487.246, 556.918);
     polygon.ps[2] = Point(431.246, 556.918);
     polygon.ps[3] = Point(431.246, 516.918);
-    new ShapeRef(router, polygon, 251);
+    ShapeRef::createShapeRef(router, polygon, 251);
 
     // shapeRef252
     polygon = Polygon(4);
@@ -2032,7 +2032,7 @@ int main(void) {
     polygon.ps[1] = Point(331.246, 556.918);
     polygon.ps[2] = Point(275.246, 556.918);
     polygon.ps[3] = Point(275.246, 516.918);
-    new ShapeRef(router, polygon, 252);
+    ShapeRef::createShapeRef(router, polygon, 252);
 
     // shapeRef253
     polygon = Polygon(4);
@@ -2040,7 +2040,7 @@ int main(void) {
     polygon.ps[1] = Point(173.246, 556.918);
     polygon.ps[2] = Point(117.246, 556.918);
     polygon.ps[3] = Point(117.246, 516.918);
-    new ShapeRef(router, polygon, 253);
+    ShapeRef::createShapeRef(router, polygon, 253);
 
     // shapeRef254
     polygon = Polygon(4);
@@ -2048,7 +2048,7 @@ int main(void) {
     polygon.ps[1] = Point(1321.25, 254.918);
     polygon.ps[2] = Point(1265.25, 254.918);
     polygon.ps[3] = Point(1265.25, 214.918);
-    new ShapeRef(router, polygon, 254);
+    ShapeRef::createShapeRef(router, polygon, 254);
 
     // shapeRef255
     polygon = Polygon(4);
@@ -2056,7 +2056,7 @@ int main(void) {
     polygon.ps[1] = Point(1111.25, 642.918);
     polygon.ps[2] = Point(1055.25, 642.918);
     polygon.ps[3] = Point(1055.25, 602.918);
-    new ShapeRef(router, polygon, 255);
+    ShapeRef::createShapeRef(router, polygon, 255);
 
     // shapeRef256
     polygon = Polygon(4);
@@ -2064,7 +2064,7 @@ int main(void) {
     polygon.ps[1] = Point(1447.25, 438.918);
     polygon.ps[2] = Point(1391.25, 438.918);
     polygon.ps[3] = Point(1391.25, 398.918);
-    new ShapeRef(router, polygon, 256);
+    ShapeRef::createShapeRef(router, polygon, 256);
 
     // shapeRef257
     polygon = Polygon(4);
@@ -2072,7 +2072,7 @@ int main(void) {
     polygon.ps[1] = Point(1447.25, 738.918);
     polygon.ps[2] = Point(1391.25, 738.918);
     polygon.ps[3] = Point(1391.25, 698.918);
-    new ShapeRef(router, polygon, 257);
+    ShapeRef::createShapeRef(router, polygon, 257);
 
     // shapeRef258
     polygon = Polygon(4);
@@ -2080,7 +2080,7 @@ int main(void) {
     polygon.ps[1] = Point(1507.25, 738.918);
     polygon.ps[2] = Point(1451.25, 738.918);
     polygon.ps[3] = Point(1451.25, 698.918);
-    new ShapeRef(router, polygon, 258);
+    ShapeRef::createShapeRef(router, polygon, 258);
 
     // shapeRef259
     polygon = Polygon(4);
@@ -2088,7 +2088,7 @@ int main(void) {
     polygon.ps[1] = Point(751.246, 738.918);
     polygon.ps[2] = Point(695.246, 738.918);
     polygon.ps[3] = Point(695.246, 698.918);
-    new ShapeRef(router, polygon, 259);
+    ShapeRef::createShapeRef(router, polygon, 259);
 
     // shapeRef260
     polygon = Polygon(4);
@@ -2096,7 +2096,7 @@ int main(void) {
     polygon.ps[1] = Point(955.246, 738.918);
     polygon.ps[2] = Point(899.246, 738.918);
     polygon.ps[3] = Point(899.246, 698.918);
-    new ShapeRef(router, polygon, 260);
+    ShapeRef::createShapeRef(router, polygon, 260);
 
     // shapeRef261
     polygon = Polygon(4);
@@ -2104,7 +2104,7 @@ int main(void) {
     polygon.ps[1] = Point(173.246, 52.9179);
     polygon.ps[2] = Point(117.246, 52.9179);
     polygon.ps[3] = Point(117.246, 12.9179);
-    new ShapeRef(router, polygon, 261);
+    ShapeRef::createShapeRef(router, polygon, 261);
 
     // shapeRef262
     polygon = Polygon(4);
@@ -2112,7 +2112,7 @@ int main(void) {
     polygon.ps[1] = Point(173.246, 330.918);
     polygon.ps[2] = Point(117.246, 330.918);
     polygon.ps[3] = Point(117.246, 290.918);
-    new ShapeRef(router, polygon, 262);
+    ShapeRef::createShapeRef(router, polygon, 262);
 
     // shapeRef263
     polygon = Polygon(4);
@@ -2120,7 +2120,7 @@ int main(void) {
     polygon.ps[1] = Point(1033.25, 254.918);
     polygon.ps[2] = Point(977.246, 254.918);
     polygon.ps[3] = Point(977.246, 214.918);
-    new ShapeRef(router, polygon, 263);
+    ShapeRef::createShapeRef(router, polygon, 263);
 
     // shapeRef264
     polygon = Polygon(4);
@@ -2128,7 +2128,7 @@ int main(void) {
     polygon.ps[1] = Point(877.246, 254.918);
     polygon.ps[2] = Point(821.246, 254.918);
     polygon.ps[3] = Point(821.246, 214.918);
-    new ShapeRef(router, polygon, 264);
+    ShapeRef::createShapeRef(router, polygon, 264);
 
     // shapeRef265
     polygon = Polygon(4);
@@ -2136,7 +2136,7 @@ int main(void) {
     polygon.ps[1] = Point(721.246, 254.918);
     polygon.ps[2] = Point(665.246, 254.918);
     polygon.ps[3] = Point(665.246, 214.918);
-    new ShapeRef(router, polygon, 265);
+    ShapeRef::createShapeRef(router, polygon, 265);
 
     // shapeRef266
     polygon = Polygon(4);
@@ -2144,7 +2144,7 @@ int main(void) {
     polygon.ps[1] = Point(565.246, 254.918);
     polygon.ps[2] = Point(509.246, 254.918);
     polygon.ps[3] = Point(509.246, 214.918);
-    new ShapeRef(router, polygon, 266);
+    ShapeRef::createShapeRef(router, polygon, 266);
 
     // shapeRef267
     polygon = Polygon(4);
@@ -2152,7 +2152,7 @@ int main(void) {
     polygon.ps[1] = Point(409.246, 254.918);
     polygon.ps[2] = Point(353.246, 254.918);
     polygon.ps[3] = Point(353.246, 214.918);
-    new ShapeRef(router, polygon, 267);
+    ShapeRef::createShapeRef(router, polygon, 267);
 
     // shapeRef268
     polygon = Polygon(4);
@@ -2160,7 +2160,7 @@ int main(void) {
     polygon.ps[1] = Point(331.246, 308.918);
     polygon.ps[2] = Point(275.246, 308.918);
     polygon.ps[3] = Point(275.246, 268.918);
-    new ShapeRef(router, polygon, 268);
+    ShapeRef::createShapeRef(router, polygon, 268);
 
     // shapeRef269
     polygon = Polygon(4);
@@ -2168,7 +2168,7 @@ int main(void) {
     polygon.ps[1] = Point(1159.25, 738.918);
     polygon.ps[2] = Point(1103.25, 738.918);
     polygon.ps[3] = Point(1103.25, 698.918);
-    new ShapeRef(router, polygon, 269);
+    ShapeRef::createShapeRef(router, polygon, 269);
 
     // shapeRef270
     polygon = Polygon(4);
@@ -2176,7 +2176,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 706.918);
     polygon.ps[2] = Point(1007.25, 706.918);
     polygon.ps[3] = Point(1007.25, 666.918);
-    new ShapeRef(router, polygon, 270);
+    ShapeRef::createShapeRef(router, polygon, 270);
 
     // shapeRef271
     polygon = Polygon(4);
@@ -2184,7 +2184,7 @@ int main(void) {
     polygon.ps[1] = Point(1159.25, 610.918);
     polygon.ps[2] = Point(1103.25, 610.918);
     polygon.ps[3] = Point(1103.25, 570.918);
-    new ShapeRef(router, polygon, 271);
+    ShapeRef::createShapeRef(router, polygon, 271);
 
     // shapeRef272
     polygon = Polygon(4);
@@ -2192,7 +2192,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 642.918);
     polygon.ps[2] = Point(1007.25, 642.918);
     polygon.ps[3] = Point(1007.25, 602.918);
-    new ShapeRef(router, polygon, 272);
+    ShapeRef::createShapeRef(router, polygon, 272);
 
     // shapeRef273
     polygon = Polygon(4);
@@ -2200,7 +2200,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 610.918);
     polygon.ps[2] = Point(1007.25, 610.918);
     polygon.ps[3] = Point(1007.25, 570.918);
-    new ShapeRef(router, polygon, 273);
+    ShapeRef::createShapeRef(router, polygon, 273);
 
     // shapeRef274
     polygon = Polygon(4);
@@ -2208,7 +2208,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 534.918);
     polygon.ps[2] = Point(1007.25, 534.918);
     polygon.ps[3] = Point(1007.25, 494.918);
-    new ShapeRef(router, polygon, 274);
+    ShapeRef::createShapeRef(router, polygon, 274);
 
     // shapeRef275
     polygon = Polygon(4);
@@ -2216,7 +2216,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 502.918);
     polygon.ps[2] = Point(1007.25, 502.918);
     polygon.ps[3] = Point(1007.25, 462.918);
-    new ShapeRef(router, polygon, 275);
+    ShapeRef::createShapeRef(router, polygon, 275);
 
     // shapeRef276
     polygon = Polygon(4);
@@ -2224,7 +2224,7 @@ int main(void) {
     polygon.ps[1] = Point(1159.25, 438.918);
     polygon.ps[2] = Point(1103.25, 438.918);
     polygon.ps[3] = Point(1103.25, 398.918);
-    new ShapeRef(router, polygon, 276);
+    ShapeRef::createShapeRef(router, polygon, 276);
 
     // shapeRef277
     polygon = Polygon(4);
@@ -2232,7 +2232,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 438.918);
     polygon.ps[2] = Point(1007.25, 438.918);
     polygon.ps[3] = Point(1007.25, 398.918);
-    new ShapeRef(router, polygon, 277);
+    ShapeRef::createShapeRef(router, polygon, 277);
 
     // shapeRef278
     polygon = Polygon(4);
@@ -2240,7 +2240,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 406.918);
     polygon.ps[2] = Point(1007.25, 406.918);
     polygon.ps[3] = Point(1007.25, 366.918);
-    new ShapeRef(router, polygon, 278);
+    ShapeRef::createShapeRef(router, polygon, 278);
 
     // shapeRef279
     polygon = Polygon(4);
@@ -2248,7 +2248,7 @@ int main(void) {
     polygon.ps[1] = Point(1033.25, 222.918);
     polygon.ps[2] = Point(977.246, 222.918);
     polygon.ps[3] = Point(977.246, 182.918);
-    new ShapeRef(router, polygon, 279);
+    ShapeRef::createShapeRef(router, polygon, 279);
 
     // shapeRef280
     polygon = Polygon(4);
@@ -2256,7 +2256,7 @@ int main(void) {
     polygon.ps[1] = Point(985.246, 212.918);
     polygon.ps[2] = Point(929.246, 212.918);
     polygon.ps[3] = Point(929.246, 172.918);
-    new ShapeRef(router, polygon, 280);
+    ShapeRef::createShapeRef(router, polygon, 280);
 
     // shapeRef281
     polygon = Polygon(4);
@@ -2264,7 +2264,7 @@ int main(void) {
     polygon.ps[1] = Point(985.246, 148.918);
     polygon.ps[2] = Point(929.246, 148.918);
     polygon.ps[3] = Point(929.246, 108.918);
-    new ShapeRef(router, polygon, 281);
+    ShapeRef::createShapeRef(router, polygon, 281);
 
     // shapeRef282
     polygon = Polygon(4);
@@ -2272,7 +2272,7 @@ int main(void) {
     polygon.ps[1] = Point(955.246, 610.918);
     polygon.ps[2] = Point(899.246, 610.918);
     polygon.ps[3] = Point(899.246, 570.918);
-    new ShapeRef(router, polygon, 282);
+    ShapeRef::createShapeRef(router, polygon, 282);
 
     // shapeRef283
     polygon = Polygon(4);
@@ -2280,7 +2280,7 @@ int main(void) {
     polygon.ps[1] = Point(907.246, 642.918);
     polygon.ps[2] = Point(851.246, 642.918);
     polygon.ps[3] = Point(851.246, 602.918);
-    new ShapeRef(router, polygon, 283);
+    ShapeRef::createShapeRef(router, polygon, 283);
 
     // shapeRef284
     polygon = Polygon(4);
@@ -2288,7 +2288,7 @@ int main(void) {
     polygon.ps[1] = Point(907.246, 610.918);
     polygon.ps[2] = Point(851.246, 610.918);
     polygon.ps[3] = Point(851.246, 570.918);
-    new ShapeRef(router, polygon, 284);
+    ShapeRef::createShapeRef(router, polygon, 284);
 
     // shapeRef285
     polygon = Polygon(4);
@@ -2296,7 +2296,7 @@ int main(void) {
     polygon.ps[1] = Point(907.246, 534.918);
     polygon.ps[2] = Point(851.246, 534.918);
     polygon.ps[3] = Point(851.246, 494.918);
-    new ShapeRef(router, polygon, 285);
+    ShapeRef::createShapeRef(router, polygon, 285);
 
     // shapeRef286
     polygon = Polygon(4);
@@ -2304,7 +2304,7 @@ int main(void) {
     polygon.ps[1] = Point(907.246, 502.918);
     polygon.ps[2] = Point(851.246, 502.918);
     polygon.ps[3] = Point(851.246, 462.918);
-    new ShapeRef(router, polygon, 286);
+    ShapeRef::createShapeRef(router, polygon, 286);
 
     // shapeRef287
     polygon = Polygon(4);
@@ -2312,7 +2312,7 @@ int main(void) {
     polygon.ps[1] = Point(955.246, 438.918);
     polygon.ps[2] = Point(899.246, 438.918);
     polygon.ps[3] = Point(899.246, 398.918);
-    new ShapeRef(router, polygon, 287);
+    ShapeRef::createShapeRef(router, polygon, 287);
 
     // shapeRef288
     polygon = Polygon(4);
@@ -2320,7 +2320,7 @@ int main(void) {
     polygon.ps[1] = Point(907.246, 438.918);
     polygon.ps[2] = Point(851.246, 438.918);
     polygon.ps[3] = Point(851.246, 398.918);
-    new ShapeRef(router, polygon, 288);
+    ShapeRef::createShapeRef(router, polygon, 288);
 
     // shapeRef289
     polygon = Polygon(4);
@@ -2328,7 +2328,7 @@ int main(void) {
     polygon.ps[1] = Point(907.246, 406.918);
     polygon.ps[2] = Point(851.246, 406.918);
     polygon.ps[3] = Point(851.246, 366.918);
-    new ShapeRef(router, polygon, 289);
+    ShapeRef::createShapeRef(router, polygon, 289);
 
     // shapeRef290
     polygon = Polygon(4);
@@ -2336,7 +2336,7 @@ int main(void) {
     polygon.ps[1] = Point(877.246, 222.918);
     polygon.ps[2] = Point(821.246, 222.918);
     polygon.ps[3] = Point(821.246, 182.918);
-    new ShapeRef(router, polygon, 290);
+    ShapeRef::createShapeRef(router, polygon, 290);
 
     // shapeRef291
     polygon = Polygon(4);
@@ -2344,7 +2344,7 @@ int main(void) {
     polygon.ps[1] = Point(829.246, 212.918);
     polygon.ps[2] = Point(773.246, 212.918);
     polygon.ps[3] = Point(773.246, 172.918);
-    new ShapeRef(router, polygon, 291);
+    ShapeRef::createShapeRef(router, polygon, 291);
 
     // shapeRef292
     polygon = Polygon(4);
@@ -2352,7 +2352,7 @@ int main(void) {
     polygon.ps[1] = Point(829.246, 148.918);
     polygon.ps[2] = Point(773.246, 148.918);
     polygon.ps[3] = Point(773.246, 108.918);
-    new ShapeRef(router, polygon, 292);
+    ShapeRef::createShapeRef(router, polygon, 292);
 
     // shapeRef293
     polygon = Polygon(4);
@@ -2360,7 +2360,7 @@ int main(void) {
     polygon.ps[1] = Point(799.246, 610.918);
     polygon.ps[2] = Point(743.246, 610.918);
     polygon.ps[3] = Point(743.246, 570.918);
-    new ShapeRef(router, polygon, 293);
+    ShapeRef::createShapeRef(router, polygon, 293);
 
     // shapeRef294
     polygon = Polygon(4);
@@ -2368,7 +2368,7 @@ int main(void) {
     polygon.ps[1] = Point(751.246, 642.918);
     polygon.ps[2] = Point(695.246, 642.918);
     polygon.ps[3] = Point(695.246, 602.918);
-    new ShapeRef(router, polygon, 294);
+    ShapeRef::createShapeRef(router, polygon, 294);
 
     // shapeRef295
     polygon = Polygon(4);
@@ -2376,7 +2376,7 @@ int main(void) {
     polygon.ps[1] = Point(751.246, 610.918);
     polygon.ps[2] = Point(695.246, 610.918);
     polygon.ps[3] = Point(695.246, 570.918);
-    new ShapeRef(router, polygon, 295);
+    ShapeRef::createShapeRef(router, polygon, 295);
 
     // shapeRef296
     polygon = Polygon(4);
@@ -2384,7 +2384,7 @@ int main(void) {
     polygon.ps[1] = Point(751.246, 534.918);
     polygon.ps[2] = Point(695.246, 534.918);
     polygon.ps[3] = Point(695.246, 494.918);
-    new ShapeRef(router, polygon, 296);
+    ShapeRef::createShapeRef(router, polygon, 296);
 
     // shapeRef297
     polygon = Polygon(4);
@@ -2392,7 +2392,7 @@ int main(void) {
     polygon.ps[1] = Point(751.246, 502.918);
     polygon.ps[2] = Point(695.246, 502.918);
     polygon.ps[3] = Point(695.246, 462.918);
-    new ShapeRef(router, polygon, 297);
+    ShapeRef::createShapeRef(router, polygon, 297);
 
     // shapeRef298
     polygon = Polygon(4);
@@ -2400,7 +2400,7 @@ int main(void) {
     polygon.ps[1] = Point(799.246, 438.918);
     polygon.ps[2] = Point(743.246, 438.918);
     polygon.ps[3] = Point(743.246, 398.918);
-    new ShapeRef(router, polygon, 298);
+    ShapeRef::createShapeRef(router, polygon, 298);
 
     // shapeRef299
     polygon = Polygon(4);
@@ -2408,7 +2408,7 @@ int main(void) {
     polygon.ps[1] = Point(751.246, 438.918);
     polygon.ps[2] = Point(695.246, 438.918);
     polygon.ps[3] = Point(695.246, 398.918);
-    new ShapeRef(router, polygon, 299);
+    ShapeRef::createShapeRef(router, polygon, 299);
 
     // shapeRef300
     polygon = Polygon(4);
@@ -2416,7 +2416,7 @@ int main(void) {
     polygon.ps[1] = Point(751.246, 406.918);
     polygon.ps[2] = Point(695.246, 406.918);
     polygon.ps[3] = Point(695.246, 366.918);
-    new ShapeRef(router, polygon, 300);
+    ShapeRef::createShapeRef(router, polygon, 300);
 
     // shapeRef301
     polygon = Polygon(4);
@@ -2424,7 +2424,7 @@ int main(void) {
     polygon.ps[1] = Point(721.246, 222.918);
     polygon.ps[2] = Point(665.246, 222.918);
     polygon.ps[3] = Point(665.246, 182.918);
-    new ShapeRef(router, polygon, 301);
+    ShapeRef::createShapeRef(router, polygon, 301);
 
     // shapeRef302
     polygon = Polygon(4);
@@ -2432,7 +2432,7 @@ int main(void) {
     polygon.ps[1] = Point(673.246, 212.918);
     polygon.ps[2] = Point(617.246, 212.918);
     polygon.ps[3] = Point(617.246, 172.918);
-    new ShapeRef(router, polygon, 302);
+    ShapeRef::createShapeRef(router, polygon, 302);
 
     // shapeRef303
     polygon = Polygon(4);
@@ -2440,7 +2440,7 @@ int main(void) {
     polygon.ps[1] = Point(673.246, 148.918);
     polygon.ps[2] = Point(617.246, 148.918);
     polygon.ps[3] = Point(617.246, 108.918);
-    new ShapeRef(router, polygon, 303);
+    ShapeRef::createShapeRef(router, polygon, 303);
 
     // shapeRef304
     polygon = Polygon(4);
@@ -2448,7 +2448,7 @@ int main(void) {
     polygon.ps[1] = Point(643.246, 610.918);
     polygon.ps[2] = Point(587.246, 610.918);
     polygon.ps[3] = Point(587.246, 570.918);
-    new ShapeRef(router, polygon, 304);
+    ShapeRef::createShapeRef(router, polygon, 304);
 
     // shapeRef305
     polygon = Polygon(4);
@@ -2456,7 +2456,7 @@ int main(void) {
     polygon.ps[1] = Point(595.246, 642.918);
     polygon.ps[2] = Point(539.246, 642.918);
     polygon.ps[3] = Point(539.246, 602.918);
-    new ShapeRef(router, polygon, 305);
+    ShapeRef::createShapeRef(router, polygon, 305);
 
     // shapeRef306
     polygon = Polygon(4);
@@ -2464,7 +2464,7 @@ int main(void) {
     polygon.ps[1] = Point(595.246, 610.918);
     polygon.ps[2] = Point(539.246, 610.918);
     polygon.ps[3] = Point(539.246, 570.918);
-    new ShapeRef(router, polygon, 306);
+    ShapeRef::createShapeRef(router, polygon, 306);
 
     // shapeRef307
     polygon = Polygon(4);
@@ -2472,7 +2472,7 @@ int main(void) {
     polygon.ps[1] = Point(643.246, 506.951);
     polygon.ps[2] = Point(587.246, 506.951);
     polygon.ps[3] = Point(587.246, 466.951);
-    new ShapeRef(router, polygon, 307);
+    ShapeRef::createShapeRef(router, polygon, 307);
 
     // shapeRef308
     polygon = Polygon(4);
@@ -2480,7 +2480,7 @@ int main(void) {
     polygon.ps[1] = Point(595.246, 534.918);
     polygon.ps[2] = Point(539.246, 534.918);
     polygon.ps[3] = Point(539.246, 494.918);
-    new ShapeRef(router, polygon, 308);
+    ShapeRef::createShapeRef(router, polygon, 308);
 
     // shapeRef309
     polygon = Polygon(4);
@@ -2488,7 +2488,7 @@ int main(void) {
     polygon.ps[1] = Point(595.246, 502.918);
     polygon.ps[2] = Point(539.246, 502.918);
     polygon.ps[3] = Point(539.246, 462.918);
-    new ShapeRef(router, polygon, 309);
+    ShapeRef::createShapeRef(router, polygon, 309);
 
     // shapeRef310
     polygon = Polygon(4);
@@ -2496,7 +2496,7 @@ int main(void) {
     polygon.ps[1] = Point(643.246, 438.918);
     polygon.ps[2] = Point(587.246, 438.918);
     polygon.ps[3] = Point(587.246, 398.918);
-    new ShapeRef(router, polygon, 310);
+    ShapeRef::createShapeRef(router, polygon, 310);
 
     // shapeRef311
     polygon = Polygon(4);
@@ -2504,7 +2504,7 @@ int main(void) {
     polygon.ps[1] = Point(595.246, 438.918);
     polygon.ps[2] = Point(539.246, 438.918);
     polygon.ps[3] = Point(539.246, 398.918);
-    new ShapeRef(router, polygon, 311);
+    ShapeRef::createShapeRef(router, polygon, 311);
 
     // shapeRef312
     polygon = Polygon(4);
@@ -2512,7 +2512,7 @@ int main(void) {
     polygon.ps[1] = Point(595.246, 406.918);
     polygon.ps[2] = Point(539.246, 406.918);
     polygon.ps[3] = Point(539.246, 366.918);
-    new ShapeRef(router, polygon, 312);
+    ShapeRef::createShapeRef(router, polygon, 312);
 
     // shapeRef313
     polygon = Polygon(4);
@@ -2520,7 +2520,7 @@ int main(void) {
     polygon.ps[1] = Point(565.246, 222.918);
     polygon.ps[2] = Point(509.246, 222.918);
     polygon.ps[3] = Point(509.246, 182.918);
-    new ShapeRef(router, polygon, 313);
+    ShapeRef::createShapeRef(router, polygon, 313);
 
     // shapeRef314
     polygon = Polygon(4);
@@ -2528,7 +2528,7 @@ int main(void) {
     polygon.ps[1] = Point(517.246, 212.918);
     polygon.ps[2] = Point(461.246, 212.918);
     polygon.ps[3] = Point(461.246, 172.918);
-    new ShapeRef(router, polygon, 314);
+    ShapeRef::createShapeRef(router, polygon, 314);
 
     // shapeRef315
     polygon = Polygon(4);
@@ -2536,7 +2536,7 @@ int main(void) {
     polygon.ps[1] = Point(517.246, 148.918);
     polygon.ps[2] = Point(461.246, 148.918);
     polygon.ps[3] = Point(461.246, 108.918);
-    new ShapeRef(router, polygon, 315);
+    ShapeRef::createShapeRef(router, polygon, 315);
 
     // shapeRef316
     polygon = Polygon(4);
@@ -2544,7 +2544,7 @@ int main(void) {
     polygon.ps[1] = Point(487.246, 610.918);
     polygon.ps[2] = Point(431.246, 610.918);
     polygon.ps[3] = Point(431.246, 570.918);
-    new ShapeRef(router, polygon, 316);
+    ShapeRef::createShapeRef(router, polygon, 316);
 
     // shapeRef317
     polygon = Polygon(4);
@@ -2552,7 +2552,7 @@ int main(void) {
     polygon.ps[1] = Point(439.246, 642.918);
     polygon.ps[2] = Point(383.246, 642.918);
     polygon.ps[3] = Point(383.246, 602.918);
-    new ShapeRef(router, polygon, 317);
+    ShapeRef::createShapeRef(router, polygon, 317);
 
     // shapeRef318
     polygon = Polygon(4);
@@ -2560,7 +2560,7 @@ int main(void) {
     polygon.ps[1] = Point(439.246, 610.918);
     polygon.ps[2] = Point(383.246, 610.918);
     polygon.ps[3] = Point(383.246, 570.918);
-    new ShapeRef(router, polygon, 318);
+    ShapeRef::createShapeRef(router, polygon, 318);
 
     // shapeRef319
     polygon = Polygon(4);
@@ -2568,7 +2568,7 @@ int main(void) {
     polygon.ps[1] = Point(439.246, 534.918);
     polygon.ps[2] = Point(383.246, 534.918);
     polygon.ps[3] = Point(383.246, 494.918);
-    new ShapeRef(router, polygon, 319);
+    ShapeRef::createShapeRef(router, polygon, 319);
 
     // shapeRef320
     polygon = Polygon(4);
@@ -2576,7 +2576,7 @@ int main(void) {
     polygon.ps[1] = Point(439.246, 502.918);
     polygon.ps[2] = Point(383.246, 502.918);
     polygon.ps[3] = Point(383.246, 462.918);
-    new ShapeRef(router, polygon, 320);
+    ShapeRef::createShapeRef(router, polygon, 320);
 
     // shapeRef321
     polygon = Polygon(4);
@@ -2584,7 +2584,7 @@ int main(void) {
     polygon.ps[1] = Point(487.246, 438.918);
     polygon.ps[2] = Point(431.246, 438.918);
     polygon.ps[3] = Point(431.246, 398.918);
-    new ShapeRef(router, polygon, 321);
+    ShapeRef::createShapeRef(router, polygon, 321);
 
     // shapeRef322
     polygon = Polygon(4);
@@ -2592,7 +2592,7 @@ int main(void) {
     polygon.ps[1] = Point(439.246, 438.918);
     polygon.ps[2] = Point(383.246, 438.918);
     polygon.ps[3] = Point(383.246, 398.918);
-    new ShapeRef(router, polygon, 322);
+    ShapeRef::createShapeRef(router, polygon, 322);
 
     // shapeRef323
     polygon = Polygon(4);
@@ -2600,7 +2600,7 @@ int main(void) {
     polygon.ps[1] = Point(439.246, 406.918);
     polygon.ps[2] = Point(383.246, 406.918);
     polygon.ps[3] = Point(383.246, 366.918);
-    new ShapeRef(router, polygon, 323);
+    ShapeRef::createShapeRef(router, polygon, 323);
 
     // shapeRef324
     polygon = Polygon(4);
@@ -2608,7 +2608,7 @@ int main(void) {
     polygon.ps[1] = Point(409.246, 222.918);
     polygon.ps[2] = Point(353.246, 222.918);
     polygon.ps[3] = Point(353.246, 182.918);
-    new ShapeRef(router, polygon, 324);
+    ShapeRef::createShapeRef(router, polygon, 324);
 
     // shapeRef325
     polygon = Polygon(4);
@@ -2616,7 +2616,7 @@ int main(void) {
     polygon.ps[1] = Point(361.246, 212.918);
     polygon.ps[2] = Point(305.246, 212.918);
     polygon.ps[3] = Point(305.246, 172.918);
-    new ShapeRef(router, polygon, 325);
+    ShapeRef::createShapeRef(router, polygon, 325);
 
     // shapeRef326
     polygon = Polygon(4);
@@ -2624,7 +2624,7 @@ int main(void) {
     polygon.ps[1] = Point(361.246, 148.918);
     polygon.ps[2] = Point(305.246, 148.918);
     polygon.ps[3] = Point(305.246, 108.918);
-    new ShapeRef(router, polygon, 326);
+    ShapeRef::createShapeRef(router, polygon, 326);
 
     // shapeRef327
     polygon = Polygon(4);
@@ -2632,7 +2632,7 @@ int main(void) {
     polygon.ps[1] = Point(331.246, 610.918);
     polygon.ps[2] = Point(275.246, 610.918);
     polygon.ps[3] = Point(275.246, 570.918);
-    new ShapeRef(router, polygon, 327);
+    ShapeRef::createShapeRef(router, polygon, 327);
 
     // shapeRef328
     polygon = Polygon(4);
@@ -2640,7 +2640,7 @@ int main(void) {
     polygon.ps[1] = Point(283.246, 642.918);
     polygon.ps[2] = Point(227.246, 642.918);
     polygon.ps[3] = Point(227.246, 602.918);
-    new ShapeRef(router, polygon, 328);
+    ShapeRef::createShapeRef(router, polygon, 328);
 
     // shapeRef329
     polygon = Polygon(4);
@@ -2648,7 +2648,7 @@ int main(void) {
     polygon.ps[1] = Point(283.246, 610.918);
     polygon.ps[2] = Point(227.246, 610.918);
     polygon.ps[3] = Point(227.246, 570.918);
-    new ShapeRef(router, polygon, 329);
+    ShapeRef::createShapeRef(router, polygon, 329);
 
     // shapeRef330
     polygon = Polygon(4);
@@ -2656,7 +2656,7 @@ int main(void) {
     polygon.ps[1] = Point(283.246, 534.918);
     polygon.ps[2] = Point(227.246, 534.918);
     polygon.ps[3] = Point(227.246, 494.918);
-    new ShapeRef(router, polygon, 330);
+    ShapeRef::createShapeRef(router, polygon, 330);
 
     // shapeRef331
     polygon = Polygon(4);
@@ -2664,7 +2664,7 @@ int main(void) {
     polygon.ps[1] = Point(283.246, 502.918);
     polygon.ps[2] = Point(227.246, 502.918);
     polygon.ps[3] = Point(227.246, 462.918);
-    new ShapeRef(router, polygon, 331);
+    ShapeRef::createShapeRef(router, polygon, 331);
 
     // shapeRef332
     polygon = Polygon(4);
@@ -2672,7 +2672,7 @@ int main(void) {
     polygon.ps[1] = Point(331.246, 438.918);
     polygon.ps[2] = Point(275.246, 438.918);
     polygon.ps[3] = Point(275.246, 398.918);
-    new ShapeRef(router, polygon, 332);
+    ShapeRef::createShapeRef(router, polygon, 332);
 
     // shapeRef333
     polygon = Polygon(4);
@@ -2680,7 +2680,7 @@ int main(void) {
     polygon.ps[1] = Point(283.246, 438.918);
     polygon.ps[2] = Point(227.246, 438.918);
     polygon.ps[3] = Point(227.246, 398.918);
-    new ShapeRef(router, polygon, 333);
+    ShapeRef::createShapeRef(router, polygon, 333);
 
     // shapeRef334
     polygon = Polygon(4);
@@ -2688,7 +2688,7 @@ int main(void) {
     polygon.ps[1] = Point(283.246, 406.918);
     polygon.ps[2] = Point(227.246, 406.918);
     polygon.ps[3] = Point(227.246, 366.918);
-    new ShapeRef(router, polygon, 334);
+    ShapeRef::createShapeRef(router, polygon, 334);
 
     // shapeRef335
     polygon = Polygon(4);
@@ -2696,7 +2696,7 @@ int main(void) {
     polygon.ps[1] = Point(331.246, 276.918);
     polygon.ps[2] = Point(275.246, 276.918);
     polygon.ps[3] = Point(275.246, 236.918);
-    new ShapeRef(router, polygon, 335);
+    ShapeRef::createShapeRef(router, polygon, 335);
 
     // shapeRef336
     polygon = Polygon(4);
@@ -2704,7 +2704,7 @@ int main(void) {
     polygon.ps[1] = Point(221.246, 148.918);
     polygon.ps[2] = Point(165.246, 148.918);
     polygon.ps[3] = Point(165.246, 108.918);
-    new ShapeRef(router, polygon, 336);
+    ShapeRef::createShapeRef(router, polygon, 336);
 
     // shapeRef337
     polygon = Polygon(4);
@@ -2712,7 +2712,7 @@ int main(void) {
     polygon.ps[1] = Point(221.246, 212.918);
     polygon.ps[2] = Point(165.246, 212.918);
     polygon.ps[3] = Point(165.246, 172.918);
-    new ShapeRef(router, polygon, 337);
+    ShapeRef::createShapeRef(router, polygon, 337);
 
     // shapeRef338
     polygon = Polygon(4);
@@ -2720,7 +2720,7 @@ int main(void) {
     polygon.ps[1] = Point(173.246, 610.918);
     polygon.ps[2] = Point(117.246, 610.918);
     polygon.ps[3] = Point(117.246, 570.918);
-    new ShapeRef(router, polygon, 338);
+    ShapeRef::createShapeRef(router, polygon, 338);
 
     // shapeRef339
     polygon = Polygon(4);
@@ -2728,7 +2728,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 642.918);
     polygon.ps[2] = Point(69.2456, 642.918);
     polygon.ps[3] = Point(69.2456, 602.918);
-    new ShapeRef(router, polygon, 339);
+    ShapeRef::createShapeRef(router, polygon, 339);
 
     // shapeRef340
     polygon = Polygon(4);
@@ -2736,7 +2736,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 610.918);
     polygon.ps[2] = Point(69.2456, 610.918);
     polygon.ps[3] = Point(69.2456, 570.918);
-    new ShapeRef(router, polygon, 340);
+    ShapeRef::createShapeRef(router, polygon, 340);
 
     // shapeRef341
     polygon = Polygon(4);
@@ -2744,7 +2744,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 534.918);
     polygon.ps[2] = Point(69.2456, 534.918);
     polygon.ps[3] = Point(69.2456, 494.918);
-    new ShapeRef(router, polygon, 341);
+    ShapeRef::createShapeRef(router, polygon, 341);
 
     // shapeRef342
     polygon = Polygon(4);
@@ -2752,7 +2752,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 502.918);
     polygon.ps[2] = Point(69.2456, 502.918);
     polygon.ps[3] = Point(69.2456, 462.918);
-    new ShapeRef(router, polygon, 342);
+    ShapeRef::createShapeRef(router, polygon, 342);
 
     // shapeRef343
     polygon = Polygon(4);
@@ -2760,7 +2760,7 @@ int main(void) {
     polygon.ps[1] = Point(173.246, 438.918);
     polygon.ps[2] = Point(117.246, 438.918);
     polygon.ps[3] = Point(117.246, 398.918);
-    new ShapeRef(router, polygon, 343);
+    ShapeRef::createShapeRef(router, polygon, 343);
 
     // shapeRef344
     polygon = Polygon(4);
@@ -2768,7 +2768,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 438.918);
     polygon.ps[2] = Point(69.2456, 438.918);
     polygon.ps[3] = Point(69.2456, 398.918);
-    new ShapeRef(router, polygon, 344);
+    ShapeRef::createShapeRef(router, polygon, 344);
 
     // shapeRef345
     polygon = Polygon(4);
@@ -2776,7 +2776,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 406.918);
     polygon.ps[2] = Point(69.2456, 406.918);
     polygon.ps[3] = Point(69.2456, 366.918);
-    new ShapeRef(router, polygon, 345);
+    ShapeRef::createShapeRef(router, polygon, 345);
 
     // shapeRef346
     polygon = Polygon(4);
@@ -2784,7 +2784,7 @@ int main(void) {
     polygon.ps[1] = Point(45.2456, 212.918);
     polygon.ps[2] = Point(-10.7544, 212.918);
     polygon.ps[3] = Point(-10.7544, 172.918);
-    new ShapeRef(router, polygon, 346);
+    ShapeRef::createShapeRef(router, polygon, 346);
 
     // shapeRef347
     polygon = Polygon(4);
@@ -2792,7 +2792,7 @@ int main(void) {
     polygon.ps[1] = Point(45.2456, 148.918);
     polygon.ps[2] = Point(-10.7544, 148.918);
     polygon.ps[3] = Point(-10.7544, 108.918);
-    new ShapeRef(router, polygon, 347);
+    ShapeRef::createShapeRef(router, polygon, 347);
 
     // shapeRef348
     polygon = Polygon(4);
@@ -2800,7 +2800,7 @@ int main(void) {
     polygon.ps[1] = Point(313.246, 190.918);
     polygon.ps[2] = Point(257.246, 190.918);
     polygon.ps[3] = Point(257.246, 150.918);
-    new ShapeRef(router, polygon, 348);
+    ShapeRef::createShapeRef(router, polygon, 348);
 
     // shapeRef349
     polygon = Polygon(4);
@@ -2808,7 +2808,7 @@ int main(void) {
     polygon.ps[1] = Point(265.246, 106.918);
     polygon.ps[2] = Point(209.246, 106.918);
     polygon.ps[3] = Point(209.246, 66.9179);
-    new ShapeRef(router, polygon, 349);
+    ShapeRef::createShapeRef(router, polygon, 349);
 
     // shapeRef350
     polygon = Polygon(4);
@@ -2816,7 +2816,7 @@ int main(void) {
     polygon.ps[1] = Point(265.246, 74.9179);
     polygon.ps[2] = Point(209.246, 74.9179);
     polygon.ps[3] = Point(209.246, 34.9179);
-    new ShapeRef(router, polygon, 350);
+    ShapeRef::createShapeRef(router, polygon, 350);
 
     // shapeRef351
     polygon = Polygon(4);
@@ -2824,7 +2824,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 190.918);
     polygon.ps[2] = Point(69.2456, 190.918);
     polygon.ps[3] = Point(69.2456, 150.918);
-    new ShapeRef(router, polygon, 351);
+    ShapeRef::createShapeRef(router, polygon, 351);
 
     // shapeRef352
     polygon = Polygon(4);
@@ -2832,7 +2832,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 52.9179);
     polygon.ps[2] = Point(69.2456, 52.9179);
     polygon.ps[3] = Point(69.2456, 12.9179);
-    new ShapeRef(router, polygon, 352);
+    ShapeRef::createShapeRef(router, polygon, 352);
 
     // shapeRef353
     polygon = Polygon(4);
@@ -2840,7 +2840,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 20.9179);
     polygon.ps[2] = Point(69.2456, 20.9179);
     polygon.ps[3] = Point(69.2456, -19.0821);
-    new ShapeRef(router, polygon, 353);
+    ShapeRef::createShapeRef(router, polygon, 353);
 
     // shapeRef354
     polygon = Polygon(4);
@@ -2848,7 +2848,7 @@ int main(void) {
     polygon.ps[1] = Point(408.962, -9.08205);
     polygon.ps[2] = Point(352.962, -9.08205);
     polygon.ps[3] = Point(352.962, -49.0821);
-    new ShapeRef(router, polygon, 354);
+    ShapeRef::createShapeRef(router, polygon, 354);
 
     // shapeRef355
     polygon = Polygon(4);
@@ -2856,7 +2856,7 @@ int main(void) {
     polygon.ps[1] = Point(307.219, -9.08205);
     polygon.ps[2] = Point(251.219, -9.08205);
     polygon.ps[3] = Point(251.219, -49.0821);
-    new ShapeRef(router, polygon, 355);
+    ShapeRef::createShapeRef(router, polygon, 355);
 
     // shapeRef356
     polygon = Polygon(4);
@@ -2864,7 +2864,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 330.918);
     polygon.ps[2] = Point(69.2456, 330.918);
     polygon.ps[3] = Point(69.2456, 290.918);
-    new ShapeRef(router, polygon, 356);
+    ShapeRef::createShapeRef(router, polygon, 356);
 
     // shapeRef357
     polygon = Polygon(4);
@@ -2872,7 +2872,7 @@ int main(void) {
     polygon.ps[1] = Point(221.246, 244.918);
     polygon.ps[2] = Point(165.246, 244.918);
     polygon.ps[3] = Point(165.246, 204.918);
-    new ShapeRef(router, polygon, 357);
+    ShapeRef::createShapeRef(router, polygon, 357);
 
     // shapeRef358
     polygon = Polygon(4);
@@ -2880,7 +2880,7 @@ int main(void) {
     polygon.ps[1] = Point(361.246, 244.918);
     polygon.ps[2] = Point(305.246, 244.918);
     polygon.ps[3] = Point(305.246, 204.918);
-    new ShapeRef(router, polygon, 358);
+    ShapeRef::createShapeRef(router, polygon, 358);
 
     // shapeRef359
     polygon = Polygon(4);
@@ -2888,7 +2888,7 @@ int main(void) {
     polygon.ps[1] = Point(517.246, 244.918);
     polygon.ps[2] = Point(461.246, 244.918);
     polygon.ps[3] = Point(461.246, 204.918);
-    new ShapeRef(router, polygon, 359);
+    ShapeRef::createShapeRef(router, polygon, 359);
 
     // shapeRef360
     polygon = Polygon(4);
@@ -2896,7 +2896,7 @@ int main(void) {
     polygon.ps[1] = Point(673.246, 244.918);
     polygon.ps[2] = Point(617.246, 244.918);
     polygon.ps[3] = Point(617.246, 204.918);
-    new ShapeRef(router, polygon, 360);
+    ShapeRef::createShapeRef(router, polygon, 360);
 
     // shapeRef361
     polygon = Polygon(4);
@@ -2904,7 +2904,7 @@ int main(void) {
     polygon.ps[1] = Point(829.246, 244.918);
     polygon.ps[2] = Point(773.246, 244.918);
     polygon.ps[3] = Point(773.246, 204.918);
-    new ShapeRef(router, polygon, 361);
+    ShapeRef::createShapeRef(router, polygon, 361);
 
     // shapeRef362
     polygon = Polygon(4);
@@ -2912,7 +2912,7 @@ int main(void) {
     polygon.ps[1] = Point(985.246, 244.918);
     polygon.ps[2] = Point(929.246, 244.918);
     polygon.ps[3] = Point(929.246, 204.918);
-    new ShapeRef(router, polygon, 362);
+    ShapeRef::createShapeRef(router, polygon, 362);
 
     // shapeRef363
     polygon = Polygon(4);
@@ -2920,7 +2920,7 @@ int main(void) {
     polygon.ps[1] = Point(45.2456, 384.918);
     polygon.ps[2] = Point(-10.7544, 384.918);
     polygon.ps[3] = Point(-10.7544, 344.918);
-    new ShapeRef(router, polygon, 363);
+    ShapeRef::createShapeRef(router, polygon, 363);
 
     // shapeRef364
     polygon = Polygon(4);
@@ -2928,7 +2928,7 @@ int main(void) {
     polygon.ps[1] = Point(283.246, 470.918);
     polygon.ps[2] = Point(227.246, 470.918);
     polygon.ps[3] = Point(227.246, 430.918);
-    new ShapeRef(router, polygon, 364);
+    ShapeRef::createShapeRef(router, polygon, 364);
 
     // shapeRef365
     polygon = Polygon(4);
@@ -2936,7 +2936,7 @@ int main(void) {
     polygon.ps[1] = Point(439.246, 470.918);
     polygon.ps[2] = Point(383.246, 470.918);
     polygon.ps[3] = Point(383.246, 430.918);
-    new ShapeRef(router, polygon, 365);
+    ShapeRef::createShapeRef(router, polygon, 365);
 
     // shapeRef366
     polygon = Polygon(4);
@@ -2944,7 +2944,7 @@ int main(void) {
     polygon.ps[1] = Point(595.246, 470.918);
     polygon.ps[2] = Point(539.246, 470.918);
     polygon.ps[3] = Point(539.246, 430.918);
-    new ShapeRef(router, polygon, 366);
+    ShapeRef::createShapeRef(router, polygon, 366);
 
     // shapeRef367
     polygon = Polygon(4);
@@ -2952,7 +2952,7 @@ int main(void) {
     polygon.ps[1] = Point(907.246, 470.918);
     polygon.ps[2] = Point(851.246, 470.918);
     polygon.ps[3] = Point(851.246, 430.918);
-    new ShapeRef(router, polygon, 367);
+    ShapeRef::createShapeRef(router, polygon, 367);
 
     // shapeRef368
     polygon = Polygon(4);
@@ -2960,7 +2960,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 470.918);
     polygon.ps[2] = Point(1007.25, 470.918);
     polygon.ps[3] = Point(1007.25, 430.918);
-    new ShapeRef(router, polygon, 368);
+    ShapeRef::createShapeRef(router, polygon, 368);
 
     // shapeRef369
     polygon = Polygon(4);
@@ -2968,7 +2968,7 @@ int main(void) {
     polygon.ps[1] = Point(751.246, 470.918);
     polygon.ps[2] = Point(695.246, 470.918);
     polygon.ps[3] = Point(695.246, 430.918);
-    new ShapeRef(router, polygon, 369);
+    ShapeRef::createShapeRef(router, polygon, 369);
 
     // shapeRef370
     polygon = Polygon(4);
@@ -2976,7 +2976,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 578.918);
     polygon.ps[2] = Point(69.2456, 578.918);
     polygon.ps[3] = Point(69.2456, 538.918);
-    new ShapeRef(router, polygon, 370);
+    ShapeRef::createShapeRef(router, polygon, 370);
 
     // shapeRef371
     polygon = Polygon(4);
@@ -2984,7 +2984,7 @@ int main(void) {
     polygon.ps[1] = Point(283.246, 578.918);
     polygon.ps[2] = Point(227.246, 578.918);
     polygon.ps[3] = Point(227.246, 538.918);
-    new ShapeRef(router, polygon, 371);
+    ShapeRef::createShapeRef(router, polygon, 371);
 
     // shapeRef372
     polygon = Polygon(4);
@@ -2992,7 +2992,7 @@ int main(void) {
     polygon.ps[1] = Point(439.246, 578.918);
     polygon.ps[2] = Point(383.246, 578.918);
     polygon.ps[3] = Point(383.246, 538.918);
-    new ShapeRef(router, polygon, 372);
+    ShapeRef::createShapeRef(router, polygon, 372);
 
     // shapeRef373
     polygon = Polygon(4);
@@ -3000,7 +3000,7 @@ int main(void) {
     polygon.ps[1] = Point(595.246, 578.918);
     polygon.ps[2] = Point(539.246, 578.918);
     polygon.ps[3] = Point(539.246, 538.918);
-    new ShapeRef(router, polygon, 373);
+    ShapeRef::createShapeRef(router, polygon, 373);
 
     // shapeRef374
     polygon = Polygon(4);
@@ -3008,7 +3008,7 @@ int main(void) {
     polygon.ps[1] = Point(751.246, 578.918);
     polygon.ps[2] = Point(695.246, 578.918);
     polygon.ps[3] = Point(695.246, 538.918);
-    new ShapeRef(router, polygon, 374);
+    ShapeRef::createShapeRef(router, polygon, 374);
 
     // shapeRef375
     polygon = Polygon(4);
@@ -3016,7 +3016,7 @@ int main(void) {
     polygon.ps[1] = Point(907.246, 578.918);
     polygon.ps[2] = Point(851.246, 578.918);
     polygon.ps[3] = Point(851.246, 538.918);
-    new ShapeRef(router, polygon, 375);
+    ShapeRef::createShapeRef(router, polygon, 375);
 
     // shapeRef376
     polygon = Polygon(4);
@@ -3024,7 +3024,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 578.918);
     polygon.ps[2] = Point(1007.25, 578.918);
     polygon.ps[3] = Point(1007.25, 538.918);
-    new ShapeRef(router, polygon, 376);
+    ShapeRef::createShapeRef(router, polygon, 376);
 
     // shapeRef377
     polygon = Polygon(4);
@@ -3032,7 +3032,7 @@ int main(void) {
     polygon.ps[1] = Point(125.246, 674.918);
     polygon.ps[2] = Point(69.2456, 674.918);
     polygon.ps[3] = Point(69.2456, 634.918);
-    new ShapeRef(router, polygon, 377);
+    ShapeRef::createShapeRef(router, polygon, 377);
 
     // shapeRef378
     polygon = Polygon(4);
@@ -3040,7 +3040,7 @@ int main(void) {
     polygon.ps[1] = Point(283.246, 674.918);
     polygon.ps[2] = Point(227.246, 674.918);
     polygon.ps[3] = Point(227.246, 634.918);
-    new ShapeRef(router, polygon, 378);
+    ShapeRef::createShapeRef(router, polygon, 378);
 
     // shapeRef379
     polygon = Polygon(4);
@@ -3048,7 +3048,7 @@ int main(void) {
     polygon.ps[1] = Point(439.246, 674.918);
     polygon.ps[2] = Point(383.246, 674.918);
     polygon.ps[3] = Point(383.246, 634.918);
-    new ShapeRef(router, polygon, 379);
+    ShapeRef::createShapeRef(router, polygon, 379);
 
     // shapeRef380
     polygon = Polygon(4);
@@ -3056,7 +3056,7 @@ int main(void) {
     polygon.ps[1] = Point(595.246, 674.918);
     polygon.ps[2] = Point(539.246, 674.918);
     polygon.ps[3] = Point(539.246, 634.918);
-    new ShapeRef(router, polygon, 380);
+    ShapeRef::createShapeRef(router, polygon, 380);
 
     // shapeRef381
     polygon = Polygon(4);
@@ -3064,7 +3064,7 @@ int main(void) {
     polygon.ps[1] = Point(751.246, 674.918);
     polygon.ps[2] = Point(695.246, 674.918);
     polygon.ps[3] = Point(695.246, 634.918);
-    new ShapeRef(router, polygon, 381);
+    ShapeRef::createShapeRef(router, polygon, 381);
 
     // shapeRef382
     polygon = Polygon(4);
@@ -3072,7 +3072,7 @@ int main(void) {
     polygon.ps[1] = Point(907.246, 674.918);
     polygon.ps[2] = Point(851.246, 674.918);
     polygon.ps[3] = Point(851.246, 634.918);
-    new ShapeRef(router, polygon, 382);
+    ShapeRef::createShapeRef(router, polygon, 382);
 
     // shapeRef383
     polygon = Polygon(4);
@@ -3080,7 +3080,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 674.918);
     polygon.ps[2] = Point(1007.25, 674.918);
     polygon.ps[3] = Point(1007.25, 634.918);
-    new ShapeRef(router, polygon, 383);
+    ShapeRef::createShapeRef(router, polygon, 383);
 
     // shapeRef384
     polygon = Polygon(4);
@@ -3088,7 +3088,7 @@ int main(void) {
     polygon.ps[1] = Point(1261.25, 212.918);
     polygon.ps[2] = Point(1205.25, 212.918);
     polygon.ps[3] = Point(1205.25, 172.918);
-    new ShapeRef(router, polygon, 384);
+    ShapeRef::createShapeRef(router, polygon, 384);
 
     // shapeRef385
     polygon = Polygon(4);
@@ -3096,7 +3096,7 @@ int main(void) {
     polygon.ps[1] = Point(1351.25, 438.918);
     polygon.ps[2] = Point(1295.25, 438.918);
     polygon.ps[3] = Point(1295.25, 398.918);
-    new ShapeRef(router, polygon, 385);
+    ShapeRef::createShapeRef(router, polygon, 385);
 
     // shapeRef386
     polygon = Polygon(4);
@@ -3104,7 +3104,7 @@ int main(void) {
     polygon.ps[1] = Point(1351.25, 534.918);
     polygon.ps[2] = Point(1295.25, 534.918);
     polygon.ps[3] = Point(1295.25, 494.918);
-    new ShapeRef(router, polygon, 386);
+    ShapeRef::createShapeRef(router, polygon, 386);
 
     // shapeRef387
     polygon = Polygon(4);
@@ -3112,7 +3112,7 @@ int main(void) {
     polygon.ps[1] = Point(1351.25, 642.918);
     polygon.ps[2] = Point(1295.25, 642.918);
     polygon.ps[3] = Point(1295.25, 602.918);
-    new ShapeRef(router, polygon, 387);
+    ShapeRef::createShapeRef(router, polygon, 387);
 
     // shapeRef388
     polygon = Polygon(4);
@@ -3120,7 +3120,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 738.918);
     polygon.ps[2] = Point(1007.25, 738.918);
     polygon.ps[3] = Point(1007.25, 698.918);
-    new ShapeRef(router, polygon, 388);
+    ShapeRef::createShapeRef(router, polygon, 388);
 
     // shapeRef389
     polygon = Polygon(4);
@@ -3128,7 +3128,7 @@ int main(void) {
     polygon.ps[1] = Point(1063.25, 770.918);
     polygon.ps[2] = Point(1007.25, 770.918);
     polygon.ps[3] = Point(1007.25, 730.918);
-    new ShapeRef(router, polygon, 389);
+    ShapeRef::createShapeRef(router, polygon, 389);
 
     // shapeRef390
     polygon = Polygon(4);
@@ -3136,7 +3136,7 @@ int main(void) {
     polygon.ps[1] = Point(1351.25, 738.918);
     polygon.ps[2] = Point(1295.25, 738.918);
     polygon.ps[3] = Point(1295.25, 698.918);
-    new ShapeRef(router, polygon, 390);
+    ShapeRef::createShapeRef(router, polygon, 390);
 
     // shapeRef391
     polygon = Polygon(4);
@@ -3144,7 +3144,7 @@ int main(void) {
     polygon.ps[1] = Point(1321.25, 222.918);
     polygon.ps[2] = Point(1265.25, 222.918);
     polygon.ps[3] = Point(1265.25, 182.918);
-    new ShapeRef(router, polygon, 391);
+    ShapeRef::createShapeRef(router, polygon, 391);
 
     // shapeRef392
     polygon = Polygon(4);
@@ -3152,7 +3152,7 @@ int main(void) {
     polygon.ps[1] = Point(1447.25, 664.918);
     polygon.ps[2] = Point(1391.25, 664.918);
     polygon.ps[3] = Point(1391.25, 624.918);
-    new ShapeRef(router, polygon, 392);
+    ShapeRef::createShapeRef(router, polygon, 392);
 
     // shapeRef393
     polygon = Polygon(4);
@@ -3160,7 +3160,7 @@ int main(void) {
     polygon.ps[1] = Point(173.246, 266.918);
     polygon.ps[2] = Point(117.246, 266.918);
     polygon.ps[3] = Point(117.246, 226.918);
-    new ShapeRef(router, polygon, 393);
+    ShapeRef::createShapeRef(router, polygon, 393);
 
     // shapeRef394
     polygon = Polygon(4);
@@ -3168,7 +3168,7 @@ int main(void) {
     polygon.ps[1] = Point(173.246, 298.918);
     polygon.ps[2] = Point(117.246, 298.918);
     polygon.ps[3] = Point(117.246, 258.918);
-    new ShapeRef(router, polygon, 394);
+    ShapeRef::createShapeRef(router, polygon, 394);
 
     // shapeRef395
     polygon = Polygon(4);
@@ -3176,7 +3176,7 @@ int main(void) {
     polygon.ps[1] = Point(372.466, 54.9179);
     polygon.ps[2] = Point(312.466, 54.9179);
     polygon.ps[3] = Point(312.466, 14.9179);
-    new ShapeRef(router, polygon, 395);
+    ShapeRef::createShapeRef(router, polygon, 395);
 
     // shapeRef396
     polygon = Polygon(4);
@@ -3184,7 +3184,7 @@ int main(void) {
     polygon.ps[1] = Point(47.2456, -51.0821);
     polygon.ps[2] = Point(-12.7544, -51.0821);
     polygon.ps[3] = Point(-12.7544, -91.0821);
-    new ShapeRef(router, polygon, 396);
+    ShapeRef::createShapeRef(router, polygon, 396);
 
     // shapeRef397
     polygon = Polygon(4);
@@ -3192,7 +3192,7 @@ int main(void) {
     polygon.ps[1] = Point(372.466, 106.918);
     polygon.ps[2] = Point(312.466, 106.918);
     polygon.ps[3] = Point(312.466, 66.9179);
-    new ShapeRef(router, polygon, 397);
+    ShapeRef::createShapeRef(router, polygon, 397);
 
     // connRef398
     connRef = ConnRef::createConnRef(router, 398).get();

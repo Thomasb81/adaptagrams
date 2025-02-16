@@ -36,13 +36,13 @@ int main(void)
     
     // Create the ShapeRef:
     Rectangle shapeRect1(Point(0, 0), Point(10, 10));
-    ShapeRef *shapeRef1 = new ShapeRef(router, shapeRect1);
+    auto shapeRef1 = ShapeRef::createShapeRef(router, shapeRect1);
     
     Rectangle shapeRect2(Point(0, 90), Point(20, 100));
-    ShapeRef *shapeRef2 = new ShapeRef(router, shapeRect2);
+    auto shapeRef2 = ShapeRef::createShapeRef(router, shapeRect2);
 
     Rectangle shapeRect3(Point(50, 40), Point(90, 80));
-    ShapeRef *shapeRef3 = new ShapeRef(router, shapeRect3);
+    auto shapeRef3 = ShapeRef::createShapeRef(router, shapeRect3);
 
     // Create pins two input pins on the left side of shape 3.
     const unsigned int INPUT = 1;
