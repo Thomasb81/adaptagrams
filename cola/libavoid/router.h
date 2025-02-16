@@ -492,7 +492,9 @@ class AVOID_EXPORT Router {
         //!
         //! @param[in]  shape  Pointer reference to the shape being removed.
         //!
+    private:
         void deleteShape(ShapeRef *shape);
+    public:
         void deleteShape(std::shared_ptr<ShapeRef> shape);
 
         //! @brief Move or resize an existing shape within the router scene.
@@ -550,7 +552,9 @@ class AVOID_EXPORT Router {
         //! @param[in]  junction  Pointer reference to the junction being 
         //!                       removed.
         //!
+    private:
         void deleteJunction(JunctionRef *junction);
+    public:
         void deleteJunction(std::shared_ptr<JunctionRef> junction);
         
         //! @brief Remove a connector from the router scene.
@@ -580,7 +584,9 @@ class AVOID_EXPORT Router {
         //!                          moved.
         //! @param[in]  newPosition  The new position for the junction.
         //!
+    private:
         void moveJunction(JunctionRef *junction, const Point& newPosition);
+    public:
         void moveJunction(std::shared_ptr<JunctionRef> junction, const Point& newPosition);
 
         //! @brief Move an existing junction within the router scene by a 

@@ -316,7 +316,7 @@ void Router::deleteShape(ShapeRef *shape)
 
 void Router::deleteShape(std::shared_ptr<ShapeRef> shape){
     deleteShape(shape.get());
-    //m_shareRefList.remove(shape);
+    m_shareRefList.remove(shape);
 }
 
 void Router::deleteConnector(std::shared_ptr<ConnRef> connector)
@@ -750,7 +750,7 @@ void Router::deleteJunction(JunctionRef *junction)
 
 void Router::deleteJunction(std::shared_ptr<JunctionRef> junction) {
     deleteJunction(junction.get());
-    //m_junctionRefList.remove(junction);
+    m_junctionRefList.remove(junction);
 }
 
 
