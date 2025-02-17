@@ -49,7 +49,7 @@ int main(void)
 
     ConnEnd dstEnd(shapeRef1, CENTRE);
     ConnEnd srcEnd(shapeRef2, CENTRE);
-    ConnRef::createConnRef(router, srcEnd, dstEnd).get();
+    ConnRef::createConnRef(router, srcEnd, dstEnd);
     // Force inital callback:
     router->processTransaction();
     router->outputDiagram("output/connectionpin01-1");

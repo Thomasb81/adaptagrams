@@ -46,17 +46,17 @@ void test()
 	auto  junction228834480 = JunctionRef::createJunctionRef(router1, Point(51050, 51050), 228834480);
 	end1 = ConnEnd(shape69758810, 2);
 	end2 = ConnEnd(junction228834480);
-	ConnRef * conn159270000 = ConnRef::createConnRef(router1, end1, end2).get();
+	auto  conn159270000 = ConnRef::createConnRef(router1, end1, end2);
 	conn159270000->makePathInvalid();
 	end1 = ConnEnd(junction228834480);
 	end2 = ConnEnd(shape149922619, 2);
-	ConnRef * conn199495942 = ConnRef::createConnRef(router1, end1, end2).get();
+	auto  conn199495942 = ConnRef::createConnRef(router1, end1, end2);
 	router1->processTransaction();
 
 	router1->outputDiagram("output/hyperedgeLoop1-1");
 	end1 = ConnEnd(shape147006780, 2);
 	end2 = ConnEnd(junction228834480);
-	ConnRef * conn8326760 = ConnRef::createConnRef(router1, end1, end2).get();
+	auto  conn8326760 = ConnRef::createConnRef(router1, end1, end2);
 	conn8326760->makePathInvalid();
 	router1->processTransaction(); // infinite
 
@@ -69,11 +69,11 @@ void test()
 	shape149922619 = nullptr;
 	router1->deleteJunction(junction228834480);
 	junction228834480 = nullptr;
-	router1->deleteConnector(conn159270000->getPtr()->getPtr());
+	router1->deleteConnector(conn159270000);
 	conn159270000 = nullptr;
-	router1->deleteConnector(conn199495942->getPtr()->getPtr());
+	router1->deleteConnector(conn199495942);
 	conn199495942 = nullptr;
-	router1->deleteConnector(conn8326760->getPtr()->getPtr());
+	router1->deleteConnector(conn8326760);
 	conn8326760 = nullptr;
 	router1->processTransaction();
 

@@ -13,10 +13,10 @@ int main(void) {
     ShapeRef::createShapeRef(router, rect942733064, 942733064);
     ConnEnd srcPt100850179(Point(51925, 50800), 4);
     ConnEnd dstPt100850179(Point(51500, 50650), 8);
-    ConnRef::createConnRef(router, srcPt100850179, dstPt100850179, 100850179).get();
+    ConnRef::createConnRef(router, srcPt100850179, dstPt100850179, 100850179);
     ConnEnd srcPt240732432(Point(51925, 50650), 4);
     ConnEnd dstPt240732432(Point(51800, 50800), 1);
-    ConnRef::createConnRef(router, srcPt240732432, dstPt240732432, 240732432).get();
+    ConnRef::createConnRef(router, srcPt240732432, dstPt240732432, 240732432);
     router->processTransaction();
     router->outputDiagram("output/inlineoverlap01");
     bool overlap = router->existsOrthogonalTouchingPaths();

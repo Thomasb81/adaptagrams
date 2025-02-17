@@ -38,28 +38,28 @@ int main(void)
 
     ConnEnd dstPt(Point(95, 25), 
             ConnDirUp | ConnDirRight | ConnDirDown);
-    ConnRef::createConnRef(router, srcPt, dstPt).get();
+    ConnRef::createConnRef(router, srcPt, dstPt);
     
     dstPt = ConnEnd(Point(95, 75), 
             ConnDirUp | ConnDirRight | ConnDirDown);
-    ConnRef::createConnRef(router, srcPt, dstPt).get();
+    ConnRef::createConnRef(router, srcPt, dstPt);
     
     // Up goes towards negative coordinates.
     dstPt = ConnEnd(Point(25, 5), 
             ConnDirLeft | ConnDirRight | ConnDirUp);
-    ConnRef::createConnRef(router, srcPt, dstPt).get();
+    ConnRef::createConnRef(router, srcPt, dstPt);
     
     dstPt = ConnEnd(Point(75, 5), 
             ConnDirLeft | ConnDirRight | ConnDirUp);
-    ConnRef::createConnRef(router, srcPt, dstPt).get();
+    ConnRef::createConnRef(router, srcPt, dstPt);
 
     dstPt = ConnEnd(Point(25, 95), 
             ConnDirLeft | ConnDirRight | ConnDirDown);
-    ConnRef::createConnRef(router, srcPt, dstPt).get();
+    ConnRef::createConnRef(router, srcPt, dstPt);
     
     dstPt = ConnEnd(Point(75, 95), 
             ConnDirLeft | ConnDirRight | ConnDirDown);
-    ConnRef::createConnRef(router, srcPt, dstPt).get();
+    ConnRef::createConnRef(router, srcPt, dstPt);
     
     router->processTransaction();
     router->outputDiagram("output/inline");

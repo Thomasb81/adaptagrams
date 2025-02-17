@@ -61,23 +61,23 @@ int test()
 	junction213455341->setPositionFixed(false);
 	end1 = ConnEnd(junction878282342);
 	end2 = ConnEnd(shape341041314, 2);
-	ConnRef * conn290033688 = ConnRef::createConnRef(router, end1, end2).get();
+	auto  conn290033688 = ConnRef::createConnRef(router, end1, end2);
 	conn290033688->makePathInvalid();
 	end1 = ConnEnd(shape81920772, 2);
 	end2 = ConnEnd(junction878282342);
-	ConnRef * conn281807178 = ConnRef::createConnRef(router, end1, end2).get();
+	auto  conn281807178 = ConnRef::createConnRef(router, end1, end2);
 	conn281807178->makePathInvalid();
 	end1 = ConnEnd(shape47540376, 2);
 	end2 = ConnEnd(junction213455341);
-	ConnRef * conn762966660 = ConnRef::createConnRef(router, end1, end2).get();
+	auto  conn762966660 = ConnRef::createConnRef(router, end1, end2);
 	conn762966660->makePathInvalid();
 	end1 = ConnEnd(junction213455341);
 	end2 = ConnEnd(junction878282342);
-	ConnRef * conn46508714 = ConnRef::createConnRef(router, end1, end2).get();
+	auto  conn46508714 = ConnRef::createConnRef(router, end1, end2);
 	conn46508714->makePathInvalid();
 	end1 = ConnEnd(shape206564314, 2);
 	end2 = ConnEnd(junction213455341);
-	ConnRef * conn385831514 = ConnRef::createConnRef(router, end1, end2).get();
+	auto  conn385831514 = ConnRef::createConnRef(router, end1, end2);
 	conn385831514->makePathInvalid();
 	router->processTransaction();
 

@@ -60,7 +60,7 @@ int main(void) {
     */
 
     // connRef9
-    ConnRef *connRef9 = ConnRef::createConnRef(router, 9).get();
+    auto connRef9 = ConnRef::createConnRef(router, 9);
     srcPt = ConnEnd(junctionRef6);
     connRef9->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(shapeRef8, 3);
@@ -69,7 +69,7 @@ int main(void) {
 
 #if 1
     // connRef10 - WITH BUG
-    ConnRef *connRef10 = ConnRef::createConnRef(router, 10).get();
+    auto connRef10 = ConnRef::createConnRef(router, 10);
     srcPt = ConnEnd(junctionRef6);
     connRef10->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(shapeRef1, 4);
@@ -77,7 +77,7 @@ int main(void) {
     connRef10->setRoutingType((ConnType)2);
 #else
     // connRef10 - WITHOUT BUG
-    ConnRef *connRef10 = ConnRef::createConnRef(router, 10).get();
+    auto connRef10 = ConnRef::createConnRef(router, 10);
     srcPt = ConnEnd(shapeRef1, 4);
     connRef10->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(junctionRef6);
@@ -85,7 +85,7 @@ int main(void) {
     connRef10->setRoutingType((ConnType)2);
 #endif
 
-    //    router->deleteConnector(connRef5->getPtr()->getPtr());
+    //    router->deleteConnector(connRef5);
     router->processTransaction();
 
     ConnRef *mergedConn = junctionRef6->removeJunctionAndMergeConnectors();

@@ -44,35 +44,35 @@ int main(void)
 
     ConnEnd dstPt(shapeRef1, CENTRE); 
     Point srcPt(1.5, 4);
-    ConnRef *connRef = ConnRef::createConnRef(router, srcPt, dstPt).get();
+    auto connRef = ConnRef::createConnRef(router, srcPt, dstPt);
     // Force inital callback:
     router->processTransaction();
     router->outputDiagram("output/connendmove-1");
 
     Point dstPt2(20, 20);
-    connRef->setDestEndpoint(dstPt2);
+    connRef.get()->setDestEndpoint(dstPt2);
     router->moveShape(shapeRef1, 0.5, 0);
 
     router->processTransaction();
     router->outputDiagram("output/connendmove-2");
 
     srcPt.x += 0.5;
-    connRef->setSourceEndpoint(srcPt);
+    connRef.get()->setSourceEndpoint(srcPt);
     router->moveShape(shapeRef1, 0.5, 0);
     router->moveShape(shapeRef2, 0, 0.5);
     
     srcPt.x += 0.5;
-    connRef->setSourceEndpoint(srcPt);
+    connRef.get()->setSourceEndpoint(srcPt);
     router->moveShape(shapeRef1, 0.5, 0);
     router->moveShape(shapeRef2, 0, 0.5);
     
     srcPt.x += 0.5;
-    connRef->setSourceEndpoint(srcPt);
+    connRef.get()->setSourceEndpoint(srcPt);
     router->moveShape(shapeRef1, 0.5, 0);
     router->moveShape(shapeRef2, 0, 0.5);
     
     srcPt.x += 0.5;
-    connRef->setSourceEndpoint(srcPt);
+    connRef.get()->setSourceEndpoint(srcPt);
     router->moveShape(shapeRef1, 0.5, 0);
     router->moveShape(shapeRef2, 0, 0.5);
     

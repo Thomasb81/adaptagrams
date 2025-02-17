@@ -63,7 +63,7 @@ int main(void) {
     poly92.ps[3] = Point(487.7758458190889, 34.07523140617849);
     ShapeRef::createShapeRef(router, poly92, 92);
 
-    ConnRef *connRef109 = ConnRef::createConnRef(router, 109).get();
+    auto connRef109 = ConnRef::createConnRef(router, 109);
     ConnEnd srcPt109(Point(510.6758458190889, 34.07523140617849), 4);
     connRef109->setSourceEndpoint(srcPt109);
     ConnEnd dstPt109(Point(334.3425124847556, 183.0752314071785), 15);
@@ -73,7 +73,7 @@ int main(void) {
     checkpoints109[0] = Checkpoint(Point(487.6758458190889, 55.07523140617849), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef109->setRoutingCheckpoints(checkpoints109);
 
-    ConnRef *connRef110 = ConnRef::createConnRef(router, 110).get();
+    auto connRef110 = ConnRef::createConnRef(router, 110);
     ConnEnd srcPt110(Point(510.6758458190889, 76.07523140617849), 4);
     connRef110->setSourceEndpoint(srcPt110);
     ConnEnd dstPt110(Point(334.3425124847556, 183.0752314071785), 15);

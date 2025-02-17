@@ -12,13 +12,13 @@ int main(void) {
     ShapeRef::createShapeRef(router, rect45);
     ConnEnd srcPt53(Point(51150,49850), 4);
     ConnEnd dstPt53(Point(51500,50350), 8);
-    ConnRef::createConnRef(router, srcPt53, dstPt53).get();
+    ConnRef::createConnRef(router, srcPt53, dstPt53);
     ConnEnd srcPt52(Point(52275,49850), 8);
     ConnEnd dstPt52(Point(51150,49925), 4);
-    ConnRef::createConnRef(router, srcPt52, dstPt52).get();
+    ConnRef::createConnRef(router, srcPt52, dstPt52);
     ConnEnd srcPt6(Point(51150,50500), 4);
     ConnEnd dstPt6(Point(51925,50000), 4);
-    ConnRef::createConnRef(router, srcPt6, dstPt6, 6).get();
+    ConnRef::createConnRef(router, srcPt6, dstPt6, 6);
     router->processTransaction();
     router->outputDiagram("output/infinity");
     delete router;

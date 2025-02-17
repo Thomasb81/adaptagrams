@@ -26,23 +26,23 @@ int main(void) {
     ShapeRef::createShapeRef(router, rect281096654, 281096654);
     ConnEnd srcPt342420237(Point(50425, 50800), 15);
     ConnEnd dstPt342420237(Point(50710, 50450), 4);
-    ConnRef::createConnRef(router, srcPt342420237, dstPt342420237, 342420237).get();
+    ConnRef::createConnRef(router, srcPt342420237, dstPt342420237, 342420237);
     ConnEnd srcPt352019675(Point(50990, 50500), 8);
     ConnEnd dstPt352019675(junctionRef478845150);
     //ConnEnd dstPt352019675(Point(50700, 51075), 15);
-    ConnRef::createConnRef(router, srcPt352019675, dstPt352019675, 352019675).get();
+    ConnRef::createConnRef(router, srcPt352019675, dstPt352019675, 352019675);
     ConnEnd srcPt42699400(junctionRef478845150);
     //ConnEnd srcPt42699400(Point(50700, 51075), 15);
     ConnEnd dstPt42699400(Point(50615, 51075), 8);
-    ConnRef::createConnRef(router, srcPt42699400, dstPt42699400, 42699400).get();
+    ConnRef::createConnRef(router, srcPt42699400, dstPt42699400, 42699400);
     ConnEnd srcPt94712625(Point(50710, 50550), 4);
     ConnEnd dstPt94712625(junctionRef478845150);
     //ConnEnd dstPt94712625(Point(50700, 51075), 15);
-    ConnRef::createConnRef(router, srcPt94712625, dstPt94712625, 94712625).get();
+    ConnRef::createConnRef(router, srcPt94712625, dstPt94712625, 94712625);
     
     ConnEnd srcPt92802970(Point(50990, 50450), 8);
     ConnEnd dstPt92802970(Point(51275, 50485), 1);
-    ConnRef *conn = ConnRef::createConnRef(router, srcPt92802970, dstPt92802970, 92802970).get();
+    auto conn = ConnRef::createConnRef(router, srcPt92802970, dstPt92802970, 92802970);
     std::vector<Checkpoint> checkpoints;
     checkpoints.push_back(Point(50000, 50000));
     checkpoints.push_back(Point(50200, 50000));
@@ -51,7 +51,7 @@ int main(void) {
     
     ConnEnd srcPt716502036(Point(50710, 50500), 4);
     ConnEnd dstPt716502036(Point(51800, 50925), 15);
-    ConnRef::createConnRef(router, srcPt716502036, dstPt716502036, 716502036).get();
+    ConnRef::createConnRef(router, srcPt716502036, dstPt716502036, 716502036);
     router->processTransaction();
     router->outputDiagram("output/checkpoints01-1");
     router->moveJunction(junctionRef478845150, 585, 0);

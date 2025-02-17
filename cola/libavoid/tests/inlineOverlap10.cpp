@@ -17,7 +17,7 @@ int main(void) {
     router->setRoutingOption((RoutingOption)4, true);
     router->setRoutingOption((RoutingOption)5, true);
     Polygon polygon;
-    ConnRef *connRef = nullptr;
+    std::shared_ptr<ConnRef> connRef = nullptr;
     ConnEnd srcPt;
     ConnEnd dstPt;
     PolyLine newRoute;
@@ -54,36 +54,36 @@ int main(void) {
     new ShapeConnectionPin(shapeRef346216920, 8, 1, 0.78481, true, 10, (ConnDirFlags) 8);
 
     // connRef13958908
-    connRef = ConnRef::createConnRef(router, 13958908).get();
+    connRef = ConnRef::createConnRef(router, 13958908);
     srcPt = ConnEnd(shapeRef346216920, 3);
-    connRef->setSourceEndpoint(srcPt);
+    connRef.get()->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(shapeRef320077872, 6);
-    connRef->setDestEndpoint(dstPt);
-    connRef->setRoutingType((ConnType)2);
+    connRef.get()->setDestEndpoint(dstPt);
+    connRef.get()->setRoutingType((ConnType)2);
 
     // connRef81482716
-    connRef = ConnRef::createConnRef(router, 81482716).get();
+    connRef = ConnRef::createConnRef(router, 81482716);
     srcPt = ConnEnd(shapeRef320077872, 8);
-    connRef->setSourceEndpoint(srcPt);
+    connRef.get()->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(shapeRef346216920, 7);
-    connRef->setDestEndpoint(dstPt);
-    connRef->setRoutingType((ConnType)2);
+    connRef.get()->setDestEndpoint(dstPt);
+    connRef.get()->setRoutingType((ConnType)2);
 
     // connRef180721992
-    connRef = ConnRef::createConnRef(router, 180721992).get();
+    connRef = ConnRef::createConnRef(router, 180721992);
     srcPt = ConnEnd(shapeRef320077872, 4);
-    connRef->setSourceEndpoint(srcPt);
+    connRef.get()->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(shapeRef346216920, 5);
-    connRef->setDestEndpoint(dstPt);
-    connRef->setRoutingType((ConnType)2);
+    connRef.get()->setDestEndpoint(dstPt);
+    connRef.get()->setRoutingType((ConnType)2);
 
     // connRef273666240
-    connRef = ConnRef::createConnRef(router, 273666240).get();
+    connRef = ConnRef::createConnRef(router, 273666240);
     srcPt = ConnEnd(shapeRef320077872, 2);
-    connRef->setSourceEndpoint(srcPt);
+    connRef.get()->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(shapeRef346216920, 1);
-    connRef->setDestEndpoint(dstPt);
-    connRef->setRoutingType((ConnType)2);
+    connRef.get()->setDestEndpoint(dstPt);
+    connRef.get()->setRoutingType((ConnType)2);
 
     router->processTransaction();
     router->outputDiagram("output/inlineoverlap10");

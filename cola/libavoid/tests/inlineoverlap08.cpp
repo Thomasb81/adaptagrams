@@ -84,28 +84,28 @@ int main(void) {
     poly10.ps[3] = Point(155, -185);
     ShapeRef::createShapeRef(router, poly10, 10);
 
-    ConnRef *connRef11 = ConnRef::createConnRef(router, 11).get();
+    auto connRef11 = ConnRef::createConnRef(router, 11);
     ConnEnd srcPt11(Point(20, -47), 15);
     connRef11->setSourceEndpoint(srcPt11);
     ConnEnd dstPt11(Point(57, -165), 15);
     connRef11->setDestEndpoint(dstPt11);
     connRef11->setRoutingType((ConnType)2);
 
-    ConnRef *connRef12 = ConnRef::createConnRef(router, 12).get();
+    auto connRef12 = ConnRef::createConnRef(router, 12);
     ConnEnd srcPt12(Point(61, -165), 15);
     connRef12->setSourceEndpoint(srcPt12);
     ConnEnd dstPt12(Point(57, -20), 15);
     connRef12->setDestEndpoint(dstPt12);
     connRef12->setRoutingType((ConnType)2);
 
-    ConnRef *connRef13 = ConnRef::createConnRef(router, 13).get();
+    auto connRef13 = ConnRef::createConnRef(router, 13);
     ConnEnd srcPt13(Point(15, -74), 15);
     connRef13->setSourceEndpoint(srcPt13);
     ConnEnd dstPt13(Point(65, -20), 15);
     connRef13->setDestEndpoint(dstPt13);
     connRef13->setRoutingType((ConnType)2);
 
-    ConnRef *connRef14 = ConnRef::createConnRef(router, 14).get();
+    auto connRef14 = ConnRef::createConnRef(router, 14);
     ConnEnd srcPt14(Point(61, -20), 15);
     connRef14->setSourceEndpoint(srcPt14);
     ConnEnd dstPt14(Point(61, -24), 15);

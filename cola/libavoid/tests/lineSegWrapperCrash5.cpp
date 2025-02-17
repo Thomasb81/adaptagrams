@@ -1037,840 +1037,840 @@ int main(void) {
     poly3.ps[3] = Point(1238.92, -22.1578);
     ShapeRef::createShapeRef(router, poly3, 3);
     
-    ConnRef *connRef211 = ConnRef::createConnRef(router, 211).get();
+    auto connRef211 = ConnRef::createConnRef(router, 211);
     ConnEnd srcPt211(Point(507.924, 435.557), 15);
     connRef211->setSourceEndpoint(srcPt211);
     ConnEnd dstPt211(Point(557.924, 435.557), 15);
     connRef211->setDestEndpoint(dstPt211);
     connRef211->setRoutingType((ConnType)2);
 
-    ConnRef *connRef212 = ConnRef::createConnRef(router, 212).get();
+    auto connRef212 = ConnRef::createConnRef(router, 212);
     ConnEnd srcPt212(Point(627.924, 527.557), 15);
     connRef212->setSourceEndpoint(srcPt212);
     ConnEnd dstPt212(Point(677.924, 527.557), 15);
     connRef212->setDestEndpoint(dstPt212);
     connRef212->setRoutingType((ConnType)2);
 
-    ConnRef *connRef213 = ConnRef::createConnRef(router, 213).get();
+    auto connRef213 = ConnRef::createConnRef(router, 213);
     ConnEnd srcPt213(Point(627.924, 435.557), 15);
     connRef213->setSourceEndpoint(srcPt213);
     ConnEnd dstPt213(Point(677.924, 435.557), 15);
     connRef213->setDestEndpoint(dstPt213);
     connRef213->setRoutingType((ConnType)2);
 
-    ConnRef *connRef214 = ConnRef::createConnRef(router, 214).get();
+    auto connRef214 = ConnRef::createConnRef(router, 214);
     ConnEnd srcPt214(Point(867.924, 343.557), 15);
     connRef214->setSourceEndpoint(srcPt214);
     ConnEnd dstPt214(Point(917.924, 343.557), 15);
     connRef214->setDestEndpoint(dstPt214);
     connRef214->setRoutingType((ConnType)2);
 
-    ConnRef *connRef215 = ConnRef::createConnRef(router, 215).get();
+    auto connRef215 = ConnRef::createConnRef(router, 215);
     ConnEnd srcPt215(Point(867.924, 435.557), 15);
     connRef215->setSourceEndpoint(srcPt215);
     ConnEnd dstPt215(Point(917.924, 435.557), 15);
     connRef215->setDestEndpoint(dstPt215);
     connRef215->setRoutingType((ConnType)2);
 
-    ConnRef *connRef216 = ConnRef::createConnRef(router, 216).get();
+    auto connRef216 = ConnRef::createConnRef(router, 216);
     ConnEnd srcPt216(Point(867.924, 161.557), 15);
     connRef216->setSourceEndpoint(srcPt216);
     ConnEnd dstPt216(Point(917.924, 161.557), 15);
     connRef216->setDestEndpoint(dstPt216);
     connRef216->setRoutingType((ConnType)2);
 
-    ConnRef *connRef217 = ConnRef::createConnRef(router, 217).get();
+    auto connRef217 = ConnRef::createConnRef(router, 217);
     ConnEnd srcPt217(Point(747.924, 343.557), 15);
     connRef217->setSourceEndpoint(srcPt217);
     ConnEnd dstPt217(Point(797.924, 343.557), 15);
     connRef217->setDestEndpoint(dstPt217);
     connRef217->setRoutingType((ConnType)2);
 
-    ConnRef *connRef218 = ConnRef::createConnRef(router, 218).get();
+    auto connRef218 = ConnRef::createConnRef(router, 218);
     ConnEnd srcPt218(Point(1088.92, 388.557), 15);
     connRef218->setSourceEndpoint(srcPt218);
     ConnEnd dstPt218(Point(1138.92, 435.557), 15);
     connRef218->setDestEndpoint(dstPt218);
     connRef218->setRoutingType((ConnType)2);
 
-    ConnRef *connRef219 = ConnRef::createConnRef(router, 219).get();
+    auto connRef219 = ConnRef::createConnRef(router, 219);
     ConnEnd srcPt219(Point(1208.92, 388.557), 15);
     connRef219->setSourceEndpoint(srcPt219);
     ConnEnd dstPt219(Point(1258.92, 435.557), 15);
     connRef219->setDestEndpoint(dstPt219);
     connRef219->setRoutingType((ConnType)2);
 
-    ConnRef *connRef220 = ConnRef::createConnRef(router, 220).get();
+    auto connRef220 = ConnRef::createConnRef(router, 220);
     ConnEnd srcPt220(Point(1088.92, 152.342), 15);
     connRef220->setSourceEndpoint(srcPt220);
     ConnEnd dstPt220(Point(1138.92, 161.557), 15);
     connRef220->setDestEndpoint(dstPt220);
     connRef220->setRoutingType((ConnType)2);
 
-    ConnRef *connRef221 = ConnRef::createConnRef(router, 221).get();
+    auto connRef221 = ConnRef::createConnRef(router, 221);
     ConnEnd srcPt221(Point(1088.92, 60.3422), 15);
     connRef221->setSourceEndpoint(srcPt221);
     ConnEnd dstPt221(Point(1138.92, 60.3422), 15);
     connRef221->setDestEndpoint(dstPt221);
     connRef221->setRoutingType((ConnType)2);
 
-    ConnRef *connRef222 = ConnRef::createConnRef(router, 222).get();
+    auto connRef222 = ConnRef::createConnRef(router, 222);
     ConnEnd srcPt222(Point(1208.92, 152.342), 15);
     connRef222->setSourceEndpoint(srcPt222);
     ConnEnd dstPt222(Point(1258.92, 161.557), 15);
     connRef222->setDestEndpoint(dstPt222);
     connRef222->setRoutingType((ConnType)2);
 
-    ConnRef *connRef223 = ConnRef::createConnRef(router, 223).get();
+    auto connRef223 = ConnRef::createConnRef(router, 223);
     ConnEnd srcPt223(Point(1088.92, -60.6578), 15);
     connRef223->setSourceEndpoint(srcPt223);
     ConnEnd dstPt223(Point(1138.92, -60.6578), 15);
     connRef223->setDestEndpoint(dstPt223);
     connRef223->setRoutingType((ConnType)2);
 
-    ConnRef *connRef224 = ConnRef::createConnRef(router, 224).get();
+    auto connRef224 = ConnRef::createConnRef(router, 224);
     ConnEnd srcPt224(Point(747.924, 161.557), 15);
     connRef224->setSourceEndpoint(srcPt224);
     ConnEnd dstPt224(Point(797.924, 161.557), 15);
     connRef224->setDestEndpoint(dstPt224);
     connRef224->setRoutingType((ConnType)2);
 
-    ConnRef *connRef225 = ConnRef::createConnRef(router, 225).get();
+    auto connRef225 = ConnRef::createConnRef(router, 225);
     ConnEnd srcPt225(Point(747.924, 860.057), 15);
     connRef225->setSourceEndpoint(srcPt225);
     ConnEnd dstPt225(Point(797.924, 860.057), 15);
     connRef225->setDestEndpoint(dstPt225);
     connRef225->setRoutingType((ConnType)2);
 
-    ConnRef *connRef226 = ConnRef::createConnRef(router, 226).get();
+    auto connRef226 = ConnRef::createConnRef(router, 226);
     ConnEnd srcPt226(Point(737.924, -110.658), 15);
     connRef226->setSourceEndpoint(srcPt226);
     ConnEnd dstPt226(Point(737.924, -60.6578), 15);
     connRef226->setDestEndpoint(dstPt226);
     connRef226->setRoutingType((ConnType)2);
 
-    ConnRef *connRef227 = ConnRef::createConnRef(router, 227).get();
+    auto connRef227 = ConnRef::createConnRef(router, 227);
     ConnEnd srcPt227(Point(137.924, -15.1578), 15);
     connRef227->setSourceEndpoint(srcPt227);
     ConnEnd dstPt227(Point(137.924, 34.8422), 15);
     connRef227->setDestEndpoint(dstPt227);
     connRef227->setRoutingType((ConnType)2);
 
-    ConnRef *connRef228 = ConnRef::createConnRef(router, 228).get();
+    auto connRef228 = ConnRef::createConnRef(router, 228);
     ConnEnd srcPt228(Point(137.924, 111.557), 15);
     connRef228->setSourceEndpoint(srcPt228);
     ConnEnd dstPt228(Point(137.924, 161.557), 15);
     connRef228->setDestEndpoint(dstPt228);
     connRef228->setRoutingType((ConnType)2);
 
-    ConnRef *connRef229 = ConnRef::createConnRef(router, 229).get();
+    auto connRef229 = ConnRef::createConnRef(router, 229);
     ConnEnd srcPt229(Point(257.924, 111.557), 15);
     connRef229->setSourceEndpoint(srcPt229);
     ConnEnd dstPt229(Point(257.924, 161.557), 15);
     connRef229->setDestEndpoint(dstPt229);
     connRef229->setRoutingType((ConnType)2);
 
-    ConnRef *connRef230 = ConnRef::createConnRef(router, 230).get();
+    auto connRef230 = ConnRef::createConnRef(router, 230);
     ConnEnd srcPt230(Point(259.924, 213.557), 15);
     connRef230->setSourceEndpoint(srcPt230);
     ConnEnd dstPt230(Point(197.924, 213.557), 15);
     connRef230->setDestEndpoint(dstPt230);
     connRef230->setRoutingType((ConnType)2);
 
-    ConnRef *connRef231 = ConnRef::createConnRef(router, 231).get();
+    auto connRef231 = ConnRef::createConnRef(router, 231);
     ConnEnd srcPt231(Point(257.924, 265.557), 15);
     connRef231->setSourceEndpoint(srcPt231);
     ConnEnd dstPt231(Point(257.924, 315.557), 15);
     connRef231->setDestEndpoint(dstPt231);
     connRef231->setRoutingType((ConnType)2);
 
-    ConnRef *connRef232 = ConnRef::createConnRef(router, 232).get();
+    auto connRef232 = ConnRef::createConnRef(router, 232);
     ConnEnd srcPt232(Point(139.924, 367.557), 15);
     connRef232->setSourceEndpoint(srcPt232);
     ConnEnd dstPt232(Point(77.9242, 367.557), 15);
     connRef232->setDestEndpoint(dstPt232);
     connRef232->setRoutingType((ConnType)2);
 
-    ConnRef *connRef233 = ConnRef::createConnRef(router, 233).get();
+    auto connRef233 = ConnRef::createConnRef(router, 233);
     ConnEnd srcPt233(Point(137.924, 477.557), 15);
     connRef233->setSourceEndpoint(srcPt233);
     ConnEnd dstPt233(Point(137.924, 527.557), 15);
     connRef233->setDestEndpoint(dstPt233);
     connRef233->setRoutingType((ConnType)2);
 
-    ConnRef *connRef234 = ConnRef::createConnRef(router, 234).get();
+    auto connRef234 = ConnRef::createConnRef(router, 234);
     ConnEnd srcPt234(Point(137.924, 569.557), 15);
     connRef234->setSourceEndpoint(srcPt234);
     ConnEnd dstPt234(Point(137.924, 619.557), 15);
     connRef234->setDestEndpoint(dstPt234);
     connRef234->setRoutingType((ConnType)2);
 
-    ConnRef *connRef235 = ConnRef::createConnRef(router, 235).get();
+    auto connRef235 = ConnRef::createConnRef(router, 235);
     ConnEnd srcPt235(Point(139.924, 661.557), 15);
     connRef235->setSourceEndpoint(srcPt235);
     ConnEnd dstPt235(Point(77.9242, 661.557), 15);
     connRef235->setDestEndpoint(dstPt235);
     connRef235->setRoutingType((ConnType)2);
 
-    ConnRef *connRef236 = ConnRef::createConnRef(router, 236).get();
+    auto connRef236 = ConnRef::createConnRef(router, 236);
     ConnEnd srcPt236(Point(137.924, 713.557), 15);
     connRef236->setSourceEndpoint(srcPt236);
     ConnEnd dstPt236(Point(137.924, 763.557), 15);
     connRef236->setDestEndpoint(dstPt236);
     connRef236->setRoutingType((ConnType)2);
 
-    ConnRef *connRef237 = ConnRef::createConnRef(router, 237).get();
+    auto connRef237 = ConnRef::createConnRef(router, 237);
     ConnEnd srcPt237(Point(257.924, 713.557), 15);
     connRef237->setSourceEndpoint(srcPt237);
     ConnEnd dstPt237(Point(257.924, 763.557), 15);
     connRef237->setDestEndpoint(dstPt237);
     connRef237->setRoutingType((ConnType)2);
 
-    ConnRef *connRef238 = ConnRef::createConnRef(router, 238).get();
+    auto connRef238 = ConnRef::createConnRef(router, 238);
     ConnEnd srcPt238(Point(377.924, 577.557), 15);
     connRef238->setSourceEndpoint(srcPt238);
     ConnEnd dstPt238(Point(377.924, 627.557), 15);
     connRef238->setDestEndpoint(dstPt238);
     connRef238->setRoutingType((ConnType)2);
 
-    ConnRef *connRef239 = ConnRef::createConnRef(router, 239).get();
+    auto connRef239 = ConnRef::createConnRef(router, 239);
     ConnEnd srcPt239(Point(377.924, 713.557), 15);
     connRef239->setSourceEndpoint(srcPt239);
     ConnEnd dstPt239(Point(377.924, 763.557), 15);
     connRef239->setDestEndpoint(dstPt239);
     connRef239->setRoutingType((ConnType)2);
 
-    ConnRef *connRef240 = ConnRef::createConnRef(router, 240).get();
+    auto connRef240 = ConnRef::createConnRef(router, 240);
     ConnEnd srcPt240(Point(497.924, 713.557), 15);
     connRef240->setSourceEndpoint(srcPt240);
     ConnEnd dstPt240(Point(497.924, 763.557), 15);
     connRef240->setDestEndpoint(dstPt240);
     connRef240->setRoutingType((ConnType)2);
 
-    ConnRef *connRef241 = ConnRef::createConnRef(router, 241).get();
+    auto connRef241 = ConnRef::createConnRef(router, 241);
     ConnEnd srcPt241(Point(617.924, 713.557), 15);
     connRef241->setSourceEndpoint(srcPt241);
     ConnEnd dstPt241(Point(617.924, 763.557), 15);
     connRef241->setDestEndpoint(dstPt241);
     connRef241->setRoutingType((ConnType)2);
 
-    ConnRef *connRef242 = ConnRef::createConnRef(router, 242).get();
+    auto connRef242 = ConnRef::createConnRef(router, 242);
     ConnEnd srcPt242(Point(497.924, 853.057), 15);
     connRef242->setSourceEndpoint(srcPt242);
     ConnEnd dstPt242(Point(497.924, 903.057), 15);
     connRef242->setDestEndpoint(dstPt242);
     connRef242->setRoutingType((ConnType)2);
 
-    ConnRef *connRef243 = ConnRef::createConnRef(router, 243).get();
+    auto connRef243 = ConnRef::createConnRef(router, 243);
     ConnEnd srcPt243(Point(617.924, 853.057), 15);
     connRef243->setSourceEndpoint(srcPt243);
     ConnEnd dstPt243(Point(617.924, 903.057), 15);
     connRef243->setDestEndpoint(dstPt243);
     connRef243->setRoutingType((ConnType)2);
 
-    ConnRef *connRef244 = ConnRef::createConnRef(router, 244).get();
+    auto connRef244 = ConnRef::createConnRef(router, 244);
     ConnEnd srcPt244(Point(377.924, 111.557), 15);
     connRef244->setSourceEndpoint(srcPt244);
     ConnEnd dstPt244(Point(377.924, 161.557), 15);
     connRef244->setDestEndpoint(dstPt244);
     connRef244->setRoutingType((ConnType)2);
 
-    ConnRef *connRef245 = ConnRef::createConnRef(router, 245).get();
+    auto connRef245 = ConnRef::createConnRef(router, 245);
     ConnEnd srcPt245(Point(377.924, -22.6578), 15);
     connRef245->setSourceEndpoint(srcPt245);
     ConnEnd dstPt245(Point(377.924, 27.3422), 15);
     connRef245->setDestEndpoint(dstPt245);
     connRef245->setRoutingType((ConnType)2);
 
-    ConnRef *connRef246 = ConnRef::createConnRef(router, 246).get();
+    auto connRef246 = ConnRef::createConnRef(router, 246);
     ConnEnd srcPt246(Point(497.924, -4.15778), 15);
     connRef246->setSourceEndpoint(srcPt246);
     ConnEnd dstPt246(Point(497.924, 45.8422), 15);
     connRef246->setDestEndpoint(dstPt246);
     connRef246->setRoutingType((ConnType)2);
 
-    ConnRef *connRef247 = ConnRef::createConnRef(router, 247).get();
+    auto connRef247 = ConnRef::createConnRef(router, 247);
     ConnEnd srcPt247(Point(617.924, -4.15778), 15);
     connRef247->setSourceEndpoint(srcPt247);
     ConnEnd dstPt247(Point(617.924, 45.8422), 15);
     connRef247->setDestEndpoint(dstPt247);
     connRef247->setRoutingType((ConnType)2);
 
-    ConnRef *connRef248 = ConnRef::createConnRef(router, 248).get();
+    auto connRef248 = ConnRef::createConnRef(router, 248);
     ConnEnd srcPt248(Point(737.924, 524.057), 15);
     connRef248->setSourceEndpoint(srcPt248);
     ConnEnd dstPt248(Point(737.924, 574.057), 15);
     connRef248->setDestEndpoint(dstPt248);
     connRef248->setRoutingType((ConnType)2);
 
-    ConnRef *connRef249 = ConnRef::createConnRef(router, 249).get();
+    auto connRef249 = ConnRef::createConnRef(router, 249);
     ConnEnd srcPt249(Point(497.924, 477.557), 15);
     connRef249->setSourceEndpoint(srcPt249);
     ConnEnd dstPt249(Point(497.924, 527.557), 15);
     connRef249->setDestEndpoint(dstPt249);
     connRef249->setRoutingType((ConnType)2);
 
-    ConnRef *connRef250 = ConnRef::createConnRef(router, 250).get();
+    auto connRef250 = ConnRef::createConnRef(router, 250);
     ConnEnd srcPt250(Point(497.924, 385.557), 15);
     connRef250->setSourceEndpoint(srcPt250);
     ConnEnd dstPt250(Point(497.924, 435.557), 15);
     connRef250->setDestEndpoint(dstPt250);
     connRef250->setRoutingType((ConnType)2);
 
-    ConnRef *connRef251 = ConnRef::createConnRef(router, 251).get();
+    auto connRef251 = ConnRef::createConnRef(router, 251);
     ConnEnd srcPt251(Point(617.924, 477.557), 15);
     connRef251->setSourceEndpoint(srcPt251);
     ConnEnd dstPt251(Point(617.924, 527.557), 15);
     connRef251->setDestEndpoint(dstPt251);
     connRef251->setRoutingType((ConnType)2);
 
-    ConnRef *connRef252 = ConnRef::createConnRef(router, 252).get();
+    auto connRef252 = ConnRef::createConnRef(router, 252);
     ConnEnd srcPt252(Point(617.924, 385.557), 15);
     connRef252->setSourceEndpoint(srcPt252);
     ConnEnd dstPt252(Point(617.924, 435.557), 15);
     connRef252->setDestEndpoint(dstPt252);
     connRef252->setRoutingType((ConnType)2);
 
-    ConnRef *connRef253 = ConnRef::createConnRef(router, 253).get();
+    auto connRef253 = ConnRef::createConnRef(router, 253);
     ConnEnd srcPt253(Point(857.924, 293.557), 15);
     connRef253->setSourceEndpoint(srcPt253);
     ConnEnd dstPt253(Point(857.924, 343.557), 15);
     connRef253->setDestEndpoint(dstPt253);
     connRef253->setRoutingType((ConnType)2);
 
-    ConnRef *connRef254 = ConnRef::createConnRef(router, 254).get();
+    auto connRef254 = ConnRef::createConnRef(router, 254);
     ConnEnd srcPt254(Point(857.924, 385.557), 15);
     connRef254->setSourceEndpoint(srcPt254);
     ConnEnd dstPt254(Point(857.924, 435.557), 15);
     connRef254->setDestEndpoint(dstPt254);
     connRef254->setRoutingType((ConnType)2);
 
-    ConnRef *connRef255 = ConnRef::createConnRef(router, 255).get();
+    auto connRef255 = ConnRef::createConnRef(router, 255);
     ConnEnd srcPt255(Point(857.924, 111.557), 15);
     connRef255->setSourceEndpoint(srcPt255);
     ConnEnd dstPt255(Point(857.924, 161.557), 15);
     connRef255->setDestEndpoint(dstPt255);
     connRef255->setRoutingType((ConnType)2);
 
-    ConnRef *connRef256 = ConnRef::createConnRef(router, 256).get();
+    auto connRef256 = ConnRef::createConnRef(router, 256);
     ConnEnd srcPt256(Point(737.924, 293.557), 15);
     connRef256->setSourceEndpoint(srcPt256);
     ConnEnd dstPt256(Point(737.924, 343.557), 15);
     connRef256->setDestEndpoint(dstPt256);
     connRef256->setRoutingType((ConnType)2);
 
-    ConnRef *connRef257 = ConnRef::createConnRef(router, 257).get();
+    auto connRef257 = ConnRef::createConnRef(router, 257);
     ConnEnd srcPt257(Point(1078.92, 338.557), 15);
     connRef257->setSourceEndpoint(srcPt257);
     ConnEnd dstPt257(Point(1078.92, 388.557), 15);
     connRef257->setDestEndpoint(dstPt257);
     connRef257->setRoutingType((ConnType)2);
 
-    ConnRef *connRef258 = ConnRef::createConnRef(router, 258).get();
+    auto connRef258 = ConnRef::createConnRef(router, 258);
     ConnEnd srcPt258(Point(1198.92, 338.557), 15);
     connRef258->setSourceEndpoint(srcPt258);
     ConnEnd dstPt258(Point(1198.92, 388.557), 15);
     connRef258->setDestEndpoint(dstPt258);
     connRef258->setRoutingType((ConnType)2);
 
-    ConnRef *connRef259 = ConnRef::createConnRef(router, 259).get();
+    auto connRef259 = ConnRef::createConnRef(router, 259);
     ConnEnd srcPt259(Point(1078.92, 102.342), 15);
     connRef259->setSourceEndpoint(srcPt259);
     ConnEnd dstPt259(Point(1078.92, 152.342), 15);
     connRef259->setDestEndpoint(dstPt259);
     connRef259->setRoutingType((ConnType)2);
 
-    ConnRef *connRef260 = ConnRef::createConnRef(router, 260).get();
+    auto connRef260 = ConnRef::createConnRef(router, 260);
     ConnEnd srcPt260(Point(1078.92, 10.3422), 15);
     connRef260->setSourceEndpoint(srcPt260);
     ConnEnd dstPt260(Point(1078.92, 60.3422), 15);
     connRef260->setDestEndpoint(dstPt260);
     connRef260->setRoutingType((ConnType)2);
 
-    ConnRef *connRef261 = ConnRef::createConnRef(router, 261).get();
+    auto connRef261 = ConnRef::createConnRef(router, 261);
     ConnEnd srcPt261(Point(1198.92, 102.342), 15);
     connRef261->setSourceEndpoint(srcPt261);
     ConnEnd dstPt261(Point(1198.92, 152.342), 15);
     connRef261->setDestEndpoint(dstPt261);
     connRef261->setRoutingType((ConnType)2);
 
-    ConnRef *connRef262 = ConnRef::createConnRef(router, 262).get();
+    auto connRef262 = ConnRef::createConnRef(router, 262);
     ConnEnd srcPt262(Point(1078.92, -110.658), 15);
     connRef262->setSourceEndpoint(srcPt262);
     ConnEnd dstPt262(Point(1078.92, -60.6578), 15);
     connRef262->setDestEndpoint(dstPt262);
     connRef262->setRoutingType((ConnType)2);
 
-    ConnRef *connRef263 = ConnRef::createConnRef(router, 263).get();
+    auto connRef263 = ConnRef::createConnRef(router, 263);
     ConnEnd srcPt263(Point(958.924, 230.557), 15);
     connRef263->setSourceEndpoint(srcPt263);
     ConnEnd dstPt263(Point(958.924, 280.557), 15);
     connRef263->setDestEndpoint(dstPt263);
     connRef263->setRoutingType((ConnType)2);
 
-    ConnRef *connRef264 = ConnRef::createConnRef(router, 264).get();
+    auto connRef264 = ConnRef::createConnRef(router, 264);
     ConnEnd srcPt264(Point(737.924, 111.557), 15);
     connRef264->setSourceEndpoint(srcPt264);
     ConnEnd dstPt264(Point(737.924, 161.557), 15);
     connRef264->setDestEndpoint(dstPt264);
     connRef264->setRoutingType((ConnType)2);
 
-    ConnRef *connRef265 = ConnRef::createConnRef(router, 265).get();
+    auto connRef265 = ConnRef::createConnRef(router, 265);
     ConnEnd srcPt265(Point(737.924, 810.057), 15);
     connRef265->setSourceEndpoint(srcPt265);
     ConnEnd dstPt265(Point(737.924, 860.057), 15);
     connRef265->setDestEndpoint(dstPt265);
     connRef265->setRoutingType((ConnType)2);
 
-    ConnRef *connRef266 = ConnRef::createConnRef(router, 266).get();
+    auto connRef266 = ConnRef::createConnRef(router, 266);
     ConnEnd srcPt266(Point(77.9242, 161.557), 15);
     connRef266->setSourceEndpoint(srcPt266);
     ConnEnd dstPt266(Point(40.9242, 252.5), 15);
     connRef266->setDestEndpoint(dstPt266);
     connRef266->setRoutingType((ConnType)2);
 
-    ConnRef *connRef267 = ConnRef::createConnRef(router, 267).get();
+    auto connRef267 = ConnRef::createConnRef(router, 267);
     ConnEnd srcPt267(Point(77.9242, 763.557), 15);
     connRef267->setSourceEndpoint(srcPt267);
     ConnEnd dstPt267(Point(-46.0758, 329.75), 15);
     connRef267->setDestEndpoint(dstPt267);
     connRef267->setRoutingType((ConnType)2);
 
-    ConnRef *connRef148 = ConnRef::createConnRef(router, 148).get();
+    auto connRef148 = ConnRef::createConnRef(router, 148);
     ConnEnd srcPt148(Point(1018.92, -60.6578), 15);
     connRef148->setSourceEndpoint(srcPt148);
     ConnEnd dstPt148(Point(1068.92, -60.6578), 15);
     connRef148->setDestEndpoint(dstPt148);
     connRef148->setRoutingType((ConnType)2);
 
-    ConnRef *connRef149 = ConnRef::createConnRef(router, 149).get();
+    auto connRef149 = ConnRef::createConnRef(router, 149);
     ConnEnd srcPt149(Point(1138.92, 161.557), 15);
     connRef149->setSourceEndpoint(srcPt149);
     ConnEnd dstPt149(Point(1188.92, 152.342), 15);
     connRef149->setDestEndpoint(dstPt149);
     connRef149->setRoutingType((ConnType)2);
 
-    ConnRef *connRef150 = ConnRef::createConnRef(router, 150).get();
+    auto connRef150 = ConnRef::createConnRef(router, 150);
     ConnEnd srcPt150(Point(1138.92, 435.557), 15);
     connRef150->setSourceEndpoint(srcPt150);
     ConnEnd dstPt150(Point(1188.92, 388.557), 15);
     connRef150->setDestEndpoint(dstPt150);
     connRef150->setRoutingType((ConnType)2);
 
-    ConnRef *connRef151 = ConnRef::createConnRef(router, 151).get();
+    auto connRef151 = ConnRef::createConnRef(router, 151);
     ConnEnd srcPt151(Point(317.924, 763.557), 15);
     connRef151->setSourceEndpoint(srcPt151);
     ConnEnd dstPt151(Point(367.924, 627.557), 15);
     connRef151->setDestEndpoint(dstPt151);
     connRef151->setRoutingType((ConnType)2);
 
-    ConnRef *connRef152 = ConnRef::createConnRef(router, 152).get();
+    auto connRef152 = ConnRef::createConnRef(router, 152);
     ConnEnd srcPt152(Point(317.924, 763.557), 15);
     connRef152->setSourceEndpoint(srcPt152);
     ConnEnd dstPt152(Point(367.924, 763.557), 15);
     connRef152->setDestEndpoint(dstPt152);
     connRef152->setRoutingType((ConnType)2);
 
-    ConnRef *connRef153 = ConnRef::createConnRef(router, 153).get();
+    auto connRef153 = ConnRef::createConnRef(router, 153);
     ConnEnd srcPt153(Point(317.924, 763.557), 15);
     connRef153->setSourceEndpoint(srcPt153);
     ConnEnd dstPt153(Point(487.924, 903.057), 15);
     connRef153->setDestEndpoint(dstPt153);
     connRef153->setRoutingType((ConnType)2);
 
-    ConnRef *connRef154 = ConnRef::createConnRef(router, 154).get();
+    auto connRef154 = ConnRef::createConnRef(router, 154);
     ConnEnd srcPt154(Point(317.924, 763.557), 15);
     connRef154->setSourceEndpoint(srcPt154);
     ConnEnd dstPt154(Point(727.924, 574.057), 15);
     connRef154->setDestEndpoint(dstPt154);
     connRef154->setRoutingType((ConnType)2);
 
-    ConnRef *connRef155 = ConnRef::createConnRef(router, 155).get();
+    auto connRef155 = ConnRef::createConnRef(router, 155);
     ConnEnd srcPt155(Point(557.924, 903.057), 15);
     connRef155->setSourceEndpoint(srcPt155);
     ConnEnd dstPt155(Point(607.924, 903.057), 15);
     connRef155->setDestEndpoint(dstPt155);
     connRef155->setRoutingType((ConnType)2);
 
-    ConnRef *connRef156 = ConnRef::createConnRef(router, 156).get();
+    auto connRef156 = ConnRef::createConnRef(router, 156);
     ConnEnd srcPt156(Point(197.924, 763.557), 15);
     connRef156->setSourceEndpoint(srcPt156);
     ConnEnd dstPt156(Point(247.924, 763.557), 15);
     connRef156->setDestEndpoint(dstPt156);
     connRef156->setRoutingType((ConnType)2);
 
-    ConnRef *connRef157 = ConnRef::createConnRef(router, 157).get();
+    auto connRef157 = ConnRef::createConnRef(router, 157);
     ConnEnd srcPt157(Point(147.924, 161.557), 15);
     connRef157->setSourceEndpoint(srcPt157);
     ConnEnd dstPt157(Point(197.924, 161.557), 15);
     connRef157->setDestEndpoint(dstPt157);
     connRef157->setRoutingType((ConnType)2);
 
-    ConnRef *connRef158 = ConnRef::createConnRef(router, 158).get();
+    auto connRef158 = ConnRef::createConnRef(router, 158);
     ConnEnd srcPt158(Point(197.924, 161.557), 15);
     connRef158->setSourceEndpoint(srcPt158);
     ConnEnd dstPt158(Point(247.924, 161.557), 15);
     connRef158->setDestEndpoint(dstPt158);
     connRef158->setRoutingType((ConnType)2);
 
-    ConnRef *connRef159 = ConnRef::createConnRef(router, 159).get();
+    auto connRef159 = ConnRef::createConnRef(router, 159);
     ConnEnd srcPt159(Point(197.924, 161.557), 15);
     connRef159->setSourceEndpoint(srcPt159);
     ConnEnd dstPt159(Point(197.924, 203.557), 15);
     connRef159->setDestEndpoint(dstPt159);
     connRef159->setRoutingType((ConnType)2);
 
-    ConnRef *connRef160 = ConnRef::createConnRef(router, 160).get();
+    auto connRef160 = ConnRef::createConnRef(router, 160);
     ConnEnd srcPt160(Point(317.924, 161.557), 15);
     connRef160->setSourceEndpoint(srcPt160);
     ConnEnd dstPt160(Point(727.924, -60.6578), 15);
     connRef160->setDestEndpoint(dstPt160);
     connRef160->setRoutingType((ConnType)2);
 
-    ConnRef *connRef161 = ConnRef::createConnRef(router, 161).get();
+    auto connRef161 = ConnRef::createConnRef(router, 161);
     ConnEnd srcPt161(Point(317.924, 161.557), 15);
     connRef161->setSourceEndpoint(srcPt161);
     ConnEnd dstPt161(Point(367.924, 161.557), 15);
     connRef161->setDestEndpoint(dstPt161);
     connRef161->setRoutingType((ConnType)2);
 
-    ConnRef *connRef162 = ConnRef::createConnRef(router, 162).get();
+    auto connRef162 = ConnRef::createConnRef(router, 162);
     ConnEnd srcPt162(Point(317.924, 161.557), 15);
     connRef162->setSourceEndpoint(srcPt162);
     ConnEnd dstPt162(Point(367.924, 27.3422), 15);
     connRef162->setDestEndpoint(dstPt162);
     connRef162->setRoutingType((ConnType)2);
 
-    ConnRef *connRef163 = ConnRef::createConnRef(router, 163).get();
+    auto connRef163 = ConnRef::createConnRef(router, 163);
     ConnEnd srcPt163(Point(317.924, 161.557), 15);
     connRef163->setSourceEndpoint(srcPt163);
     ConnEnd dstPt163(Point(487.924, 435.557), 15);
     connRef163->setDestEndpoint(dstPt163);
     connRef163->setRoutingType((ConnType)2);
 
-    ConnRef *connRef164 = ConnRef::createConnRef(router, 164).get();
+    auto connRef164 = ConnRef::createConnRef(router, 164);
     ConnEnd srcPt164(Point(437.924, 763.557), 15);
     connRef164->setSourceEndpoint(srcPt164);
     ConnEnd dstPt164(Point(487.924, 763.557), 15);
     connRef164->setDestEndpoint(dstPt164);
     connRef164->setRoutingType((ConnType)2);
 
-    ConnRef *connRef165 = ConnRef::createConnRef(router, 165).get();
+    auto connRef165 = ConnRef::createConnRef(router, 165);
     ConnEnd srcPt165(Point(437.924, 763.557), 15);
     connRef165->setSourceEndpoint(srcPt165);
     ConnEnd dstPt165(Point(727.924, 860.057), 15);
     connRef165->setDestEndpoint(dstPt165);
     connRef165->setRoutingType((ConnType)2);
 
-    ConnRef *connRef166 = ConnRef::createConnRef(router, 166).get();
+    auto connRef166 = ConnRef::createConnRef(router, 166);
     ConnEnd srcPt166(Point(557.924, 527.557), 15);
     connRef166->setSourceEndpoint(srcPt166);
     ConnEnd dstPt166(Point(607.924, 527.557), 15);
     connRef166->setDestEndpoint(dstPt166);
     connRef166->setRoutingType((ConnType)2);
 
-    ConnRef *connRef167 = ConnRef::createConnRef(router, 167).get();
+    auto connRef167 = ConnRef::createConnRef(router, 167);
     ConnEnd srcPt167(Point(797.924, 343.557), 15);
     connRef167->setSourceEndpoint(srcPt167);
     ConnEnd dstPt167(Point(847.924, 343.557), 15);
     connRef167->setDestEndpoint(dstPt167);
     connRef167->setRoutingType((ConnType)2);
 
-    ConnRef *connRef168 = ConnRef::createConnRef(router, 168).get();
+    auto connRef168 = ConnRef::createConnRef(router, 168);
     ConnEnd srcPt168(Point(797.924, 343.557), 15);
     connRef168->setSourceEndpoint(srcPt168);
     ConnEnd dstPt168(Point(847.924, 435.557), 15);
     connRef168->setDestEndpoint(dstPt168);
     connRef168->setRoutingType((ConnType)2);
 
-    ConnRef *connRef169 = ConnRef::createConnRef(router, 169).get();
+    auto connRef169 = ConnRef::createConnRef(router, 169);
     ConnEnd srcPt169(Point(1018.92, 435.557), 15);
     connRef169->setSourceEndpoint(srcPt169);
     ConnEnd dstPt169(Point(1068.92, 388.557), 15);
     connRef169->setDestEndpoint(dstPt169);
     connRef169->setRoutingType((ConnType)2);
 
-    ConnRef *connRef170 = ConnRef::createConnRef(router, 170).get();
+    auto connRef170 = ConnRef::createConnRef(router, 170);
     ConnEnd srcPt170(Point(1018.92, 161.557), 15);
     connRef170->setSourceEndpoint(srcPt170);
     ConnEnd dstPt170(Point(1068.92, 152.342), 15);
     connRef170->setDestEndpoint(dstPt170);
     connRef170->setRoutingType((ConnType)2);
 
-    ConnRef *connRef171 = ConnRef::createConnRef(router, 171).get();
+    auto connRef171 = ConnRef::createConnRef(router, 171);
     ConnEnd srcPt171(Point(1018.92, 161.557), 15);
     connRef171->setSourceEndpoint(srcPt171);
     ConnEnd dstPt171(Point(1068.92, 60.3422), 15);
     connRef171->setDestEndpoint(dstPt171);
     connRef171->setRoutingType((ConnType)2);
 
-    ConnRef *connRef172 = ConnRef::createConnRef(router, 172).get();
+    auto connRef172 = ConnRef::createConnRef(router, 172);
     ConnEnd srcPt172(Point(267.924, 315.557), 15);
     connRef172->setSourceEndpoint(srcPt172);
     ConnEnd dstPt172(Point(437.924, 161.557), 15);
     connRef172->setDestEndpoint(dstPt172);
     connRef172->setRoutingType((ConnType)2);
 
-    ConnRef *connRef173 = ConnRef::createConnRef(router, 173).get();
+    auto connRef173 = ConnRef::createConnRef(router, 173);
     ConnEnd srcPt173(Point(437.924, 161.557), 15);
     connRef173->setSourceEndpoint(srcPt173);
     ConnEnd dstPt173(Point(487.924, 45.8422), 15);
     connRef173->setDestEndpoint(dstPt173);
     connRef173->setRoutingType((ConnType)2);
 
-    ConnRef *connRef174 = ConnRef::createConnRef(router, 174).get();
+    auto connRef174 = ConnRef::createConnRef(router, 174);
     ConnEnd srcPt174(Point(437.924, 161.557), 15);
     connRef174->setSourceEndpoint(srcPt174);
     ConnEnd dstPt174(Point(727.924, 161.557), 15);
     connRef174->setDestEndpoint(dstPt174);
     connRef174->setRoutingType((ConnType)2);
 
-    ConnRef *connRef175 = ConnRef::createConnRef(router, 175).get();
+    auto connRef175 = ConnRef::createConnRef(router, 175);
     ConnEnd srcPt175(Point(77.9242, 161.557), 15);
     connRef175->setSourceEndpoint(srcPt175);
     ConnEnd dstPt175(Point(127.924, 161.557), 15);
     connRef175->setDestEndpoint(dstPt175);
     connRef175->setRoutingType((ConnType)2);
 
-    ConnRef *connRef176 = ConnRef::createConnRef(router, 176).get();
+    auto connRef176 = ConnRef::createConnRef(router, 176);
     ConnEnd srcPt176(Point(77.9242, 161.557), 15);
     connRef176->setSourceEndpoint(srcPt176);
     ConnEnd dstPt176(Point(77.9242, 357.557), 15);
     connRef176->setDestEndpoint(dstPt176);
     connRef176->setRoutingType((ConnType)2);
 
-    ConnRef *connRef177 = ConnRef::createConnRef(router, 177).get();
+    auto connRef177 = ConnRef::createConnRef(router, 177);
     ConnEnd srcPt177(Point(557.924, 763.557), 15);
     connRef177->setSourceEndpoint(srcPt177);
     ConnEnd dstPt177(Point(607.924, 763.557), 15);
     connRef177->setDestEndpoint(dstPt177);
     connRef177->setRoutingType((ConnType)2);
 
-    ConnRef *connRef178 = ConnRef::createConnRef(router, 178).get();
+    auto connRef178 = ConnRef::createConnRef(router, 178);
     ConnEnd srcPt178(Point(77.9242, 527.557), 15);
     connRef178->setSourceEndpoint(srcPt178);
     ConnEnd dstPt178(Point(127.924, 527.557), 15);
     connRef178->setDestEndpoint(dstPt178);
     connRef178->setRoutingType((ConnType)2);
 
-    ConnRef *connRef179 = ConnRef::createConnRef(router, 179).get();
+    auto connRef179 = ConnRef::createConnRef(router, 179);
     ConnEnd srcPt179(Point(557.924, 54.8422), 15);
     connRef179->setSourceEndpoint(srcPt179);
     ConnEnd dstPt179(Point(607.924, 45.8422), 15);
     connRef179->setDestEndpoint(dstPt179);
     connRef179->setRoutingType((ConnType)2);
 
-    ConnRef *connRef180 = ConnRef::createConnRef(router, 180).get();
+    auto connRef180 = ConnRef::createConnRef(router, 180);
     ConnEnd srcPt180(Point(557.924, 435.557), 15);
     connRef180->setSourceEndpoint(srcPt180);
     ConnEnd dstPt180(Point(607.924, 435.557), 15);
     connRef180->setDestEndpoint(dstPt180);
     connRef180->setRoutingType((ConnType)2);
 
-    ConnRef *connRef181 = ConnRef::createConnRef(router, 181).get();
+    auto connRef181 = ConnRef::createConnRef(router, 181);
     ConnEnd srcPt181(Point(77.9242, 763.557), 15);
     connRef181->setSourceEndpoint(srcPt181);
     ConnEnd dstPt181(Point(77.9242, 671.557), 15);
     connRef181->setDestEndpoint(dstPt181);
     connRef181->setRoutingType((ConnType)2);
 
-    ConnRef *connRef182 = ConnRef::createConnRef(router, 182).get();
+    auto connRef182 = ConnRef::createConnRef(router, 182);
     ConnEnd srcPt182(Point(77.9242, 763.557), 15);
     connRef182->setSourceEndpoint(srcPt182);
     ConnEnd dstPt182(Point(127.924, 763.557), 15);
     connRef182->setDestEndpoint(dstPt182);
     connRef182->setRoutingType((ConnType)2);
 
-    ConnRef *connRef183 = ConnRef::createConnRef(router, 183).get();
+    auto connRef183 = ConnRef::createConnRef(router, 183);
     ConnEnd srcPt183(Point(197.924, 315.557), 15);
     connRef183->setSourceEndpoint(srcPt183);
     ConnEnd dstPt183(Point(247.924, 315.557), 15);
     connRef183->setDestEndpoint(dstPt183);
     connRef183->setRoutingType((ConnType)2);
 
-    ConnRef *connRef184 = ConnRef::createConnRef(router, 184).get();
+    auto connRef184 = ConnRef::createConnRef(router, 184);
     ConnEnd srcPt184(Point(677.924, 343.557), 15);
     connRef184->setSourceEndpoint(srcPt184);
     ConnEnd dstPt184(Point(727.924, 343.557), 15);
     connRef184->setDestEndpoint(dstPt184);
     connRef184->setRoutingType((ConnType)2);
 
-    ConnRef *connRef185 = ConnRef::createConnRef(router, 185).get();
+    auto connRef185 = ConnRef::createConnRef(router, 185);
     ConnEnd srcPt185(Point(797.924, 161.557), 15);
     connRef185->setSourceEndpoint(srcPt185);
     ConnEnd dstPt185(Point(847.924, 161.557), 15);
     connRef185->setDestEndpoint(dstPt185);
     connRef185->setRoutingType((ConnType)2);
 
-    ConnRef *connRef186 = ConnRef::createConnRef(router, 186).get();
+    auto connRef186 = ConnRef::createConnRef(router, 186);
     ConnEnd srcPt186(Point(77.9242, 34.8422), 15);
     connRef186->setSourceEndpoint(srcPt186);
     ConnEnd dstPt186(Point(127.924, 34.8422), 15);
     connRef186->setDestEndpoint(dstPt186);
     connRef186->setRoutingType((ConnType)2);
 
-    ConnRef *connRef187 = ConnRef::createConnRef(router, 187).get();
+    auto connRef187 = ConnRef::createConnRef(router, 187);
     ConnEnd srcPt187(Point(437.924, 527.557), 15);
     connRef187->setSourceEndpoint(srcPt187);
     ConnEnd dstPt187(Point(487.924, 527.557), 15);
     connRef187->setDestEndpoint(dstPt187);
     connRef187->setRoutingType((ConnType)2);
 
-    ConnRef *connRef188 = ConnRef::createConnRef(router, 188).get();
+    auto connRef188 = ConnRef::createConnRef(router, 188);
     ConnEnd srcPt188(Point(77.9242, 619.557), 15);
     connRef188->setSourceEndpoint(srcPt188);
     ConnEnd dstPt188(Point(127.924, 619.557), 15);
     connRef188->setDestEndpoint(dstPt188);
     connRef188->setRoutingType((ConnType)2);
 
-    ConnRef *connRef189 = ConnRef::createConnRef(router, 189).get();
+    auto connRef189 = ConnRef::createConnRef(router, 189);
     ConnEnd srcPt189(Point(747.924, -60.6578), 15);
     connRef189->setSourceEndpoint(srcPt189);
     ConnEnd dstPt189(Point(797.924, -60.6578), 15);
     connRef189->setDestEndpoint(dstPt189);
     connRef189->setRoutingType((ConnType)2);
 
-    ConnRef *connRef190 = ConnRef::createConnRef(router, 190).get();
+    auto connRef190 = ConnRef::createConnRef(router, 190);
     ConnEnd srcPt190(Point(147.924, 34.8422), 15);
     connRef190->setSourceEndpoint(srcPt190);
     ConnEnd dstPt190(Point(197.924, 161.557), 15);
     connRef190->setDestEndpoint(dstPt190);
     connRef190->setRoutingType((ConnType)2);
 
-    ConnRef *connRef191 = ConnRef::createConnRef(router, 191).get();
+    auto connRef191 = ConnRef::createConnRef(router, 191);
     ConnEnd srcPt191(Point(267.924, 161.557), 15);
     connRef191->setSourceEndpoint(srcPt191);
     ConnEnd dstPt191(Point(317.924, 161.557), 15);
     connRef191->setDestEndpoint(dstPt191);
     connRef191->setRoutingType((ConnType)2);
 
-    ConnRef *connRef192 = ConnRef::createConnRef(router, 192).get();
+    auto connRef192 = ConnRef::createConnRef(router, 192);
     ConnEnd srcPt192(Point(197.924, 223.557), 15);
     connRef192->setSourceEndpoint(srcPt192);
     ConnEnd dstPt192(Point(197.924, 315.557), 15);
     connRef192->setDestEndpoint(dstPt192);
     connRef192->setRoutingType((ConnType)2);
 
-    ConnRef *connRef193 = ConnRef::createConnRef(router, 193).get();
+    auto connRef193 = ConnRef::createConnRef(router, 193);
     ConnEnd srcPt193(Point(77.9242, 377.557), 15);
     connRef193->setSourceEndpoint(srcPt193);
     ConnEnd dstPt193(Point(77.9242, 527.557), 15);
     connRef193->setDestEndpoint(dstPt193);
     connRef193->setRoutingType((ConnType)2);
 
-    ConnRef *connRef194 = ConnRef::createConnRef(router, 194).get();
+    auto connRef194 = ConnRef::createConnRef(router, 194);
     ConnEnd srcPt194(Point(147.924, 527.557), 15);
     connRef194->setSourceEndpoint(srcPt194);
     ConnEnd dstPt194(Point(197.924, 527.557), 15);
     connRef194->setDestEndpoint(dstPt194);
     connRef194->setRoutingType((ConnType)2);
 
-    ConnRef *connRef195 = ConnRef::createConnRef(router, 195).get();
+    auto connRef195 = ConnRef::createConnRef(router, 195);
     ConnEnd srcPt195(Point(147.924, 619.557), 15);
     connRef195->setSourceEndpoint(srcPt195);
     ConnEnd dstPt195(Point(197.924, 763.557), 15);
     connRef195->setDestEndpoint(dstPt195);
     connRef195->setRoutingType((ConnType)2);
 
-    ConnRef *connRef196 = ConnRef::createConnRef(router, 196).get();
+    auto connRef196 = ConnRef::createConnRef(router, 196);
     ConnEnd srcPt196(Point(77.9242, 651.557), 15);
     connRef196->setSourceEndpoint(srcPt196);
     ConnEnd dstPt196(Point(77.9242, 619.557), 15);
     connRef196->setDestEndpoint(dstPt196);
     connRef196->setRoutingType((ConnType)2);
 
-    ConnRef *connRef197 = ConnRef::createConnRef(router, 197).get();
+    auto connRef197 = ConnRef::createConnRef(router, 197);
     ConnEnd srcPt197(Point(147.924, 763.557), 15);
     connRef197->setSourceEndpoint(srcPt197);
     ConnEnd dstPt197(Point(197.924, 763.557), 15);
     connRef197->setDestEndpoint(dstPt197);
     connRef197->setRoutingType((ConnType)2);
 
-    ConnRef *connRef198 = ConnRef::createConnRef(router, 198).get();
+    auto connRef198 = ConnRef::createConnRef(router, 198);
     ConnEnd srcPt198(Point(267.924, 763.557), 15);
     connRef198->setSourceEndpoint(srcPt198);
     ConnEnd dstPt198(Point(317.924, 763.557), 15);
     connRef198->setDestEndpoint(dstPt198);
     connRef198->setRoutingType((ConnType)2);
 
-    ConnRef *connRef199 = ConnRef::createConnRef(router, 199).get();
+    auto connRef199 = ConnRef::createConnRef(router, 199);
     ConnEnd srcPt199(Point(387.924, 627.557), 15);
     connRef199->setSourceEndpoint(srcPt199);
     ConnEnd dstPt199(Point(437.924, 627.557), 15);
     connRef199->setDestEndpoint(dstPt199);
     connRef199->setRoutingType((ConnType)2);
 
-    ConnRef *connRef200 = ConnRef::createConnRef(router, 200).get();
+    auto connRef200 = ConnRef::createConnRef(router, 200);
     ConnEnd srcPt200(Point(387.924, 763.557), 15);
     connRef200->setSourceEndpoint(srcPt200);
     ConnEnd dstPt200(Point(437.924, 763.557), 15);
     connRef200->setDestEndpoint(dstPt200);
     connRef200->setRoutingType((ConnType)2);
 
-    ConnRef *connRef201 = ConnRef::createConnRef(router, 201).get();
+    auto connRef201 = ConnRef::createConnRef(router, 201);
     ConnEnd srcPt201(Point(507.924, 763.557), 15);
     connRef201->setSourceEndpoint(srcPt201);
     ConnEnd dstPt201(Point(557.924, 763.557), 15);
     connRef201->setDestEndpoint(dstPt201);
     connRef201->setRoutingType((ConnType)2);
 
-    ConnRef *connRef202 = ConnRef::createConnRef(router, 202).get();
+    auto connRef202 = ConnRef::createConnRef(router, 202);
     ConnEnd srcPt202(Point(627.924, 763.557), 15);
     connRef202->setSourceEndpoint(srcPt202);
     ConnEnd dstPt202(Point(677.924, 763.557), 15);
     connRef202->setDestEndpoint(dstPt202);
     connRef202->setRoutingType((ConnType)2);
 
-    ConnRef *connRef203 = ConnRef::createConnRef(router, 203).get();
+    auto connRef203 = ConnRef::createConnRef(router, 203);
     ConnEnd srcPt203(Point(507.924, 903.057), 15);
     connRef203->setSourceEndpoint(srcPt203);
     ConnEnd dstPt203(Point(557.924, 903.057), 15);
     connRef203->setDestEndpoint(dstPt203);
     connRef203->setRoutingType((ConnType)2);
 
-    ConnRef *connRef204 = ConnRef::createConnRef(router, 204).get();
+    auto connRef204 = ConnRef::createConnRef(router, 204);
     ConnEnd srcPt204(Point(627.924, 903.057), 15);
     connRef204->setSourceEndpoint(srcPt204);
     ConnEnd dstPt204(Point(677.924, 903.057), 15);
     connRef204->setDestEndpoint(dstPt204);
     connRef204->setRoutingType((ConnType)2);
 
-    ConnRef *connRef205 = ConnRef::createConnRef(router, 205).get();
+    auto connRef205 = ConnRef::createConnRef(router, 205);
     ConnEnd srcPt205(Point(387.924, 161.557), 15);
     connRef205->setSourceEndpoint(srcPt205);
     ConnEnd dstPt205(Point(437.924, 161.557), 15);
     connRef205->setDestEndpoint(dstPt205);
     connRef205->setRoutingType((ConnType)2);
 
-    ConnRef *connRef206 = ConnRef::createConnRef(router, 206).get();
+    auto connRef206 = ConnRef::createConnRef(router, 206);
     ConnEnd srcPt206(Point(387.924, 27.3422), 15);
     connRef206->setSourceEndpoint(srcPt206);
     ConnEnd dstPt206(Point(437.924, 27.3422), 15);
     connRef206->setDestEndpoint(dstPt206);
     connRef206->setRoutingType((ConnType)2);
 
-    ConnRef *connRef207 = ConnRef::createConnRef(router, 207).get();
+    auto connRef207 = ConnRef::createConnRef(router, 207);
     ConnEnd srcPt207(Point(507.924, 45.8422), 15);
     connRef207->setSourceEndpoint(srcPt207);
     ConnEnd dstPt207(Point(557.924, 54.8422), 15);
     connRef207->setDestEndpoint(dstPt207);
     connRef207->setRoutingType((ConnType)2);
 
-    ConnRef *connRef208 = ConnRef::createConnRef(router, 208).get();
+    auto connRef208 = ConnRef::createConnRef(router, 208);
     ConnEnd srcPt208(Point(627.924, 45.8422), 15);
     connRef208->setSourceEndpoint(srcPt208);
     ConnEnd dstPt208(Point(677.924, 54.8422), 15);
     connRef208->setDestEndpoint(dstPt208);
     connRef208->setRoutingType((ConnType)2);
 
-    ConnRef *connRef209 = ConnRef::createConnRef(router, 209).get();
+    auto connRef209 = ConnRef::createConnRef(router, 209);
     ConnEnd srcPt209(Point(747.924, 574.057), 15);
     connRef209->setSourceEndpoint(srcPt209);
     ConnEnd dstPt209(Point(797.924, 574.057), 15);
     connRef209->setDestEndpoint(dstPt209);
     connRef209->setRoutingType((ConnType)2);
 
-    ConnRef *connRef210 = ConnRef::createConnRef(router, 210).get();
+    auto connRef210 = ConnRef::createConnRef(router, 210);
     ConnEnd srcPt210(Point(507.924, 527.557), 15);
     connRef210->setSourceEndpoint(srcPt210);
     ConnEnd dstPt210(Point(557.924, 527.557), 15);

@@ -60,7 +60,7 @@ int main(void)
 
     ConnEnd srcEnd(shapeRef1, CONNECTIONPIN_CENTRE);
     ConnEnd dstEnd(shapeRef6, CONNECTIONPIN_CENTRE);
-    ConnRef *conn1= ConnRef::createConnRef(router, srcEnd, dstEnd).get();
+    auto conn1= ConnRef::createConnRef(router, srcEnd, dstEnd);
     
     router->processTransaction();
     router->outputDiagram("output/junction04-1");
@@ -76,13 +76,13 @@ int main(void)
     // the junction.
     ConnEnd srcEnd3(shapeRef5, CONNECTIONPIN_CENTRE);
     ConnEnd dstEnd3(newObjs.first);
-    ConnRef::createConnRef(router, srcEnd3, dstEnd3).get();
+    ConnRef::createConnRef(router, srcEnd3, dstEnd3);
 
     router->processTransaction();
     router->outputDiagram("output/junction04-3");
 
     // Delete one half of the original connector, up to the junction.
-    router->deleteConnector(conn1->getPtr()->getPtr());
+    router->deleteConnector(conn1);
     conn1 = nullptr;
 
     router->processTransaction();

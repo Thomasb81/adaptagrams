@@ -32,21 +32,21 @@ int main(void) {
     poly335855988.ps[3] = Point(51140, 50190);
     ShapeRef::createShapeRef(router, poly335855988, 335855988);
 
-    ConnRef *connRef240732432 = ConnRef::createConnRef(router, 240732432).get();
+    auto connRef240732432 = ConnRef::createConnRef(router, 240732432);
     ConnEnd srcPt240732432(Point(51935, 50650), 4);
     connRef240732432->setSourceEndpoint(srcPt240732432);
     ConnEnd dstPt240732432(Point(51800, 50810), 1);
     connRef240732432->setDestEndpoint(dstPt240732432);
     connRef240732432->setRoutingType((ConnType)2);
 
-    ConnRef *connRef148374725 = ConnRef::createConnRef(router, 148374725).get();
+    auto connRef148374725 = ConnRef::createConnRef(router, 148374725);
     ConnEnd srcPt148374725(Point(51935, 50500), 4);
     connRef148374725->setSourceEndpoint(srcPt148374725);
     ConnEnd dstPt148374725(Point(51490, 50800), 8);
     connRef148374725->setDestEndpoint(dstPt148374725);
     connRef148374725->setRoutingType((ConnType)2);
 
-    ConnRef *connRef100850179 = ConnRef::createConnRef(router, 100850179).get();
+    auto connRef100850179 = ConnRef::createConnRef(router, 100850179);
     ConnEnd srcPt100850179(Point(51935, 50800), 4);
     connRef100850179->setSourceEndpoint(srcPt100850179);
     ConnEnd dstPt100850179(Point(51490, 50650), 8);

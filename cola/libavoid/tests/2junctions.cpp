@@ -36,13 +36,13 @@ int test()
 	junction328922310->setPositionFixed(true);
 	end1 = ConnEnd(shape365249936, 3);
 	end2 = ConnEnd(junction328922310);
-	/*ConnRef * conn152169328 = */ ConnRef::createConnRef(router1, end1, end2).get();
+	/*auto  conn152169328 = */ ConnRef::createConnRef(router1, end1, end2);
 	end1 = ConnEnd(junction328922310);
 	end2 = ConnEnd(shape386142480, 2);
-	/*ConnRef * conn684888074 = */ ConnRef::createConnRef(router1, end1, end2).get();
+	/*auto  conn684888074 = */ ConnRef::createConnRef(router1, end1, end2);
 	end1 = ConnEnd(shape365249936, 5);
 	end2 = ConnEnd(junction328922310);
-	ConnRef * conn18168360 = ConnRef::createConnRef(router1, end1, end2).get();
+	auto  conn18168360 = ConnRef::createConnRef(router1, end1, end2);
 	router1->processTransaction();
 
 	router1->outputDiagram("output/2junctions-1");
@@ -55,19 +55,19 @@ int test()
 	ShapeConnectionPin * pin150429385_0 = new ShapeConnectionPin(shape150429385, 1, 0.5, 0, true, 10, 1);
 	pin150429385_0->setExclusive(true);
 	auto  junction550292508 = JunctionRef::createJunctionRef(router1, Point(50850, 50875), 550292508);
-	router1->deleteConnector(conn18168360->getPtr()->getPtr());
+	router1->deleteConnector(conn18168360);
 	conn18168360 = nullptr;
 	end1 = ConnEnd(shape365249936, 5);
 	end2 = ConnEnd(junction550292508);
-	ConnRef * conn795337150 = ConnRef::createConnRef(router1, end1, end2).get();
+	auto  conn795337150 = ConnRef::createConnRef(router1, end1, end2);
 	conn795337150->makePathInvalid();
 	end1 = ConnEnd(junction550292508);
 	end2 = ConnEnd(junction328922310);
-	ConnRef * conn151961380 = ConnRef::createConnRef(router1, end1, end2).get();
+	auto  conn151961380 = ConnRef::createConnRef(router1, end1, end2);
 	conn151961380->makePathInvalid();
 	end1 = ConnEnd(shape150429385, 1);
 	end2 = ConnEnd(junction550292508);
-	ConnRef * conn149180423 = ConnRef::createConnRef(router1, end1, end2).get();
+	auto  conn149180423 = ConnRef::createConnRef(router1, end1, end2);
 	conn149180423->makePathInvalid();
 	router1->processTransaction();
 
@@ -81,19 +81,19 @@ int test()
 	shape386142480 = nullptr;
 	router1->deleteJunction(junction328922310);
 	junction328922310 = nullptr;
-	router1->deleteConnector(conn152169328->getPtr()->getPtr());
+	router1->deleteConnector(conn152169328);
 	conn152169328 = nullptr;
-	router1->deleteConnector(conn684888074->getPtr()->getPtr());
+	router1->deleteConnector(conn684888074);
 	conn684888074 = nullptr;
 	router1->deleteShape(shape150429385);
 	shape150429385 = nullptr;
 	router1->deleteJunction(junction550292508);
 	junction550292508 = nullptr;
-	router1->deleteConnector(conn795337150->getPtr()->getPtr());
+	router1->deleteConnector(conn795337150);
 	conn795337150 = nullptr;
-	router1->deleteConnector(conn151961380->getPtr()->getPtr());
+	router1->deleteConnector(conn151961380);
 	conn151961380 = nullptr;
-	router1->deleteConnector(conn149180423->getPtr()->getPtr());
+	router1->deleteConnector(conn149180423);
 	conn149180423 = nullptr;
 	router1->processTransaction();
 */
