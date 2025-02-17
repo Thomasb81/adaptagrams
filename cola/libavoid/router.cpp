@@ -134,6 +134,7 @@ Router::~Router()
 //    }
     m_shareRefList.clear();
     m_junctionRefList.clear();
+    m_connRefList.clear();
     //m_currently_calling_destructors = false;
 
     // Cleanup orphaned orthogonal graph vertices.
@@ -336,6 +337,7 @@ void Router::deleteConnector(std::shared_ptr<ConnRef> connector)
         connector.get()->m_dst_connend->m_conn_ref.reset();
     }
 
+    m_connRefList.remove(connector);
     connector.reset();
     m_currently_calling_destructors = false;
 }

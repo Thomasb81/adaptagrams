@@ -896,6 +896,7 @@ class AVOID_EXPORT Router {
         DebugHandler *m_debug_handler;
         std::list<std::shared_ptr<ShapeRef> > m_shareRefList;
         std::list<std::shared_ptr<JunctionRef> > m_junctionRefList;
+        std::list<std::shared_ptr<ConnRef> > m_connRefList;
 };
 
 

@@ -76,6 +76,7 @@ std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const unsigned i
     ptr.get()->m_route.clear();
 
     ptr.get()->m_reroute_flag_ptr = router->m_conn_reroute_flags.addConn(ptr->getPtr());
+    router->m_connRefList.push_back(ptr);
     return ptr;
 }
 
@@ -116,51 +117,51 @@ ConnRef::~ConnRef()
     //move to Router::deleteConnector
     //m_router->removeObjectFromQueuedActions(this->getPtr().get());
 
-    freeRoutes();
-
-    if (m_src_vert)
-    {
-        m_src_vert->removeFromGraph();
-        m_router->vertices.removeVertex(m_src_vert);
-        delete m_src_vert;
-        m_src_vert = nullptr;
-    }
-    if (m_src_connend)
-    {
-        m_src_connend->disconnect();
-        m_src_connend->freeActivePin();
-        delete m_src_connend;
-        m_src_connend = nullptr;
-    }
-
-    if (m_dst_vert)
-    {
-        m_dst_vert->removeFromGraph();
-        m_router->vertices.removeVertex(m_dst_vert);
-        delete m_dst_vert;
-        m_dst_vert = nullptr;
-    }
-    if (m_dst_connend)
-    {
-        m_dst_connend->disconnect();
-        m_dst_connend->freeActivePin();
-        delete m_dst_connend;
-        m_dst_connend = nullptr;
-    }
-
-    // Clear checkpoint vertices.
-    for (size_t i = 0; i < m_checkpoint_vertices.size(); ++i)
-    {
-        m_checkpoint_vertices[i]->removeFromGraph(true);
-        m_router->vertices.removeVertex(m_checkpoint_vertices[i]);
-        delete m_checkpoint_vertices[i];
-    }
-    m_checkpoint_vertices.clear();
-
-    if (m_active)
-    {
-        makeInactive();
-    }
+//    freeRoutes();
+//
+//    if (m_src_vert)
+//    {
+//        m_src_vert->removeFromGraph();
+//        m_router->vertices.removeVertex(m_src_vert);
+//        delete m_src_vert;
+//        m_src_vert = nullptr;
+//    }
+//    if (m_src_connend)
+//    {
+//        m_src_connend->disconnect();
+//        m_src_connend->freeActivePin();
+//        delete m_src_connend;
+//        m_src_connend = nullptr;
+//    }
+//
+//    if (m_dst_vert)
+//    {
+//        m_dst_vert->removeFromGraph();
+//        m_router->vertices.removeVertex(m_dst_vert);
+//        delete m_dst_vert;
+//        m_dst_vert = nullptr;
+//    }
+//    if (m_dst_connend)
+//    {
+//        m_dst_connend->disconnect();
+//        m_dst_connend->freeActivePin();
+//        delete m_dst_connend;
+//        m_dst_connend = nullptr;
+//    }
+//
+//    // Clear checkpoint vertices.
+//    for (size_t i = 0; i < m_checkpoint_vertices.size(); ++i)
+//    {
+//        m_checkpoint_vertices[i]->removeFromGraph(true);
+//        m_router->vertices.removeVertex(m_checkpoint_vertices[i]);
+//        delete m_checkpoint_vertices[i];
+//    }
+//    m_checkpoint_vertices.clear();
+//
+//    if (m_active)
+//    {
+//        makeInactive();
+//    }
 }
 
 
