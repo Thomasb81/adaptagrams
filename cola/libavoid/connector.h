@@ -181,17 +181,12 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         std::shared_ptr<ConnRef> getPtr();
 
 
-// To prevent C++ objects from being destroyed in garbage collected languages
-// when the libraries are called from SWIG, we hide the declarations of the
-// destructors and prevent generation of default destructors.
-#ifndef SWIG
         //! @brief  Connector reference destuctor.
         //!
         //! Do not call this yourself, instead call
         //! Router::deleteConnector().  Ownership of this object
         //! belongs to the router scene.
         ~ConnRef();
-#endif        
         //! @brief  Sets both a new source and destination endpoint for this 
         //!         connector.
         //!
