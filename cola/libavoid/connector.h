@@ -33,6 +33,7 @@
 #include <list>
 #include <vector>
 #include <memory>
+#include <functional>
 
 #include "libavoid/dllexport.h"
 #include "libavoid/vertices.h"
@@ -269,7 +270,7 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         //! @param[in]  cb   A pointer to the callback function.
         //! @param[in]  ptr  A generic pointer that will be passed to the 
         //!                  callback function.
-        void setCallback(void (*cb)(void *), void *ptr);
+        void setCallback(std::function<void(ConnRef*)> cb, ConnRef *ptr);
         
         //! @brief   Returns the type of routing performed for this connector.
         //! @return  The type of routing performed.
@@ -459,8 +460,8 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         VertInf *m_src_vert;
         VertInf *m_dst_vert;
         VertInf *m_start_vert;
-        void (*m_callback_func)(void *);
-        void *m_connector;
+        std::function<void(ConnRef*)> m_callback_func;
+        ConnRef *m_connector;
         ConnEnd *m_src_connend;
         ConnEnd *m_dst_connend;
         std::vector<Checkpoint> m_checkpoints;

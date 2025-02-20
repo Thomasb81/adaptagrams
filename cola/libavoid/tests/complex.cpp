@@ -26,7 +26,7 @@
 using namespace Avoid;
     
 
-static void connCallback(void *ptr)
+static void connCallback(ConnRef *ptr)
 {
     ConnRef *connRef = (ConnRef *) ptr; 
 
@@ -51,7 +51,7 @@ int main(void)
     Point srcPt(1.2, 0.5);
     Point dstPt(1.5, 4);
     auto connRef = ConnRef::createConnRef(router, srcPt, dstPt);
-    connRef.get()->setCallback(connCallback, (void *) connRef.get() );
+    connRef.get()->setCallback(connCallback, connRef.get() );
     // Force inital callback:
     router->processTransaction();
 

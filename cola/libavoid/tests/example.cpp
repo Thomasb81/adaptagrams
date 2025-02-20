@@ -26,7 +26,7 @@
 
 using namespace Avoid;    
 
-static void connCallback(void *ptr)
+static void connCallback(ConnRef *ptr)
 {
     ConnRef *connRef = (ConnRef *) ptr; 
 
@@ -53,6 +53,7 @@ int main(void)
     connRef.get()->setCallback(connCallback, connRef.get());
     // Force inital callback:
     router->processTransaction();
+    router->outputDiagram("output/example-01");
 
     printf("\nAdding a shape.\n");
     // Create the ShapeRef:
@@ -62,6 +63,7 @@ int main(void)
     shapePoly.ps[2] = Point(1.5, 2.5);
     auto shapeRef = ShapeRef::createShapeRef(router, shapePoly);
     router->processTransaction();
+    router->outputDiagram("output/example-02");
 
     printf("\nShifting endpoint.\n");
     Point dstPt2(6, 4.5);
@@ -69,6 +71,7 @@ int main(void)
     // It's expected you know the connector needs rerouting, so the callback
     // isn't called.  You can force it to be called though, via:
     router->processTransaction();
+    router->outputDiagram("output/example-03");
 
     printf("\nMoving shape right by 0.5.\n");
     router->moveShape(shapeRef, 0.5, 0);

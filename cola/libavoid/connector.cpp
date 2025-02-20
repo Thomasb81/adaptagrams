@@ -773,7 +773,7 @@ void ConnRef::removeFromGraph(void)
 }
 
 
-void ConnRef::setCallback(void (*cb)(void *), void *ptr)
+void ConnRef::setCallback(std::function<void(ConnRef*)> cb, ConnRef *ptr)
 {
     m_callback_func = cb;
     m_connector = ptr;
