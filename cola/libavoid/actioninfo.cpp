@@ -33,9 +33,9 @@
 namespace Avoid {
 
 
-ActionInfo::ActionInfo(ActionType t, ShapeRef *s, const Polygon& p, bool fM)
+ActionInfo::ActionInfo(ActionType t, std::shared_ptr<ShapeRef> s, const Polygon& p, bool fM)
     : type(t),
-      objPtr(s),
+      objPtr(s.get()),
       newPoly(p),
       firstMove(fM)
 {
@@ -43,9 +43,9 @@ ActionInfo::ActionInfo(ActionType t, ShapeRef *s, const Polygon& p, bool fM)
 }
 
 
-ActionInfo::ActionInfo(ActionType t, ShapeRef *s)
+ActionInfo::ActionInfo(ActionType t, std::shared_ptr<ShapeRef> s)
     : type(t),
-      objPtr(s)
+      objPtr(s.get())
 
 {
     COLA_ASSERT((type == ShapeAdd) || (type == ShapeRemove) ||
@@ -53,18 +53,18 @@ ActionInfo::ActionInfo(ActionType t, ShapeRef *s)
 }
 
 
-ActionInfo::ActionInfo(ActionType t, JunctionRef *j, const Point& p)
+ActionInfo::ActionInfo(ActionType t, std::shared_ptr<JunctionRef> j, const Point& p)
     : type(t),
-      objPtr(j),
+      objPtr(j.get()),
       newPosition(p)
 {
     COLA_ASSERT(type == JunctionMove);
 }
 
 
-ActionInfo::ActionInfo(ActionType t, JunctionRef *j)
+ActionInfo::ActionInfo(ActionType t, std::shared_ptr<JunctionRef> j)
     : type(t),
-      objPtr(j)
+      objPtr(j.get())
 {
     COLA_ASSERT((type == JunctionAdd) || (type == JunctionRemove) ||
             (type == JunctionMove));

@@ -831,18 +831,9 @@ class AVOID_EXPORT Router {
         friend class HyperedgeImprover;
 
         unsigned int assignId(const unsigned int suggestedId);
-        void addShape(ShapeRef *shape);
-        void deleteShape(ShapeRef *shape);
-        void moveShape(ShapeRef *shape, const Polygon& newPoly,
-                const bool first_move = false);
         void moveShape(ShapeRef *shape, const double xDiff, const double yDiff);
         void addShape(std::shared_ptr<ShapeRef> shape);
-        void addJunction(JunctionRef *junction);
-        void deleteJunction(JunctionRef *junction);
         void addJunction(std::shared_ptr<JunctionRef> junction);
-        void moveJunction(JunctionRef *junction, const Point& newPosition);
-        void moveJunction(JunctionRef *junction, const double xDiff, 
-                const double yDiff);
         void addCluster(ClusterRef *cluster);
         void modifyConnector(std::shared_ptr<ConnRef> conn);
         void modifyConnector(std::shared_ptr<ConnRef> conn, unsigned int type,

@@ -228,8 +228,9 @@ void Router::removeObjectFromQueuedActions(const void *object)
 }
 
 
-void Router::addShape(ShapeRef *shape)
+void Router::addShape(std::shared_ptr<ShapeRef> shape)
 {
+    m_shapeRefList.push_back(shape);
     // There shouldn't be remove events or move events for the same shape
     // already in the action list.
     // XXX: Possibly we could handle this by ordering them intelligently.
@@ -252,14 +253,9 @@ void Router::addShape(ShapeRef *shape)
         processTransaction();
     }
 }
-void Router::addShape(std::shared_ptr<ShapeRef> shape){
-    addShape(shape.get());
-    m_shapeRefList.push_back(shape);
-    
-}
 
 
-void Router::deleteShape(ShapeRef *shape)
+void Router::deleteShape(std::shared_ptr<ShapeRef> shape)
 {
     // There shouldn't be add events events for the same shape already 
     // in the action list.
@@ -287,12 +283,9 @@ void Router::deleteShape(ShapeRef *shape)
     {
         processTransaction();
     }
-}
-
-void Router::deleteShape(std::shared_ptr<ShapeRef> shape){
-    deleteShape(shape.get());
     m_shapeRefList.remove(shape);
 }
+
 
 void Router::deleteConnector(std::shared_ptr<ConnRef> connector)
 {
@@ -316,7 +309,7 @@ void Router::deleteConnector(std::shared_ptr<ConnRef> connector)
     m_currently_calling_destructors = false;
 }
 
-void Router::moveShape(ShapeRef *shape, const double xDiff, const double yDiff)
+void Router::moveShape(std::shared_ptr<ShapeRef> shape, const double xDiff, const double yDiff)
 {
     ActionInfo moveInfo(ShapeMove, shape, Polygon(), false);
     ActionInfoList::iterator found =
@@ -337,9 +330,6 @@ void Router::moveShape(ShapeRef *shape, const double xDiff, const double yDiff)
 
     moveShape(shape, newPoly);
 }
-void Router::moveShape(std::shared_ptr<ShapeRef> shape, const double xDiff, const double yDiff){
-    moveShape(shape.get(), xDiff, yDiff);
-}
 
 
 void Router::markAllObstaclesAsMoved(void)
@@ -347,8 +337,8 @@ void Router::markAllObstaclesAsMoved(void)
     for (ObstacleList::iterator obstacleIt = m_obstacles.begin();
             obstacleIt != m_obstacles.end(); ++obstacleIt)
     {
-        ShapeRef *shape = dynamic_cast<ShapeRef *> ((*obstacleIt).get());
-        JunctionRef *junction = dynamic_cast<JunctionRef *> ((*obstacleIt).get());
+        std::shared_ptr<ShapeRef> shape = (dynamic_cast<ShapeRef *> (obstacleIt->get()))->getPtr();
+        std::shared_ptr<JunctionRef> junction = (dynamic_cast<JunctionRef *> (obstacleIt->get()))->getPtr();
         if (shape)
         {
             moveShape(shape, 0, 0);
@@ -360,7 +350,7 @@ void Router::markAllObstaclesAsMoved(void)
     }
 }
 
-void Router::moveShape(ShapeRef *shape, const Polygon& newPoly, 
+void Router::moveShape(std::shared_ptr<ShapeRef> shape, const Polygon& newPoly, 
         const bool first_move)
 {
     // There shouldn't be remove events or add events for the same shape
@@ -400,11 +390,6 @@ void Router::moveShape(ShapeRef *shape, const Polygon& newPoly,
     {
         processTransaction();
     }
-}
-
-void Router::moveShape(std::shared_ptr<ShapeRef> shape, const Polygon& newPoly, 
-        const bool first_move){
-    moveShape(shape.get(), newPoly, first_move);
 }
 
 
@@ -663,8 +648,9 @@ bool Router::processTransaction(void)
 }
 
 
-void Router::addJunction(JunctionRef *junction)
+void Router::addJunction(std::shared_ptr<JunctionRef> junction)
 {
+    m_junctionRefList.push_back(junction);
     // There shouldn't be remove events or move events for the same junction
     // already in the action list.
     // XXX: Possibly we could handle this by ordering them intelligently.
@@ -688,29 +674,25 @@ void Router::addJunction(JunctionRef *junction)
     }
 }
 
-void Router::addJunction(std::shared_ptr<JunctionRef> junction) {
-    m_junctionRefList.push_back(junction);
-    addJunction(junction.get());
-}
 
-void Router::deleteJunction(JunctionRef *junction)
+void Router::deleteJunction(std::shared_ptr<JunctionRef> junction)
 {
     // There shouldn't be add events events for the same junction already 
     // in the action list.
     // XXX: Possibly we could handle this by ordering them intelligently.
     COLA_ASSERT(find(actionList.begin(), actionList.end(), 
-                ActionInfo(JunctionAdd, junction)) == actionList.end());
+                ActionInfo(JunctionAdd, junction->getPtr())) == actionList.end());
 
     // Delete any ShapeMove entries for this shape in the action list.
     ActionInfoList::iterator found = find(actionList.begin(), 
-            actionList.end(), ActionInfo(JunctionMove, junction));
+            actionList.end(), ActionInfo(JunctionMove, junction->getPtr()));
     if (found != actionList.end())
     {
         actionList.erase(found);
     }
 
     // Add the ShapeRemove entry.
-    ActionInfo remInfo(JunctionRemove, junction);
+    ActionInfo remInfo(JunctionRemove, junction->getPtr());
     found = find(actionList.begin(), actionList.end(), remInfo);
     if (found == actionList.end())
     {
@@ -721,15 +703,11 @@ void Router::deleteJunction(JunctionRef *junction)
     {
         processTransaction();
     }
-}
-
-void Router::deleteJunction(std::shared_ptr<JunctionRef> junction) {
-    deleteJunction(junction.get());
     m_junctionRefList.remove(junction);
 }
 
 
-void Router::moveJunction(JunctionRef *junction, const double xDiff, 
+void Router::moveJunction(std::shared_ptr<JunctionRef> junction, const double xDiff, 
         const double yDiff)
 {
     ActionInfo moveInfo(JunctionMove, junction, Point());
@@ -753,19 +731,14 @@ void Router::moveJunction(JunctionRef *junction, const double xDiff,
     moveJunction(junction, newPosition);
 }
 
-void Router::moveJunction(std::shared_ptr<JunctionRef> junction, const double xDiff, 
-        const double yDiff){
-    moveJunction(junction.get(),xDiff,yDiff);
-}
 
-
-void Router::moveJunction(JunctionRef *junction, const Point& newPosition)
+void Router::moveJunction(std::shared_ptr<JunctionRef> junction, const Point& newPosition)
 {
     // There shouldn't be remove events or add events for the same junction
     // already in the action list.
     // XXX: Possibly we could handle this by ordering them intelligently.
     COLA_ASSERT(find(actionList.begin(), actionList.end(), 
-                ActionInfo(JunctionRemove, junction)) == actionList.end());
+                ActionInfo(JunctionRemove, junction->getPtr())) == actionList.end());
     
     ActionInfoList::iterator found = find(actionList.begin(), 
             actionList.end(), ActionInfo(JunctionAdd, junction));
@@ -796,9 +769,6 @@ void Router::moveJunction(JunctionRef *junction, const Point& newPosition)
     {
         processTransaction();
     }
-}
-void Router::moveJunction(std::shared_ptr<JunctionRef> junction, const Point& newPosition){
-    moveJunction(junction.get(),newPosition);
 }
 
 void Router::addCluster(ClusterRef *cluster)

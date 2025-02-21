@@ -58,10 +58,10 @@ typedef std::list<std::pair<unsigned int, ConnEnd> > ConnUpdateList;
 
 class ActionInfo {
     public:
-        ActionInfo(ActionType t, ShapeRef *s, const Polygon& p, bool fM);
-        ActionInfo(ActionType t, ShapeRef *s);
-        ActionInfo(ActionType t, JunctionRef *j, const Point& p);
-        ActionInfo(ActionType t, JunctionRef *j);
+        ActionInfo(ActionType t, std::shared_ptr<ShapeRef> s, const Polygon& p, bool fM);
+        ActionInfo(ActionType t, std::shared_ptr<ShapeRef> s);
+        ActionInfo(ActionType t, std::shared_ptr<JunctionRef> j, const Point& p);
+        ActionInfo(ActionType t, std::shared_ptr<JunctionRef> j);
         ActionInfo(ActionType t, std::shared_ptr<ConnRef> c);
         ActionInfo(ActionType t, ShapeConnectionPin *p);
         ~ActionInfo();

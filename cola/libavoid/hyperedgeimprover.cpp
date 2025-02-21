@@ -1016,7 +1016,7 @@ void HyperedgeImprover::execute(bool canMakeMajorChanges)
     for (JunctionRefList::iterator curr = m_deleted_junctions.begin();
             curr != m_deleted_junctions.end(); ++curr)
     {
-        m_router->deleteJunction(*curr);
+        m_router->deleteJunction((*curr)->getPtr());
     }
 
     TIMER_STOP(m_router);

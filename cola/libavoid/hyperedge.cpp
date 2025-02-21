@@ -366,7 +366,7 @@ void HyperedgeRerouter::performRerouting(void)
                 m_deleted_junctions_vector[i].begin();
                 curr != m_deleted_junctions_vector[i].end(); ++curr)
         {
-            m_router->deleteJunction(*curr);
+            m_router->deleteJunction((*curr)->getPtr());
         }
     }
 
