@@ -103,16 +103,18 @@ class AVOID_EXPORT JunctionRef : public std::enable_shared_from_this<JunctionRef
         //!       enabled, but if not and there are clashes then strange 
         //!       things can happen.
         //!
+        //! @param[out]          a shared pointer on created JunctionRef.
         //! @param[in]  router   The router scene to place the junction into.
         //! @param[in]  position A Point representing the position of the 
         //!                      junction.
         //! @param[in]  id       Optionally, a positive integer ID unique
         //!                      among all objects.
         //!
-    private :
-        JunctionRef(Router *router, Point position, const unsigned int id = 0);
-    public:
         static std::shared_ptr<JunctionRef> createJunctionRef(Router *router, Point position, const unsigned int id = 0);
+        
+        //! @brief return the shared pointer of JunctionRef
+        //!
+        //! @param[out] shared pointer of current JunctionRef.  
         std::shared_ptr<JunctionRef> getPtr();
 
         //! @brief  Junction reference destructor.
@@ -177,6 +179,9 @@ class AVOID_EXPORT JunctionRef : public std::enable_shared_from_this<JunctionRef
         friend class ConnEnd;
         friend class HyperedgeImprover;
 
+        //! @brief Private constructor, use createJunctionRef Static class method 
+        //! instead
+        JunctionRef(Router *router, Point position, const unsigned int id = 0);
         void outputCode(FILE *fp) const;
         void setPosition(const Point& position);
         void setRecommendedPosition(const Point& position);

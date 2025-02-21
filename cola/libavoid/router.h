@@ -490,11 +490,8 @@ class AVOID_EXPORT Router {
         //! You should not use the shape reference again after this call.
         //! The router will handle freeing of the shape's memory.
         //!
-        //! @param[in]  shape  Pointer reference to the shape being removed.
-        //!
-    private:
-        void deleteShape(ShapeRef *shape);
-    public:
+        //! @param[in]  shape  Shared pointer reference to the shape being 
+        //!                    removed.
         void deleteShape(std::shared_ptr<ShapeRef> shape);
 
         //! @brief Move or resize an existing shape within the router scene.
@@ -508,15 +505,13 @@ class AVOID_EXPORT Router {
         //! the next time Router::processTransaction() is called.  See
         //! Router::setTransactionUse() for more information.
         //!
-        //! @param[in]  shape       Pointer reference to the shape being 
+        //! @param[in]  shape       Shared pointer reference to the shape being 
         //!                         moved/resized.
         //! @param[in]  newPoly     The new polygon boundary for the shape.
         //! @param[in]  first_move  This option is used for some advanced 
         //!                         (currently undocumented) behaviour and 
         //!                         it should be ignored for the moment.
         //!
-        void moveShape(ShapeRef *shape, const Polygon& newPoly,
-                const bool first_move = false);
         void moveShape(std::shared_ptr<ShapeRef> shape, const Polygon& newPoly,
                 const bool first_move = false);
 
@@ -531,13 +526,13 @@ class AVOID_EXPORT Router {
         //! the next time Router::processTransaction() is called.  See
         //! Router::setTransactionUse() for more information.
         //!
-        //! @param[in]  shape       Pointer reference to the shape being moved.
+        //! @param[in]  shape       Shared pointer reference to the shape being
+        //!                         moved.
         //! @param[in]  xDiff       The distance to move the shape in the 
         //!                         x dimension.
         //! @param[in]  yDiff       The distance to move the shape in the 
         //!                         y dimension.
         //!
-        void moveShape(ShapeRef *shape, const double xDiff, const double yDiff);
         void moveShape(std::shared_ptr<ShapeRef> shape, const double xDiff, const double yDiff);
 
         //! @brief Remove a junction from the router scene.
@@ -549,12 +544,9 @@ class AVOID_EXPORT Router {
         //! You should not use the junction reference again after this call.
         //! The router will handle freeing of the junction's memory.
         //!
-        //! @param[in]  junction  Pointer reference to the junction being 
-        //!                       removed.
+        //! @param[in]  junction  Shared pointer reference to the junction 
+        //!                       being removed.
         //!
-    private:
-        void deleteJunction(JunctionRef *junction);
-    public:
         void deleteJunction(std::shared_ptr<JunctionRef> junction);
         
         //! @brief Remove a connector from the router scene.
@@ -566,8 +558,8 @@ class AVOID_EXPORT Router {
         //! You should not use the connector reference again after this call.
         //! The router will handle freeing of the connector's memory.
         //!
-        //! @param[in]  connector  Pointer reference to the connector being
-        //!                        removed.
+        //! @param[in]  connector  shared pointer reference to the connector 
+        //!                        being removed.
         //!
         void deleteConnector(std::shared_ptr<ConnRef> connector);
 
@@ -580,13 +572,10 @@ class AVOID_EXPORT Router {
         //! the next time Router::processTransaction() is called.  See
         //! Router::setTransactionUse() for more information.
         //!
-        //! @param[in]  junction     Pointer reference to the junction being
-        //!                          moved.
+        //! @param[in]  junction     Shared pointer reference to the junction
+        //!                          being moved.
         //! @param[in]  newPosition  The new position for the junction.
         //!
-    private:
-        void moveJunction(JunctionRef *junction, const Point& newPosition);
-    public:
         void moveJunction(std::shared_ptr<JunctionRef> junction, const Point& newPosition);
 
         //! @brief Move an existing junction within the router scene by a 
@@ -599,15 +588,13 @@ class AVOID_EXPORT Router {
         //! the next time Router::processTransaction() is called.  See
         //! Router::setTransactionUse() for more information.
         //!
-        //! @param[in]  junction    Pointer reference to the junction being 
-        //!                         moved.
+        //! @param[in]  junction    Shared pointer reference to the junction
+        //!                         being moved.
         //! @param[in]  xDiff       The distance to move the junction in the 
         //!                         x dimension.
         //! @param[in]  yDiff       The distance to move the junction in the 
         //!                         y dimension.
         //!
-        void moveJunction(JunctionRef *junction, const double xDiff, 
-                const double yDiff);
         void moveJunction(std::shared_ptr<JunctionRef> junction, const double xDiff, 
                 const double yDiff);
         
@@ -845,9 +832,17 @@ class AVOID_EXPORT Router {
 
         unsigned int assignId(const unsigned int suggestedId);
         void addShape(ShapeRef *shape);
+        void deleteShape(ShapeRef *shape);
+        void moveShape(ShapeRef *shape, const Polygon& newPoly,
+                const bool first_move = false);
+        void moveShape(ShapeRef *shape, const double xDiff, const double yDiff);
         void addShape(std::shared_ptr<ShapeRef> shape);
         void addJunction(JunctionRef *junction);
+        void deleteJunction(JunctionRef *junction);
         void addJunction(std::shared_ptr<JunctionRef> junction);
+        void moveJunction(JunctionRef *junction, const Point& newPosition);
+        void moveJunction(JunctionRef *junction, const double xDiff, 
+                const double yDiff);
         void addCluster(ClusterRef *cluster);
         void modifyConnector(std::shared_ptr<ConnRef> conn);
         void modifyConnector(std::shared_ptr<ConnRef> conn, unsigned int type,
@@ -894,7 +889,11 @@ class AVOID_EXPORT Router {
         HyperedgeImprover m_hyperedge_improver;
 
         DebugHandler *m_debug_handler;
-        std::list<std::shared_ptr<ShapeRef> > m_shareRefList;
+
+        // maintain list of shapeRef, JunctionRef and ConnRef shared pointer
+        // to avoid any premature deletion : deletion is allowed only once router
+        // instance has been deleted.
+        std::list<std::shared_ptr<ShapeRef> > m_shapeRefList;
         std::list<std::shared_ptr<JunctionRef> > m_junctionRefList;
         std::list<std::shared_ptr<ConnRef> > m_connRefList;
 };

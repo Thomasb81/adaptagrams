@@ -153,13 +153,12 @@ class AVOID_EXPORT ConnEnd
         //! and destination endpoints of the connector will be returned 
         //! during routing.
         //!
-        //! @param[in]  shapeRef              A pointer to the containing shape's
-        //!                                   ShapeRef.
+        //! @param[in]  shapeRef              A shared pointer to the 
+        //!                                   containing shape's ShapeRef.
         //! @param[in]  connectionPinClassID  A non-zero integer denoting the
         //!                                   class ID for the set of pins to
         //!                                   connect to.
         //!
-        ConnEnd(ShapeRef *shapeRef, const unsigned int connectionPinClassID);
         ConnEnd(std::shared_ptr<ShapeRef> shapeRef, const unsigned int connectionPinClassID);
 
         //! @brief Constructs a ConnEnd attached to one of the connection 
@@ -169,10 +168,9 @@ class AVOID_EXPORT ConnEnd
         //! may later be moved.  See the ShapeConnectionPin documentation for 
         //! more information.
         //!
-        //! @param[in]  junctionRef           A pointer to the containing 
-        //!                                   junction's junctionRef.
+        //! @param[in]  junctionRef           A shared pointer to the 
+        //!                                   containing junction's junctionRef.
         //!
-        ConnEnd(JunctionRef *junctionRef);
         ConnEnd(std::shared_ptr<JunctionRef> junctionRef);
 
 
@@ -233,6 +231,9 @@ class AVOID_EXPORT ConnEnd
         friend class ShapeConnectionPin;
         friend class HyperedgeImprover;
         friend class CrossingConnectorsInfo;
+
+        ConnEnd(ShapeRef *shapeRef, const unsigned int connectionPinClassID);
+        ConnEnd(JunctionRef *junctionRef);
 
         void connect(ConnRef *conn);
         void disconnect(const bool shapeDeleted = false);

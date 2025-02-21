@@ -136,10 +136,10 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         //! @brief Constructs a connector with no endpoints specified.
         //!
         //! The constructor requires a valid Router instance.  This router
-        //! will take ownership of the connector.  Hence, you should not
-        //! call the destructor yourself, but should instead call
-        //! Router::deleteConnector() and the router instance will remove
-        //! and then free the connector's memory.
+        //! will take ownership of the connector. To remove connector call 
+        //! Router::deleteConnector(). When all connector references are not 
+        //! anymore assign connector memory will be free. See std::shared_ptr
+        //! for more details
         //!
         //! @note Regarding IDs:
         //!       You can let libavoid manually handle IDs by not specifying
@@ -150,21 +150,20 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         //!       enabled, but if not and there are clashes then strange 
         //!       things can happen.
         //!
+        //! @param[out] shared pointer on created connector.
         //! @param[in]  router  The router scene to place the connector into.
         //! @param[in]  id      Optionally, a positive integer ID unique
         //!                     among all objects.
         //!
-    private:
-        ConnRef(Router *router);
-    public:
         static std::shared_ptr<ConnRef> createConnRef(Router *router, const unsigned int id = 0);
+
         //! @brief Constructs a connector with endpoints specified.
         //!
         //! The constructor requires a valid Router instance.  This router
-        //! will take ownership of the connector.  Hence, you should not
-        //! call the destructor yourself, but should instead call
-        //! Router::deleteConnector() and the router instance will remove
-        //! and then free the connector's memory.
+        //! will take ownership of the connector. To remove connector call
+        //! Router::deleteConnector(). When all connector references are not
+        //! anymore assign connector memory will be free. See std::shared_ptr 
+        //! for more details
         //!
         //! If an ID is not specified, then one will be assigned to the shape.
         //! If assigning an ID yourself, note that it should be a unique 
@@ -172,6 +171,7 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         //! so the same ID cannot be given to a shape and a connector for 
         //! example.
         //!
+        //! @param[out] shared pointer on created connector.
         //! @param[in]  router  The router scene to place the connector into.
         //! @param[in]  id      A unique positive integer ID for the connector.
         //! @param[in]  src     The source endpoint of the connector.
@@ -179,6 +179,10 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         //!
         static std::shared_ptr<ConnRef> createConnRef(Router *router, const ConnEnd& src, const ConnEnd& dst,
                 const unsigned int id = 0);
+
+        //! @brief return the shared pointer of connector
+        //!
+        //! @param[out] shared pointer of current connector.  
         std::shared_ptr<ConnRef> getPtr();
 
 
@@ -423,6 +427,9 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         friend struct HyperedgeTreeNode;
         friend class HyperedgeRerouter;
 
+        //! @brief Private constructor, use createConnRef Static class method 
+        //! instead
+        ConnRef(Router *router);
         PolyLine& routeRef(void);
         void freeRoutes(void);
         void performCallback(void);

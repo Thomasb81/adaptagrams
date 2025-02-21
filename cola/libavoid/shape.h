@@ -110,16 +110,18 @@ class AVOID_EXPORT ShapeRef : public std::enable_shared_from_this<ShapeRef>, pub
         //!       enabled, but if not and there are clashes then strange 
         //!       things can happen.
         //!
+        //! @param[out] shared pointer on create shapeRef.        
         //! @param[in]  router  The router scene to place the shape into.
         //! @param[in]  poly    A Polygon representing the boundary of the 
         //!                     shape.
         //! @param[in]  id      Optionally, a positive integer ID unique
         //!                     among all objects.
         //!
-    private:
-        ShapeRef(Router *router, Polygon& poly, const unsigned int id = 0);
-    public:
         static std::shared_ptr<ShapeRef> createShapeRef(Router *router, Polygon& poly, const unsigned int id = 0);
+        
+        //! @brief return the shared pointer of shareRef
+        //!
+        //! @param[out] shared pointer of current shapeRef.  
         std::shared_ptr<ShapeRef> getPtr();
 
         //! @brief  Shape reference destructor.
@@ -148,6 +150,7 @@ class AVOID_EXPORT ShapeRef : public std::enable_shared_from_this<ShapeRef>, pub
         friend class ShapeConnectionPin;
         friend class topology::LayoutObstacle;
 
+        ShapeRef(Router *router, Polygon& poly, const unsigned int id = 0);
         void outputCode(FILE *fp) const;
         void moveAttachedConns(const Polygon& newPoly);
         void assignPinVisibilityTo(const unsigned int pinClassId,

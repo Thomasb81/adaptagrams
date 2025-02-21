@@ -75,7 +75,7 @@ int main(void)
     // Create a connector from the centre of shape 5 that connects to 
     // the junction.
     ConnEnd srcEnd3(shapeRef5, CONNECTIONPIN_CENTRE);
-    ConnEnd dstEnd3(newObjs.first);
+    ConnEnd dstEnd3(newObjs.first->getPtr());
     ConnRef::createConnRef(router, srcEnd3, dstEnd3);
 
     router->processTransaction();

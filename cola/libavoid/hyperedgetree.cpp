@@ -155,7 +155,7 @@ void HyperedgeTreeNode::addConns(HyperedgeTreeEdge *ignored, Router *router,
                 router->removeObjectFromQueuedActions(conn.get());
                 conn->makeActive();
                 conn->m_initialised = true;
-                ConnEnd connend(junction);
+                ConnEnd connend(junction->getPtr());
                 conn->updateEndPoint(VertID::src, connend);
             }
     
@@ -225,7 +225,7 @@ void HyperedgeTreeNode::updateConnEnds(HyperedgeTreeEdge *ignored,
                             existingEnd.junction()->id(), junction->id());
 #endif
                     unsigned short end = (forward) ? VertID::src : VertID::tar;
-                    ConnEnd connend(junction);
+                    ConnEnd connend(junction->getPtr());
                     edge->conn->updateEndPoint(end, connend);
                     changedConns.push_back(edge->conn);
                 }
@@ -610,7 +610,7 @@ void HyperedgeTreeEdge::addConns(HyperedgeTreeNode *ignored, Router *router,
     else if (endNode->junction)
     {
         // Or, set a ConnEnd connecting to the junction we have reached.
-        ConnEnd connend(endNode->junction);
+        ConnEnd connend(endNode->junction->getPtr());
         conn->updateEndPoint(VertID::tar, connend);
     }
 }
@@ -651,7 +651,7 @@ void HyperedgeTreeEdge::updateConnEnds(HyperedgeTreeNode *ignored,
                     (forward) ? "tar" : "src", conn->id(),
                     existingEnd.junction()->id(), endNode->junction->id());
 #endif
-            ConnEnd connend(endNode->junction);
+            ConnEnd connend(endNode->junction->getPtr());
             unsigned short end = (forward) ? VertID::tar : VertID::src;
             conn->updateEndPoint(end, connend);
 

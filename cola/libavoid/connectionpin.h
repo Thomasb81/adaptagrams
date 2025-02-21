@@ -166,19 +166,12 @@ class AVOID_EXPORT ShapeConnectionPin
         //!                            be directional if a pin is on the shape
         //!                            edge or in all directions otherwise.
         //!
-//        ShapeConnectionPin(ShapeRef *shape, const unsigned int classId,
-//                const double xOffset, const double yOffset, 
-//                const bool proportional, const double insideOffset,
-//                const ConnDirFlags visDirs);
         ShapeConnectionPin(std::shared_ptr<ShapeRef> shape, const unsigned int classId,
                 const double xOffset, const double yOffset, 
                 const bool proportional, const double insideOffset,
                 const ConnDirFlags visDirs);
         
         // Old constructor.  Provided for compatibility with old debug files.
-//        ShapeConnectionPin(ShapeRef *shape, const unsigned int classId,
-//                const double xOffset, const double yOffset, 
-//                const double insideOffset, const ConnDirFlags visDirs);
         ShapeConnectionPin(std::shared_ptr<ShapeRef> shape, const unsigned int classId,
                 const double xOffset, const double yOffset, 
                 const double insideOffset, const ConnDirFlags visDirs);
@@ -201,8 +194,6 @@ class AVOID_EXPORT ShapeConnectionPin
         //!                            specifying the directions that this 
         //!                            connection point has visibility. 
         //!
-//        ShapeConnectionPin(JunctionRef *junction, const unsigned int classId,
-//                const ConnDirFlags visDirs = ConnDirNone);
         ShapeConnectionPin(std::shared_ptr<JunctionRef> junction, const unsigned int classId,
                 const ConnDirFlags visDirs = ConnDirNone);
         

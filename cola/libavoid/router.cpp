@@ -132,7 +132,7 @@ Router::~Router()
 //        obstacle->reset();
 //        obstacle = m_obstacles.begin();
 //    }
-    m_shareRefList.clear();
+    m_shapeRefList.clear();
     m_junctionRefList.clear();
     m_connRefList.clear();
     //m_currently_calling_destructors = false;
@@ -280,7 +280,7 @@ void Router::addShape(ShapeRef *shape)
 }
 void Router::addShape(std::shared_ptr<ShapeRef> shape){
     addShape(shape.get());
-    m_shareRefList.push_back(shape);
+    m_shapeRefList.push_back(shape);
     
 }
 
@@ -317,7 +317,7 @@ void Router::deleteShape(ShapeRef *shape)
 
 void Router::deleteShape(std::shared_ptr<ShapeRef> shape){
     deleteShape(shape.get());
-    m_shareRefList.remove(shape);
+    m_shapeRefList.remove(shape);
 }
 
 void Router::deleteConnector(std::shared_ptr<ConnRef> connector)
