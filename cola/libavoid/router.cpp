@@ -108,30 +108,7 @@ Router::~Router()
 {
     m_currently_calling_destructors = true;
 
-    // Delete remaining connectors.
-//    ConnRefList::iterator conn = connRefs.begin();
-//    while (conn != connRefs.end())
-//    {
-//        db_printf("Deleting connector %u in ~Router()\n", (*conn)->id());
-//        //delete *conn;
-//        (*conn).reset();
-//        conn = connRefs.begin();
-//    }
-    //connRefs.clear();
 
-    // Remove remaining obstacles (shapes and junctions).
-//    ObstacleList::iterator obstacle =  m_obstacles.begin();
-//    while (obstacle != m_obstacles.end())
-//    {
-//        Obstacle *obstaclePtr = (*obstacle).get();
-//        if (obstaclePtr->isActive())
-//        {
-//            obstaclePtr->removeFromGraph();
-//            obstaclePtr->makeInactive();
-//        }
-//        obstacle->reset();
-//        obstacle = m_obstacles.begin();
-//    }
     m_shapeRefList.clear();
     m_junctionRefList.clear();
     m_connRefList.clear();
@@ -140,9 +117,6 @@ Router::~Router()
     // Cleanup orphaned orthogonal graph vertices.
     destroyOrthogonalVisGraph();
 
-    //COLA_ASSERT(m_obstacles.size() == 0);
-    //COLA_ASSERT(connRefs.size() == 0);
-    //COLA_ASSERT(visGraph.size() == 0);
 
     delete m_topology_addon;
 }
@@ -560,7 +534,6 @@ void Router::processActions(void)
             // Free deleted obstacle.
             m_currently_calling_destructors = true;
             deletedObstacles.push_back(obstacle->id());
-            //delete obstacle;
             m_currently_calling_destructors = false;
         }
     }

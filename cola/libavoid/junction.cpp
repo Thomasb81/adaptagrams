@@ -40,23 +40,16 @@ JunctionRef::JunctionRef(Router *router, Point position, const unsigned int id)
       m_recommended_position(position),
       m_position_fixed(false)
 {
-    // For Junctions we use a single non-exclusive pin.
-//    ShapeConnectionPin *pin = new Avoid::ShapeConnectionPin(this,
-//            Avoid::CONNECTIONPIN_CENTRE, ConnDirAll);
-//    pin->setExclusive(false);
-//    m_connection_pins.insert(pin);
-
-//    m_router->addJunction(this);
 }
 
 std::shared_ptr<JunctionRef> JunctionRef::createJunctionRef(Router *router, Point position, const unsigned int id) {
     std::shared_ptr<JunctionRef> ptr =  std::shared_ptr<JunctionRef>(new JunctionRef(router, position,id));
     
+    // For Junctions we use a single non-exclusive pin.
     ShapeConnectionPin *pin = new Avoid::ShapeConnectionPin(ptr,
             Avoid::CONNECTIONPIN_CENTRE, ConnDirAll);
     pin->setExclusive(false);
     ptr->m_connection_pins.insert(pin);
-    
     
     router->addJunction(ptr->getPtr());
     return ptr;
@@ -68,12 +61,6 @@ std::shared_ptr<JunctionRef> JunctionRef::getPtr() {
 
 JunctionRef::~JunctionRef()
 {
-//    if (m_router->m_currently_calling_destructors == false)
-//    {
-//        err_printf("ERROR: JunctionRef::~JunctionRef() shouldn't be called directly.\n");
-//        err_printf("       It is owned by the router.  Call Router::deleteJunction() instead.\n");
-//        abort();
-//    }
 }
 
 

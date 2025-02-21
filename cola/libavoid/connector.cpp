@@ -103,65 +103,6 @@ std::shared_ptr<ConnRef> ConnRef::getPtr(){
 ConnRef::~ConnRef()
 {
     COLA_ASSERT(m_router);
-
-    if (m_router->m_currently_calling_destructors == false)
-    {
-        //err_printf("ERROR: ConnRef::~ConnRef() shouldn't be called directly.\n");
-        //err_printf("       It is owned by the router.  Call Router::deleteConnector() instead.\n");
-        //abort();
-    }
-
-    //move to Router::deleteConnector
-    //m_router->m_conn_reroute_flags.removeConn(this->getPtr());
-
-    //move to Router::deleteConnector
-    //m_router->removeObjectFromQueuedActions(this->getPtr().get());
-
-//    freeRoutes();
-//
-//    if (m_src_vert)
-//    {
-//        m_src_vert->removeFromGraph();
-//        m_router->vertices.removeVertex(m_src_vert);
-//        delete m_src_vert;
-//        m_src_vert = nullptr;
-//    }
-//    if (m_src_connend)
-//    {
-//        m_src_connend->disconnect();
-//        m_src_connend->freeActivePin();
-//        delete m_src_connend;
-//        m_src_connend = nullptr;
-//    }
-//
-//    if (m_dst_vert)
-//    {
-//        m_dst_vert->removeFromGraph();
-//        m_router->vertices.removeVertex(m_dst_vert);
-//        delete m_dst_vert;
-//        m_dst_vert = nullptr;
-//    }
-//    if (m_dst_connend)
-//    {
-//        m_dst_connend->disconnect();
-//        m_dst_connend->freeActivePin();
-//        delete m_dst_connend;
-//        m_dst_connend = nullptr;
-//    }
-//
-//    // Clear checkpoint vertices.
-//    for (size_t i = 0; i < m_checkpoint_vertices.size(); ++i)
-//    {
-//        m_checkpoint_vertices[i]->removeFromGraph(true);
-//        m_router->vertices.removeVertex(m_checkpoint_vertices[i]);
-//        delete m_checkpoint_vertices[i];
-//    }
-//    m_checkpoint_vertices.clear();
-//
-//    if (m_active)
-//    {
-//        makeInactive();
-//    }
 }
 
 
@@ -572,11 +513,6 @@ void ConnRef::makeInactive(void)
 {
     COLA_ASSERT(m_active);
 
-    // move to Router::deleteConnector    
-    // Remove from connRefs list.
-//    if (m_router->connRefs.size() > 0) {
-//        m_router->connRefs.erase(m_connrefs_pos);
-//    }
     m_active = false;
 }
 
