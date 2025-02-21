@@ -66,7 +66,7 @@ int main(void)
     router->outputDiagram("output/junction04-1");
 
     // Split the connector on its second segment and add a junction point.
-    std::pair<JunctionRef *, std::shared_ptr<ConnRef> > newObjs = 
+    std::pair<std::shared_ptr<JunctionRef> , std::shared_ptr<ConnRef> > newObjs = 
             conn1->splitAtSegment(2);
 
     router->processTransaction();
@@ -75,7 +75,7 @@ int main(void)
     // Create a connector from the centre of shape 5 that connects to 
     // the junction.
     ConnEnd srcEnd3(shapeRef5, CONNECTIONPIN_CENTRE);
-    ConnEnd dstEnd3(newObjs.first->getPtr());
+    ConnEnd dstEnd3(newObjs.first);
     ConnRef::createConnRef(router, srcEnd3, dstEnd3);
 
     router->processTransaction();

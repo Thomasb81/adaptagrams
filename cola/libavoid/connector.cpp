@@ -628,11 +628,11 @@ Point midpoint(Point a, Point b)
 }
 
 
-std::pair<JunctionRef *, std::shared_ptr<ConnRef> > ConnRef::splitAtSegment(
+std::pair<std::shared_ptr<JunctionRef> , std::shared_ptr<ConnRef> > ConnRef::splitAtSegment(
                 const size_t segmentN)
 {
     std::shared_ptr<ConnRef> newConn;
-    JunctionRef *newJunction = nullptr;
+    std::shared_ptr<JunctionRef> newJunction;
 
     if (m_display_route.size() > segmentN)
     {
@@ -641,7 +641,7 @@ std::pair<JunctionRef *, std::shared_ptr<ConnRef> > ConnRef::splitAtSegment(
                 m_display_route.at(segmentN));
 
         // Create the new junction.
-        newJunction = JunctionRef::createJunctionRef(router(), junctionPos).get();
+        newJunction = JunctionRef::createJunctionRef(router(), junctionPos);
         router()->addJunction(newJunction);
         newJunction->preferOrthogonalDimension(
                 (m_display_route.at(segmentN - 1).x == 

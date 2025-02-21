@@ -304,7 +304,7 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         //!
         //! @return  A pair containing pointers to the new JunctionRef and 
         //!          ConnRef.
-        std::pair<JunctionRef *, std::shared_ptr<ConnRef> > splitAtSegment(
+        std::pair<std::shared_ptr<JunctionRef> , std::shared_ptr<ConnRef> > splitAtSegment(
                 const size_t segmentN);
 
         //! @brief  Allows the user to specify a set of checkpoints that this
