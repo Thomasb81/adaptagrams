@@ -56,34 +56,34 @@ int main(void) {
     // connRef13958908
     connRef = ConnRef::createConnRef(router, 13958908);
     srcPt = ConnEnd(shapeRef346216920, 3);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(shapeRef320077872, 6);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
 
     // connRef81482716
     connRef = ConnRef::createConnRef(router, 81482716);
     srcPt = ConnEnd(shapeRef320077872, 8);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(shapeRef346216920, 7);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
 
     // connRef180721992
     connRef = ConnRef::createConnRef(router, 180721992);
     srcPt = ConnEnd(shapeRef320077872, 4);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(shapeRef346216920, 5);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
 
     // connRef273666240
     connRef = ConnRef::createConnRef(router, 273666240);
     srcPt = ConnEnd(shapeRef320077872, 2);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(shapeRef346216920, 1);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
 
     router->processTransaction();
     router->outputDiagram("output/inlineoverlap10");

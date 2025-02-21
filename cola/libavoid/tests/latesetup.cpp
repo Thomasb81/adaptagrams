@@ -52,12 +52,12 @@ int main(void)
     Point srcPt(1.2, 0.5);
     Point dstPt(1.5, 4);
     auto connRef = ConnRef::createConnRef(router);
-    connRef.get()->setCallback(connCallback, connRef.get());
+    connRef->setCallback(connCallback, connRef.get());
     // Force inital callback:
     router->processTransaction();
 
     auto connRef2 = ConnRef::createConnRef(router);
-    connRef2.get()->setCallback(connCallback, connRef2.get());
+    connRef2->setCallback(connCallback, connRef2.get());
     router->processTransaction();
 
     router->deleteConnector(connRef2);
@@ -65,7 +65,7 @@ int main(void)
     router->processTransaction();
 
     printf("\nAdd endpoints.\n");
-    connRef.get()->setEndpoints(srcPt, dstPt);
+    connRef->setEndpoints(srcPt, dstPt);
     router->processTransaction();
     
     printf("\nAdding a shape.\n");
@@ -79,7 +79,7 @@ int main(void)
 
     printf("\nShifting endpoint.\n");
     Point dstPt2(6, 4.5);
-    connRef.get()->setDestEndpoint(dstPt2);
+    connRef->setDestEndpoint(dstPt2);
     // It's expected you know the connector needs rerouting, so the callback
     // isn't called.  You can force it to be called though, via:
     router->processTransaction();

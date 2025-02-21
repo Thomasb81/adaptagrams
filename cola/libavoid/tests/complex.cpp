@@ -51,7 +51,7 @@ int main(void)
     Point srcPt(1.2, 0.5);
     Point dstPt(1.5, 4);
     auto connRef = ConnRef::createConnRef(router, srcPt, dstPt);
-    connRef.get()->setCallback(connCallback, connRef.get() );
+    connRef->setCallback(connCallback, connRef.get() );
     // Force inital callback:
     router->processTransaction();
 
@@ -66,7 +66,7 @@ int main(void)
 
     printf("\nShifting endpoint.\n");
     Point dstPt2(6, 4.5);
-    connRef.get()->setDestEndpoint(dstPt2);
+    connRef->setDestEndpoint(dstPt2);
     // It's expected you know the connector needs rerouting, so the callback
     // isn't called.  You can force it to be called though, via:
     router->processTransaction();
@@ -76,11 +76,11 @@ int main(void)
     router->processTransaction();
 
     printf("\nChanging type to orthogonal.\n");
-    connRef.get()->setRoutingType(ConnType_Orthogonal);
+    connRef->setRoutingType(ConnType_Orthogonal);
     router->processTransaction();
 
     printf("\nChanging type back to polyline.\n");
-    connRef.get()->setRoutingType(ConnType_PolyLine);
+    connRef->setRoutingType(ConnType_PolyLine);
     router->processTransaction();
 
     router->deleteConnector(connRef);

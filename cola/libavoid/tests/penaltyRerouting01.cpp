@@ -164,200 +164,200 @@ int main(void) {
     // connRef17
     connRef = ConnRef::createConnRef(router, 17);
     srcPt = ConnEnd(Point(464, 598), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(369, 598), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 17;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(464, 598);
     newRoute.ps[1] = Point(369, 598);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef18
     connRef = ConnRef::createConnRef(router, 18);
     srcPt = ConnEnd(Point(267.5, 598), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(166, 598), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 18;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(267.5, 598);
     newRoute.ps[1] = Point(166, 598);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef19
     connRef = ConnRef::createConnRef(router, 19);
     srcPt = ConnEnd(Point(369, 598), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(369, 369), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 19;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(369, 598);
     newRoute.ps[1] = Point(369, 369);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef20
     connRef = ConnRef::createConnRef(router, 20);
     srcPt = ConnEnd(Point(464, 506), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(464, 598), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 20;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(464, 506);
     newRoute.ps[1] = Point(464, 598);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef21
     connRef = ConnRef::createConnRef(router, 21);
     srcPt = ConnEnd(Point(756, 598), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(756, 145), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 21;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(756, 598);
     newRoute.ps[1] = Point(756, 145);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef22
     connRef = ConnRef::createConnRef(router, 22);
     srcPt = ConnEnd(Point(369, 369), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(267.5, 369), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 22;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(369, 369);
     newRoute.ps[1] = Point(267.5, 369);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef23
     connRef = ConnRef::createConnRef(router, 23);
     srcPt = ConnEnd(Point(166, 145), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(756, 145), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 23;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(166, 145);
     newRoute.ps[1] = Point(756, 145);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef24
     connRef = ConnRef::createConnRef(router, 24);
     srcPt = ConnEnd(Point(464, 486.495), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(706.495, 486.495), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
 
     // connRef25
     connRef = ConnRef::createConnRef(router, 25);
     srcPt = ConnEnd(Point(535, 369), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(535, 506), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 25;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(535, 369);
     newRoute.ps[1] = Point(535, 506);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef26
     connRef = ConnRef::createConnRef(router, 26);
     srcPt = ConnEnd(Point(648, 598), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(648, 369), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 26;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(648, 598);
     newRoute.ps[1] = Point(648, 369);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef27
     connRef = ConnRef::createConnRef(router, 27);
     srcPt = ConnEnd(Point(464, 486.495), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(217, 486.495), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
 
     // connRef28
     connRef = ConnRef::createConnRef(router, 28);
     srcPt = ConnEnd(Point(648, 598), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(756, 598), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 28;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(648, 598);
     newRoute.ps[1] = Point(756, 598);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef29
     connRef = ConnRef::createConnRef(router, 29);
     srcPt = ConnEnd(Point(166, 598), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(166, 145), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 29;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(166, 598);
     newRoute.ps[1] = Point(166, 145);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef30
     connRef = ConnRef::createConnRef(router, 30);
     srcPt = ConnEnd(Point(648, 369), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(535, 369), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 30;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(648, 369);
     newRoute.ps[1] = Point(535, 369);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef31
     connRef = ConnRef::createConnRef(router, 31);
     srcPt = ConnEnd(Point(267.5, 369), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(267.5, 598), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 31;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(267.5, 369);
     newRoute.ps[1] = Point(267.5, 598);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     // connRef32
     connRef = ConnRef::createConnRef(router, 32);
     srcPt = ConnEnd(Point(535, 506), 15);
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     dstPt = ConnEnd(Point(464, 506), 15);
-    connRef.get()->setDestEndpoint(dstPt);
-    connRef.get()->setRoutingType((ConnType)2);
+    connRef->setDestEndpoint(dstPt);
+    connRef->setRoutingType((ConnType)2);
     newRoute._id = 32;
     newRoute.ps.resize(2);
     newRoute.ps[0] = Point(535, 506);
     newRoute.ps[1] = Point(464, 506);
-    connRef.get()->setFixedRoute(newRoute);
+    connRef->setFixedRoute(newRoute);
 
     router->processTransaction();
     router->outputDiagram("output/penaltyRerouting01");

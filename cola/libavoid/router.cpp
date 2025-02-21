@@ -301,14 +301,14 @@ void Router::deleteConnector(std::shared_ptr<ConnRef> connector)
     m_conn_reroute_flags.removeConn(connector);
     removeObjectFromQueuedActions(connector.get());
     if (connRefs.size() > 0 ) {
-        connRefs.erase(connector.get()->m_connrefs_pos);
+        connRefs.erase(connector->m_connrefs_pos);
     }
     
-    if (connector.get()->m_src_connend) {
-        connector.get()->m_src_connend->m_conn_ref.reset();
+    if (connector->m_src_connend) {
+        connector->m_src_connend->m_conn_ref.reset();
     }
-    if (connector.get()->m_dst_connend) {
-        connector.get()->m_dst_connend->m_conn_ref.reset();
+    if (connector->m_dst_connend) {
+        connector->m_dst_connend->m_conn_ref.reset();
     }
 
     m_connRefList.remove(connector);

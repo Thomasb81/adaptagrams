@@ -50,29 +50,29 @@ int main(void)
     router->outputDiagram("output/connendmove-1");
 
     Point dstPt2(20, 20);
-    connRef.get()->setDestEndpoint(dstPt2);
+    connRef->setDestEndpoint(dstPt2);
     router->moveShape(shapeRef1, 0.5, 0);
 
     router->processTransaction();
     router->outputDiagram("output/connendmove-2");
 
     srcPt.x += 0.5;
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     router->moveShape(shapeRef1, 0.5, 0);
     router->moveShape(shapeRef2, 0, 0.5);
     
     srcPt.x += 0.5;
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     router->moveShape(shapeRef1, 0.5, 0);
     router->moveShape(shapeRef2, 0, 0.5);
     
     srcPt.x += 0.5;
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     router->moveShape(shapeRef1, 0.5, 0);
     router->moveShape(shapeRef2, 0, 0.5);
     
     srcPt.x += 0.5;
-    connRef.get()->setSourceEndpoint(srcPt);
+    connRef->setSourceEndpoint(srcPt);
     router->moveShape(shapeRef1, 0.5, 0);
     router->moveShape(shapeRef2, 0, 0.5);
     

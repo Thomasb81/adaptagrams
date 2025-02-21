@@ -503,7 +503,7 @@ void HyperedgeImprover::removeZeroLengthEdges(HyperedgeTreeNode *self,
                     fprintf(stderr, "                   Deleted junction %u\n",
                             other->junction->id());
                     fprintf(stderr, "                   Deleted connector %u\n",
-                            edge->conn.get()->id());
+                            edge->conn->id());
 #endif
 
                     // Delete one of the junctions.
@@ -751,7 +751,7 @@ void HyperedgeImprover::getEndpoints(JunctionRef *junction, JunctionRef *ignore,
         COLA_ASSERT(connEnd->m_conn_ref != nullptr);
         std::shared_ptr<ConnRef> connRef = connEnd->m_conn_ref;
         std::pair<Obstacle *, Obstacle *> anchors =
-                connRef.get()->endpointAnchors();
+                connRef->endpointAnchors();
 
         JunctionRef *junction1 =
                 dynamic_cast<JunctionRef *> (anchors.first);
@@ -764,7 +764,7 @@ void HyperedgeImprover::getEndpoints(JunctionRef *junction, JunctionRef *ignore,
         }
         else
         {
-            endpoints.insert(connRef.get()->m_src_vert);
+            endpoints.insert(connRef->m_src_vert);
         }
 
         JunctionRef *junction2 =
@@ -778,7 +778,7 @@ void HyperedgeImprover::getEndpoints(JunctionRef *junction, JunctionRef *ignore,
         }
         else
         {
-            endpoints.insert(connRef.get()->m_dst_vert);
+            endpoints.insert(connRef->m_dst_vert);
         }
     }
 }

@@ -69,13 +69,13 @@ ConnRef::ConnRef(Router *router)
 std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const unsigned int id){
     std::shared_ptr<ConnRef> ptr = std::shared_ptr<ConnRef>(new ConnRef(router));
 
-    COLA_ASSERT(ptr.get()->m_router != nullptr);
-    ptr.get()->m_id = ptr.get()->m_router->assignId(id);
+    COLA_ASSERT(ptr->m_router != nullptr);
+    ptr->m_id = ptr->m_router->assignId(id);
 
     // TODO: Store endpoints and details.
-    ptr.get()->m_route.clear();
+    ptr->m_route.clear();
 
-    ptr.get()->m_reroute_flag_ptr = router->m_conn_reroute_flags.addConn(ptr->getPtr());
+    ptr->m_reroute_flag_ptr = router->m_conn_reroute_flags.addConn(ptr->getPtr());
     router->m_connRefList.push_back(ptr);
     return ptr;
 }
@@ -83,14 +83,14 @@ std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const unsigned i
 std::shared_ptr<ConnRef> ConnRef::createConnRef(Router *router, const ConnEnd& src,  const ConnEnd& dst, const unsigned int id) {
     std::shared_ptr<ConnRef> ptr = std::shared_ptr<ConnRef>(new ConnRef(router));
 
-    COLA_ASSERT(ptr.get()->m_router != nullptr);
-    ptr.get()->m_id = ptr.get()->m_router->assignId(id);
-    ptr.get()->m_route.clear();
+    COLA_ASSERT(ptr->m_router != nullptr);
+    ptr->m_id = ptr->m_router->assignId(id);
+    ptr->m_route.clear();
 
     // Set endpoint values.
-    ptr.get()->setEndpoints(src, dst);
+    ptr->setEndpoints(src, dst);
 
-    ptr.get()->m_reroute_flag_ptr = router->m_conn_reroute_flags.addConn(ptr->getPtr());
+    ptr->m_reroute_flag_ptr = router->m_conn_reroute_flags.addConn(ptr->getPtr());
 
     return ptr;
 }

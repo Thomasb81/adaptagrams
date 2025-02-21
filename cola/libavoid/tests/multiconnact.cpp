@@ -50,7 +50,7 @@ int main(void)
     Point srcPt(0,400);
     Point dstPt(775,400);
     auto connRef = ConnRef::createConnRef(router, srcPt, dstPt);
-    connRef.get()->setCallback(connCallback, connRef.get());
+    connRef->setCallback(connCallback, connRef.get());
 
     Point srcPt2(775,625);
     Point dstPt2(350,475);
@@ -60,12 +60,12 @@ int main(void)
     router->processTransaction();
 
     printf("\nShifting endpoint.\n");
-    connRef.get()->setEndpoints(Point(0,375), Point(775,400));
+    connRef->setEndpoints(Point(0,375), Point(775,400));
     connRef2->setEndpoints(Point(775,625), Point(350,450));
     router->processTransaction();
 
     printf("\nShifting endpoint.\n");
-    connRef.get()->setEndpoints(Point(0,400), Point(775,400));
+    connRef->setEndpoints(Point(0,400), Point(775,400));
     connRef2->setEndpoints(Point(775,625), Point(350,475));
     router->processTransaction();
 
