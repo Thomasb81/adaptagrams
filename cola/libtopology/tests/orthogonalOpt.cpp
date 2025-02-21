@@ -23,1199 +23,1199 @@ int main(void) {
     poly1.ps[1] = Point(726.878, 250.197);
     poly1.ps[2] = Point(706.878, 250.197);
     poly1.ps[3] = Point(706.878, 218.197);
-    new ShapeRef(router, poly1, 1);
+    ShapeRef::createShapeRef(router, poly1, 1);
 
     Polygon poly2(4);
     poly2.ps[0] = Point(117.711, 1515.53);
     poly2.ps[1] = Point(117.711, 1535.53);
     poly2.ps[2] = Point(85.7111, 1535.53);
     poly2.ps[3] = Point(85.7111, 1515.53);
-    new ShapeRef(router, poly2, 2);
+    ShapeRef::createShapeRef(router, poly2, 2);
 
     Polygon poly3(4);
     poly3.ps[0] = Point(-251.289, 1435.53);
     poly3.ps[1] = Point(-251.289, 1467.53);
     poly3.ps[2] = Point(-271.289, 1467.53);
     poly3.ps[3] = Point(-271.289, 1435.53);
-    new ShapeRef(router, poly3, 3);
+    ShapeRef::createShapeRef(router, poly3, 3);
 
     Polygon poly4(4);
     poly4.ps[0] = Point(117.711, 1557.53);
     poly4.ps[1] = Point(117.711, 1577.53);
     poly4.ps[2] = Point(85.7111, 1577.53);
     poly4.ps[3] = Point(85.7111, 1557.53);
-    new ShapeRef(router, poly4, 4);
+    ShapeRef::createShapeRef(router, poly4, 4);
 
     Polygon poly5(4);
     poly5.ps[0] = Point(-251.289, 1515.53);
     poly5.ps[1] = Point(-251.289, 1577.53);
     poly5.ps[2] = Point(-313.289, 1577.53);
     poly5.ps[3] = Point(-313.289, 1515.53);
-    new ShapeRef(router, poly5, 5);
+    ShapeRef::createShapeRef(router, poly5, 5);
 
     Polygon poly6(4);
     poly6.ps[0] = Point(1158.88, -159.553);
     poly6.ps[1] = Point(1158.88, 217.447);
     poly6.ps[2] = Point(936.878, 217.447);
     poly6.ps[3] = Point(936.878, -159.553);
-    new ShapeRef(router, poly6, 6);
+    ShapeRef::createShapeRef(router, poly6, 6);
 
     Polygon poly7(4);
     poly7.ps[0] = Point(836.878, -647.803);
     poly7.ps[1] = Point(836.878, -473.803);
     poly7.ps[2] = Point(716.878, -473.803);
     poly7.ps[3] = Point(716.878, -647.803);
-    new ShapeRef(router, poly7, 7);
+    ShapeRef::createShapeRef(router, poly7, 7);
 
     Polygon poly8(4);
     poly8.ps[0] = Point(417.378, 1468.53);
     poly8.ps[1] = Point(417.378, 1500.53);
     poly8.ps[2] = Point(397.378, 1500.53);
     poly8.ps[3] = Point(397.378, 1468.53);
-    new ShapeRef(router, poly8, 8);
+    ShapeRef::createShapeRef(router, poly8, 8);
 
     Polygon poly9(4);
     poly9.ps[0] = Point(684.878, 1440.53);
     poly9.ps[1] = Point(684.878, 1460.53);
     poly9.ps[2] = Point(652.878, 1460.53);
     poly9.ps[3] = Point(652.878, 1440.53);
-    new ShapeRef(router, poly9, 9);
+    ShapeRef::createShapeRef(router, poly9, 9);
 
     Polygon poly10(4);
     poly10.ps[0] = Point(684.878, 1515.53);
     poly10.ps[1] = Point(684.878, 1535.53);
     poly10.ps[2] = Point(652.878, 1535.53);
     poly10.ps[3] = Point(652.878, 1515.53);
-    new ShapeRef(router, poly10, 10);
+    ShapeRef::createShapeRef(router, poly10, 10);
 
     Polygon poly11(4);
     poly11.ps[0] = Point(587.378, 1275.86);
     poly11.ps[1] = Point(587.378, 1295.86);
     poly11.ps[2] = Point(555.378, 1295.86);
     poly11.ps[3] = Point(555.378, 1275.86);
-    new ShapeRef(router, poly11, 11);
+    ShapeRef::createShapeRef(router, poly11, 11);
 
     Polygon poly12(4);
     poly12.ps[0] = Point(581.378, 1173.86);
     poly12.ps[1] = Point(581.378, 1205.86);
     poly12.ps[2] = Point(561.378, 1205.86);
     poly12.ps[3] = Point(561.378, 1173.86);
-    new ShapeRef(router, poly12, 12);
+    ShapeRef::createShapeRef(router, poly12, 12);
 
     Polygon poly13(4);
     poly13.ps[0] = Point(291.378, 1242.86);
     poly13.ps[1] = Point(291.378, 1262.86);
     poly13.ps[2] = Point(259.378, 1262.86);
     poly13.ps[3] = Point(259.378, 1242.86);
-    new ShapeRef(router, poly13, 13);
+    ShapeRef::createShapeRef(router, poly13, 13);
 
     Polygon poly14(4);
     poly14.ps[0] = Point(-117.289, 1242.86);
     poly14.ps[1] = Point(-117.289, 1262.86);
     poly14.ps[2] = Point(-149.289, 1262.86);
     poly14.ps[3] = Point(-149.289, 1242.86);
-    new ShapeRef(router, poly14, 14);
+    ShapeRef::createShapeRef(router, poly14, 14);
 
     Polygon poly15(4);
     poly15.ps[0] = Point(901.878, 1242.86);
     poly15.ps[1] = Point(901.878, 1262.86);
     poly15.ps[2] = Point(869.878, 1262.86);
     poly15.ps[3] = Point(869.878, 1242.86);
-    new ShapeRef(router, poly15, 15);
+    ShapeRef::createShapeRef(router, poly15, 15);
 
     Polygon poly16(4);
     poly16.ps[0] = Point(515.378, 991.864);
     poly16.ps[1] = Point(515.378, 1035.86);
     poly16.ps[2] = Point(427.378, 1035.86);
     poly16.ps[3] = Point(427.378, 991.864);
-    new ShapeRef(router, poly16, 16);
+    ShapeRef::createShapeRef(router, poly16, 16);
 
     Polygon poly17(4);
     poly17.ps[0] = Point(726.878, 1032.86);
     poly17.ps[1] = Point(726.878, 1064.86);
     poly17.ps[2] = Point(706.878, 1064.86);
     poly17.ps[3] = Point(706.878, 1032.86);
-    new ShapeRef(router, poly17, 17);
+    ShapeRef::createShapeRef(router, poly17, 17);
 
     Polygon poly18(4);
     poly18.ps[0] = Point(-281.789, 1046.86);
     poly18.ps[1] = Point(-281.789, 1210.86);
     poly18.ps[2] = Point(-488.789, 1210.86);
     poly18.ps[3] = Point(-488.789, 1046.86);
-    new ShapeRef(router, poly18, 18);
+    ShapeRef::createShapeRef(router, poly18, 18);
 
     Polygon poly19(4);
     poly19.ps[0] = Point(726.878, 908.864);
     poly19.ps[1] = Point(726.878, 940.864);
     poly19.ps[2] = Point(706.878, 940.864);
     poly19.ps[3] = Point(706.878, 908.864);
-    new ShapeRef(router, poly19, 19);
+    ShapeRef::createShapeRef(router, poly19, 19);
 
     Polygon poly20(4);
     poly20.ps[0] = Point(726.878, 784.864);
     poly20.ps[1] = Point(726.878, 816.864);
     poly20.ps[2] = Point(706.878, 816.864);
     poly20.ps[3] = Point(706.878, 784.864);
-    new ShapeRef(router, poly20, 20);
+    ShapeRef::createShapeRef(router, poly20, 20);
 
     Polygon poly21(4);
     poly21.ps[0] = Point(705.878, 373.864);
     poly21.ps[1] = Point(705.878, 405.864);
     poly21.ps[2] = Point(685.878, 405.864);
     poly21.ps[3] = Point(685.878, 373.864);
-    new ShapeRef(router, poly21, 21);
+    ShapeRef::createShapeRef(router, poly21, 21);
 
     Polygon poly22(4);
     poly22.ps[0] = Point(306.878, 715.864);
     poly22.ps[1] = Point(306.878, 775.864);
     poly22.ps[2] = Point(-6.12224, 775.864);
     poly22.ps[3] = Point(-6.12224, 715.864);
-    new ShapeRef(router, poly22, 22);
+    ShapeRef::createShapeRef(router, poly22, 22);
 
     Polygon poly23(4);
     poly23.ps[0] = Point(554.378, 318.864);
     poly23.ps[1] = Point(554.378, 338.864);
     poly23.ps[2] = Point(522.378, 338.864);
     poly23.ps[3] = Point(522.378, 318.864);
-    new ShapeRef(router, poly23, 23);
+    ShapeRef::createShapeRef(router, poly23, 23);
 
     Polygon poly24(4);
     poly24.ps[0] = Point(705.878, 9.94694);
     poly24.ps[1] = Point(705.878, 41.9469);
     poly24.ps[2] = Point(685.878, 41.9469);
     poly24.ps[3] = Point(685.878, 9.94694);
-    new ShapeRef(router, poly24, 24);
+    ShapeRef::createShapeRef(router, poly24, 24);
 
     Polygon poly25(4);
     poly25.ps[0] = Point(838.878, 9.94694);
     poly25.ps[1] = Point(838.878, 41.9469);
     poly25.ps[2] = Point(818.878, 41.9469);
     poly25.ps[3] = Point(818.878, 9.94694);
-    new ShapeRef(router, poly25, 25);
+    ShapeRef::createShapeRef(router, poly25, 25);
 
     Polygon poly26(4);
     poly26.ps[0] = Point(868.878, -256.303);
     poly26.ps[1] = Point(868.878, -236.303);
     poly26.ps[2] = Point(836.878, -236.303);
     poly26.ps[3] = Point(836.878, -256.303);
-    new ShapeRef(router, poly26, 26);
+    ShapeRef::createShapeRef(router, poly26, 26);
 
     Polygon poly27(4);
     poly27.ps[0] = Point(726.878, -143.553);
     poly27.ps[1] = Point(726.878, -111.553);
     poly27.ps[2] = Point(706.878, -111.553);
     poly27.ps[3] = Point(706.878, -143.553);
-    new ShapeRef(router, poly27, 27);
+    ShapeRef::createShapeRef(router, poly27, 27);
 
     Polygon poly28(4);
     poly28.ps[0] = Point(726.878, -334.803);
     poly28.ps[1] = Point(726.878, -302.803);
     poly28.ps[2] = Point(706.878, -302.803);
     poly28.ps[3] = Point(706.878, -334.803);
-    new ShapeRef(router, poly28, 28);
+    ShapeRef::createShapeRef(router, poly28, 28);
 
     Polygon poly29(4);
     poly29.ps[0] = Point(488.378, -50.0531);
     poly29.ps[1] = Point(488.378, -30.0531);
     poly29.ps[2] = Point(456.378, -30.0531);
     poly29.ps[3] = Point(456.378, -50.0531);
-    new ShapeRef(router, poly29, 29);
+    ShapeRef::createShapeRef(router, poly29, 29);
 
     Polygon poly30(4);
     poly30.ps[0] = Point(-14.2889, -146.053);
     poly30.ps[1] = Point(-14.2889, -126.053);
     poly30.ps[2] = Point(-46.2889, -126.053);
     poly30.ps[3] = Point(-46.2889, -146.053);
-    new ShapeRef(router, poly30, 30);
+    ShapeRef::createShapeRef(router, poly30, 30);
 
     Polygon poly31(4);
     poly31.ps[0] = Point(-14.2889, -71.0531);
     poly31.ps[1] = Point(-14.2889, -51.0531);
     poly31.ps[2] = Point(-46.2889, -51.0531);
     poly31.ps[3] = Point(-46.2889, -71.0531);
-    new ShapeRef(router, poly31, 31);
+    ShapeRef::createShapeRef(router, poly31, 31);
 
     Polygon poly32(4);
     poly32.ps[0] = Point(390.378, -137.553);
     poly32.ps[1] = Point(390.378, -117.553);
     poly32.ps[2] = Point(358.378, -117.553);
     poly32.ps[3] = Point(358.378, -137.553);
-    new ShapeRef(router, poly32, 32);
+    ShapeRef::createShapeRef(router, poly32, 32);
 
     Polygon poly33(4);
     poly33.ps[0] = Point(219.378, -143.553);
     poly33.ps[1] = Point(219.378, -111.553);
     poly33.ps[2] = Point(199.378, -111.553);
     poly33.ps[3] = Point(199.378, -143.553);
-    new ShapeRef(router, poly33, 33);
+    ShapeRef::createShapeRef(router, poly33, 33);
 
     Polygon poly34(4);
     poly34.ps[0] = Point(-237.289, -143.553);
     poly34.ps[1] = Point(-237.289, -111.553);
     poly34.ps[2] = Point(-257.289, -111.553);
     poly34.ps[3] = Point(-257.289, -143.553);
-    new ShapeRef(router, poly34, 34);
+    ShapeRef::createShapeRef(router, poly34, 34);
 
     Polygon poly35(4);
     poly35.ps[0] = Point(84.7111, -393.803);
     poly35.ps[1] = Point(84.7111, -373.803);
     poly35.ps[2] = Point(52.7111, -373.803);
     poly35.ps[3] = Point(52.7111, -393.803);
-    new ShapeRef(router, poly35, 35);
+    ShapeRef::createShapeRef(router, poly35, 35);
 
     Polygon poly36(4);
     poly36.ps[0] = Point(84.7111, -318.803);
     poly36.ps[1] = Point(84.7111, -298.803);
     poly36.ps[2] = Point(52.7111, -298.803);
     poly36.ps[3] = Point(52.7111, -318.803);
-    new ShapeRef(router, poly36, 36);
+    ShapeRef::createShapeRef(router, poly36, 36);
 
     Polygon poly37(4);
     poly37.ps[0] = Point(84.7111, -126.803);
     poly37.ps[1] = Point(84.7111, -106.803);
     poly37.ps[2] = Point(52.7111, -106.803);
     poly37.ps[3] = Point(52.7111, -126.803);
-    new ShapeRef(router, poly37, 37);
+    ShapeRef::createShapeRef(router, poly37, 37);
 
     Polygon poly38(4);
     poly38.ps[0] = Point(357.378, -361.803);
     poly38.ps[1] = Point(357.378, -341.803);
     poly38.ps[2] = Point(325.378, -341.803);
     poly38.ps[3] = Point(325.378, -361.803);
-    new ShapeRef(router, poly38, 38);
+    ShapeRef::createShapeRef(router, poly38, 38);
 
     Polygon poly39(4);
     poly39.ps[0] = Point(357.378, -463.803);
     poly39.ps[1] = Point(357.378, -443.803);
     poly39.ps[2] = Point(325.378, -443.803);
     poly39.ps[3] = Point(325.378, -463.803);
-    new ShapeRef(router, poly39, 39);
+    ShapeRef::createShapeRef(router, poly39, 39);
 
     Polygon poly40(4);
     poly40.ps[0] = Point(-131.789, -596.303);
     poly40.ps[1] = Point(-131.789, -561.303);
     poly40.ps[2] = Point(-392.789, -561.303);
     poly40.ps[3] = Point(-392.789, -596.303);
-    new ShapeRef(router, poly40, 40);
+    ShapeRef::createShapeRef(router, poly40, 40);
 
     Polygon poly41(4);
     poly41.ps[0] = Point(18.7111, 1408.53);
     poly41.ps[1] = Point(18.7111, 1428.53);
     poly41.ps[2] = Point(-13.2889, 1428.53);
     poly41.ps[3] = Point(-13.2889, 1408.53);
-    new ShapeRef(router, poly41, 41);
+    ShapeRef::createShapeRef(router, poly41, 41);
 
     Polygon poly42(4);
     poly42.ps[0] = Point(726.878, 609.864);
     poly42.ps[1] = Point(726.878, 641.864);
     poly42.ps[2] = Point(706.878, 641.864);
     poly42.ps[3] = Point(706.878, 609.864);
-    new ShapeRef(router, poly42, 42);
+    ShapeRef::createShapeRef(router, poly42, 42);
 
     Polygon poly43(4);
     poly43.ps[0] = Point(84.7111, -243.803);
     poly43.ps[1] = Point(84.7111, -223.803);
     poly43.ps[2] = Point(52.7111, -223.803);
     poly43.ps[3] = Point(52.7111, -243.803);
-    new ShapeRef(router, poly43, 43);
+    ShapeRef::createShapeRef(router, poly43, 43);
 
     Polygon poly44(4);
     poly44.ps[0] = Point(-14.2889, -29.0531);
     poly44.ps[1] = Point(-14.2889, -9.05306);
     poly44.ps[2] = Point(-46.2889, -9.05306);
     poly44.ps[3] = Point(-46.2889, -29.0531);
-    new ShapeRef(router, poly44, 44);
+    ShapeRef::createShapeRef(router, poly44, 44);
 
     Polygon poly45(4);
     poly45.ps[0] = Point(-231.289, 89.1969);
     poly45.ps[1] = Point(-231.289, 109.197);
     poly45.ps[2] = Point(-263.289, 109.197);
     poly45.ps[3] = Point(-263.289, 89.1969);
-    new ShapeRef(router, poly45, 45);
+    ShapeRef::createShapeRef(router, poly45, 45);
 
     Polygon poly46(4);
     poly46.ps[0] = Point(-231.289, 191.197);
     poly46.ps[1] = Point(-231.289, 211.197);
     poly46.ps[2] = Point(-263.289, 211.197);
     poly46.ps[3] = Point(-263.289, 191.197);
-    new ShapeRef(router, poly46, 46);
+    ShapeRef::createShapeRef(router, poly46, 46);
 
     Polygon poly47(4);
     poly47.ps[0] = Point(150.711, 89.1969);
     poly47.ps[1] = Point(150.711, 109.197);
     poly47.ps[2] = Point(118.711, 109.197);
     poly47.ps[3] = Point(118.711, 89.1969);
-    new ShapeRef(router, poly47, 47);
+    ShapeRef::createShapeRef(router, poly47, 47);
 
     Polygon poly48(4);
     poly48.ps[0] = Point(150.711, 191.197);
     poly48.ps[1] = Point(150.711, 211.197);
     poly48.ps[2] = Point(118.711, 211.197);
     poly48.ps[3] = Point(118.711, 191.197);
-    new ShapeRef(router, poly48, 48);
+    ShapeRef::createShapeRef(router, poly48, 48);
 
     Polygon poly49(4);
     poly49.ps[0] = Point(959.878, -277.303);
     poly49.ps[1] = Point(959.878, -215.303);
     poly49.ps[2] = Point(897.878, -215.303);
     poly49.ps[3] = Point(897.878, -277.303);
-    new ShapeRef(router, poly49, 49);
+    ShapeRef::createShapeRef(router, poly49, 49);
 
     Polygon poly50(4);
     poly50.ps[0] = Point(747.878, -443.803);
     poly50.ps[1] = Point(747.878, -381.803);
     poly50.ps[2] = Point(685.878, -381.803);
     poly50.ps[3] = Point(685.878, -443.803);
-    new ShapeRef(router, poly50, 50);
+    ShapeRef::createShapeRef(router, poly50, 50);
 
     Polygon poly51(4);
     poly51.ps[0] = Point(747.878, 831.864);
     poly51.ps[1] = Point(747.878, 893.864);
     poly51.ps[2] = Point(685.878, 893.864);
     poly51.ps[3] = Point(685.878, 831.864);
-    new ShapeRef(router, poly51, 51);
+    ShapeRef::createShapeRef(router, poly51, 51);
 
     Polygon poly52(4);
     poly52.ps[0] = Point(-216.289, -243.803);
     poly52.ps[1] = Point(-216.289, -181.803);
     poly52.ps[2] = Point(-278.289, -181.803);
     poly52.ps[3] = Point(-278.289, -243.803);
-    new ShapeRef(router, poly52, 52);
+    ShapeRef::createShapeRef(router, poly52, 52);
 
     Polygon poly53(4);
     poly53.ps[0] = Point(-216.289, -71.0531);
     poly53.ps[1] = Point(-216.289, -9.05306);
     poly53.ps[2] = Point(-278.289, -9.05306);
     poly53.ps[3] = Point(-278.289, -71.0531);
-    new ShapeRef(router, poly53, 53);
+    ShapeRef::createShapeRef(router, poly53, 53);
 
     Polygon poly54(4);
     poly54.ps[0] = Point(339.378, 297.864);
     poly54.ps[1] = Point(339.378, 359.864);
     poly54.ps[2] = Point(277.378, 359.864);
     poly54.ps[3] = Point(277.378, 297.864);
-    new ShapeRef(router, poly54, 54);
+    ShapeRef::createShapeRef(router, poly54, 54);
 
     Polygon poly55(4);
     poly55.ps[0] = Point(339.378, -71.0531);
     poly55.ps[1] = Point(339.378, -9.05306);
     poly55.ps[2] = Point(277.378, -9.05306);
     poly55.ps[3] = Point(277.378, -71.0531);
-    new ShapeRef(router, poly55, 55);
+    ShapeRef::createShapeRef(router, poly55, 55);
 
     Polygon poly56(4);
     poly56.ps[0] = Point(747.878, -243.803);
     poly56.ps[1] = Point(747.878, -181.803);
     poly56.ps[2] = Point(685.878, -181.803);
     poly56.ps[3] = Point(685.878, -243.803);
-    new ShapeRef(router, poly56, 56);
+    ShapeRef::createShapeRef(router, poly56, 56);
 
     Polygon poly57(4);
     poly57.ps[0] = Point(747.878, -71.0531);
     poly57.ps[1] = Point(747.878, -9.05306);
     poly57.ps[2] = Point(685.878, -9.05306);
     poly57.ps[3] = Point(685.878, -71.0531);
-    new ShapeRef(router, poly57, 57);
+    ShapeRef::createShapeRef(router, poly57, 57);
 
     Polygon poly58(4);
     poly58.ps[0] = Point(747.878, 955.864);
     poly58.ps[1] = Point(747.878, 1017.86);
     poly58.ps[2] = Point(685.878, 1017.86);
     poly58.ps[3] = Point(685.878, 955.864);
-    new ShapeRef(router, poly58, 58);
+    ShapeRef::createShapeRef(router, poly58, 58);
 
     Polygon poly59(4);
     poly59.ps[0] = Point(747.878, 707.864);
     poly59.ps[1] = Point(747.878, 769.864);
     poly59.ps[2] = Point(685.878, 769.864);
     poly59.ps[3] = Point(685.878, 707.864);
-    new ShapeRef(router, poly59, 59);
+    ShapeRef::createShapeRef(router, poly59, 59);
 
     Polygon poly60(4);
     poly60.ps[0] = Point(747.878, 470.864);
     poly60.ps[1] = Point(747.878, 532.864);
     poly60.ps[2] = Point(685.878, 532.864);
     poly60.ps[3] = Point(685.878, 470.864);
-    new ShapeRef(router, poly60, 60);
+    ShapeRef::createShapeRef(router, poly60, 60);
 
     Polygon poly61(4);
     poly61.ps[0] = Point(992.878, 1221.86);
     poly61.ps[1] = Point(992.878, 1283.86);
     poly61.ps[2] = Point(930.878, 1283.86);
     poly61.ps[3] = Point(930.878, 1221.86);
-    new ShapeRef(router, poly61, 61);
+    ShapeRef::createShapeRef(router, poly61, 61);
 
     Polygon poly62(4);
     poly62.ps[0] = Point(273.378, 1387.53);
     poly62.ps[1] = Point(273.378, 1449.53);
     poly62.ps[2] = Point(211.378, 1449.53);
     poly62.ps[3] = Point(211.378, 1387.53);
-    new ShapeRef(router, poly62, 62);
+    ShapeRef::createShapeRef(router, poly62, 62);
 
     Polygon poly63(4);
     poly63.ps[0] = Point(883.878, 1515.53);
     poly63.ps[1] = Point(883.878, 1577.53);
     poly63.ps[2] = Point(821.878, 1577.53);
     poly63.ps[3] = Point(821.878, 1515.53);
-    new ShapeRef(router, poly63, 63);
+    ShapeRef::createShapeRef(router, poly63, 63);
 
     Polygon poly64(4);
     poly64.ps[0] = Point(747.878, 1221.86);
     poly64.ps[1] = Point(747.878, 1283.86);
     poly64.ps[2] = Point(685.878, 1283.86);
     poly64.ps[3] = Point(685.878, 1221.86);
-    new ShapeRef(router, poly64, 64);
+    ShapeRef::createShapeRef(router, poly64, 64);
 
     Polygon poly65(4);
     poly65.ps[0] = Point(438.378, 1221.86);
     poly65.ps[1] = Point(438.378, 1283.86);
     poly65.ps[2] = Point(376.378, 1283.86);
     poly65.ps[3] = Point(376.378, 1221.86);
-    new ShapeRef(router, poly65, 65);
+    ShapeRef::createShapeRef(router, poly65, 65);
 
     Polygon poly66(4);
     poly66.ps[0] = Point(-251.289, 1221.86);
     poly66.ps[1] = Point(-251.289, 1283.86);
     poly66.ps[2] = Point(-313.289, 1283.86);
     poly66.ps[3] = Point(-313.289, 1221.86);
-    new ShapeRef(router, poly66, 66);
+    ShapeRef::createShapeRef(router, poly66, 66);
 
     Polygon poly67(4);
     poly67.ps[0] = Point(438.378, 1515.53);
     poly67.ps[1] = Point(438.378, 1577.53);
     poly67.ps[2] = Point(376.378, 1577.53);
     poly67.ps[3] = Point(376.378, 1515.53);
-    new ShapeRef(router, poly67, 67);
+    ShapeRef::createShapeRef(router, poly67, 67);
 
     Polygon poly68(4);
     poly68.ps[0] = Point(66.7111, 1221.86);
     poly68.ps[1] = Point(66.7111, 1283.86);
     poly68.ps[2] = Point(4.71109, 1283.86);
     poly68.ps[3] = Point(4.71109, 1221.86);
-    new ShapeRef(router, poly68, 68);
+    ShapeRef::createShapeRef(router, poly68, 68);
 
     Polygon poly69(4);
     poly69.ps[0] = Point(-102.289, 1387.53);
     poly69.ps[1] = Point(-102.289, 1449.53);
     poly69.ps[2] = Point(-164.289, 1449.53);
     poly69.ps[3] = Point(-164.289, 1387.53);
-    new ShapeRef(router, poly69, 69);
+    ShapeRef::createShapeRef(router, poly69, 69);
 
     Polygon poly70(4);
     poly70.ps[0] = Point(747.878, 107.947);
     poly70.ps[1] = Point(747.878, 169.947);
     poly70.ps[2] = Point(685.878, 169.947);
     poly70.ps[3] = Point(685.878, 107.947);
-    new ShapeRef(router, poly70, 70);
+    ShapeRef::createShapeRef(router, poly70, 70);
 
     Polygon poly71(4);
     poly71.ps[0] = Point(-286.289, 68.1969);
     poly71.ps[1] = Point(-286.289, 130.197);
     poly71.ps[2] = Point(-348.289, 130.197);
     poly71.ps[3] = Point(-348.289, 68.1969);
-    new ShapeRef(router, poly71, 71);
+    ShapeRef::createShapeRef(router, poly71, 71);
 
     Polygon poly72(4);
     poly72.ps[0] = Point(-69.2889, 68.1969);
     poly72.ps[1] = Point(-69.2889, 130.197);
     poly72.ps[2] = Point(-131.289, 130.197);
     poly72.ps[3] = Point(-131.289, 68.1969);
-    new ShapeRef(router, poly72, 72);
+    ShapeRef::createShapeRef(router, poly72, 72);
 
     Polygon poly73(4);
     poly73.ps[0] = Point(-69.2889, 170.197);
     poly73.ps[1] = Point(-69.2889, 232.197);
     poly73.ps[2] = Point(-131.289, 232.197);
     poly73.ps[3] = Point(-131.289, 170.197);
-    new ShapeRef(router, poly73, 73);
+    ShapeRef::createShapeRef(router, poly73, 73);
 
     Polygon poly74(4);
     poly74.ps[0] = Point(-286.289, 170.197);
     poly74.ps[1] = Point(-286.289, 232.197);
     poly74.ps[2] = Point(-348.289, 232.197);
     poly74.ps[3] = Point(-348.289, 170.197);
-    new ShapeRef(router, poly74, 74);
+    ShapeRef::createShapeRef(router, poly74, 74);
 
     Polygon poly75(4);
     poly75.ps[0] = Point(-150.289, 955.864);
     poly75.ps[1] = Point(-150.289, 975.864);
     poly75.ps[2] = Point(-182.289, 975.864);
     poly75.ps[3] = Point(-182.289, 955.864);
-    new ShapeRef(router, poly75, 75);
+    ShapeRef::createShapeRef(router, poly75, 75);
 
     Polygon poly76(4);
     poly76.ps[0] = Point(-251.289, 955.864);
     poly76.ps[1] = Point(-251.289, 1017.86);
     poly76.ps[2] = Point(-313.289, 1017.86);
     poly76.ps[3] = Point(-313.289, 955.864);
-    new ShapeRef(router, poly76, 76);
+    ShapeRef::createShapeRef(router, poly76, 76);
 
     Polygon poly77(4);
     poly77.ps[0] = Point(684.878, 1557.53);
     poly77.ps[1] = Point(684.878, 1577.53);
     poly77.ps[2] = Point(652.878, 1577.53);
     poly77.ps[3] = Point(652.878, 1557.53);
-    new ShapeRef(router, poly77, 77);
+    ShapeRef::createShapeRef(router, poly77, 77);
 
     Polygon poly78(4);
     poly78.ps[0] = Point(-150.289, 997.864);
     poly78.ps[1] = Point(-150.289, 1017.86);
     poly78.ps[2] = Point(-182.289, 1017.86);
     poly78.ps[3] = Point(-182.289, 997.864);
-    new ShapeRef(router, poly78, 78);
+    ShapeRef::createShapeRef(router, poly78, 78);
 
     Polygon poly79(4);
     poly79.ps[0] = Point(1032.38, 1410.03);
     poly79.ps[1] = Point(1032.38, 1575.03);
     poly79.ps[2] = Point(895.378, 1575.03);
     poly79.ps[3] = Point(895.378, 1410.03);
-    new ShapeRef(router, poly79, 79);
+    ShapeRef::createShapeRef(router, poly79, 79);
 
     Polygon poly80(4);
     poly80.ps[0] = Point(747.878, 373.864);
     poly80.ps[1] = Point(747.878, 405.864);
     poly80.ps[2] = Point(727.878, 405.864);
     poly80.ps[3] = Point(727.878, 373.864);
-    new ShapeRef(router, poly80, 80);
+    ShapeRef::createShapeRef(router, poly80, 80);
 
     Polygon poly81(4);
     poly81.ps[0] = Point(833.878, 547.864);
     poly81.ps[1] = Point(833.878, 579.864);
     poly81.ps[2] = Point(813.878, 579.864);
     poly81.ps[3] = Point(813.878, 547.864);
-    new ShapeRef(router, poly81, 81);
+    ShapeRef::createShapeRef(router, poly81, 81);
 
     Polygon poly82(4);
     poly82.ps[0] = Point(875.878, 547.864);
     poly82.ps[1] = Point(875.878, 579.864);
     poly82.ps[2] = Point(855.878, 579.864);
     poly82.ps[3] = Point(855.878, 547.864);
-    new ShapeRef(router, poly82, 82);
+    ShapeRef::createShapeRef(router, poly82, 82);
 
     Polygon poly83(4);
     poly83.ps[0] = Point(150.711, 1113.86);
     poly83.ps[1] = Point(150.711, 1133.86);
     poly83.ps[2] = Point(118.711, 1133.86);
     poly83.ps[3] = Point(118.711, 1113.86);
-    new ShapeRef(router, poly83, 83);
+    ShapeRef::createShapeRef(router, poly83, 83);
 
     Polygon poly84(4);
     poly84.ps[0] = Point(966.878, 547.864);
     poly84.ps[1] = Point(966.878, 579.864);
     poly84.ps[2] = Point(946.878, 579.864);
     poly84.ps[3] = Point(946.878, 547.864);
-    new ShapeRef(router, poly84, 84);
+    ShapeRef::createShapeRef(router, poly84, 84);
 
     Polygon poly85(4);
     poly85.ps[0] = Point(536.378, 594.864);
     poly85.ps[1] = Point(536.378, 656.864);
     poly85.ps[2] = Point(474.378, 656.864);
     poly85.ps[3] = Point(474.378, 594.864);
-    new ShapeRef(router, poly85, 85);
+    ShapeRef::createShapeRef(router, poly85, 85);
 
     Polygon poly86(4);
     poly86.ps[0] = Point(651.878, 695.864);
     poly86.ps[1] = Point(651.878, 715.864);
     poly86.ps[2] = Point(619.878, 715.864);
     poly86.ps[3] = Point(619.878, 695.864);
-    new ShapeRef(router, poly86, 86);
+    ShapeRef::createShapeRef(router, poly86, 86);
 
     Polygon poly87(4);
     poly87.ps[0] = Point(651.878, 491.864);
     poly87.ps[1] = Point(651.878, 511.864);
     poly87.ps[2] = Point(619.878, 511.864);
     poly87.ps[3] = Point(619.878, 491.864);
-    new ShapeRef(router, poly87, 87);
+    ShapeRef::createShapeRef(router, poly87, 87);
 
     Polygon poly88(4);
     poly88.ps[0] = Point(747.878, 297.864);
     poly88.ps[1] = Point(747.878, 359.864);
     poly88.ps[2] = Point(685.878, 359.864);
     poly88.ps[3] = Point(685.878, 297.864);
-    new ShapeRef(router, poly88, 88);
+    ShapeRef::createShapeRef(router, poly88, 88);
 
     Polygon poly89(4);
     poly89.ps[0] = Point(-293.289, 1435.53);
     poly89.ps[1] = Point(-293.289, 1467.53);
     poly89.ps[2] = Point(-313.289, 1467.53);
     poly89.ps[3] = Point(-313.289, 1435.53);
-    new ShapeRef(router, poly89, 89);
+    ShapeRef::createShapeRef(router, poly89, 89);
 
     Polygon poly90(4);
     poly90.ps[0] = Point(747.878, 9.94694);
     poly90.ps[1] = Point(747.878, 41.9469);
     poly90.ps[2] = Point(727.878, 41.9469);
     poly90.ps[3] = Point(727.878, 9.94694);
-    new ShapeRef(router, poly90, 90);
+    ShapeRef::createShapeRef(router, poly90, 90);
 
     Polygon poly91(4);
     poly91.ps[0] = Point(84.7111, -201.803);
     poly91.ps[1] = Point(84.7111, -181.803);
     poly91.ps[2] = Point(52.7111, -181.803);
     poly91.ps[3] = Point(52.7111, -201.803);
-    new ShapeRef(router, poly91, 91);
+    ShapeRef::createShapeRef(router, poly91, 91);
 
     Polygon poly92(4);
     poly92.ps[0] = Point(-14.2889, 45.9469);
     poly92.ps[1] = Point(-14.2889, 65.9469);
     poly92.ps[2] = Point(-46.2889, 65.9469);
     poly92.ps[3] = Point(-46.2889, 45.9469);
-    new ShapeRef(router, poly92, 92);
+    ShapeRef::createShapeRef(router, poly92, 92);
 
     Polygon poly93(4);
     poly93.ps[0] = Point(684.878, 1632.53);
     poly93.ps[1] = Point(684.878, 1652.53);
     poly93.ps[2] = Point(652.878, 1652.53);
     poly93.ps[3] = Point(652.878, 1632.53);
-    new ShapeRef(router, poly93, 93);
+    ShapeRef::createShapeRef(router, poly93, 93);
 
     Polygon poly94(4);
     poly94.ps[0] = Point(438.378, 1125.86);
     poly94.ps[1] = Point(438.378, 1187.86);
     poly94.ps[2] = Point(376.378, 1187.86);
     poly94.ps[3] = Point(376.378, 1125.86);
-    new ShapeRef(router, poly94, 94);
+    ShapeRef::createShapeRef(router, poly94, 94);
 
     Polygon poly95(4);
     poly95.ps[0] = Point(802.878, 214.197);
     poly95.ps[1] = Point(802.878, 254.197);
     poly95.ps[2] = Point(726.878, 254.197);
     poly95.ps[3] = Point(726.878, 214.197);
-    new ShapeRef(router, poly95, 95);
+    ShapeRef::createShapeRef(router, poly95, 95);
 
     Polygon poly96(4);
     poly96.ps[0] = Point(129.711, 1455.53);
     poly96.ps[1] = Point(129.711, 1515.53);
     poly96.ps[2] = Point(73.7111, 1515.53);
     poly96.ps[3] = Point(73.7111, 1455.53);
-    new ShapeRef(router, poly96, 96);
+    ShapeRef::createShapeRef(router, poly96, 96);
 
     Polygon poly97(4);
     poly97.ps[0] = Point(-175.289, 1431.53);
     poly97.ps[1] = Point(-175.289, 1471.53);
     poly97.ps[2] = Point(-251.289, 1471.53);
     poly97.ps[3] = Point(-251.289, 1431.53);
-    new ShapeRef(router, poly97, 97);
+    ShapeRef::createShapeRef(router, poly97, 97);
 
     Polygon poly98(4);
     poly98.ps[0] = Point(129.711, 1577.53);
     poly98.ps[1] = Point(129.711, 1637.53);
     poly98.ps[2] = Point(73.7111, 1637.53);
     poly98.ps[3] = Point(73.7111, 1577.53);
-    new ShapeRef(router, poly98, 98);
+    ShapeRef::createShapeRef(router, poly98, 98);
 
     Polygon poly99(4);
     poly99.ps[0] = Point(493.378, 1464.53);
     poly99.ps[1] = Point(493.378, 1504.53);
     poly99.ps[2] = Point(417.378, 1504.53);
     poly99.ps[3] = Point(417.378, 1464.53);
-    new ShapeRef(router, poly99, 99);
+    ShapeRef::createShapeRef(router, poly99, 99);
 
     Polygon poly100(4);
     poly100.ps[0] = Point(696.878, 1380.53);
     poly100.ps[1] = Point(696.878, 1440.53);
     poly100.ps[2] = Point(640.878, 1440.53);
     poly100.ps[3] = Point(640.878, 1380.53);
-    new ShapeRef(router, poly100, 100);
+    ShapeRef::createShapeRef(router, poly100, 100);
 
     Polygon poly101(4);
     poly101.ps[0] = Point(696.878, 1455.53);
     poly101.ps[1] = Point(696.878, 1515.53);
     poly101.ps[2] = Point(640.878, 1515.53);
     poly101.ps[3] = Point(640.878, 1455.53);
-    new ShapeRef(router, poly101, 101);
+    ShapeRef::createShapeRef(router, poly101, 101);
 
     Polygon poly102(4);
     poly102.ps[0] = Point(599.378, 1295.86);
     poly102.ps[1] = Point(599.378, 1355.86);
     poly102.ps[2] = Point(543.378, 1355.86);
     poly102.ps[3] = Point(543.378, 1295.86);
-    new ShapeRef(router, poly102, 102);
+    ShapeRef::createShapeRef(router, poly102, 102);
 
     Polygon poly103(4);
     poly103.ps[0] = Point(657.378, 1169.86);
     poly103.ps[1] = Point(657.378, 1209.86);
     poly103.ps[2] = Point(581.378, 1209.86);
     poly103.ps[3] = Point(581.378, 1169.86);
-    new ShapeRef(router, poly103, 103);
+    ShapeRef::createShapeRef(router, poly103, 103);
 
     Polygon poly104(4);
     poly104.ps[0] = Point(303.378, 1182.86);
     poly104.ps[1] = Point(303.378, 1242.86);
     poly104.ps[2] = Point(247.378, 1242.86);
     poly104.ps[3] = Point(247.378, 1182.86);
-    new ShapeRef(router, poly104, 104);
+    ShapeRef::createShapeRef(router, poly104, 104);
 
     Polygon poly105(4);
     poly105.ps[0] = Point(-105.289, 1182.86);
     poly105.ps[1] = Point(-105.289, 1242.86);
     poly105.ps[2] = Point(-161.289, 1242.86);
     poly105.ps[3] = Point(-161.289, 1182.86);
-    new ShapeRef(router, poly105, 105);
+    ShapeRef::createShapeRef(router, poly105, 105);
 
     Polygon poly106(4);
     poly106.ps[0] = Point(913.878, 1182.86);
     poly106.ps[1] = Point(913.878, 1242.86);
     poly106.ps[2] = Point(857.878, 1242.86);
     poly106.ps[3] = Point(857.878, 1182.86);
-    new ShapeRef(router, poly106, 106);
+    ShapeRef::createShapeRef(router, poly106, 106);
 
     Polygon poly107(4);
     poly107.ps[0] = Point(802.878, 1028.86);
     poly107.ps[1] = Point(802.878, 1068.86);
     poly107.ps[2] = Point(726.878, 1068.86);
     poly107.ps[3] = Point(726.878, 1028.86);
-    new ShapeRef(router, poly107, 107);
+    ShapeRef::createShapeRef(router, poly107, 107);
 
     Polygon poly108(4);
     poly108.ps[0] = Point(802.878, 904.864);
     poly108.ps[1] = Point(802.878, 944.864);
     poly108.ps[2] = Point(726.878, 944.864);
     poly108.ps[3] = Point(726.878, 904.864);
-    new ShapeRef(router, poly108, 108);
+    ShapeRef::createShapeRef(router, poly108, 108);
 
     Polygon poly109(4);
     poly109.ps[0] = Point(802.878, 780.864);
     poly109.ps[1] = Point(802.878, 820.864);
     poly109.ps[2] = Point(726.878, 820.864);
     poly109.ps[3] = Point(726.878, 780.864);
-    new ShapeRef(router, poly109, 109);
+    ShapeRef::createShapeRef(router, poly109, 109);
 
     Polygon poly110(4);
     poly110.ps[0] = Point(685.878, 369.864);
     poly110.ps[1] = Point(685.878, 409.864);
     poly110.ps[2] = Point(609.878, 409.864);
     poly110.ps[3] = Point(609.878, 369.864);
-    new ShapeRef(router, poly110, 110);
+    ShapeRef::createShapeRef(router, poly110, 110);
 
     Polygon poly111(4);
     poly111.ps[0] = Point(566.378, 258.864);
     poly111.ps[1] = Point(566.378, 318.864);
     poly111.ps[2] = Point(510.378, 318.864);
     poly111.ps[3] = Point(510.378, 258.864);
-    new ShapeRef(router, poly111, 111);
+    ShapeRef::createShapeRef(router, poly111, 111);
 
     Polygon poly112(4);
     poly112.ps[0] = Point(685.878, 5.94694);
     poly112.ps[1] = Point(685.878, 45.9469);
     poly112.ps[2] = Point(609.878, 45.9469);
     poly112.ps[3] = Point(609.878, 5.94694);
-    new ShapeRef(router, poly112, 112);
+    ShapeRef::createShapeRef(router, poly112, 112);
 
     Polygon poly113(4);
     poly113.ps[0] = Point(914.878, 5.94694);
     poly113.ps[1] = Point(914.878, 45.9469);
     poly113.ps[2] = Point(838.878, 45.9469);
     poly113.ps[3] = Point(838.878, 5.94694);
-    new ShapeRef(router, poly113, 113);
+    ShapeRef::createShapeRef(router, poly113, 113);
 
     Polygon poly114(4);
     poly114.ps[0] = Point(880.878, -316.303);
     poly114.ps[1] = Point(880.878, -256.303);
     poly114.ps[2] = Point(824.878, -256.303);
     poly114.ps[3] = Point(824.878, -316.303);
-    new ShapeRef(router, poly114, 114);
+    ShapeRef::createShapeRef(router, poly114, 114);
 
     Polygon poly115(4);
     poly115.ps[0] = Point(802.878, -147.553);
     poly115.ps[1] = Point(802.878, -107.553);
     poly115.ps[2] = Point(726.878, -107.553);
     poly115.ps[3] = Point(726.878, -147.553);
-    new ShapeRef(router, poly115, 115);
+    ShapeRef::createShapeRef(router, poly115, 115);
 
     Polygon poly116(4);
     poly116.ps[0] = Point(802.878, -338.803);
     poly116.ps[1] = Point(802.878, -298.803);
     poly116.ps[2] = Point(726.878, -298.803);
     poly116.ps[3] = Point(726.878, -338.803);
-    new ShapeRef(router, poly116, 116);
+    ShapeRef::createShapeRef(router, poly116, 116);
 
     Polygon poly117(4);
     poly117.ps[0] = Point(500.378, -110.053);
     poly117.ps[1] = Point(500.378, -50.0531);
     poly117.ps[2] = Point(444.378, -50.0531);
     poly117.ps[3] = Point(444.378, -110.053);
-    new ShapeRef(router, poly117, 117);
+    ShapeRef::createShapeRef(router, poly117, 117);
 
     Polygon poly118(4);
     poly118.ps[0] = Point(-2.28891, -206.053);
     poly118.ps[1] = Point(-2.28891, -146.053);
     poly118.ps[2] = Point(-58.2889, -146.053);
     poly118.ps[3] = Point(-58.2889, -206.053);
-    new ShapeRef(router, poly118, 118);
+    ShapeRef::createShapeRef(router, poly118, 118);
 
     Polygon poly119(4);
     poly119.ps[0] = Point(-2.28891, -131.053);
     poly119.ps[1] = Point(-2.28891, -71.0531);
     poly119.ps[2] = Point(-58.2889, -71.0531);
     poly119.ps[3] = Point(-58.2889, -131.053);
-    new ShapeRef(router, poly119, 119);
+    ShapeRef::createShapeRef(router, poly119, 119);
 
     Polygon poly120(4);
     poly120.ps[0] = Point(402.378, -197.553);
     poly120.ps[1] = Point(402.378, -137.553);
     poly120.ps[2] = Point(346.378, -137.553);
     poly120.ps[3] = Point(346.378, -197.553);
-    new ShapeRef(router, poly120, 120);
+    ShapeRef::createShapeRef(router, poly120, 120);
 
     Polygon poly121(4);
     poly121.ps[0] = Point(199.378, -147.553);
     poly121.ps[1] = Point(199.378, -107.553);
     poly121.ps[2] = Point(123.378, -107.553);
     poly121.ps[3] = Point(123.378, -147.553);
-    new ShapeRef(router, poly121, 121);
+    ShapeRef::createShapeRef(router, poly121, 121);
 
     Polygon poly122(4);
     poly122.ps[0] = Point(-161.289, -147.553);
     poly122.ps[1] = Point(-161.289, -107.553);
     poly122.ps[2] = Point(-237.289, -107.553);
     poly122.ps[3] = Point(-237.289, -147.553);
-    new ShapeRef(router, poly122, 122);
+    ShapeRef::createShapeRef(router, poly122, 122);
 
     Polygon poly123(4);
     poly123.ps[0] = Point(96.7111, -453.803);
     poly123.ps[1] = Point(96.7111, -393.803);
     poly123.ps[2] = Point(40.7111, -393.803);
     poly123.ps[3] = Point(40.7111, -453.803);
-    new ShapeRef(router, poly123, 123);
+    ShapeRef::createShapeRef(router, poly123, 123);
 
     Polygon poly124(4);
     poly124.ps[0] = Point(96.7111, -378.803);
     poly124.ps[1] = Point(96.7111, -318.803);
     poly124.ps[2] = Point(40.7111, -318.803);
     poly124.ps[3] = Point(40.7111, -378.803);
-    new ShapeRef(router, poly124, 124);
+    ShapeRef::createShapeRef(router, poly124, 124);
 
     Polygon poly125(4);
     poly125.ps[0] = Point(96.7111, -106.803);
     poly125.ps[1] = Point(96.7111, -46.8031);
     poly125.ps[2] = Point(40.7111, -46.8031);
     poly125.ps[3] = Point(40.7111, -106.803);
-    new ShapeRef(router, poly125, 125);
+    ShapeRef::createShapeRef(router, poly125, 125);
 
     Polygon poly126(4);
     poly126.ps[0] = Point(369.378, -421.803);
     poly126.ps[1] = Point(369.378, -361.803);
     poly126.ps[2] = Point(313.378, -361.803);
     poly126.ps[3] = Point(313.378, -421.803);
-    new ShapeRef(router, poly126, 126);
+    ShapeRef::createShapeRef(router, poly126, 126);
 
     Polygon poly127(4);
     poly127.ps[0] = Point(369.378, -523.803);
     poly127.ps[1] = Point(369.378, -463.803);
     poly127.ps[2] = Point(313.378, -463.803);
     poly127.ps[3] = Point(313.378, -523.803);
-    new ShapeRef(router, poly127, 127);
+    ShapeRef::createShapeRef(router, poly127, 127);
 
     Polygon poly128(4);
     poly128.ps[0] = Point(30.7111, 1348.53);
     poly128.ps[1] = Point(30.7111, 1408.53);
     poly128.ps[2] = Point(-25.2889, 1408.53);
     poly128.ps[3] = Point(-25.2889, 1348.53);
-    new ShapeRef(router, poly128, 128);
+    ShapeRef::createShapeRef(router, poly128, 128);
 
     Polygon poly129(4);
     poly129.ps[0] = Point(802.878, 605.864);
     poly129.ps[1] = Point(802.878, 645.864);
     poly129.ps[2] = Point(726.878, 645.864);
     poly129.ps[3] = Point(726.878, 605.864);
-    new ShapeRef(router, poly129, 129);
+    ShapeRef::createShapeRef(router, poly129, 129);
 
     Polygon poly130(4);
     poly130.ps[0] = Point(96.7111, -303.803);
     poly130.ps[1] = Point(96.7111, -243.803);
     poly130.ps[2] = Point(40.7111, -243.803);
     poly130.ps[3] = Point(40.7111, -303.803);
-    new ShapeRef(router, poly130, 130);
+    ShapeRef::createShapeRef(router, poly130, 130);
 
     Polygon poly131(4);
     poly131.ps[0] = Point(-2.28891, -9.05306);
     poly131.ps[1] = Point(-2.28891, 50.9469);
     poly131.ps[2] = Point(-58.2889, 50.9469);
     poly131.ps[3] = Point(-58.2889, -9.05306);
-    new ShapeRef(router, poly131, 131);
+    ShapeRef::createShapeRef(router, poly131, 131);
 
     Polygon poly132(4);
     poly132.ps[0] = Point(-219.289, 29.1969);
     poly132.ps[1] = Point(-219.289, 89.1969);
     poly132.ps[2] = Point(-275.289, 89.1969);
     poly132.ps[3] = Point(-275.289, 29.1969);
-    new ShapeRef(router, poly132, 132);
+    ShapeRef::createShapeRef(router, poly132, 132);
 
     Polygon poly133(4);
     poly133.ps[0] = Point(-219.289, 131.197);
     poly133.ps[1] = Point(-219.289, 191.197);
     poly133.ps[2] = Point(-275.289, 191.197);
     poly133.ps[3] = Point(-275.289, 131.197);
-    new ShapeRef(router, poly133, 133);
+    ShapeRef::createShapeRef(router, poly133, 133);
 
     Polygon poly134(4);
     poly134.ps[0] = Point(162.711, 29.1969);
     poly134.ps[1] = Point(162.711, 89.1969);
     poly134.ps[2] = Point(106.711, 89.1969);
     poly134.ps[3] = Point(106.711, 29.1969);
-    new ShapeRef(router, poly134, 134);
+    ShapeRef::createShapeRef(router, poly134, 134);
 
     Polygon poly135(4);
     poly135.ps[0] = Point(162.711, 131.197);
     poly135.ps[1] = Point(162.711, 191.197);
     poly135.ps[2] = Point(106.711, 191.197);
     poly135.ps[3] = Point(106.711, 131.197);
-    new ShapeRef(router, poly135, 135);
+    ShapeRef::createShapeRef(router, poly135, 135);
 
     Polygon poly136(4);
     poly136.ps[0] = Point(-138.289, 895.864);
     poly136.ps[1] = Point(-138.289, 955.864);
     poly136.ps[2] = Point(-194.289, 955.864);
     poly136.ps[3] = Point(-194.289, 895.864);
-    new ShapeRef(router, poly136, 136);
+    ShapeRef::createShapeRef(router, poly136, 136);
 
     Polygon poly137(4);
     poly137.ps[0] = Point(696.878, 1577.53);
     poly137.ps[1] = Point(696.878, 1637.53);
     poly137.ps[2] = Point(640.878, 1637.53);
     poly137.ps[3] = Point(640.878, 1577.53);
-    new ShapeRef(router, poly137, 137);
+    ShapeRef::createShapeRef(router, poly137, 137);
 
     Polygon poly138(4);
     poly138.ps[0] = Point(-138.289, 1017.86);
     poly138.ps[1] = Point(-138.289, 1077.86);
     poly138.ps[2] = Point(-194.289, 1077.86);
     poly138.ps[3] = Point(-194.289, 1017.86);
-    new ShapeRef(router, poly138, 138);
+    ShapeRef::createShapeRef(router, poly138, 138);
 
     Polygon poly139(4);
     poly139.ps[0] = Point(823.878, 369.864);
     poly139.ps[1] = Point(823.878, 409.864);
     poly139.ps[2] = Point(747.878, 409.864);
     poly139.ps[3] = Point(747.878, 369.864);
-    new ShapeRef(router, poly139, 139);
+    ShapeRef::createShapeRef(router, poly139, 139);
 
     Polygon poly140(4);
     poly140.ps[0] = Point(813.878, 543.864);
     poly140.ps[1] = Point(813.878, 583.864);
     poly140.ps[2] = Point(737.878, 583.864);
     poly140.ps[3] = Point(737.878, 543.864);
-    new ShapeRef(router, poly140, 140);
+    ShapeRef::createShapeRef(router, poly140, 140);
 
     Polygon poly141(4);
     poly141.ps[0] = Point(951.878, 543.864);
     poly141.ps[1] = Point(951.878, 583.864);
     poly141.ps[2] = Point(875.878, 583.864);
     poly141.ps[3] = Point(875.878, 543.864);
-    new ShapeRef(router, poly141, 141);
+    ShapeRef::createShapeRef(router, poly141, 141);
 
     Polygon poly142(4);
     poly142.ps[0] = Point(162.711, 1053.86);
     poly142.ps[1] = Point(162.711, 1113.86);
     poly142.ps[2] = Point(106.711, 1113.86);
     poly142.ps[3] = Point(106.711, 1053.86);
-    new ShapeRef(router, poly142, 142);
+    ShapeRef::createShapeRef(router, poly142, 142);
 
     Polygon poly143(4);
     poly143.ps[0] = Point(1042.88, 543.864);
     poly143.ps[1] = Point(1042.88, 583.864);
     poly143.ps[2] = Point(966.878, 583.864);
     poly143.ps[3] = Point(966.878, 543.864);
-    new ShapeRef(router, poly143, 143);
+    ShapeRef::createShapeRef(router, poly143, 143);
 
     Polygon poly144(4);
     poly144.ps[0] = Point(663.878, 635.864);
     poly144.ps[1] = Point(663.878, 695.864);
     poly144.ps[2] = Point(607.878, 695.864);
     poly144.ps[3] = Point(607.878, 635.864);
-    new ShapeRef(router, poly144, 144);
+    ShapeRef::createShapeRef(router, poly144, 144);
 
     Polygon poly145(4);
     poly145.ps[0] = Point(663.878, 431.864);
     poly145.ps[1] = Point(663.878, 491.864);
     poly145.ps[2] = Point(607.878, 491.864);
     poly145.ps[3] = Point(607.878, 431.864);
-    new ShapeRef(router, poly145, 145);
+    ShapeRef::createShapeRef(router, poly145, 145);
 
     Polygon poly146(4);
     poly146.ps[0] = Point(-313.289, 1431.53);
     poly146.ps[1] = Point(-313.289, 1471.53);
     poly146.ps[2] = Point(-389.289, 1471.53);
     poly146.ps[3] = Point(-389.289, 1431.53);
-    new ShapeRef(router, poly146, 146);
+    ShapeRef::createShapeRef(router, poly146, 146);
 
     Polygon poly147(4);
     poly147.ps[0] = Point(823.878, 5.94694);
     poly147.ps[1] = Point(823.878, 45.9469);
     poly147.ps[2] = Point(747.878, 45.9469);
     poly147.ps[3] = Point(747.878, 5.94694);
-    new ShapeRef(router, poly147, 147);
+    ShapeRef::createShapeRef(router, poly147, 147);
 
     Polygon poly148(4);
     poly148.ps[0] = Point(96.7111, -181.803);
     poly148.ps[1] = Point(96.7111, -121.803);
     poly148.ps[2] = Point(40.7111, -121.803);
     poly148.ps[3] = Point(40.7111, -181.803);
-    new ShapeRef(router, poly148, 148);
+    ShapeRef::createShapeRef(router, poly148, 148);
 
     Polygon poly149(4);
     poly149.ps[0] = Point(-2.28891, 65.9469);
     poly149.ps[1] = Point(-2.28891, 125.947);
     poly149.ps[2] = Point(-58.2889, 125.947);
     poly149.ps[3] = Point(-58.2889, 65.9469);
-    new ShapeRef(router, poly149, 149);
+    ShapeRef::createShapeRef(router, poly149, 149);
 
     Polygon poly150(4);
     poly150.ps[0] = Point(696.878, 1652.53);
     poly150.ps[1] = Point(696.878, 1712.53);
     poly150.ps[2] = Point(640.878, 1712.53);
     poly150.ps[3] = Point(640.878, 1652.53);
-    new ShapeRef(router, poly150, 150);
+    ShapeRef::createShapeRef(router, poly150, 150);
 
     Polygon poly151(4);
     poly151.ps[0] = Point(997.378, -10.5531);
     poly151.ps[1] = Point(997.378, 29.4469);
     poly151.ps[2] = Point(937.378, 29.4469);
     poly151.ps[3] = Point(937.378, -10.5531);
-    new ShapeRef(router, poly151, 151);
+    ShapeRef::createShapeRef(router, poly151, 151);
 
     Polygon poly152(4);
     poly152.ps[0] = Point(997.378, 29.4469);
     poly152.ps[1] = Point(997.378, 69.4469);
     poly152.ps[2] = Point(937.378, 69.4469);
     poly152.ps[3] = Point(937.378, 29.4469);
-    new ShapeRef(router, poly152, 152);
+    ShapeRef::createShapeRef(router, poly152, 152);
 
     Polygon poly153(4);
     poly153.ps[0] = Point(1048.38, 157.947);
     poly153.ps[1] = Point(1048.38, 217.947);
     poly153.ps[2] = Point(1008.38, 217.947);
     poly153.ps[3] = Point(1008.38, 157.947);
-    new ShapeRef(router, poly153, 153);
+    ShapeRef::createShapeRef(router, poly153, 153);
 
     Polygon poly154(4);
     poly154.ps[0] = Point(1088.38, 157.947);
     poly154.ps[1] = Point(1088.38, 217.947);
     poly154.ps[2] = Point(1048.38, 217.947);
     poly154.ps[3] = Point(1048.38, 157.947);
-    new ShapeRef(router, poly154, 154);
+    ShapeRef::createShapeRef(router, poly154, 154);
 
     Polygon poly155(4);
     poly155.ps[0] = Point(797.378, -533.303);
     poly155.ps[1] = Point(797.378, -473.303);
     poly155.ps[2] = Point(757.378, -473.303);
     poly155.ps[3] = Point(757.378, -533.303);
-    new ShapeRef(router, poly155, 155);
+    ShapeRef::createShapeRef(router, poly155, 155);
 
     Polygon poly156(4);
     poly156.ps[0] = Point(-281.289, 1089.36);
     poly156.ps[1] = Point(-281.289, 1129.36);
     poly156.ps[2] = Point(-341.289, 1129.36);
     poly156.ps[3] = Point(-341.289, 1089.36);
-    new ShapeRef(router, poly156, 156);
+    ShapeRef::createShapeRef(router, poly156, 156);
 
     Polygon poly157(4);
     poly157.ps[0] = Point(-281.289, 1129.36);
     poly157.ps[1] = Point(-281.289, 1169.36);
     poly157.ps[2] = Point(-341.289, 1169.36);
     poly157.ps[3] = Point(-341.289, 1129.36);
-    new ShapeRef(router, poly157, 157);
+    ShapeRef::createShapeRef(router, poly157, 157);
 
     Polygon poly158(4);
     poly158.ps[0] = Point(307.378, 726.364);
     poly158.ps[1] = Point(307.378, 766.364);
     poly158.ps[2] = Point(247.378, 766.364);
     poly158.ps[3] = Point(247.378, 726.364);
-    new ShapeRef(router, poly158, 158);
+    ShapeRef::createShapeRef(router, poly158, 158);
 
     Polygon poly159(4);
     poly159.ps[0] = Point(984.378, 1410.53);
     poly159.ps[1] = Point(984.378, 1470.53);
     poly159.ps[2] = Point(944.378, 1470.53);
     poly159.ps[3] = Point(944.378, 1410.53);
-    new ShapeRef(router, poly159, 159);
+    ShapeRef::createShapeRef(router, poly159, 159);
 
     Polygon poly160(4);
     poly160.ps[0] = Point(139.611, 1525.53);
     poly160.ps[1] = Point(139.611, 1567.53);
     poly160.ps[2] = Point(63.8111, 1567.53);
     poly160.ps[3] = Point(63.8111, 1525.53);
-    new ShapeRef(router, poly160, 160);
+    ShapeRef::createShapeRef(router, poly160, 160);
 
     Polygon poly161(4);
     poly161.ps[0] = Point(4.94066e-324, 1421.63);
     poly161.ps[1] = Point(4.94066e-324, 1481.43);
     poly161.ps[2] = Point(-303.289, 1481.43);
     poly161.ps[3] = Point(-303.289, 1421.63);
-    new ShapeRef(router, poly161, 161);
+    ShapeRef::createShapeRef(router, poly161, 161);
 
     Polygon poly162(4);
     poly162.ps[0] = Point(106.611, -383.803);
     poly162.ps[1] = Point(106.611, 4.94066e-324);
     poly162.ps[2] = Point(30.8111, 4.94066e-324);
     poly162.ps[3] = Point(30.8111, -383.803);
-    new ShapeRef(router, poly162, 162);
+    ShapeRef::createShapeRef(router, poly162, 162);
 
     Polygon poly163(4);
     poly163.ps[0] = Point(7.61109, -136.053);
     poly163.ps[1] = Point(7.61109, 55.9469);
     poly163.ps[2] = Point(-68.1889, 55.9469);
     poly163.ps[3] = Point(-68.1889, -136.053);
-    new ShapeRef(router, poly163, 163);
+    ShapeRef::createShapeRef(router, poly163, 163);
 
     Polygon poly164(4);
     poly164.ps[0] = Point(828.878, -3.95306);
     poly164.ps[1] = Point(828.878, 55.8469);
     poly164.ps[2] = Point(695.878, 55.8469);
     poly164.ps[3] = Point(695.878, -3.95306);
-    new ShapeRef(router, poly164, 164);
+    ShapeRef::createShapeRef(router, poly164, 164);
 
     Polygon poly165(4);
     poly165.ps[0] = Point(-128.389, 965.864);
     poly165.ps[1] = Point(-128.389, 1007.86);
     poly165.ps[2] = Point(-204.189, 1007.86);
     poly165.ps[3] = Point(-204.189, 965.864);
-    new ShapeRef(router, poly165, 165);
+    ShapeRef::createShapeRef(router, poly165, 165);
 
     Polygon poly166(4);
     poly166.ps[0] = Point(956.878, 533.964);
     poly166.ps[1] = Point(956.878, 593.764);
     poly166.ps[2] = Point(823.878, 593.764);
     poly166.ps[3] = Point(823.878, 533.964);
-    new ShapeRef(router, poly166, 166);
+    ShapeRef::createShapeRef(router, poly166, 166);
 
     Polygon poly167(4);
     poly167.ps[0] = Point(737.878, 359.964);
     poly167.ps[1] = Point(737.878, 419.764);
     poly167.ps[2] = Point(695.878, 419.764);
     poly167.ps[3] = Point(695.878, 359.964);
-    new ShapeRef(router, poly167, 167);
+    ShapeRef::createShapeRef(router, poly167, 167);
 
     Polygon poly168(4);
     poly168.ps[0] = Point(706.778, 1450.53);
     poly168.ps[1] = Point(706.778, 1642.53);
     poly168.ps[2] = Point(630.978, 1642.53);
     poly168.ps[3] = Point(630.978, 1450.53);
-    new ShapeRef(router, poly168, 168);
+    ShapeRef::createShapeRef(router, poly168, 168);
 
-    ConnRef *connRef169 = new ConnRef(router, 169);
+    auto connRef169 = ConnRef::createConnRef(router, 169);
     ConnEnd srcPt169(Point(716.878, 234.197), 2);
     connRef169->setSourceEndpoint(srcPt169);
     ConnEnd dstPt169(Point(308.378, 328.864), 15);
     connRef169->setDestEndpoint(dstPt169);
     connRef169->setRoutingType((ConnType)2);
 
-    ConnRef *connRef170 = new ConnRef(router, 170);
+    auto connRef170 = ConnRef::createConnRef(router, 170);
     ConnEnd srcPt170(Point(716.878, 138.947), 15);
     connRef170->setSourceEndpoint(srcPt170);
     ConnEnd dstPt170(Point(716.878, 234.197), 1);
     connRef170->setDestEndpoint(dstPt170);
     connRef170->setRoutingType((ConnType)2);
 
-    ConnRef *connRef171 = new ConnRef(router, 171);
+    auto connRef171 = ConnRef::createConnRef(router, 171);
     ConnEnd srcPt171(Point(716.878, 234.197), 2);
     connRef171->setSourceEndpoint(srcPt171);
     ConnEnd dstPt171(Point(716.878, 328.864), 15);
     connRef171->setDestEndpoint(dstPt171);
     connRef171->setRoutingType((ConnType)2);
 
-    ConnRef *connRef172 = new ConnRef(router, 172);
+    auto connRef172 = ConnRef::createConnRef(router, 172);
     ConnEnd srcPt172(Point(101.711, 1525.53), 4);
     connRef172->setSourceEndpoint(srcPt172);
     ConnEnd dstPt172(Point(-282.289, 1546.53), 15);
@@ -1225,7 +1225,7 @@ int main(void) {
     checkpoints172[0] = Checkpoint(Point(63.7111, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef172->setRoutingCheckpoints(checkpoints172);
 
-    ConnRef *connRef173 = new ConnRef(router, 173);
+    auto connRef173 = ConnRef::createConnRef(router, 173);
     ConnEnd srcPt173(Point(101.711, 1525.53), 8);
     connRef173->setSourceEndpoint(srcPt173);
     ConnEnd dstPt173(Point(407.378, 1546.53), 15);
@@ -1235,7 +1235,7 @@ int main(void) {
     checkpoints173[0] = Checkpoint(Point(139.711, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef173->setRoutingCheckpoints(checkpoints173);
 
-    ConnRef *connRef174 = new ConnRef(router, 174);
+    auto connRef174 = ConnRef::createConnRef(router, 174);
     ConnEnd srcPt174(Point(-261.289, 1451.53), 2);
     connRef174->setSourceEndpoint(srcPt174);
     ConnEnd dstPt174(Point(-282.289, 1546.53), 15);
@@ -1245,7 +1245,7 @@ int main(void) {
     checkpoints174[0] = Checkpoint(Point(-282.289, 1481.53), (ConnDirFlags) 15, (ConnDirFlags) 1);
     connRef174->setRoutingCheckpoints(checkpoints174);
 
-    ConnRef *connRef175 = new ConnRef(router, 175);
+    auto connRef175 = ConnRef::createConnRef(router, 175);
     ConnEnd srcPt175(Point(-261.289, 1451.53), 1);
     connRef175->setSourceEndpoint(srcPt175);
     ConnEnd dstPt175(Point(-282.289, 1252.86), 15);
@@ -1255,7 +1255,7 @@ int main(void) {
     checkpoints175[0] = Checkpoint(Point(-282.289, 1421.53), (ConnDirFlags) 15, (ConnDirFlags) 2);
     connRef175->setRoutingCheckpoints(checkpoints175);
 
-    ConnRef *connRef176 = new ConnRef(router, 176);
+    auto connRef176 = ConnRef::createConnRef(router, 176);
     ConnEnd srcPt176(Point(101.711, 1567.53), 4);
     connRef176->setSourceEndpoint(srcPt176);
     ConnEnd dstPt176(Point(-282.289, 1546.53), 15);
@@ -1265,7 +1265,7 @@ int main(void) {
     checkpoints176[0] = Checkpoint(Point(63.7111, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef176->setRoutingCheckpoints(checkpoints176);
 
-    ConnRef *connRef177 = new ConnRef(router, 177);
+    auto connRef177 = ConnRef::createConnRef(router, 177);
     ConnEnd srcPt177(Point(101.711, 1567.53), 8);
     connRef177->setSourceEndpoint(srcPt177);
     ConnEnd dstPt177(Point(407.378, 1546.53), 15);
@@ -1275,7 +1275,7 @@ int main(void) {
     checkpoints177[0] = Checkpoint(Point(139.711, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef177->setRoutingCheckpoints(checkpoints177);
 
-    ConnRef *connRef178 = new ConnRef(router, 178);
+    auto connRef178 = ConnRef::createConnRef(router, 178);
     ConnEnd srcPt178(Point(-303.289, 1451.53), 2);
     connRef178->setSourceEndpoint(srcPt178);
     ConnEnd dstPt178(Point(-282.289, 1546.53), 15);
@@ -1285,14 +1285,14 @@ int main(void) {
     checkpoints178[0] = Checkpoint(Point(-282.289, 1481.53), (ConnDirFlags) 15, (ConnDirFlags) 1);
     connRef178->setRoutingCheckpoints(checkpoints178);
 
-    ConnRef *connRef179 = new ConnRef(router, 179);
+    auto connRef179 = ConnRef::createConnRef(router, 179);
     ConnEnd srcPt179(Point(407.378, 1484.53), 2);
     connRef179->setSourceEndpoint(srcPt179);
     ConnEnd dstPt179(Point(407.378, 1546.53), 15);
     connRef179->setDestEndpoint(dstPt179);
     connRef179->setRoutingType((ConnType)2);
 
-    ConnRef *connRef180 = new ConnRef(router, 180);
+    auto connRef180 = ConnRef::createConnRef(router, 180);
     ConnEnd srcPt180(Point(668.878, 1450.53), 4);
     connRef180->setSourceEndpoint(srcPt180);
     ConnEnd dstPt180(Point(407.378, 1546.53), 15);
@@ -1302,7 +1302,7 @@ int main(void) {
     checkpoints180[0] = Checkpoint(Point(630.878, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef180->setRoutingCheckpoints(checkpoints180);
 
-    ConnRef *connRef181 = new ConnRef(router, 181);
+    auto connRef181 = ConnRef::createConnRef(router, 181);
     ConnEnd srcPt181(Point(668.878, 1525.53), 4);
     connRef181->setSourceEndpoint(srcPt181);
     ConnEnd dstPt181(Point(407.378, 1546.53), 15);
@@ -1312,140 +1312,140 @@ int main(void) {
     checkpoints181[0] = Checkpoint(Point(630.878, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef181->setRoutingCheckpoints(checkpoints181);
 
-    ConnRef *connRef182 = new ConnRef(router, 182);
+    auto connRef182 = ConnRef::createConnRef(router, 182);
     ConnEnd srcPt182(Point(716.878, 1252.86), 15);
     connRef182->setSourceEndpoint(srcPt182);
     ConnEnd dstPt182(Point(571.378, 1285.86), 8);
     connRef182->setDestEndpoint(dstPt182);
     connRef182->setRoutingType((ConnType)2);
 
-    ConnRef *connRef183 = new ConnRef(router, 183);
+    auto connRef183 = ConnRef::createConnRef(router, 183);
     ConnEnd srcPt183(Point(571.378, 1285.86), 4);
     connRef183->setSourceEndpoint(srcPt183);
     ConnEnd dstPt183(Point(407.378, 1252.86), 15);
     connRef183->setDestEndpoint(dstPt183);
     connRef183->setRoutingType((ConnType)2);
 
-    ConnRef *connRef184 = new ConnRef(router, 184);
+    auto connRef184 = ConnRef::createConnRef(router, 184);
     ConnEnd srcPt184(Point(716.878, 1252.86), 15);
     connRef184->setSourceEndpoint(srcPt184);
     ConnEnd dstPt184(Point(571.378, 1189.86), 1);
     connRef184->setDestEndpoint(dstPt184);
     connRef184->setRoutingType((ConnType)2);
 
-    ConnRef *connRef185 = new ConnRef(router, 185);
+    auto connRef185 = ConnRef::createConnRef(router, 185);
     ConnEnd srcPt185(Point(571.378, 1189.86), 2);
     connRef185->setSourceEndpoint(srcPt185);
     ConnEnd dstPt185(Point(407.378, 1252.86), 15);
     connRef185->setDestEndpoint(dstPt185);
     connRef185->setRoutingType((ConnType)2);
 
-    ConnRef *connRef186 = new ConnRef(router, 186);
+    auto connRef186 = ConnRef::createConnRef(router, 186);
     ConnEnd srcPt186(Point(242.378, 1418.53), 15);
     connRef186->setSourceEndpoint(srcPt186);
     ConnEnd dstPt186(Point(275.378, 1252.86), 8);
     connRef186->setDestEndpoint(dstPt186);
     connRef186->setRoutingType((ConnType)2);
 
-    ConnRef *connRef187 = new ConnRef(router, 187);
+    auto connRef187 = ConnRef::createConnRef(router, 187);
     ConnEnd srcPt187(Point(407.378, 1252.86), 15);
     connRef187->setSourceEndpoint(srcPt187);
     ConnEnd dstPt187(Point(275.378, 1252.86), 8);
     connRef187->setDestEndpoint(dstPt187);
     connRef187->setRoutingType((ConnType)2);
 
-    ConnRef *connRef188 = new ConnRef(router, 188);
+    auto connRef188 = ConnRef::createConnRef(router, 188);
     ConnEnd srcPt188(Point(275.378, 1252.86), 4);
     connRef188->setSourceEndpoint(srcPt188);
     ConnEnd dstPt188(Point(35.7111, 1252.86), 15);
     connRef188->setDestEndpoint(dstPt188);
     connRef188->setRoutingType((ConnType)2);
 
-    ConnRef *connRef189 = new ConnRef(router, 189);
+    auto connRef189 = ConnRef::createConnRef(router, 189);
     ConnEnd srcPt189(Point(275.378, 1252.86), 4);
     connRef189->setSourceEndpoint(srcPt189);
     ConnEnd dstPt189(Point(407.378, 1156.86), 15);
     connRef189->setDestEndpoint(dstPt189);
     connRef189->setRoutingType((ConnType)2);
 
-    ConnRef *connRef190 = new ConnRef(router, 190);
+    auto connRef190 = ConnRef::createConnRef(router, 190);
     ConnEnd srcPt190(Point(-282.289, 1252.86), 15);
     connRef190->setSourceEndpoint(srcPt190);
     ConnEnd dstPt190(Point(-133.289, 1252.86), 4);
     connRef190->setDestEndpoint(dstPt190);
     connRef190->setRoutingType((ConnType)2);
 
-    ConnRef *connRef191 = new ConnRef(router, 191);
+    auto connRef191 = ConnRef::createConnRef(router, 191);
     ConnEnd srcPt191(Point(-133.289, 1252.86), 8);
     connRef191->setSourceEndpoint(srcPt191);
     ConnEnd dstPt191(Point(35.7111, 1252.86), 15);
     connRef191->setDestEndpoint(dstPt191);
     connRef191->setRoutingType((ConnType)2);
 
-    ConnRef *connRef192 = new ConnRef(router, 192);
+    auto connRef192 = ConnRef::createConnRef(router, 192);
     ConnEnd srcPt192(Point(-133.289, 1418.53), 15);
     connRef192->setSourceEndpoint(srcPt192);
     ConnEnd dstPt192(Point(-133.289, 1252.86), 4);
     connRef192->setDestEndpoint(dstPt192);
     connRef192->setRoutingType((ConnType)2);
 
-    ConnRef *connRef193 = new ConnRef(router, 193);
+    auto connRef193 = ConnRef::createConnRef(router, 193);
     ConnEnd srcPt193(Point(961.878, 1252.86), 15);
     connRef193->setSourceEndpoint(srcPt193);
     ConnEnd dstPt193(Point(885.878, 1252.86), 8);
     connRef193->setDestEndpoint(dstPt193);
     connRef193->setRoutingType((ConnType)2);
 
-    ConnRef *connRef194 = new ConnRef(router, 194);
+    auto connRef194 = ConnRef::createConnRef(router, 194);
     ConnEnd srcPt194(Point(885.878, 1252.86), 4);
     connRef194->setSourceEndpoint(srcPt194);
     ConnEnd dstPt194(Point(716.878, 1252.86), 15);
     connRef194->setDestEndpoint(dstPt194);
     connRef194->setRoutingType((ConnType)2);
 
-    ConnRef *connRef195 = new ConnRef(router, 195);
+    auto connRef195 = ConnRef::createConnRef(router, 195);
     ConnEnd srcPt195(Point(716.878, 986.864), 15);
     connRef195->setSourceEndpoint(srcPt195);
     ConnEnd dstPt195(Point(716.878, 1048.86), 1);
     connRef195->setDestEndpoint(dstPt195);
     connRef195->setRoutingType((ConnType)2);
 
-    ConnRef *connRef196 = new ConnRef(router, 196);
+    auto connRef196 = ConnRef::createConnRef(router, 196);
     ConnEnd srcPt196(Point(716.878, 1048.86), 2);
     connRef196->setSourceEndpoint(srcPt196);
     ConnEnd dstPt196(Point(716.878, 1252.86), 15);
     connRef196->setDestEndpoint(dstPt196);
     connRef196->setRoutingType((ConnType)2);
 
-    ConnRef *connRef197 = new ConnRef(router, 197);
+    auto connRef197 = ConnRef::createConnRef(router, 197);
     ConnEnd srcPt197(Point(716.878, 862.864), 15);
     connRef197->setSourceEndpoint(srcPt197);
     ConnEnd dstPt197(Point(716.878, 924.864), 1);
     connRef197->setDestEndpoint(dstPt197);
     connRef197->setRoutingType((ConnType)2);
 
-    ConnRef *connRef198 = new ConnRef(router, 198);
+    auto connRef198 = ConnRef::createConnRef(router, 198);
     ConnEnd srcPt198(Point(716.878, 924.864), 2);
     connRef198->setSourceEndpoint(srcPt198);
     ConnEnd dstPt198(Point(716.878, 986.864), 15);
     connRef198->setDestEndpoint(dstPt198);
     connRef198->setRoutingType((ConnType)2);
 
-    ConnRef *connRef199 = new ConnRef(router, 199);
+    auto connRef199 = ConnRef::createConnRef(router, 199);
     ConnEnd srcPt199(Point(716.878, 862.864), 15);
     connRef199->setSourceEndpoint(srcPt199);
     ConnEnd dstPt199(Point(716.878, 800.864), 2);
     connRef199->setDestEndpoint(dstPt199);
     connRef199->setRoutingType((ConnType)2);
 
-    ConnRef *connRef200 = new ConnRef(router, 200);
+    auto connRef200 = ConnRef::createConnRef(router, 200);
     ConnEnd srcPt200(Point(716.878, 800.864), 1);
     connRef200->setSourceEndpoint(srcPt200);
     ConnEnd dstPt200(Point(716.878, 738.864), 15);
     connRef200->setDestEndpoint(dstPt200);
     connRef200->setRoutingType((ConnType)2);
 
-    ConnRef *connRef201 = new ConnRef(router, 201);
+    auto connRef201 = ConnRef::createConnRef(router, 201);
     ConnEnd srcPt201(Point(695.878, 389.864), 2);
     connRef201->setSourceEndpoint(srcPt201);
     ConnEnd dstPt201(Point(716.878, 501.864), 15);
@@ -1455,7 +1455,7 @@ int main(void) {
     checkpoints201[0] = Checkpoint(Point(716.878, 419.864), (ConnDirFlags) 15, (ConnDirFlags) 1);
     connRef201->setRoutingCheckpoints(checkpoints201);
 
-    ConnRef *connRef202 = new ConnRef(router, 202);
+    auto connRef202 = ConnRef::createConnRef(router, 202);
     ConnEnd srcPt202(Point(695.878, 389.864), 1);
     connRef202->setSourceEndpoint(srcPt202);
     ConnEnd dstPt202(Point(716.878, 328.864), 15);
@@ -1465,21 +1465,21 @@ int main(void) {
     checkpoints202[0] = Checkpoint(Point(716.878, 359.864), (ConnDirFlags) 15, (ConnDirFlags) 2);
     connRef202->setRoutingCheckpoints(checkpoints202);
 
-    ConnRef *connRef203 = new ConnRef(router, 203);
+    auto connRef203 = ConnRef::createConnRef(router, 203);
     ConnEnd srcPt203(Point(538.378, 328.864), 4);
     connRef203->setSourceEndpoint(srcPt203);
     ConnEnd dstPt203(Point(308.378, 328.864), 15);
     connRef203->setDestEndpoint(dstPt203);
     connRef203->setRoutingType((ConnType)2);
 
-    ConnRef *connRef204 = new ConnRef(router, 204);
+    auto connRef204 = ConnRef::createConnRef(router, 204);
     ConnEnd srcPt204(Point(716.878, 328.864), 15);
     connRef204->setSourceEndpoint(srcPt204);
     ConnEnd dstPt204(Point(538.378, 328.864), 8);
     connRef204->setDestEndpoint(dstPt204);
     connRef204->setRoutingType((ConnType)2);
 
-    ConnRef *connRef205 = new ConnRef(router, 205);
+    auto connRef205 = ConnRef::createConnRef(router, 205);
     ConnEnd srcPt205(Point(695.878, 25.9469), 1);
     connRef205->setSourceEndpoint(srcPt205);
     ConnEnd dstPt205(Point(716.878, -40.0531), 15);
@@ -1489,7 +1489,7 @@ int main(void) {
     checkpoints205[0] = Checkpoint(Point(716.878, -4.05306), (ConnDirFlags) 15, (ConnDirFlags) 2);
     connRef205->setRoutingCheckpoints(checkpoints205);
 
-    ConnRef *connRef206 = new ConnRef(router, 206);
+    auto connRef206 = ConnRef::createConnRef(router, 206);
     ConnEnd srcPt206(Point(695.878, 25.9469), 2);
     connRef206->setSourceEndpoint(srcPt206);
     ConnEnd dstPt206(Point(716.878, 138.947), 15);
@@ -1499,7 +1499,7 @@ int main(void) {
     checkpoints206[0] = Checkpoint(Point(716.878, 55.9469), (ConnDirFlags) 15, (ConnDirFlags) 1);
     connRef206->setRoutingCheckpoints(checkpoints206);
 
-    ConnRef *connRef207 = new ConnRef(router, 207);
+    auto connRef207 = ConnRef::createConnRef(router, 207);
     ConnEnd srcPt207(Point(828.878, 25.9469), 1);
     connRef207->setSourceEndpoint(srcPt207);
     ConnEnd dstPt207(Point(716.878, -40.0531), 15);
@@ -1509,56 +1509,56 @@ int main(void) {
     checkpoints207[0] = Checkpoint(Point(716.878, -4.05306), (ConnDirFlags) 15, (ConnDirFlags) 2);
     connRef207->setRoutingCheckpoints(checkpoints207);
 
-    ConnRef *connRef208 = new ConnRef(router, 208);
+    auto connRef208 = ConnRef::createConnRef(router, 208);
     ConnEnd srcPt208(Point(852.878, -246.303), 4);
     connRef208->setSourceEndpoint(srcPt208);
     ConnEnd dstPt208(Point(716.878, -212.803), 15);
     connRef208->setDestEndpoint(dstPt208);
     connRef208->setRoutingType((ConnType)2);
 
-    ConnRef *connRef209 = new ConnRef(router, 209);
+    auto connRef209 = ConnRef::createConnRef(router, 209);
     ConnEnd srcPt209(Point(716.878, -212.803), 15);
     connRef209->setSourceEndpoint(srcPt209);
     ConnEnd dstPt209(Point(716.878, -127.553), 1);
     connRef209->setDestEndpoint(dstPt209);
     connRef209->setRoutingType((ConnType)2);
 
-    ConnRef *connRef210 = new ConnRef(router, 210);
+    auto connRef210 = ConnRef::createConnRef(router, 210);
     ConnEnd srcPt210(Point(716.878, -127.553), 2);
     connRef210->setSourceEndpoint(srcPt210);
     ConnEnd dstPt210(Point(716.878, -40.0531), 15);
     connRef210->setDestEndpoint(dstPt210);
     connRef210->setRoutingType((ConnType)2);
 
-    ConnRef *connRef211 = new ConnRef(router, 211);
+    auto connRef211 = ConnRef::createConnRef(router, 211);
     ConnEnd srcPt211(Point(716.878, -412.803), 15);
     connRef211->setSourceEndpoint(srcPt211);
     ConnEnd dstPt211(Point(716.878, -318.803), 1);
     connRef211->setDestEndpoint(dstPt211);
     connRef211->setRoutingType((ConnType)2);
 
-    ConnRef *connRef212 = new ConnRef(router, 212);
+    auto connRef212 = ConnRef::createConnRef(router, 212);
     ConnEnd srcPt212(Point(716.878, -318.803), 2);
     connRef212->setSourceEndpoint(srcPt212);
     ConnEnd dstPt212(Point(716.878, -212.803), 15);
     connRef212->setDestEndpoint(dstPt212);
     connRef212->setRoutingType((ConnType)2);
 
-    ConnRef *connRef213 = new ConnRef(router, 213);
+    auto connRef213 = ConnRef::createConnRef(router, 213);
     ConnEnd srcPt213(Point(308.378, -40.0531), 15);
     connRef213->setSourceEndpoint(srcPt213);
     ConnEnd dstPt213(Point(472.378, -40.0531), 4);
     connRef213->setDestEndpoint(dstPt213);
     connRef213->setRoutingType((ConnType)2);
 
-    ConnRef *connRef214 = new ConnRef(router, 214);
+    auto connRef214 = ConnRef::createConnRef(router, 214);
     ConnEnd srcPt214(Point(472.378, -40.0531), 8);
     connRef214->setSourceEndpoint(srcPt214);
     ConnEnd dstPt214(Point(716.878, -40.0531), 15);
     connRef214->setDestEndpoint(dstPt214);
     connRef214->setRoutingType((ConnType)2);
 
-    ConnRef *connRef215 = new ConnRef(router, 215);
+    auto connRef215 = ConnRef::createConnRef(router, 215);
     ConnEnd srcPt215(Point(-30.2889, -136.053), 4);
     connRef215->setSourceEndpoint(srcPt215);
     ConnEnd dstPt215(Point(-247.289, -40.0531), 15);
@@ -1568,7 +1568,7 @@ int main(void) {
     checkpoints215[0] = Checkpoint(Point(-68.2889, -40.0531), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef215->setRoutingCheckpoints(checkpoints215);
 
-    ConnRef *connRef216 = new ConnRef(router, 216);
+    auto connRef216 = ConnRef::createConnRef(router, 216);
     ConnEnd srcPt216(Point(-30.2889, -136.053), 8);
     connRef216->setSourceEndpoint(srcPt216);
     ConnEnd dstPt216(Point(308.378, -40.0531), 15);
@@ -1578,7 +1578,7 @@ int main(void) {
     checkpoints216[0] = Checkpoint(Point(7.71109, -40.0531), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef216->setRoutingCheckpoints(checkpoints216);
 
-    ConnRef *connRef217 = new ConnRef(router, 217);
+    auto connRef217 = ConnRef::createConnRef(router, 217);
     ConnEnd srcPt217(Point(-30.2889, -61.0531), 4);
     connRef217->setSourceEndpoint(srcPt217);
     ConnEnd dstPt217(Point(-247.289, -40.0531), 15);
@@ -1588,7 +1588,7 @@ int main(void) {
     checkpoints217[0] = Checkpoint(Point(-68.2889, -40.0531), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef217->setRoutingCheckpoints(checkpoints217);
 
-    ConnRef *connRef218 = new ConnRef(router, 218);
+    auto connRef218 = ConnRef::createConnRef(router, 218);
     ConnEnd srcPt218(Point(-30.2889, -61.0531), 8);
     connRef218->setSourceEndpoint(srcPt218);
     ConnEnd dstPt218(Point(308.378, -40.0531), 15);
@@ -1598,49 +1598,49 @@ int main(void) {
     checkpoints218[0] = Checkpoint(Point(7.71109, -40.0531), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef218->setRoutingCheckpoints(checkpoints218);
 
-    ConnRef *connRef219 = new ConnRef(router, 219);
+    auto connRef219 = ConnRef::createConnRef(router, 219);
     ConnEnd srcPt219(Point(374.378, -127.553), 4);
     connRef219->setSourceEndpoint(srcPt219);
     ConnEnd dstPt219(Point(308.378, -40.0531), 15);
     connRef219->setDestEndpoint(dstPt219);
     connRef219->setRoutingType((ConnType)2);
 
-    ConnRef *connRef220 = new ConnRef(router, 220);
+    auto connRef220 = ConnRef::createConnRef(router, 220);
     ConnEnd srcPt220(Point(716.878, -212.803), 15);
     connRef220->setSourceEndpoint(srcPt220);
     ConnEnd dstPt220(Point(374.378, -127.553), 8);
     connRef220->setDestEndpoint(dstPt220);
     connRef220->setRoutingType((ConnType)2);
 
-    ConnRef *connRef221 = new ConnRef(router, 221);
+    auto connRef221 = ConnRef::createConnRef(router, 221);
     ConnEnd srcPt221(Point(209.378, -127.553), 2);
     connRef221->setSourceEndpoint(srcPt221);
     ConnEnd dstPt221(Point(308.378, -40.0531), 15);
     connRef221->setDestEndpoint(dstPt221);
     connRef221->setRoutingType((ConnType)2);
 
-    ConnRef *connRef222 = new ConnRef(router, 222);
+    auto connRef222 = ConnRef::createConnRef(router, 222);
     ConnEnd srcPt222(Point(716.878, -212.803), 15);
     connRef222->setSourceEndpoint(srcPt222);
     ConnEnd dstPt222(Point(209.378, -127.553), 1);
     connRef222->setDestEndpoint(dstPt222);
     connRef222->setRoutingType((ConnType)2);
 
-    ConnRef *connRef223 = new ConnRef(router, 223);
+    auto connRef223 = ConnRef::createConnRef(router, 223);
     ConnEnd srcPt223(Point(-247.289, -212.803), 15);
     connRef223->setSourceEndpoint(srcPt223);
     ConnEnd dstPt223(Point(-247.289, -127.553), 1);
     connRef223->setDestEndpoint(dstPt223);
     connRef223->setRoutingType((ConnType)2);
 
-    ConnRef *connRef224 = new ConnRef(router, 224);
+    auto connRef224 = ConnRef::createConnRef(router, 224);
     ConnEnd srcPt224(Point(-247.289, -127.553), 2);
     connRef224->setSourceEndpoint(srcPt224);
     ConnEnd dstPt224(Point(-247.289, -40.0531), 15);
     connRef224->setDestEndpoint(dstPt224);
     connRef224->setRoutingType((ConnType)2);
 
-    ConnRef *connRef225 = new ConnRef(router, 225);
+    auto connRef225 = ConnRef::createConnRef(router, 225);
     ConnEnd srcPt225(Point(68.7111, -383.803), 4);
     connRef225->setSourceEndpoint(srcPt225);
     ConnEnd dstPt225(Point(-247.289, -212.803), 15);
@@ -1650,7 +1650,7 @@ int main(void) {
     checkpoints225[0] = Checkpoint(Point(30.7111, -212.803), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef225->setRoutingCheckpoints(checkpoints225);
 
-    ConnRef *connRef226 = new ConnRef(router, 226);
+    auto connRef226 = ConnRef::createConnRef(router, 226);
     ConnEnd srcPt226(Point(68.7111, -383.803), 8);
     connRef226->setSourceEndpoint(srcPt226);
     ConnEnd dstPt226(Point(716.878, -212.803), 15);
@@ -1660,7 +1660,7 @@ int main(void) {
     checkpoints226[0] = Checkpoint(Point(106.711, -212.803), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef226->setRoutingCheckpoints(checkpoints226);
 
-    ConnRef *connRef227 = new ConnRef(router, 227);
+    auto connRef227 = ConnRef::createConnRef(router, 227);
     ConnEnd srcPt227(Point(68.7111, -308.803), 4);
     connRef227->setSourceEndpoint(srcPt227);
     ConnEnd dstPt227(Point(-247.289, -212.803), 15);
@@ -1670,7 +1670,7 @@ int main(void) {
     checkpoints227[0] = Checkpoint(Point(30.7111, -212.803), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef227->setRoutingCheckpoints(checkpoints227);
 
-    ConnRef *connRef228 = new ConnRef(router, 228);
+    auto connRef228 = ConnRef::createConnRef(router, 228);
     ConnEnd srcPt228(Point(68.7111, -308.803), 8);
     connRef228->setSourceEndpoint(srcPt228);
     ConnEnd dstPt228(Point(716.878, -212.803), 15);
@@ -1680,7 +1680,7 @@ int main(void) {
     checkpoints228[0] = Checkpoint(Point(106.711, -212.803), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef228->setRoutingCheckpoints(checkpoints228);
 
-    ConnRef *connRef229 = new ConnRef(router, 229);
+    auto connRef229 = ConnRef::createConnRef(router, 229);
     ConnEnd srcPt229(Point(68.7111, -116.803), 4);
     connRef229->setSourceEndpoint(srcPt229);
     ConnEnd dstPt229(Point(-247.289, -212.803), 15);
@@ -1690,7 +1690,7 @@ int main(void) {
     checkpoints229[0] = Checkpoint(Point(30.7111, -212.803), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef229->setRoutingCheckpoints(checkpoints229);
 
-    ConnRef *connRef230 = new ConnRef(router, 230);
+    auto connRef230 = ConnRef::createConnRef(router, 230);
     ConnEnd srcPt230(Point(68.7111, -116.803), 8);
     connRef230->setSourceEndpoint(srcPt230);
     ConnEnd dstPt230(Point(716.878, -212.803), 15);
@@ -1700,56 +1700,56 @@ int main(void) {
     checkpoints230[0] = Checkpoint(Point(106.711, -212.803), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef230->setRoutingCheckpoints(checkpoints230);
 
-    ConnRef *connRef231 = new ConnRef(router, 231);
+    auto connRef231 = ConnRef::createConnRef(router, 231);
     ConnEnd srcPt231(Point(716.878, -412.803), 15);
     connRef231->setSourceEndpoint(srcPt231);
     ConnEnd dstPt231(Point(341.378, -351.803), 8);
     connRef231->setDestEndpoint(dstPt231);
     connRef231->setRoutingType((ConnType)2);
 
-    ConnRef *connRef232 = new ConnRef(router, 232);
+    auto connRef232 = ConnRef::createConnRef(router, 232);
     ConnEnd srcPt232(Point(341.378, -351.803), 4);
     connRef232->setSourceEndpoint(srcPt232);
     ConnEnd dstPt232(Point(-247.289, -212.803), 15);
     connRef232->setDestEndpoint(dstPt232);
     connRef232->setRoutingType((ConnType)2);
 
-    ConnRef *connRef233 = new ConnRef(router, 233);
+    auto connRef233 = ConnRef::createConnRef(router, 233);
     ConnEnd srcPt233(Point(716.878, -412.803), 15);
     connRef233->setSourceEndpoint(srcPt233);
     ConnEnd dstPt233(Point(341.378, -453.803), 8);
     connRef233->setDestEndpoint(dstPt233);
     connRef233->setRoutingType((ConnType)2);
 
-    ConnRef *connRef234 = new ConnRef(router, 234);
+    auto connRef234 = ConnRef::createConnRef(router, 234);
     ConnEnd srcPt234(Point(341.378, -453.803), 4);
     connRef234->setSourceEndpoint(srcPt234);
     ConnEnd dstPt234(Point(-247.289, -212.803), 15);
     connRef234->setDestEndpoint(dstPt234);
     connRef234->setRoutingType((ConnType)2);
 
-    ConnRef *connRef235 = new ConnRef(router, 235);
+    auto connRef235 = ConnRef::createConnRef(router, 235);
     ConnEnd srcPt235(Point(2.71109, 1418.53), 8);
     connRef235->setSourceEndpoint(srcPt235);
     ConnEnd dstPt235(Point(242.378, 1418.53), 15);
     connRef235->setDestEndpoint(dstPt235);
     connRef235->setRoutingType((ConnType)2);
 
-    ConnRef *connRef236 = new ConnRef(router, 236);
+    auto connRef236 = ConnRef::createConnRef(router, 236);
     ConnEnd srcPt236(Point(716.878, 738.864), 15);
     connRef236->setSourceEndpoint(srcPt236);
     ConnEnd dstPt236(Point(716.878, 625.864), 2);
     connRef236->setDestEndpoint(dstPt236);
     connRef236->setRoutingType((ConnType)2);
 
-    ConnRef *connRef237 = new ConnRef(router, 237);
+    auto connRef237 = ConnRef::createConnRef(router, 237);
     ConnEnd srcPt237(Point(716.878, 625.864), 1);
     connRef237->setSourceEndpoint(srcPt237);
     ConnEnd dstPt237(Point(716.878, 501.864), 15);
     connRef237->setDestEndpoint(dstPt237);
     connRef237->setRoutingType((ConnType)2);
 
-    ConnRef *connRef238 = new ConnRef(router, 238);
+    auto connRef238 = ConnRef::createConnRef(router, 238);
     ConnEnd srcPt238(Point(68.7111, -233.803), 8);
     connRef238->setSourceEndpoint(srcPt238);
     ConnEnd dstPt238(Point(716.878, -212.803), 15);
@@ -1759,7 +1759,7 @@ int main(void) {
     checkpoints238[0] = Checkpoint(Point(106.711, -212.803), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef238->setRoutingCheckpoints(checkpoints238);
 
-    ConnRef *connRef239 = new ConnRef(router, 239);
+    auto connRef239 = ConnRef::createConnRef(router, 239);
     ConnEnd srcPt239(Point(-30.2889, -19.0531), 8);
     connRef239->setSourceEndpoint(srcPt239);
     ConnEnd dstPt239(Point(308.378, -40.0531), 15);
@@ -1769,42 +1769,42 @@ int main(void) {
     checkpoints239[0] = Checkpoint(Point(7.71109, -40.0531), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef239->setRoutingCheckpoints(checkpoints239);
 
-    ConnRef *connRef240 = new ConnRef(router, 240);
+    auto connRef240 = ConnRef::createConnRef(router, 240);
     ConnEnd srcPt240(Point(-247.289, 99.1969), 8);
     connRef240->setSourceEndpoint(srcPt240);
     ConnEnd dstPt240(Point(-100.289, 99.1969), 15);
     connRef240->setDestEndpoint(dstPt240);
     connRef240->setRoutingType((ConnType)2);
 
-    ConnRef *connRef241 = new ConnRef(router, 241);
+    auto connRef241 = ConnRef::createConnRef(router, 241);
     ConnEnd srcPt241(Point(-247.289, 201.197), 8);
     connRef241->setSourceEndpoint(srcPt241);
     ConnEnd dstPt241(Point(-100.289, 201.197), 15);
     connRef241->setDestEndpoint(dstPt241);
     connRef241->setRoutingType((ConnType)2);
 
-    ConnRef *connRef242 = new ConnRef(router, 242);
+    auto connRef242 = ConnRef::createConnRef(router, 242);
     ConnEnd srcPt242(Point(134.711, 99.1969), 8);
     connRef242->setSourceEndpoint(srcPt242);
     ConnEnd dstPt242(Point(308.378, -40.0531), 15);
     connRef242->setDestEndpoint(dstPt242);
     connRef242->setRoutingType((ConnType)2);
 
-    ConnRef *connRef243 = new ConnRef(router, 243);
+    auto connRef243 = ConnRef::createConnRef(router, 243);
     ConnEnd srcPt243(Point(134.711, 201.197), 8);
     connRef243->setSourceEndpoint(srcPt243);
     ConnEnd dstPt243(Point(308.378, -40.0531), 15);
     connRef243->setDestEndpoint(dstPt243);
     connRef243->setRoutingType((ConnType)2);
 
-    ConnRef *connRef244 = new ConnRef(router, 244);
+    auto connRef244 = ConnRef::createConnRef(router, 244);
     ConnEnd srcPt244(Point(928.878, -246.303), 15);
     connRef244->setSourceEndpoint(srcPt244);
     ConnEnd dstPt244(Point(852.878, -246.303), 8);
     connRef244->setDestEndpoint(dstPt244);
     connRef244->setRoutingType((ConnType)2);
 
-    ConnRef *connRef245 = new ConnRef(router, 245);
+    auto connRef245 = ConnRef::createConnRef(router, 245);
     ConnEnd srcPt245(Point(68.7111, -233.803), 4);
     connRef245->setSourceEndpoint(srcPt245);
     ConnEnd dstPt245(Point(-247.289, -212.803), 15);
@@ -1814,7 +1814,7 @@ int main(void) {
     checkpoints245[0] = Checkpoint(Point(30.7111, -212.803), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef245->setRoutingCheckpoints(checkpoints245);
 
-    ConnRef *connRef246 = new ConnRef(router, 246);
+    auto connRef246 = ConnRef::createConnRef(router, 246);
     ConnEnd srcPt246(Point(68.7111, -191.803), 4);
     connRef246->setSourceEndpoint(srcPt246);
     ConnEnd dstPt246(Point(-247.289, -212.803), 15);
@@ -1824,7 +1824,7 @@ int main(void) {
     checkpoints246[0] = Checkpoint(Point(30.7111, -212.803), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef246->setRoutingCheckpoints(checkpoints246);
 
-    ConnRef *connRef247 = new ConnRef(router, 247);
+    auto connRef247 = ConnRef::createConnRef(router, 247);
     ConnEnd srcPt247(Point(-30.2889, -19.0531), 4);
     connRef247->setSourceEndpoint(srcPt247);
     ConnEnd dstPt247(Point(-247.289, -40.0531), 15);
@@ -1834,7 +1834,7 @@ int main(void) {
     checkpoints247[0] = Checkpoint(Point(-68.2889, -40.0531), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef247->setRoutingCheckpoints(checkpoints247);
 
-    ConnRef *connRef248 = new ConnRef(router, 248);
+    auto connRef248 = ConnRef::createConnRef(router, 248);
     ConnEnd srcPt248(Point(-30.2889, 55.9469), 4);
     connRef248->setSourceEndpoint(srcPt248);
     ConnEnd dstPt248(Point(-247.289, -40.0531), 15);
@@ -1844,7 +1844,7 @@ int main(void) {
     checkpoints248[0] = Checkpoint(Point(-68.2889, -40.0531), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef248->setRoutingCheckpoints(checkpoints248);
 
-    ConnRef *connRef249 = new ConnRef(router, 249);
+    auto connRef249 = ConnRef::createConnRef(router, 249);
     ConnEnd srcPt249(Point(-30.2889, 55.9469), 8);
     connRef249->setSourceEndpoint(srcPt249);
     ConnEnd dstPt249(Point(308.378, -40.0531), 15);
@@ -1854,7 +1854,7 @@ int main(void) {
     checkpoints249[0] = Checkpoint(Point(7.71109, -40.0531), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef249->setRoutingCheckpoints(checkpoints249);
 
-    ConnRef *connRef250 = new ConnRef(router, 250);
+    auto connRef250 = ConnRef::createConnRef(router, 250);
     ConnEnd srcPt250(Point(737.878, 25.9469), 1);
     connRef250->setSourceEndpoint(srcPt250);
     ConnEnd dstPt250(Point(716.878, -40.0531), 15);
@@ -1864,7 +1864,7 @@ int main(void) {
     checkpoints250[0] = Checkpoint(Point(716.878, -4.05306), (ConnDirFlags) 15, (ConnDirFlags) 2);
     connRef250->setRoutingCheckpoints(checkpoints250);
 
-    ConnRef *connRef251 = new ConnRef(router, 251);
+    auto connRef251 = ConnRef::createConnRef(router, 251);
     ConnEnd srcPt251(Point(-166.289, 1007.86), 8);
     connRef251->setSourceEndpoint(srcPt251);
     ConnEnd dstPt251(Point(716.878, 986.864), 15);
@@ -1874,7 +1874,7 @@ int main(void) {
     checkpoints251[0] = Checkpoint(Point(-128.289, 986.864), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef251->setRoutingCheckpoints(checkpoints251);
 
-    ConnRef *connRef252 = new ConnRef(router, 252);
+    auto connRef252 = ConnRef::createConnRef(router, 252);
     ConnEnd srcPt252(Point(823.878, 563.864), 2);
     connRef252->setSourceEndpoint(srcPt252);
     ConnEnd dstPt252(Point(716.878, 738.864), 15);
@@ -1884,7 +1884,7 @@ int main(void) {
     checkpoints252[0] = Checkpoint(Point(844.878, 593.864), (ConnDirFlags) 15, (ConnDirFlags) 1);
     connRef252->setRoutingCheckpoints(checkpoints252);
 
-    ConnRef *connRef253 = new ConnRef(router, 253);
+    auto connRef253 = ConnRef::createConnRef(router, 253);
     ConnEnd srcPt253(Point(865.878, 563.864), 2);
     connRef253->setSourceEndpoint(srcPt253);
     ConnEnd dstPt253(Point(716.878, 738.864), 15);
@@ -1894,7 +1894,7 @@ int main(void) {
     checkpoints253[0] = Checkpoint(Point(844.878, 593.864), (ConnDirFlags) 15, (ConnDirFlags) 1);
     connRef253->setRoutingCheckpoints(checkpoints253);
 
-    ConnRef *connRef254 = new ConnRef(router, 254);
+    auto connRef254 = ConnRef::createConnRef(router, 254);
     ConnEnd srcPt254(Point(956.878, 563.864), 2);
     connRef254->setSourceEndpoint(srcPt254);
     ConnEnd dstPt254(Point(716.878, 738.864), 15);
@@ -1904,7 +1904,7 @@ int main(void) {
     checkpoints254[0] = Checkpoint(Point(844.878, 593.864), (ConnDirFlags) 15, (ConnDirFlags) 1);
     connRef254->setRoutingCheckpoints(checkpoints254);
 
-    ConnRef *connRef255 = new ConnRef(router, 255);
+    auto connRef255 = ConnRef::createConnRef(router, 255);
     ConnEnd srcPt255(Point(737.878, 389.864), 2);
     connRef255->setSourceEndpoint(srcPt255);
     ConnEnd dstPt255(Point(716.878, 501.864), 15);
@@ -1914,14 +1914,14 @@ int main(void) {
     checkpoints255[0] = Checkpoint(Point(716.878, 419.864), (ConnDirFlags) 15, (ConnDirFlags) 1);
     connRef255->setRoutingCheckpoints(checkpoints255);
 
-    ConnRef *connRef256 = new ConnRef(router, 256);
+    auto connRef256 = ConnRef::createConnRef(router, 256);
     ConnEnd srcPt256(Point(716.878, 501.864), 15);
     connRef256->setSourceEndpoint(srcPt256);
     ConnEnd dstPt256(Point(635.878, 501.864), 8);
     connRef256->setDestEndpoint(dstPt256);
     connRef256->setRoutingType((ConnType)2);
 
-    ConnRef *connRef257 = new ConnRef(router, 257);
+    auto connRef257 = ConnRef::createConnRef(router, 257);
     ConnEnd srcPt257(Point(668.878, 1450.53), 8);
     connRef257->setSourceEndpoint(srcPt257);
     ConnEnd dstPt257(Point(852.878, 1546.53), 15);
@@ -1931,7 +1931,7 @@ int main(void) {
     checkpoints257[0] = Checkpoint(Point(706.878, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef257->setRoutingCheckpoints(checkpoints257);
 
-    ConnRef *connRef258 = new ConnRef(router, 258);
+    auto connRef258 = ConnRef::createConnRef(router, 258);
     ConnEnd srcPt258(Point(668.878, 1525.53), 8);
     connRef258->setSourceEndpoint(srcPt258);
     ConnEnd dstPt258(Point(852.878, 1546.53), 15);
@@ -1941,7 +1941,7 @@ int main(void) {
     checkpoints258[0] = Checkpoint(Point(706.878, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef258->setRoutingCheckpoints(checkpoints258);
 
-    ConnRef *connRef259 = new ConnRef(router, 259);
+    auto connRef259 = ConnRef::createConnRef(router, 259);
     ConnEnd srcPt259(Point(668.878, 1567.53), 8);
     connRef259->setSourceEndpoint(srcPt259);
     ConnEnd dstPt259(Point(852.878, 1546.53), 15);
@@ -1951,7 +1951,7 @@ int main(void) {
     checkpoints259[0] = Checkpoint(Point(706.878, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef259->setRoutingCheckpoints(checkpoints259);
 
-    ConnRef *connRef260 = new ConnRef(router, 260);
+    auto connRef260 = ConnRef::createConnRef(router, 260);
     ConnEnd srcPt260(Point(668.878, 1642.53), 8);
     connRef260->setSourceEndpoint(srcPt260);
     ConnEnd dstPt260(Point(852.878, 1546.53), 15);
@@ -1961,28 +1961,28 @@ int main(void) {
     checkpoints260[0] = Checkpoint(Point(706.878, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef260->setRoutingCheckpoints(checkpoints260);
 
-    ConnRef *connRef261 = new ConnRef(router, 261);
+    auto connRef261 = ConnRef::createConnRef(router, 261);
     ConnEnd srcPt261(Point(134.711, 1123.86), 8);
     connRef261->setSourceEndpoint(srcPt261);
     ConnEnd dstPt261(Point(716.878, 1252.86), 15);
     connRef261->setDestEndpoint(dstPt261);
     connRef261->setRoutingType((ConnType)2);
 
-    ConnRef *connRef262 = new ConnRef(router, 262);
+    auto connRef262 = ConnRef::createConnRef(router, 262);
     ConnEnd srcPt262(Point(407.378, 1252.86), 15);
     connRef262->setSourceEndpoint(srcPt262);
     ConnEnd dstPt262(Point(407.378, 1484.53), 1);
     connRef262->setDestEndpoint(dstPt262);
     connRef262->setRoutingType((ConnType)2);
 
-    ConnRef *connRef263 = new ConnRef(router, 263);
+    auto connRef263 = ConnRef::createConnRef(router, 263);
     ConnEnd srcPt263(Point(-282.289, 1252.86), 15);
     connRef263->setSourceEndpoint(srcPt263);
     ConnEnd dstPt263(Point(134.711, 1123.86), 4);
     connRef263->setDestEndpoint(dstPt263);
     connRef263->setRoutingType((ConnType)2);
 
-    ConnRef *connRef264 = new ConnRef(router, 264);
+    auto connRef264 = ConnRef::createConnRef(router, 264);
     ConnEnd srcPt264(Point(668.878, 1567.53), 4);
     connRef264->setSourceEndpoint(srcPt264);
     ConnEnd dstPt264(Point(407.378, 1546.53), 15);
@@ -1992,7 +1992,7 @@ int main(void) {
     checkpoints264[0] = Checkpoint(Point(630.878, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef264->setRoutingCheckpoints(checkpoints264);
 
-    ConnRef *connRef265 = new ConnRef(router, 265);
+    auto connRef265 = ConnRef::createConnRef(router, 265);
     ConnEnd srcPt265(Point(668.878, 1642.53), 4);
     connRef265->setSourceEndpoint(srcPt265);
     ConnEnd dstPt265(Point(407.378, 1546.53), 15);
@@ -2002,14 +2002,14 @@ int main(void) {
     checkpoints265[0] = Checkpoint(Point(630.878, 1546.53), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef265->setRoutingCheckpoints(checkpoints265);
 
-    ConnRef *connRef266 = new ConnRef(router, 266);
+    auto connRef266 = ConnRef::createConnRef(router, 266);
     ConnEnd srcPt266(Point(-133.289, 1418.53), 15);
     connRef266->setSourceEndpoint(srcPt266);
     ConnEnd dstPt266(Point(2.71109, 1418.53), 4);
     connRef266->setDestEndpoint(dstPt266);
     connRef266->setRoutingType((ConnType)2);
 
-    ConnRef *connRef267 = new ConnRef(router, 267);
+    auto connRef267 = ConnRef::createConnRef(router, 267);
     ConnEnd srcPt267(Point(828.878, 25.9469), 2);
     connRef267->setSourceEndpoint(srcPt267);
     ConnEnd dstPt267(Point(716.878, 138.947), 15);
@@ -2019,35 +2019,35 @@ int main(void) {
     checkpoints267[0] = Checkpoint(Point(716.878, 55.9469), (ConnDirFlags) 15, (ConnDirFlags) 1);
     connRef267->setRoutingCheckpoints(checkpoints267);
 
-    ConnRef *connRef268 = new ConnRef(router, 268);
+    auto connRef268 = ConnRef::createConnRef(router, 268);
     ConnEnd srcPt268(Point(-317.289, 99.1969), 15);
     connRef268->setSourceEndpoint(srcPt268);
     ConnEnd dstPt268(Point(-247.289, 99.1969), 4);
     connRef268->setDestEndpoint(dstPt268);
     connRef268->setRoutingType((ConnType)2);
 
-    ConnRef *connRef269 = new ConnRef(router, 269);
+    auto connRef269 = ConnRef::createConnRef(router, 269);
     ConnEnd srcPt269(Point(-100.289, 99.1969), 15);
     connRef269->setSourceEndpoint(srcPt269);
     ConnEnd dstPt269(Point(134.711, 99.1969), 4);
     connRef269->setDestEndpoint(dstPt269);
     connRef269->setRoutingType((ConnType)2);
 
-    ConnRef *connRef270 = new ConnRef(router, 270);
+    auto connRef270 = ConnRef::createConnRef(router, 270);
     ConnEnd srcPt270(Point(-100.289, 201.197), 15);
     connRef270->setSourceEndpoint(srcPt270);
     ConnEnd dstPt270(Point(134.711, 201.197), 4);
     connRef270->setDestEndpoint(dstPt270);
     connRef270->setRoutingType((ConnType)2);
 
-    ConnRef *connRef271 = new ConnRef(router, 271);
+    auto connRef271 = ConnRef::createConnRef(router, 271);
     ConnEnd srcPt271(Point(-317.289, 201.197), 15);
     connRef271->setSourceEndpoint(srcPt271);
     ConnEnd dstPt271(Point(-247.289, 201.197), 4);
     connRef271->setDestEndpoint(dstPt271);
     connRef271->setRoutingType((ConnType)2);
 
-    ConnRef *connRef272 = new ConnRef(router, 272);
+    auto connRef272 = ConnRef::createConnRef(router, 272);
     ConnEnd srcPt272(Point(-166.289, 965.864), 8);
     connRef272->setSourceEndpoint(srcPt272);
     ConnEnd dstPt272(Point(716.878, 986.864), 15);
@@ -2057,7 +2057,7 @@ int main(void) {
     checkpoints272[0] = Checkpoint(Point(-128.289, 986.864), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef272->setRoutingCheckpoints(checkpoints272);
 
-    ConnRef *connRef273 = new ConnRef(router, 273);
+    auto connRef273 = ConnRef::createConnRef(router, 273);
     ConnEnd srcPt273(Point(-166.289, 965.864), 4);
     connRef273->setSourceEndpoint(srcPt273);
     ConnEnd dstPt273(Point(-282.289, 986.864), 15);
@@ -2067,7 +2067,7 @@ int main(void) {
     checkpoints273[0] = Checkpoint(Point(-204.289, 986.864), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef273->setRoutingCheckpoints(checkpoints273);
 
-    ConnRef *connRef274 = new ConnRef(router, 274);
+    auto connRef274 = ConnRef::createConnRef(router, 274);
     ConnEnd srcPt274(Point(-166.289, 1007.86), 4);
     connRef274->setSourceEndpoint(srcPt274);
     ConnEnd dstPt274(Point(-282.289, 986.864), 15);
@@ -2077,7 +2077,7 @@ int main(void) {
     checkpoints274[0] = Checkpoint(Point(-204.289, 986.864), (ConnDirFlags) 15, (ConnDirFlags) 4);
     connRef274->setRoutingCheckpoints(checkpoints274);
 
-    ConnRef *connRef275 = new ConnRef(router, 275);
+    auto connRef275 = ConnRef::createConnRef(router, 275);
     ConnEnd srcPt275(Point(737.878, 389.864), 1);
     connRef275->setSourceEndpoint(srcPt275);
     ConnEnd dstPt275(Point(716.878, 328.864), 15);
@@ -2087,28 +2087,28 @@ int main(void) {
     checkpoints275[0] = Checkpoint(Point(716.878, 359.864), (ConnDirFlags) 15, (ConnDirFlags) 2);
     connRef275->setRoutingCheckpoints(checkpoints275);
 
-    ConnRef *connRef276 = new ConnRef(router, 276);
+    auto connRef276 = ConnRef::createConnRef(router, 276);
     ConnEnd srcPt276(Point(505.378, 625.864), 15);
     connRef276->setSourceEndpoint(srcPt276);
     ConnEnd dstPt276(Point(635.878, 705.864), 4);
     connRef276->setDestEndpoint(dstPt276);
     connRef276->setRoutingType((ConnType)2);
 
-    ConnRef *connRef277 = new ConnRef(router, 277);
+    auto connRef277 = ConnRef::createConnRef(router, 277);
     ConnEnd srcPt277(Point(635.878, 705.864), 8);
     connRef277->setSourceEndpoint(srcPt277);
     ConnEnd dstPt277(Point(716.878, 738.864), 15);
     connRef277->setDestEndpoint(dstPt277);
     connRef277->setRoutingType((ConnType)2);
 
-    ConnRef *connRef278 = new ConnRef(router, 278);
+    auto connRef278 = ConnRef::createConnRef(router, 278);
     ConnEnd srcPt278(Point(635.878, 501.864), 4);
     connRef278->setSourceEndpoint(srcPt278);
     ConnEnd dstPt278(Point(505.378, 625.864), 15);
     connRef278->setDestEndpoint(dstPt278);
     connRef278->setRoutingType((ConnType)2);
 
-    ConnRef *connRef279 = new ConnRef(router, 279);
+    auto connRef279 = ConnRef::createConnRef(router, 279);
     ConnEnd srcPt279(Point(823.878, 563.864), 1);
     connRef279->setSourceEndpoint(srcPt279);
     ConnEnd dstPt279(Point(716.878, 328.864), 15);
@@ -2118,7 +2118,7 @@ int main(void) {
     checkpoints279[0] = Checkpoint(Point(844.878, 533.864), (ConnDirFlags) 15, (ConnDirFlags) 2);
     connRef279->setRoutingCheckpoints(checkpoints279);
 
-    ConnRef *connRef280 = new ConnRef(router, 280);
+    auto connRef280 = ConnRef::createConnRef(router, 280);
     ConnEnd srcPt280(Point(865.878, 563.864), 1);
     connRef280->setSourceEndpoint(srcPt280);
     ConnEnd dstPt280(Point(716.878, 328.864), 15);
@@ -2128,7 +2128,7 @@ int main(void) {
     checkpoints280[0] = Checkpoint(Point(844.878, 533.864), (ConnDirFlags) 15, (ConnDirFlags) 2);
     connRef280->setRoutingCheckpoints(checkpoints280);
 
-    ConnRef *connRef281 = new ConnRef(router, 281);
+    auto connRef281 = ConnRef::createConnRef(router, 281);
     ConnEnd srcPt281(Point(956.878, 563.864), 1);
     connRef281->setSourceEndpoint(srcPt281);
     ConnEnd dstPt281(Point(716.878, 328.864), 15);
@@ -2138,7 +2138,7 @@ int main(void) {
     checkpoints281[0] = Checkpoint(Point(844.878, 533.864), (ConnDirFlags) 15, (ConnDirFlags) 2);
     connRef281->setRoutingCheckpoints(checkpoints281);
 
-    ConnRef *connRef282 = new ConnRef(router, 282);
+    auto connRef282 = ConnRef::createConnRef(router, 282);
     ConnEnd srcPt282(Point(-303.289, 1451.53), 1);
     connRef282->setSourceEndpoint(srcPt282);
     ConnEnd dstPt282(Point(-282.289, 1252.86), 15);
@@ -2148,7 +2148,7 @@ int main(void) {
     checkpoints282[0] = Checkpoint(Point(-282.289, 1421.53), (ConnDirFlags) 15, (ConnDirFlags) 2);
     connRef282->setRoutingCheckpoints(checkpoints282);
 
-    ConnRef *connRef283 = new ConnRef(router, 283);
+    auto connRef283 = ConnRef::createConnRef(router, 283);
     ConnEnd srcPt283(Point(737.878, 25.9469), 2);
     connRef283->setSourceEndpoint(srcPt283);
     ConnEnd dstPt283(Point(716.878, 138.947), 15);
@@ -2158,7 +2158,7 @@ int main(void) {
     checkpoints283[0] = Checkpoint(Point(716.878, 55.9469), (ConnDirFlags) 15, (ConnDirFlags) 1);
     connRef283->setRoutingCheckpoints(checkpoints283);
 
-    ConnRef *connRef284 = new ConnRef(router, 284);
+    auto connRef284 = ConnRef::createConnRef(router, 284);
     ConnEnd srcPt284(Point(68.7111, -191.803), 8);
     connRef284->setSourceEndpoint(srcPt284);
     ConnEnd dstPt284(Point(716.878, -212.803), 15);
@@ -2168,469 +2168,469 @@ int main(void) {
     checkpoints284[0] = Checkpoint(Point(106.711, -212.803), (ConnDirFlags) 15, (ConnDirFlags) 8);
     connRef284->setRoutingCheckpoints(checkpoints284);
 
-    ConnRef *connRef285 = new ConnRef(router, 285);
+    auto connRef285 = ConnRef::createConnRef(router, 285);
     ConnEnd srcPt285(Point(407.378, 1156.86), 15);
     connRef285->setSourceEndpoint(srcPt285);
     ConnEnd dstPt285(Point(571.378, 1285.86), 8);
     connRef285->setDestEndpoint(dstPt285);
     connRef285->setRoutingType((ConnType)2);
 
-    ConnRef *connRef286 = new ConnRef(router, 286);
+    auto connRef286 = ConnRef::createConnRef(router, 286);
     ConnEnd srcPt286(Point(407.378, 1156.86), 15);
     connRef286->setSourceEndpoint(srcPt286);
     ConnEnd dstPt286(Point(571.378, 1189.86), 1);
     connRef286->setDestEndpoint(dstPt286);
     connRef286->setRoutingType((ConnType)2);
 
-    ConnRef *connRef287 = new ConnRef(router, 287);
+    auto connRef287 = ConnRef::createConnRef(router, 287);
     ConnEnd srcPt287(Point(774.878, 234.197), 4);
     connRef287->setSourceEndpoint(srcPt287);
     ConnEnd dstPt287(Point(716.878, 234.197), 8);
     connRef287->setDestEndpoint(dstPt287);
     connRef287->setRoutingType((ConnType)2);
 
-    ConnRef *connRef288 = new ConnRef(router, 288);
+    auto connRef288 = ConnRef::createConnRef(router, 288);
     ConnEnd srcPt288(Point(101.711, 1475.53), 2);
     connRef288->setSourceEndpoint(srcPt288);
     ConnEnd dstPt288(Point(101.711, 1525.53), 1);
     connRef288->setDestEndpoint(dstPt288);
     connRef288->setRoutingType((ConnType)2);
 
-    ConnRef *connRef289 = new ConnRef(router, 289);
+    auto connRef289 = ConnRef::createConnRef(router, 289);
     ConnEnd srcPt289(Point(-203.289, 1451.53), 4);
     connRef289->setSourceEndpoint(srcPt289);
     ConnEnd dstPt289(Point(-261.289, 1451.53), 8);
     connRef289->setDestEndpoint(dstPt289);
     connRef289->setRoutingType((ConnType)2);
 
-    ConnRef *connRef290 = new ConnRef(router, 290);
+    auto connRef290 = ConnRef::createConnRef(router, 290);
     ConnEnd srcPt290(Point(101.711, 1617.53), 1);
     connRef290->setSourceEndpoint(srcPt290);
     ConnEnd dstPt290(Point(101.711, 1567.53), 2);
     connRef290->setDestEndpoint(dstPt290);
     connRef290->setRoutingType((ConnType)2);
 
-    ConnRef *connRef291 = new ConnRef(router, 291);
+    auto connRef291 = ConnRef::createConnRef(router, 291);
     ConnEnd srcPt291(Point(465.378, 1484.53), 4);
     connRef291->setSourceEndpoint(srcPt291);
     ConnEnd dstPt291(Point(407.378, 1484.53), 8);
     connRef291->setDestEndpoint(dstPt291);
     connRef291->setRoutingType((ConnType)2);
 
-    ConnRef *connRef292 = new ConnRef(router, 292);
+    auto connRef292 = ConnRef::createConnRef(router, 292);
     ConnEnd srcPt292(Point(668.878, 1400.53), 2);
     connRef292->setSourceEndpoint(srcPt292);
     ConnEnd dstPt292(Point(668.878, 1450.53), 1);
     connRef292->setDestEndpoint(dstPt292);
     connRef292->setRoutingType((ConnType)2);
 
-    ConnRef *connRef293 = new ConnRef(router, 293);
+    auto connRef293 = ConnRef::createConnRef(router, 293);
     ConnEnd srcPt293(Point(668.878, 1475.53), 2);
     connRef293->setSourceEndpoint(srcPt293);
     ConnEnd dstPt293(Point(668.878, 1525.53), 1);
     connRef293->setDestEndpoint(dstPt293);
     connRef293->setRoutingType((ConnType)2);
 
-    ConnRef *connRef294 = new ConnRef(router, 294);
+    auto connRef294 = ConnRef::createConnRef(router, 294);
     ConnEnd srcPt294(Point(571.378, 1335.86), 1);
     connRef294->setSourceEndpoint(srcPt294);
     ConnEnd dstPt294(Point(571.378, 1285.86), 2);
     connRef294->setDestEndpoint(dstPt294);
     connRef294->setRoutingType((ConnType)2);
 
-    ConnRef *connRef295 = new ConnRef(router, 295);
+    auto connRef295 = ConnRef::createConnRef(router, 295);
     ConnEnd srcPt295(Point(629.378, 1189.86), 4);
     connRef295->setSourceEndpoint(srcPt295);
     ConnEnd dstPt295(Point(571.378, 1189.86), 8);
     connRef295->setDestEndpoint(dstPt295);
     connRef295->setRoutingType((ConnType)2);
 
-    ConnRef *connRef296 = new ConnRef(router, 296);
+    auto connRef296 = ConnRef::createConnRef(router, 296);
     ConnEnd srcPt296(Point(275.378, 1202.86), 2);
     connRef296->setSourceEndpoint(srcPt296);
     ConnEnd dstPt296(Point(275.378, 1252.86), 1);
     connRef296->setDestEndpoint(dstPt296);
     connRef296->setRoutingType((ConnType)2);
 
-    ConnRef *connRef297 = new ConnRef(router, 297);
+    auto connRef297 = ConnRef::createConnRef(router, 297);
     ConnEnd srcPt297(Point(-133.289, 1202.86), 2);
     connRef297->setSourceEndpoint(srcPt297);
     ConnEnd dstPt297(Point(-133.289, 1252.86), 1);
     connRef297->setDestEndpoint(dstPt297);
     connRef297->setRoutingType((ConnType)2);
 
-    ConnRef *connRef298 = new ConnRef(router, 298);
+    auto connRef298 = ConnRef::createConnRef(router, 298);
     ConnEnd srcPt298(Point(885.878, 1202.86), 2);
     connRef298->setSourceEndpoint(srcPt298);
     ConnEnd dstPt298(Point(885.878, 1252.86), 1);
     connRef298->setDestEndpoint(dstPt298);
     connRef298->setRoutingType((ConnType)2);
 
-    ConnRef *connRef299 = new ConnRef(router, 299);
+    auto connRef299 = ConnRef::createConnRef(router, 299);
     ConnEnd srcPt299(Point(774.878, 1048.86), 4);
     connRef299->setSourceEndpoint(srcPt299);
     ConnEnd dstPt299(Point(716.878, 1048.86), 8);
     connRef299->setDestEndpoint(dstPt299);
     connRef299->setRoutingType((ConnType)2);
 
-    ConnRef *connRef300 = new ConnRef(router, 300);
+    auto connRef300 = ConnRef::createConnRef(router, 300);
     ConnEnd srcPt300(Point(774.878, 924.864), 4);
     connRef300->setSourceEndpoint(srcPt300);
     ConnEnd dstPt300(Point(716.878, 924.864), 8);
     connRef300->setDestEndpoint(dstPt300);
     connRef300->setRoutingType((ConnType)2);
 
-    ConnRef *connRef301 = new ConnRef(router, 301);
+    auto connRef301 = ConnRef::createConnRef(router, 301);
     ConnEnd srcPt301(Point(774.878, 800.864), 4);
     connRef301->setSourceEndpoint(srcPt301);
     ConnEnd dstPt301(Point(716.878, 800.864), 8);
     connRef301->setDestEndpoint(dstPt301);
     connRef301->setRoutingType((ConnType)2);
 
-    ConnRef *connRef302 = new ConnRef(router, 302);
+    auto connRef302 = ConnRef::createConnRef(router, 302);
     ConnEnd srcPt302(Point(637.878, 389.864), 8);
     connRef302->setSourceEndpoint(srcPt302);
     ConnEnd dstPt302(Point(695.878, 389.864), 4);
     connRef302->setDestEndpoint(dstPt302);
     connRef302->setRoutingType((ConnType)2);
 
-    ConnRef *connRef303 = new ConnRef(router, 303);
+    auto connRef303 = ConnRef::createConnRef(router, 303);
     ConnEnd srcPt303(Point(538.378, 278.864), 2);
     connRef303->setSourceEndpoint(srcPt303);
     ConnEnd dstPt303(Point(538.378, 328.864), 1);
     connRef303->setDestEndpoint(dstPt303);
     connRef303->setRoutingType((ConnType)2);
 
-    ConnRef *connRef304 = new ConnRef(router, 304);
+    auto connRef304 = ConnRef::createConnRef(router, 304);
     ConnEnd srcPt304(Point(637.878, 25.9469), 8);
     connRef304->setSourceEndpoint(srcPt304);
     ConnEnd dstPt304(Point(695.878, 25.9469), 4);
     connRef304->setDestEndpoint(dstPt304);
     connRef304->setRoutingType((ConnType)2);
 
-    ConnRef *connRef305 = new ConnRef(router, 305);
+    auto connRef305 = ConnRef::createConnRef(router, 305);
     ConnEnd srcPt305(Point(886.878, 25.9469), 4);
     connRef305->setSourceEndpoint(srcPt305);
     ConnEnd dstPt305(Point(828.878, 25.9469), 8);
     connRef305->setDestEndpoint(dstPt305);
     connRef305->setRoutingType((ConnType)2);
 
-    ConnRef *connRef306 = new ConnRef(router, 306);
+    auto connRef306 = ConnRef::createConnRef(router, 306);
     ConnEnd srcPt306(Point(852.878, -296.303), 2);
     connRef306->setSourceEndpoint(srcPt306);
     ConnEnd dstPt306(Point(852.878, -246.303), 1);
     connRef306->setDestEndpoint(dstPt306);
     connRef306->setRoutingType((ConnType)2);
 
-    ConnRef *connRef307 = new ConnRef(router, 307);
+    auto connRef307 = ConnRef::createConnRef(router, 307);
     ConnEnd srcPt307(Point(774.878, -127.553), 4);
     connRef307->setSourceEndpoint(srcPt307);
     ConnEnd dstPt307(Point(716.878, -127.553), 8);
     connRef307->setDestEndpoint(dstPt307);
     connRef307->setRoutingType((ConnType)2);
 
-    ConnRef *connRef308 = new ConnRef(router, 308);
+    auto connRef308 = ConnRef::createConnRef(router, 308);
     ConnEnd srcPt308(Point(774.878, -318.803), 4);
     connRef308->setSourceEndpoint(srcPt308);
     ConnEnd dstPt308(Point(716.878, -318.803), 8);
     connRef308->setDestEndpoint(dstPt308);
     connRef308->setRoutingType((ConnType)2);
 
-    ConnRef *connRef309 = new ConnRef(router, 309);
+    auto connRef309 = ConnRef::createConnRef(router, 309);
     ConnEnd srcPt309(Point(472.378, -90.0531), 2);
     connRef309->setSourceEndpoint(srcPt309);
     ConnEnd dstPt309(Point(472.378, -40.0531), 1);
     connRef309->setDestEndpoint(dstPt309);
     connRef309->setRoutingType((ConnType)2);
 
-    ConnRef *connRef310 = new ConnRef(router, 310);
+    auto connRef310 = ConnRef::createConnRef(router, 310);
     ConnEnd srcPt310(Point(-30.2889, -186.053), 2);
     connRef310->setSourceEndpoint(srcPt310);
     ConnEnd dstPt310(Point(-30.2889, -136.053), 1);
     connRef310->setDestEndpoint(dstPt310);
     connRef310->setRoutingType((ConnType)2);
 
-    ConnRef *connRef311 = new ConnRef(router, 311);
+    auto connRef311 = ConnRef::createConnRef(router, 311);
     ConnEnd srcPt311(Point(-30.2889, -111.053), 2);
     connRef311->setSourceEndpoint(srcPt311);
     ConnEnd dstPt311(Point(-30.2889, -61.0531), 1);
     connRef311->setDestEndpoint(dstPt311);
     connRef311->setRoutingType((ConnType)2);
 
-    ConnRef *connRef312 = new ConnRef(router, 312);
+    auto connRef312 = ConnRef::createConnRef(router, 312);
     ConnEnd srcPt312(Point(374.378, -177.553), 2);
     connRef312->setSourceEndpoint(srcPt312);
     ConnEnd dstPt312(Point(374.378, -127.553), 1);
     connRef312->setDestEndpoint(dstPt312);
     connRef312->setRoutingType((ConnType)2);
 
-    ConnRef *connRef313 = new ConnRef(router, 313);
+    auto connRef313 = ConnRef::createConnRef(router, 313);
     ConnEnd srcPt313(Point(151.378, -127.553), 8);
     connRef313->setSourceEndpoint(srcPt313);
     ConnEnd dstPt313(Point(209.378, -127.553), 4);
     connRef313->setDestEndpoint(dstPt313);
     connRef313->setRoutingType((ConnType)2);
 
-    ConnRef *connRef314 = new ConnRef(router, 314);
+    auto connRef314 = ConnRef::createConnRef(router, 314);
     ConnEnd srcPt314(Point(-189.289, -127.553), 4);
     connRef314->setSourceEndpoint(srcPt314);
     ConnEnd dstPt314(Point(-247.289, -127.553), 8);
     connRef314->setDestEndpoint(dstPt314);
     connRef314->setRoutingType((ConnType)2);
 
-    ConnRef *connRef315 = new ConnRef(router, 315);
+    auto connRef315 = ConnRef::createConnRef(router, 315);
     ConnEnd srcPt315(Point(68.7111, -433.803), 2);
     connRef315->setSourceEndpoint(srcPt315);
     ConnEnd dstPt315(Point(68.7111, -383.803), 1);
     connRef315->setDestEndpoint(dstPt315);
     connRef315->setRoutingType((ConnType)2);
 
-    ConnRef *connRef316 = new ConnRef(router, 316);
+    auto connRef316 = ConnRef::createConnRef(router, 316);
     ConnEnd srcPt316(Point(68.7111, -358.803), 2);
     connRef316->setSourceEndpoint(srcPt316);
     ConnEnd dstPt316(Point(68.7111, -308.803), 1);
     connRef316->setDestEndpoint(dstPt316);
     connRef316->setRoutingType((ConnType)2);
 
-    ConnRef *connRef317 = new ConnRef(router, 317);
+    auto connRef317 = ConnRef::createConnRef(router, 317);
     ConnEnd srcPt317(Point(68.7111, -66.8031), 1);
     connRef317->setSourceEndpoint(srcPt317);
     ConnEnd dstPt317(Point(68.7111, -116.803), 2);
     connRef317->setDestEndpoint(dstPt317);
     connRef317->setRoutingType((ConnType)2);
 
-    ConnRef *connRef318 = new ConnRef(router, 318);
+    auto connRef318 = ConnRef::createConnRef(router, 318);
     ConnEnd srcPt318(Point(341.378, -401.803), 2);
     connRef318->setSourceEndpoint(srcPt318);
     ConnEnd dstPt318(Point(341.378, -351.803), 1);
     connRef318->setDestEndpoint(dstPt318);
     connRef318->setRoutingType((ConnType)2);
 
-    ConnRef *connRef319 = new ConnRef(router, 319);
+    auto connRef319 = ConnRef::createConnRef(router, 319);
     ConnEnd srcPt319(Point(341.378, -503.803), 2);
     connRef319->setSourceEndpoint(srcPt319);
     ConnEnd dstPt319(Point(341.378, -453.803), 1);
     connRef319->setDestEndpoint(dstPt319);
     connRef319->setRoutingType((ConnType)2);
 
-    ConnRef *connRef320 = new ConnRef(router, 320);
+    auto connRef320 = ConnRef::createConnRef(router, 320);
     ConnEnd srcPt320(Point(2.71109, 1368.53), 2);
     connRef320->setSourceEndpoint(srcPt320);
     ConnEnd dstPt320(Point(2.71109, 1418.53), 1);
     connRef320->setDestEndpoint(dstPt320);
     connRef320->setRoutingType((ConnType)2);
 
-    ConnRef *connRef321 = new ConnRef(router, 321);
+    auto connRef321 = ConnRef::createConnRef(router, 321);
     ConnEnd srcPt321(Point(774.878, 625.864), 4);
     connRef321->setSourceEndpoint(srcPt321);
     ConnEnd dstPt321(Point(716.878, 625.864), 8);
     connRef321->setDestEndpoint(dstPt321);
     connRef321->setRoutingType((ConnType)2);
 
-    ConnRef *connRef322 = new ConnRef(router, 322);
+    auto connRef322 = ConnRef::createConnRef(router, 322);
     ConnEnd srcPt322(Point(68.7111, -283.803), 2);
     connRef322->setSourceEndpoint(srcPt322);
     ConnEnd dstPt322(Point(68.7111, -233.803), 1);
     connRef322->setDestEndpoint(dstPt322);
     connRef322->setRoutingType((ConnType)2);
 
-    ConnRef *connRef323 = new ConnRef(router, 323);
+    auto connRef323 = ConnRef::createConnRef(router, 323);
     ConnEnd srcPt323(Point(-30.2889, 30.9469), 1);
     connRef323->setSourceEndpoint(srcPt323);
     ConnEnd dstPt323(Point(-30.2889, -19.0531), 2);
     connRef323->setDestEndpoint(dstPt323);
     connRef323->setRoutingType((ConnType)2);
 
-    ConnRef *connRef324 = new ConnRef(router, 324);
+    auto connRef324 = ConnRef::createConnRef(router, 324);
     ConnEnd srcPt324(Point(-247.289, 49.1969), 2);
     connRef324->setSourceEndpoint(srcPt324);
     ConnEnd dstPt324(Point(-247.289, 99.1969), 1);
     connRef324->setDestEndpoint(dstPt324);
     connRef324->setRoutingType((ConnType)2);
 
-    ConnRef *connRef325 = new ConnRef(router, 325);
+    auto connRef325 = ConnRef::createConnRef(router, 325);
     ConnEnd srcPt325(Point(-247.289, 151.197), 2);
     connRef325->setSourceEndpoint(srcPt325);
     ConnEnd dstPt325(Point(-247.289, 201.197), 1);
     connRef325->setDestEndpoint(dstPt325);
     connRef325->setRoutingType((ConnType)2);
 
-    ConnRef *connRef326 = new ConnRef(router, 326);
+    auto connRef326 = ConnRef::createConnRef(router, 326);
     ConnEnd srcPt326(Point(134.711, 49.1969), 2);
     connRef326->setSourceEndpoint(srcPt326);
     ConnEnd dstPt326(Point(134.711, 99.1969), 1);
     connRef326->setDestEndpoint(dstPt326);
     connRef326->setRoutingType((ConnType)2);
 
-    ConnRef *connRef327 = new ConnRef(router, 327);
+    auto connRef327 = ConnRef::createConnRef(router, 327);
     ConnEnd srcPt327(Point(134.711, 151.197), 2);
     connRef327->setSourceEndpoint(srcPt327);
     ConnEnd dstPt327(Point(134.711, 201.197), 1);
     connRef327->setDestEndpoint(dstPt327);
     connRef327->setRoutingType((ConnType)2);
 
-    ConnRef *connRef328 = new ConnRef(router, 328);
+    auto connRef328 = ConnRef::createConnRef(router, 328);
     ConnEnd srcPt328(Point(-166.289, 915.864), 2);
     connRef328->setSourceEndpoint(srcPt328);
     ConnEnd dstPt328(Point(-166.289, 965.864), 1);
     connRef328->setDestEndpoint(dstPt328);
     connRef328->setRoutingType((ConnType)2);
 
-    ConnRef *connRef329 = new ConnRef(router, 329);
+    auto connRef329 = ConnRef::createConnRef(router, 329);
     ConnEnd srcPt329(Point(668.878, 1617.53), 1);
     connRef329->setSourceEndpoint(srcPt329);
     ConnEnd dstPt329(Point(668.878, 1567.53), 2);
     connRef329->setDestEndpoint(dstPt329);
     connRef329->setRoutingType((ConnType)2);
 
-    ConnRef *connRef330 = new ConnRef(router, 330);
+    auto connRef330 = ConnRef::createConnRef(router, 330);
     ConnEnd srcPt330(Point(-166.289, 1057.86), 1);
     connRef330->setSourceEndpoint(srcPt330);
     ConnEnd dstPt330(Point(-166.289, 1007.86), 2);
     connRef330->setDestEndpoint(dstPt330);
     connRef330->setRoutingType((ConnType)2);
 
-    ConnRef *connRef331 = new ConnRef(router, 331);
+    auto connRef331 = ConnRef::createConnRef(router, 331);
     ConnEnd srcPt331(Point(795.878, 389.864), 4);
     connRef331->setSourceEndpoint(srcPt331);
     ConnEnd dstPt331(Point(737.878, 389.864), 8);
     connRef331->setDestEndpoint(dstPt331);
     connRef331->setRoutingType((ConnType)2);
 
-    ConnRef *connRef332 = new ConnRef(router, 332);
+    auto connRef332 = ConnRef::createConnRef(router, 332);
     ConnEnd srcPt332(Point(765.878, 563.864), 8);
     connRef332->setSourceEndpoint(srcPt332);
     ConnEnd dstPt332(Point(823.878, 563.864), 4);
     connRef332->setDestEndpoint(dstPt332);
     connRef332->setRoutingType((ConnType)2);
 
-    ConnRef *connRef333 = new ConnRef(router, 333);
+    auto connRef333 = ConnRef::createConnRef(router, 333);
     ConnEnd srcPt333(Point(923.878, 563.864), 4);
     connRef333->setSourceEndpoint(srcPt333);
     ConnEnd dstPt333(Point(865.878, 563.864), 8);
     connRef333->setDestEndpoint(dstPt333);
     connRef333->setRoutingType((ConnType)2);
 
-    ConnRef *connRef334 = new ConnRef(router, 334);
+    auto connRef334 = ConnRef::createConnRef(router, 334);
     ConnEnd srcPt334(Point(134.711, 1073.86), 2);
     connRef334->setSourceEndpoint(srcPt334);
     ConnEnd dstPt334(Point(134.711, 1123.86), 1);
     connRef334->setDestEndpoint(dstPt334);
     connRef334->setRoutingType((ConnType)2);
 
-    ConnRef *connRef335 = new ConnRef(router, 335);
+    auto connRef335 = ConnRef::createConnRef(router, 335);
     ConnEnd srcPt335(Point(1014.88, 563.864), 4);
     connRef335->setSourceEndpoint(srcPt335);
     ConnEnd dstPt335(Point(956.878, 563.864), 8);
     connRef335->setDestEndpoint(dstPt335);
     connRef335->setRoutingType((ConnType)2);
 
-    ConnRef *connRef336 = new ConnRef(router, 336);
+    auto connRef336 = ConnRef::createConnRef(router, 336);
     ConnEnd srcPt336(Point(635.878, 655.864), 2);
     connRef336->setSourceEndpoint(srcPt336);
     ConnEnd dstPt336(Point(635.878, 705.864), 1);
     connRef336->setDestEndpoint(dstPt336);
     connRef336->setRoutingType((ConnType)2);
 
-    ConnRef *connRef337 = new ConnRef(router, 337);
+    auto connRef337 = ConnRef::createConnRef(router, 337);
     ConnEnd srcPt337(Point(635.878, 451.864), 2);
     connRef337->setSourceEndpoint(srcPt337);
     ConnEnd dstPt337(Point(635.878, 501.864), 1);
     connRef337->setDestEndpoint(dstPt337);
     connRef337->setRoutingType((ConnType)2);
 
-    ConnRef *connRef338 = new ConnRef(router, 338);
+    auto connRef338 = ConnRef::createConnRef(router, 338);
     ConnEnd srcPt338(Point(-361.289, 1451.53), 8);
     connRef338->setSourceEndpoint(srcPt338);
     ConnEnd dstPt338(Point(-303.289, 1451.53), 4);
     connRef338->setDestEndpoint(dstPt338);
     connRef338->setRoutingType((ConnType)2);
 
-    ConnRef *connRef339 = new ConnRef(router, 339);
+    auto connRef339 = ConnRef::createConnRef(router, 339);
     ConnEnd srcPt339(Point(795.878, 25.9469), 4);
     connRef339->setSourceEndpoint(srcPt339);
     ConnEnd dstPt339(Point(737.878, 25.9469), 8);
     connRef339->setDestEndpoint(dstPt339);
     connRef339->setRoutingType((ConnType)2);
 
-    ConnRef *connRef340 = new ConnRef(router, 340);
+    auto connRef340 = ConnRef::createConnRef(router, 340);
     ConnEnd srcPt340(Point(68.7111, -141.803), 1);
     connRef340->setSourceEndpoint(srcPt340);
     ConnEnd dstPt340(Point(68.7111, -191.803), 2);
     connRef340->setDestEndpoint(dstPt340);
     connRef340->setRoutingType((ConnType)2);
 
-    ConnRef *connRef341 = new ConnRef(router, 341);
+    auto connRef341 = ConnRef::createConnRef(router, 341);
     ConnEnd srcPt341(Point(-30.2889, 105.947), 1);
     connRef341->setSourceEndpoint(srcPt341);
     ConnEnd dstPt341(Point(-30.2889, 55.9469), 2);
     connRef341->setDestEndpoint(dstPt341);
     connRef341->setRoutingType((ConnType)2);
 
-    ConnRef *connRef342 = new ConnRef(router, 342);
+    auto connRef342 = ConnRef::createConnRef(router, 342);
     ConnEnd srcPt342(Point(668.878, 1692.53), 1);
     connRef342->setSourceEndpoint(srcPt342);
     ConnEnd dstPt342(Point(668.878, 1642.53), 2);
     connRef342->setDestEndpoint(dstPt342);
     connRef342->setRoutingType((ConnType)2);
 
-    ConnRef *connRef343 = new ConnRef(router, 343);
+    auto connRef343 = ConnRef::createConnRef(router, 343);
     ConnEnd srcPt343(Point(716.878, -212.803), 15);
     connRef343->setSourceEndpoint(srcPt343);
     ConnEnd dstPt343(Point(942.378, 9.44694), 4);
     connRef343->setDestEndpoint(dstPt343);
     connRef343->setRoutingType((ConnType)2);
 
-    ConnRef *connRef344 = new ConnRef(router, 344);
+    auto connRef344 = ConnRef::createConnRef(router, 344);
     ConnEnd srcPt344(Point(716.878, 328.864), 15);
     connRef344->setSourceEndpoint(srcPt344);
     ConnEnd dstPt344(Point(942.378, 49.4469), 4);
     connRef344->setDestEndpoint(dstPt344);
     connRef344->setRoutingType((ConnType)2);
 
-    ConnRef *connRef345 = new ConnRef(router, 345);
+    auto connRef345 = ConnRef::createConnRef(router, 345);
     ConnEnd srcPt345(Point(716.878, 862.864), 15);
     connRef345->setSourceEndpoint(srcPt345);
     ConnEnd dstPt345(Point(1028.38, 212.947), 2);
     connRef345->setDestEndpoint(dstPt345);
     connRef345->setRoutingType((ConnType)2);
 
-    ConnRef *connRef346 = new ConnRef(router, 346);
+    auto connRef346 = ConnRef::createConnRef(router, 346);
     ConnEnd srcPt346(Point(716.878, 1252.86), 15);
     connRef346->setSourceEndpoint(srcPt346);
     ConnEnd dstPt346(Point(1068.38, 212.947), 2);
     connRef346->setDestEndpoint(dstPt346);
     connRef346->setRoutingType((ConnType)2);
 
-    ConnRef *connRef347 = new ConnRef(router, 347);
+    auto connRef347 = ConnRef::createConnRef(router, 347);
     ConnEnd srcPt347(Point(716.878, -412.803), 15);
     connRef347->setSourceEndpoint(srcPt347);
     ConnEnd dstPt347(Point(777.378, -478.303), 2);
     connRef347->setDestEndpoint(dstPt347);
     connRef347->setRoutingType((ConnType)2);
 
-    ConnRef *connRef348 = new ConnRef(router, 348);
+    auto connRef348 = ConnRef::createConnRef(router, 348);
     ConnEnd srcPt348(Point(-282.289, 986.864), 15);
     connRef348->setSourceEndpoint(srcPt348);
     ConnEnd dstPt348(Point(-286.289, 1109.36), 8);
     connRef348->setDestEndpoint(dstPt348);
     connRef348->setRoutingType((ConnType)2);
 
-    ConnRef *connRef349 = new ConnRef(router, 349);
+    auto connRef349 = ConnRef::createConnRef(router, 349);
     ConnEnd srcPt349(Point(-282.289, 1252.86), 15);
     connRef349->setSourceEndpoint(srcPt349);
     ConnEnd dstPt349(Point(-286.289, 1149.36), 8);
     connRef349->setDestEndpoint(dstPt349);
     connRef349->setRoutingType((ConnType)2);
 
-    ConnRef *connRef350 = new ConnRef(router, 350);
+    auto connRef350 = ConnRef::createConnRef(router, 350);
     ConnEnd srcPt350(Point(716.878, 738.864), 15);
     connRef350->setSourceEndpoint(srcPt350);
     ConnEnd dstPt350(Point(302.378, 746.364), 8);
     connRef350->setDestEndpoint(dstPt350);
     connRef350->setRoutingType((ConnType)2);
 
-    ConnRef *connRef351 = new ConnRef(router, 351);
+    auto connRef351 = ConnRef::createConnRef(router, 351);
     ConnEnd srcPt351(Point(961.878, 1252.86), 15);
     connRef351->setSourceEndpoint(srcPt351);
     ConnEnd dstPt351(Point(964.378, 1415.53), 1);

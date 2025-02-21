@@ -989,8 +989,8 @@ static void buildOrthogonalLayoutSegments(Router *router,
     ObstacleList::iterator obstacleIt = router->m_obstacles.begin();
     for (unsigned i = 0; i < n; i++)
     {
-        ShapeRef *shape = dynamic_cast<ShapeRef *> (*obstacleIt);
-        JunctionRef *junction = dynamic_cast<JunctionRef *> (*obstacleIt);
+        ShapeRef *shape = dynamic_cast<ShapeRef *> ((*obstacleIt).get());
+        JunctionRef *junction = dynamic_cast<JunctionRef *> ((*obstacleIt).get());
         if (shape)
         {
             obstacleVector[i] = LayoutObstacle(shape, dim);
@@ -1110,7 +1110,7 @@ static void buildOrthogonalLayoutSegments(Router *router,
 
                     // Shiftable.
                     LayoutEdgeSegment *segment = new LayoutEdgeSegment(
-                            *curr, indexLow, indexHigh, false, false, dim,
+                            (*curr).get(), indexLow, indexHigh, false, false, dim,
                             minLim, maxLim);
                     segment->endsInShapeIndexes = endsInShapeIndexes;
                     segment->containsCheckpoint = containsCheckpoint;
@@ -1163,7 +1163,7 @@ static void buildOrthogonalLayoutSegments(Router *router,
                     }
                 }
 
-                LayoutEdgeSegment *nss = new LayoutEdgeSegment(*curr,
+                LayoutEdgeSegment *nss = new LayoutEdgeSegment((*curr).get(),
                         indexLow, indexHigh, isSBend, isZBend, dim,
                         minLim, maxLim);
                 nss->containsCheckpoint = containsCheckpoint;
@@ -1191,7 +1191,7 @@ static void buildOrthogonalLayoutSegments(Router *router,
                             double offset = displayRoute.ps[i - 1][dim] -
                                     obstacleVector[k].centre()[dim];
                             EndpointAnchorInMoveDir terminal(
-                                    dim, *curr, i - 1, k, offset);
+                                    dim, (*curr).get(), i - 1, k, offset);
                             extraTerminalsList.push_back(terminal);
                         }
                     }
@@ -1210,7 +1210,7 @@ static void buildOrthogonalLayoutSegments(Router *router,
                             double offset = displayRoute.ps[i][dim] -
                                     obstacleVector[k].centre()[dim];
                             EndpointAnchorInMoveDir terminal(
-                                    dim, *curr, i, k, offset);
+                                    dim, (*curr).get(), i, k, offset);
                             extraTerminalsList.push_back(terminal);
                         }
                     }

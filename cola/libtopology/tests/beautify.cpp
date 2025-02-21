@@ -228,7 +228,7 @@ void makeFeasible(vpsc::Rectangles& rs, vector<cola::Edge>& edges,
             //printf("rect[%d]:{%f,%f,%f,%f}\n",i,x,y,X,Y);
         //}
         unsigned int shapeID = i + 1;
-        new Avoid::ShapeRef(router, shapeRect, shapeID);
+        Avoid::ShapeRef::createShapeRef(router, shapeRect, shapeID);
     }
     Avoid::ConnRef *connRefs[edges.size()];
     for(unsigned i=0;i<edges.size();++i)
@@ -238,7 +238,7 @@ void makeFeasible(vpsc::Rectangles& rs, vector<cola::Edge>& edges,
         Rectangle* r0=rs[e.first], *r1=rs[e.second];
         Avoid::Point srcPt(r0->getCentreX(),r0->getCentreY());
         Avoid::Point dstPt(r1->getCentreX(),r1->getCentreY());
-        connRefs[i] = new Avoid::ConnRef(router, srcPt, dstPt, connID);
+        connRefs[i] = Avoid::ConnRef::createConnRef(router, srcPt, dstPt, connID).get();
     }
     router->processTransaction();
     //router->outputInstanceToSVG();

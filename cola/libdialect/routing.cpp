@@ -55,7 +55,7 @@ void RoutingAdapter::addNodes(const NodesById &nodes) {
         // Ask the node to compute its polygon.
         Polygon poly = p.second->makeLibavoidPolygon();
         // Allocate a ShapeRef and add it to the router.
-        ShapeRef *sr = new ShapeRef(&router, poly);
+        ShapeRef *sr = ShapeRef::createShapeRef(&router, poly).get();
         // Store in local lookup.
         nodeIdToShapeRef.insert({p.first, sr});
     }
@@ -81,7 +81,7 @@ void RoutingAdapter::addEdges(const EdgesById &edges, const EdgeConnDirsById *co
             // is in the connDirs map.
             else {
                 // Allocate a ConnRef and add it to the router.
-                ConnRef *cr = new ConnRef(&router);
+                ConnRef *cr = ConnRef::createConnRef(&router).get();
                 // Store it in the lookup map by Edge ID.
                 edgeIdToConnRef.insert({i, cr});
                 // Get the ConnEnds.
@@ -107,7 +107,7 @@ void RoutingAdapter::addEdges(const EdgesById &edges, const EdgeConnDirsById *co
         // Record the Edge in the local lookup.
         this->edges.insert(p);
         // Allocate a ConnRef and add it to the router.
-        ConnRef *cr = new ConnRef(&router);
+        ConnRef *cr = ConnRef::createConnRef(&router).get();
         // Store it in the lookup map by Edge ID.
         edgeIdToConnRef.insert({p.first, cr});
         // Get the ConnEnds.
