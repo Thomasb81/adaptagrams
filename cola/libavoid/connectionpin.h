@@ -171,11 +171,6 @@ class AVOID_EXPORT ShapeConnectionPin
                 const bool proportional, const double insideOffset,
                 const ConnDirFlags visDirs);
         
-        // Old constructor.  Provided for compatibility with old debug files.
-        ShapeConnectionPin(std::shared_ptr<ShapeRef> shape, const unsigned int classId,
-                const double xOffset, const double yOffset, 
-                const double insideOffset, const ConnDirFlags visDirs);
- 
         //! @brief Constructs a ShapeConnectionPin on a JunctionRef.
         //!
         //! Ownership of this ShapeConnectionPin is passed to the parent 
