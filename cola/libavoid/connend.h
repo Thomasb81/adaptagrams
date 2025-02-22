@@ -232,9 +232,6 @@ class AVOID_EXPORT ConnEnd
         friend class HyperedgeImprover;
         friend class CrossingConnectorsInfo;
 
-        ConnEnd(ShapeRef *shapeRef, const unsigned int connectionPinClassID);
-        ConnEnd(JunctionRef *junctionRef);
-
         void connect(ConnRef *conn);
         void disconnect(const bool shapeDeleted = false);
         void usePin(ShapeConnectionPin *pin);

@@ -1200,9 +1200,9 @@ HyperedgeTreeNode *HyperedgeImprover::moveJunctionAlongCommonEdge(
             m_router->removeObjectFromQueuedActions(conn);
             conn->makeActive();
             conn->m_initialised = true;
-            ConnEnd srcConnend(targetNode->junction);
+            ConnEnd srcConnend(targetNode->junction->getPtr());
             conn->updateEndPoint(VertID::src, srcConnend);
-            ConnEnd tarConnend(self->junction);
+            ConnEnd tarConnend(self->junction->getPtr());
             conn->updateEndPoint(VertID::tar, tarConnend);
             commonEdges[0]->conn = conn->getPtr();
             m_new_connectors.push_back(conn->getPtr());
