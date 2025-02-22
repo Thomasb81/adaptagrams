@@ -58,15 +58,12 @@ size_t HyperedgeRerouter::registerHyperedgeForRerouting(
 }
 
 size_t HyperedgeRerouter::registerHyperedgeForRerouting(
-        JunctionRef *junction)
+        std::shared_ptr<JunctionRef> junction)
 {
     m_terminals_vector.push_back(ConnEndList());
-    m_root_junction_vector.push_back(junction);
+    m_root_junction_vector.push_back(junction.get());
 
     return m_terminals_vector.size() - 1;
-}
-size_t HyperedgeRerouter::registerHyperedgeForRerouting(std::shared_ptr<JunctionRef> junction){
-    return registerHyperedgeForRerouting(junction.get());
 }
 
 size_t HyperedgeRerouter::count(void) const

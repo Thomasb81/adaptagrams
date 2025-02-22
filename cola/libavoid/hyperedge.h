@@ -196,7 +196,6 @@ class AVOID_EXPORT HyperedgeRerouter
         // @param[in] router  The router instance to operate on.
         //
         void setRouter(Router *router);
-        size_t registerHyperedgeForRerouting(JunctionRef *junction);
 
         ConnRefSet calcHyperedgeConnectors(void);
         // Called by Router during processTransaction().
