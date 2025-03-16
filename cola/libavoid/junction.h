@@ -173,6 +173,12 @@ class AVOID_EXPORT JunctionRef : public std::enable_shared_from_this<JunctionRef
         Rectangle makeRectangle(Router *router, const Point& position);
         void preferOrthogonalDimension(const size_t dim);
 
+
+        std::shared_ptr<ShapeConnectionPin> createConnectionPin(const unsigned int classId,
+                const ConnDirFlags visDirs = ConnDirNone);
+        void deleteConnectionPin(std::shared_ptr<ShapeConnectionPin> pin);
+
+
     private:
         friend class Router;
         friend class ShapeConnectionPin;

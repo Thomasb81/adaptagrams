@@ -22,7 +22,7 @@ void test()
 	poly.setPoint(2, Point(50590, 50680));
 	poly.setPoint(3, Point(50590, 50620));
 	auto  shape147006780 = ShapeRef::createShapeRef(router1, poly, 147006780);
-	ShapeConnectionPin * pin147006780_1 = new ShapeConnectionPin(shape147006780, 2, 0.941176, 0.5, true, 10, 8);
+	auto pin147006780_1 = shape147006780->createConnectionPin(2, 0.941176, 0.5, true, 10, 8);
 	pin147006780_1->setExclusive(true);
 
 	poly = Polygon(4);
@@ -31,7 +31,7 @@ void test()
 	poly.setPoint(2, Point(50365, 50935));
 	poly.setPoint(3, Point(50365, 50765));
 	auto  shape69758810 = ShapeRef::createShapeRef(router1, poly, 69758810);
-	ShapeConnectionPin * pin69758810_1 = new ShapeConnectionPin(shape69758810, 2, 0.954545, 0.5, true, 10, 8);
+	auto pin69758810_1 = shape69758810->createConnectionPin(2, 0.954545, 0.5, true, 10, 8);
 	pin69758810_1->setExclusive(true);
 
 	poly = Polygon(4);
@@ -40,7 +40,7 @@ void test()
 	poly.setPoint(2, Point(50890, 51080));
 	poly.setPoint(3, Point(50890, 51020));
 	auto  shape149922619 = ShapeRef::createShapeRef(router1, poly, 149922619);
-	ShapeConnectionPin * pin149922619_1 = new ShapeConnectionPin(shape149922619, 2, 0.941176, 0.5, true, 10, 8);
+	auto pin149922619_1 = shape149922619->createConnectionPin(2, 0.941176, 0.5, true, 10, 8);
 	pin149922619_1->setExclusive(true);
 
 	auto  junction228834480 = JunctionRef::createJunctionRef(router1, Point(51050, 51050), 228834480);

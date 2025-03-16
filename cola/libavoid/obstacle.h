@@ -134,6 +134,7 @@ class Obstacle
         VertInf *m_last_vert;
         std::set<ConnEnd *> m_following_conns;
         ShapeConnectionPinSet m_connection_pins;
+        std::list<std::shared_ptr<ShapeConnectionPin>> m_connection_pins_list;
 };
 
 

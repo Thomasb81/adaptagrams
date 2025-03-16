@@ -231,6 +231,19 @@ ConnRef *JunctionRef::removeJunctionAndMergeConnectors(void)
 }
 
 
+std::shared_ptr<ShapeConnectionPin> JunctionRef::createConnectionPin(const unsigned int classId,
+        const ConnDirFlags visDirs) {
+    std::shared_ptr<ShapeConnectionPin> ptr = std::make_shared<ShapeConnectionPin>(
+            this->getPtr(),classId,visDirs);
+    m_connection_pins_list.push_back(ptr);
+    return ptr;
+
+}
+
+
+void JunctionRef::deleteConnectionPin(std::shared_ptr<ShapeConnectionPin> pin) {
+    m_connection_pins_list.remove(pin);
+}
 //============================================================================
 }
 

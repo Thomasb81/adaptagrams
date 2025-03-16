@@ -23,7 +23,6 @@ int main(void) {
     ConnEnd dstPt;
     ConnEnd heConnPt;
     PolyLine newRoute;
-    ShapeConnectionPin *connPin = nullptr;
 
     // shapeRef1
     polygon = Polygon(4);
@@ -32,13 +31,13 @@ int main(void) {
     polygon.ps[2] = Point(490, 450);
     polygon.ps[3] = Point(450, 450);
     auto shapeRef1 = ShapeRef::createShapeRef(router, polygon, 1);
-    connPin = new ShapeConnectionPin(shapeRef1, 1, 0, 0.333333, true, 10, (ConnDirFlags) 0);
+    auto connPin = shapeRef1->createConnectionPin(1, 0, 0.333333, true, 10, (ConnDirFlags) 0);
     connPin->setExclusive(false);
-    connPin = new ShapeConnectionPin(shapeRef1, 2, 0, 0.666667, true, 10, (ConnDirFlags) 0);
+    connPin = shapeRef1->createConnectionPin(2, 0, 0.666667, true, 10, (ConnDirFlags) 0);
     connPin->setExclusive(false);
-    connPin = new ShapeConnectionPin(shapeRef1, 3, 1, 0.5, true, 10, (ConnDirFlags) 0);
+    connPin = shapeRef1->createConnectionPin(3, 1, 0.5, true, 10, (ConnDirFlags) 0);
     connPin->setExclusive(false);
-    connPin = new ShapeConnectionPin(shapeRef1, 4, 0.5, 0, true, 10, (ConnDirFlags) 0);
+    connPin = shapeRef1->createConnectionPin(4, 0.5, 0, true, 10, (ConnDirFlags) 0);
     connPin->setExclusive(false);
 
     // shapeRef8
@@ -48,15 +47,15 @@ int main(void) {
     polygon.ps[2] = Point(438, 262.5);
     polygon.ps[3] = Point(438, 237.5);
     auto shapeRef8 = ShapeRef::createShapeRef(router, polygon, 8);
-    connPin = new ShapeConnectionPin(shapeRef8, 1, 0, 0.5, true, 1, (ConnDirFlags) 0);
-    connPin = new ShapeConnectionPin(shapeRef8, 2, 1, 0.5, true, 1, (ConnDirFlags) 0);
-    connPin = new ShapeConnectionPin(shapeRef8, 3, 0.5, 1, true, 1, (ConnDirFlags) 0);
-    connPin = new ShapeConnectionPin(shapeRef8, 4, 0.5, 0, true, 1, (ConnDirFlags) 0);
+    connPin = shapeRef8->createConnectionPin(1, 0, 0.5, true, 1, (ConnDirFlags) 0);
+    connPin = shapeRef8->createConnectionPin(2, 1, 0.5, true, 1, (ConnDirFlags) 0);
+    connPin = shapeRef8->createConnectionPin(3, 0.5, 1, true, 1, (ConnDirFlags) 0);
+    connPin = shapeRef8->createConnectionPin(4, 0.5, 0, true, 1, (ConnDirFlags) 0);
 
     auto junctionRef6 = JunctionRef::createJunctionRef(router, Point(470, 300), 6);
     /*
     // This may be useful if junction pins are modified.
-    connPin = new ShapeConnectionPin(junctionRef6, 2147483646, (ConnDirFlags) 15);
+    connPin = junctionRef6->createConnectionPin(2147483646, (ConnDirFlags) 15);
     */
 
     // connRef9

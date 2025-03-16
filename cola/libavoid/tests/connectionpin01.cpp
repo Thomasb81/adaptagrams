@@ -42,10 +42,8 @@ int main(void)
     auto shapeRef2 = ShapeRef::createShapeRef(router, shapeRect2);
 
     const unsigned int CENTRE = 1;
-    new ShapeConnectionPin(shapeRef1, CENTRE, ATTACH_POS_CENTRE, 
-            ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
-    new ShapeConnectionPin(shapeRef2, CENTRE, ATTACH_POS_CENTRE, 
-            ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
+    shapeRef1->createConnectionPin(CENTRE, ATTACH_POS_CENTRE, ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
+    shapeRef2->createConnectionPin(CENTRE, ATTACH_POS_CENTRE, ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
 
     ConnEnd dstEnd(shapeRef1, CENTRE);
     ConnEnd srcEnd(shapeRef2, CENTRE);

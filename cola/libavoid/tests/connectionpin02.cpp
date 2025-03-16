@@ -46,16 +46,12 @@ int main(void)
 
     // Create pins two input pins on the left side of shape 3.
     const unsigned int INPUT = 1;
-    new ShapeConnectionPin(shapeRef3, INPUT, 0.25, 
-            0.4, true, 0, ConnDirLeft);
-    new ShapeConnectionPin(shapeRef3, INPUT, 0.75, 
-            0.6, true, 0, ConnDirLeft);
+    shapeRef3->createConnectionPin(INPUT, 0.25, 0.4, true, 0, ConnDirLeft);
+    shapeRef3->createConnectionPin(INPUT, 0.75, 0.6, true, 0, ConnDirLeft);
     
     // And centre pins for two other shapes.
-    new ShapeConnectionPin(shapeRef1, CONNECTIONPIN_CENTRE, 
-            ATTACH_POS_CENTRE, ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
-    new ShapeConnectionPin(shapeRef2, CONNECTIONPIN_CENTRE, 
-            ATTACH_POS_CENTRE, ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
+    shapeRef1->createConnectionPin(CONNECTIONPIN_CENTRE, ATTACH_POS_CENTRE, ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
+    shapeRef2->createConnectionPin(CONNECTIONPIN_CENTRE, ATTACH_POS_CENTRE, ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
 
     // Create connectors from each shape to an input pin on shape 3.
     ConnEnd srcEnd(shapeRef2, CONNECTIONPIN_CENTRE);

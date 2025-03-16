@@ -51,11 +51,11 @@ int main(void)
     auto shapeRef6 = ShapeRef::createShapeRef(router, shapeRect6);
     
     // Add a centre connection pin for the three shapes we'll be using.
-    new ShapeConnectionPin(shapeRef1, CONNECTIONPIN_CENTRE, 
+    shapeRef1->createConnectionPin(CONNECTIONPIN_CENTRE, 
             ATTACH_POS_CENTRE, ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
-    new ShapeConnectionPin(shapeRef5, CONNECTIONPIN_CENTRE, 
+    shapeRef5->createConnectionPin(CONNECTIONPIN_CENTRE, 
             ATTACH_POS_CENTRE, ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
-    new ShapeConnectionPin(shapeRef6, CONNECTIONPIN_CENTRE, 
+    shapeRef6->createConnectionPin(CONNECTIONPIN_CENTRE, 
             ATTACH_POS_CENTRE, ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
 
     ConnEnd srcEnd(shapeRef1, CONNECTIONPIN_CENTRE);

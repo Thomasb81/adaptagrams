@@ -279,5 +279,22 @@ void ShapeRef::setCentrePos(const Point& newCentre)
     m_polygon.translate(diff.x, diff.y);
 }
 
+std::shared_ptr<ShapeConnectionPin> ShapeRef::createConnectionPin(
+                const unsigned int classId,
+                const double xOffset, const double yOffset,
+                const bool proportional, const double insideOffset,
+                const ConnDirFlags visDirs
+        ) {
+    std::shared_ptr<ShapeConnectionPin> ptr = std::make_shared<ShapeConnectionPin>(
+            this->getPtr(),
+            classId, xOffset, yOffset,proportional,insideOffset,visDirs);
+    m_connection_pins_list.push_back(ptr);
+    return ptr;
+}
+
+void ShapeRef::deleteConnectionPin(std::shared_ptr<ShapeConnectionPin> pin) {
+    m_connection_pins_list.remove(pin);
+}
+
 }
 

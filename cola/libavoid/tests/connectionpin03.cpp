@@ -16,10 +16,10 @@ int main(void) {
     poly219926511.ps[2] = Point(50740, 51260);
     poly219926511.ps[3] = Point(50740, 51240);
     auto shapeRef219926511 = ShapeRef::createShapeRef(router, poly219926511, 219926511);
-    new ShapeConnectionPin(shapeRef219926511, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 4);
-    new ShapeConnectionPin(shapeRef219926511, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 1);
-    new ShapeConnectionPin(shapeRef219926511, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 8);
-    new ShapeConnectionPin(shapeRef219926511, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 2);
+    shapeRef219926511->createConnectionPin(2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 4);
+    shapeRef219926511->createConnectionPin(2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 1);
+    shapeRef219926511->createConnectionPin(2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 8);
+    shapeRef219926511->createConnectionPin(2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 2);
 
     auto shapeRef171026375 = JunctionRef::createJunctionRef(router, Point(51075, 51225), 171026375);
 
@@ -57,10 +57,10 @@ int main(void) {
     poly223927132.ps[2] = Point(51490, 51210);
     poly223927132.ps[3] = Point(51490, 51190);
     auto shapeRef223927132 = ShapeRef::createShapeRef(router, poly223927132, 223927132);
-    new ShapeConnectionPin(shapeRef223927132, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 4);
-    new ShapeConnectionPin(shapeRef223927132, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 1);
-    new ShapeConnectionPin(shapeRef223927132, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 8);
-    new ShapeConnectionPin(shapeRef223927132, 2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 2);
+    shapeRef223927132->createConnectionPin(2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 4);
+    shapeRef223927132->createConnectionPin(2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 1);
+    shapeRef223927132->createConnectionPin(2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 8);
+    shapeRef223927132->createConnectionPin(2147483646, 0.5, 0.5, true, 0, (ConnDirFlags) 2);
 
     auto shapeRef102578723 = JunctionRef::createJunctionRef(router, Point(51275, 50725), 102578723);
 

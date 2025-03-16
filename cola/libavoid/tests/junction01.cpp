@@ -10,7 +10,7 @@ int main(void) {
     router->setRoutingParameter(idealNudgingDistance, 25);
     Rectangle rect478845150(Point(50695, 51070), Point(50705, 51080));
     auto shapeRef478845150 = ShapeRef::createShapeRef(router, rect478845150, 478845150);
-    ShapeConnectionPin *pin = new ShapeConnectionPin(shapeRef478845150, 
+    auto pin = shapeRef478845150->createConnectionPin(
 	    CONNECTIONPIN_CENTRE, ATTACH_POS_CENTRE, 
 	    ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
     pin->setExclusive(false);

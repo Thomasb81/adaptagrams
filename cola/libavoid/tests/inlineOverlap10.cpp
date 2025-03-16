@@ -28,14 +28,14 @@ int main(void) {
     polygon.ps[2] = Point(50650, 51135);
     polygon.ps[3] = Point(50650, 50740);
     auto shapeRef320077872 = ShapeRef::createShapeRef(router, polygon, 320077872);
-    new ShapeConnectionPin(shapeRef320077872, 1, 0, 0.21519, true, 10, (ConnDirFlags) 4);
-    new ShapeConnectionPin(shapeRef320077872, 2, 1, 0.21519, true, 10, (ConnDirFlags) 8);
-    new ShapeConnectionPin(shapeRef320077872, 3, 0.0714286, 0.405063, true, 10, (ConnDirFlags) 4);
-    new ShapeConnectionPin(shapeRef320077872, 4, 1, 0.405063, true, 10, (ConnDirFlags) 8);
-    new ShapeConnectionPin(shapeRef320077872, 5, 0.0714286, 0.594937, true, 10, (ConnDirFlags) 4);
-    new ShapeConnectionPin(shapeRef320077872, 6, 1, 0.594937, true, 10, (ConnDirFlags) 8);
-    new ShapeConnectionPin(shapeRef320077872, 7, 0, 0.78481, true, 10, (ConnDirFlags) 4);
-    new ShapeConnectionPin(shapeRef320077872, 8, 1, 0.78481, true, 10, (ConnDirFlags) 8);
+    shapeRef320077872->createConnectionPin(1, 0, 0.21519, true, 10, (ConnDirFlags) 4);
+    shapeRef320077872->createConnectionPin(2, 1, 0.21519, true, 10, (ConnDirFlags) 8);
+    shapeRef320077872->createConnectionPin(3, 0.0714286, 0.405063, true, 10, (ConnDirFlags) 4);
+    shapeRef320077872->createConnectionPin(4, 1, 0.405063, true, 10, (ConnDirFlags) 8);
+    shapeRef320077872->createConnectionPin(5, 0.0714286, 0.594937, true, 10, (ConnDirFlags) 4);
+    shapeRef320077872->createConnectionPin(6, 1, 0.594937, true, 10, (ConnDirFlags) 8);
+    shapeRef320077872->createConnectionPin(7, 0, 0.78481, true, 10, (ConnDirFlags) 4);
+    shapeRef320077872->createConnectionPin(8, 1, 0.78481, true, 10, (ConnDirFlags) 8);
 
     // shapeRef346216920
     polygon = Polygon(4);
@@ -44,14 +44,14 @@ int main(void) {
     polygon.ps[2] = Point(51300, 51135);
     polygon.ps[3] = Point(51300, 50740);
     auto shapeRef346216920 = ShapeRef::createShapeRef(router, polygon, 346216920);
-    new ShapeConnectionPin(shapeRef346216920, 1, 0, 0.21519, true, 10, (ConnDirFlags) 4);
-    new ShapeConnectionPin(shapeRef346216920, 2, 1, 0.21519, true, 10, (ConnDirFlags) 8);
-    new ShapeConnectionPin(shapeRef346216920, 3, 0, 0.405063, true, 10, (ConnDirFlags) 4);
-    new ShapeConnectionPin(shapeRef346216920, 4, 0.928571, 0.405063, true, 10, (ConnDirFlags) 8);
-    new ShapeConnectionPin(shapeRef346216920, 5, 0, 0.594937, true, 10, (ConnDirFlags) 4);
-    new ShapeConnectionPin(shapeRef346216920, 6, 0.928571, 0.594937, true, 10, (ConnDirFlags) 8);
-    new ShapeConnectionPin(shapeRef346216920, 7, 0, 0.78481, true, 10, (ConnDirFlags) 4);
-    new ShapeConnectionPin(shapeRef346216920, 8, 1, 0.78481, true, 10, (ConnDirFlags) 8);
+    shapeRef346216920->createConnectionPin(1, 0, 0.21519, true, 10, (ConnDirFlags) 4);
+    shapeRef346216920->createConnectionPin(2, 1, 0.21519, true, 10, (ConnDirFlags) 8);
+    shapeRef346216920->createConnectionPin(3, 0, 0.405063, true, 10, (ConnDirFlags) 4);
+    shapeRef346216920->createConnectionPin(4, 0.928571, 0.405063, true, 10, (ConnDirFlags) 8);
+    shapeRef346216920->createConnectionPin(5, 0, 0.594937, true, 10, (ConnDirFlags) 4);
+    shapeRef346216920->createConnectionPin(6, 0.928571, 0.594937, true, 10, (ConnDirFlags) 8);
+    shapeRef346216920->createConnectionPin(7, 0, 0.78481, true, 10, (ConnDirFlags) 4);
+    shapeRef346216920->createConnectionPin(8, 1, 0.78481, true, 10, (ConnDirFlags) 8);
 
     // connRef13958908
     connRef = ConnRef::createConnRef(router, 13958908);

@@ -144,6 +144,16 @@ class AVOID_EXPORT ShapeRef : public std::enable_shared_from_this<ShapeRef>, pub
         void transformConnectionPinPositions(ShapeTransformationType transform);
  
         Point position(void) const;
+
+
+        std::shared_ptr<ShapeConnectionPin> createConnectionPin(
+                const unsigned int classId,
+                const double xOffset, const double yOffset,
+                const bool proportional, const double insideOffset,
+                const ConnDirFlags visDirs
+                );
+        void deleteConnectionPin(std::shared_ptr<ShapeConnectionPin> pin);
+
     private:
         friend class Router;
         friend class ConnEnd;

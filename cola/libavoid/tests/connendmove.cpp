@@ -36,8 +36,7 @@ int main(void)
     Rectangle shapeRect1(Point(0, 0), Point(10, 10));
     auto shapeRef1 = ShapeRef::createShapeRef(router, shapeRect1);
     const unsigned int CENTRE = 1;
-    new ShapeConnectionPin(shapeRef1, CENTRE, 
-            ATTACH_POS_CENTRE, ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
+    shapeRef1->createConnectionPin(CENTRE, ATTACH_POS_CENTRE, ATTACH_POS_CENTRE, true, 0.0, ConnDirNone);
     
     Rectangle shapeRect2(Point(0, 0), Point(10, 10));
     auto shapeRef2 = ShapeRef::createShapeRef(router, shapeRect1);
