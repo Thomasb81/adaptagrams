@@ -103,6 +103,46 @@ std::shared_ptr<ConnRef> ConnRef::getPtr(){
 ConnRef::~ConnRef()
 {
     COLA_ASSERT(m_router);
+
+    freeRoutes();
+    
+    if (m_src_vert) {
+
+    }
+    
+    if (m_src_connend) {
+        m_src_connend->disconnect();
+        m_src_connend->freeActivePin();
+        delete m_src_connend;
+        m_src_connend = nullptr;
+    }
+
+    if (m_dst_vert) {
+    
+    }
+
+    if (m_dst_connend)
+    {
+        m_dst_connend->disconnect();
+        m_dst_connend->freeActivePin();
+        delete m_dst_connend;
+        m_dst_connend = nullptr;
+    }
+
+    // Clear checkpoint vertices.
+    for (size_t i = 0; i < m_checkpoint_vertices.size(); ++i)
+    {
+        m_checkpoint_vertices[i]->removeFromGraph(true);
+        m_router->vertices.removeVertex(m_checkpoint_vertices[i]);
+        delete m_checkpoint_vertices[i];
+    }
+    m_checkpoint_vertices.clear();
+
+    if (m_active)
+    {
+        makeInactive();
+    }
+
 }
 
 
