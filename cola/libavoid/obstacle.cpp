@@ -239,7 +239,7 @@ size_t Obstacle::addConnectionPin(ShapeConnectionPin *pin)
 void Obstacle::removeConnectionPin(ShapeConnectionPin *pin)
 {
     m_connection_pins.erase(pin);
-    //m_router->modifyConnectionPin(pin);
+    m_router->modifyConnectionPin(pin);
 }
 
 
