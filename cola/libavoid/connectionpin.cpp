@@ -54,25 +54,6 @@ ShapeConnectionPin::ShapeConnectionPin(std::shared_ptr<ShapeRef> shape,
     commonInitForShapeConnection();
 }
 
-//ShapeConnectionPin::ShapeConnectionPin(std::shared_ptr<ShapeRef> shape, 
-//        const unsigned int classId, const double xOffset,
-//        const double yOffset, const double insideOffset,
-//        const ConnDirFlags visDirs)
-//    : m_shape(shape),
-//      m_junction(nullptr),
-//      m_class_id(classId),
-//      m_x_offset(xOffset),
-//      m_y_offset(yOffset),
-//      m_inside_offset(insideOffset),
-//      m_visibility_directions(visDirs),
-//      m_exclusive(true),
-//      m_connection_cost(0.0),
-//      m_vertex(nullptr),
-//      m_using_proportional_offsets(true)
-//{
-//    commonInitForShapeConnection();
-//}
-
 
 void ShapeConnectionPin::commonInitForShapeConnection(void)
 {
