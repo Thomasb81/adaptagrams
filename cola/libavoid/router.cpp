@@ -291,6 +291,7 @@ void Router::deleteConnector(std::shared_ptr<ConnRef> connector)
 {
     m_currently_calling_destructors = true;
     //delete connector;
+    connector->freeActivePins();
     m_conn_reroute_flags.removeConn(connector);
     removeObjectFromQueuedActions(connector.get());
     if (connRefs.size() > 0 ) {
