@@ -106,21 +106,22 @@ ConnRef::~ConnRef()
 
     freeRoutes();
     
-    if (m_src_vert) {
+    if (m_src_vert)
+    {
 
     }
-    
-    if (m_src_connend) {
+    if (m_src_connend)
+    {
         m_src_connend->disconnect();
         m_src_connend->freeActivePin();
         delete m_src_connend;
         m_src_connend = nullptr;
     }
 
-    if (m_dst_vert) {
+    if (m_dst_vert)
+    {
     
     }
-
     if (m_dst_connend)
     {
         m_dst_connend->disconnect();
@@ -142,7 +143,6 @@ ConnRef::~ConnRef()
     {
         makeInactive();
     }
-
 }
 
 
@@ -553,6 +553,8 @@ void ConnRef::makeInactive(void)
 {
     COLA_ASSERT(m_active);
 
+    // Remove from connRefs list.
+    //m_router->connRefs.erase(m_connrefs_pos);
     m_active = false;
 }
 
