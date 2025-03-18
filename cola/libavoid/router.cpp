@@ -300,9 +300,17 @@ void Router::deleteConnector(std::shared_ptr<ConnRef> connector)
     
     if (connector->m_src_connend) {
         connector->m_src_connend->m_conn_ref.reset();
+        connector->m_src_connend->disconnect();
+        connector->m_src_connend->freeActivePin();
+        delete connector->m_src_connend;
+        connector->m_src_connend = nullptr;
     }
     if (connector->m_dst_connend) {
         connector->m_dst_connend->m_conn_ref.reset();
+        connector->m_dst_connend->disconnect();
+        connector->m_dst_connend->freeActivePin();
+        delete connector->m_dst_connend;
+        connector->m_dst_connend = nullptr;
     }
 
     m_connRefList.remove(connector);
