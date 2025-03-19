@@ -134,8 +134,8 @@ ConnRef::~ConnRef()
     for (size_t i = 0; i < m_checkpoint_vertices.size(); ++i)
     {
         m_checkpoint_vertices[i]->removeFromGraph(true);
-        m_router->vertices.removeVertex(m_checkpoint_vertices[i]);
-        delete m_checkpoint_vertices[i];
+        //m_router->vertices.removeVertex(m_checkpoint_vertices[i]);
+        //delete m_checkpoint_vertices[i];
     }
     m_checkpoint_vertices.clear();
 
