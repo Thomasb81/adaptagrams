@@ -61,7 +61,6 @@ int main(void)
     router->processTransaction();
 
     router->deleteConnector(connRef2);
-    connRef2 = nullptr;
     router->processTransaction();
 
     printf("\nAdd endpoints.\n");

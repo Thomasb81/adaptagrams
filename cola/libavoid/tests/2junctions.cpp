@@ -56,7 +56,6 @@ int test()
 	pin150429385_0->setExclusive(true);
 	auto  junction550292508 = JunctionRef::createJunctionRef(router1, Point(50850, 50875), 550292508);
 	router1->deleteConnector(conn18168360);
-	conn18168360 = nullptr;
 	end1 = ConnEnd(shape365249936, 5);
 	end2 = ConnEnd(junction550292508);
 	auto  conn795337150 = ConnRef::createConnRef(router1, end1, end2);
@@ -72,29 +71,18 @@ int test()
 	router1->processTransaction();
 
 	router1->outputDiagram("output/2junctions-2");
-	router1->outputInstanceToSVG("output/2junctions-2.svg");
 	/*
 	junction550292508->setPositionFixed(true);
 	router1->deleteShape(shape365249936);
-	shape365249936 = nullptr;
 	router1->deleteShape(shape386142480);
-	shape386142480 = nullptr;
 	router1->deleteJunction(junction328922310);
-	junction328922310 = nullptr;
 	router1->deleteConnector(conn152169328);
-	conn152169328 = nullptr;
 	router1->deleteConnector(conn684888074);
-	conn684888074 = nullptr;
 	router1->deleteShape(shape150429385);
-	shape150429385 = nullptr;
 	router1->deleteJunction(junction550292508);
-	junction550292508 = nullptr;
 	router1->deleteConnector(conn795337150);
-	conn795337150 = nullptr;
 	router1->deleteConnector(conn151961380);
-	conn151961380 = nullptr;
 	router1->deleteConnector(conn149180423);
-	conn149180423 = nullptr;
 	router1->processTransaction();
 */
 	bool atEnds = true;

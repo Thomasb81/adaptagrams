@@ -18,7 +18,7 @@ int main(void) {
     router->setRoutingOption((RoutingOption)4, true);
     router->setRoutingOption((RoutingOption)5, true);
     Polygon polygon;
-    std::shared_ptr<ConnRef> connRef = nullptr;
+    std::shared_ptr<ConnRef> connRef;
     ConnEnd srcPt;
     ConnEnd dstPt;
     PolyLine newRoute;

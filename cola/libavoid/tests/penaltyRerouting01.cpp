@@ -19,7 +19,7 @@ int main(void) {
     router->setRoutingOption((RoutingOption)5, false);
     router->setRoutingOption((RoutingOption)6, true);
     Polygon polygon;
-    std::shared_ptr<ConnRef> connRef = nullptr;
+    std::shared_ptr<ConnRef> connRef;
     ConnEnd srcPt;
     ConnEnd dstPt;
     ConnEnd heConnPt;
