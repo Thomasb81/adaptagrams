@@ -131,7 +131,7 @@ DebugHandler *Router::debugHandler(void) const
     return m_debug_handler;
 }
 
-ShapeRef *Router::shapeContainingPoint(const Point& point)
+std::shared_ptr<ShapeRef> Router::shapeContainingPoint(const Point& point)
 {
     // Count points on the border as being inside.
     bool countBorder = true;
@@ -143,7 +143,7 @@ ShapeRef *Router::shapeContainingPoint(const Point& point)
         ShapeRef *shape = dynamic_cast<ShapeRef *>((*i).get());
         if (shape && inPoly(shape->routingPolygon(), point, countBorder))
         {
-            return shape;
+            return shape->getPtr();
         }
     }
     return nullptr;
