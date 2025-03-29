@@ -26,9 +26,9 @@
 using namespace Avoid;
     
 
-static void connCallback(void *ptr)
+static void connCallback(std::shared_ptr<ConnRef> ptr)
 {
-    ConnRef *connRef = (ConnRef *) ptr; 
+    auto connRef = ptr; 
 
     printf("Connector %u needs rerouting!\n", connRef->id());
 
@@ -50,12 +50,12 @@ int main(void)
     Point srcPt(0,400);
     Point dstPt(775,400);
     auto connRef = ConnRef::createConnRef(router, srcPt, dstPt);
-    connRef->setCallback(connCallback, connRef.get());
+    connRef->setCallback(connCallback, connRef);
 
     Point srcPt2(775,625);
     Point dstPt2(350,475);
     auto connRef2 = ConnRef::createConnRef(router, srcPt2, dstPt2);
-    connRef2->setCallback(connCallback, connRef2.get());
+    connRef2->setCallback(connCallback, connRef2);
     
     router->processTransaction();
 

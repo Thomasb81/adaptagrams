@@ -274,7 +274,7 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         //! @param[in]  cb   A pointer to the callback function.
         //! @param[in]  ptr  A generic pointer that will be passed to the 
         //!                  callback function.
-        void setCallback(std::function<void(ConnRef*)> cb, ConnRef *ptr);
+        void setCallback(std::function<void(std::shared_ptr<ConnRef>)> cb, std::shared_ptr<ConnRef> ptr);
         
         //! @brief   Returns the type of routing performed for this connector.
         //! @return  The type of routing performed.
@@ -467,8 +467,8 @@ class AVOID_EXPORT ConnRef : public std::enable_shared_from_this<ConnRef>
         VertInf *m_src_vert;
         VertInf *m_dst_vert;
         VertInf *m_start_vert;
-        std::function<void(ConnRef*)> m_callback_func;
-        ConnRef *m_connector;
+        std::function<void(std::shared_ptr<ConnRef>)> m_callback_func;
+        std::shared_ptr<ConnRef> m_connector;
         ConnEnd *m_src_connend;
         ConnEnd *m_dst_connend;
         std::vector<Checkpoint> m_checkpoints;
